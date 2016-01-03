@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="WebsiteSpark" content="GWDim6Y1dk" />
+  <meta content=".NET, C#, Wildermuth, Shawn, Weblog, XAML, Silverlight, WP7, Microsoft, Training, Consulting, Database, JavaScript, CSS, Web Development, HTML"
+        name="KEYWORDS" />
+  <meta id="DescriptionMetaTag" content="Shawn Wildermuth's Blog: @ViewBag.Title"
+        name="DESCRIPTION" />
+
+  <!-- for Facebook -->
+  <meta property="og:title" content="Shawn Wildermuth's Blog" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://wildermuth.com/img/headshots/shawn-2015-square-200.jpg" />
+  @*<meta property="og:url" content="" />*@
+  <meta property="og:description" content="@ViewBag.Title" />
+
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Shawn Wildermuth's Blog" />
+  <meta name="twitter:description" content="@ViewBag.Title" />
+  <meta name="twitter:image" content="http://wildermuth.com/img/headshots/shawn-2015-square-200.jpg" />
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ShawnWildermuth" />
+
+  <title>@ViewBag.Title</title>
+  <environment names="Development">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/template/css/clean-blog.css" rel="stylesheet" />
+  </environment>
+  <environment names="Production">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/template/css/clean-blog.min.css" rel="stylesheet" />
+  </environment>
+
+  <link href="~/css/site.css" rel="stylesheet" />
+
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  @RenderSection("Head", required: false)
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="~/lib/respond/dest/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-fixed-top navbar-dark" style="background-color: rgba(0,0,0,0.8)">
+    <div>
+      <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
+      <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#menu">
+        &#9776;
+      </button>
+      <div class="nav navbar-nav navbar-toggleable-sm collapse hidden-sm-down pull-lg-right">
+        @Html.Partial("_Menu")
+      </div>
+    </div>
+  </nav>
+  <div id="menu" class="responsiveMenu nav collapse hidden-md-up nav-stacked" style="color: #fff">
+    @Html.Partial("_Menu")
+  </div>
+  <!-- Page Header -->
+  <!-- Set your background image for this header on the line below. -->
+  <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="site-heading">
+            <h2>@ViewBag.PageName</h2>
+            <hr class="small">
+            <span class="subheading">@ViewBag.PageBlurb</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      @RenderBody()
+    </div>
+  </div>
+  <hr>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1  text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/shawnwildermuth">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://instagram.com/shawnwildermuth">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="http://shawnw.me/psauthor">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <img src="/img/blog/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo" />
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/shawnwildermuth">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="http://stackoverflow.com/users/40125/shawn-wildermuth">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Wilder Minds LLC 2007-2016</p>
+          <p class="copyright text-primary">Built with ASP.NET 5, MVC 6, Angular 2, Entity Framework, TypeScript, Bootstrap 4, and Hosted on Azure</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <environment names="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+  </environment>
+  <environment names="Production">
+    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.4.1.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </environment>
+
+  <script src="~/template/js/clean-blog.min.js"></script>
+  @RenderSection("Scripts", required: false)
+
+</body>
+</html>
