@@ -1,0 +1,29 @@
+﻿@{
+  ViewBag.Title = "Shawn Wildermuth's Rants and Raves";
+  ViewBag.PageName = "Contact Me";
+  ViewBag.PageBlurb = "Send a Message to Shawn Wildermuth";
+  ViewBag.PageImage = "/img/blog/shawnteaching.png";
+}
+@section Scripts {
+  <!-- 1. Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="~/lib/angular2/es6-shim.js"></script>
+  <script src="~/lib/angular2/system-polyfills.js"></script>
+
+  <script src="~/lib/angular2/angular2-polyfills.js"></script>
+  <script src="~/lib/angular2/system.src.js"></script>
+  <script src="~/lib/angular2/Rx.js"></script>
+  <script src="~/lib/angular2/angular2.dev.js"></script>
+  <script>
+    System.config({
+      packages: {
+        js: {
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('./js/app')
+          .then(null, console.error.bind(console));
+  </script>
+}
+<contact-form>Loading...</contact-form>

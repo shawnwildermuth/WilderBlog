@@ -11,7 +11,8 @@ namespace WilderBlog.Data
     public DateTime DatePosted { get; set; }
     public string Permalink { get; set; }
     public bool IsPublished { get; set; }
-    public virtual ICollection<Category> Categories { get; set; }
 
+    public virtual ICollection<Comment> Comments { get; set; }
+    public virtual ICollection<Category> Categories { get; set; }
   }
 }

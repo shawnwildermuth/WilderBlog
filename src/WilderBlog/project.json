@@ -16,11 +16,14 @@
     "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+    "WilderBlog.Commands": "1.0.0-*",
     "WilderBlog.Data": "1.0.0-*"
   },
 
   "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel"
+    "web": "Microsoft.AspNet.Server.Kestrel",
+    "ef": "EntityFramework.Commands",
+    "migrate": "WilderBlog.Commands"
   },
 
   "frameworks": {
@@ -35,5 +38,10 @@
   "publishExclude": [
     "**.user",
     "**.vspscc"
-  ]
+  ],
+  "scripts": {
+    "prebuild": [
+      "gulp npmTasks"
+    ] 
+  }
 }

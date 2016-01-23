@@ -1,0 +1,36 @@
+﻿<div class="col-md-6 col-md-offset-3">
+  <form (ngSubmit)="onSubmit()" [ngFormModel]="form" #theForm="ngForm">
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" class="form-control" ngControl="name" placeholder="e.g. John Smith" />
+      <span class="text-danger" *ngIf="form.controls.name.dirty && form.controls.name.hasError('required')"><small>*</small></span>
+      <span class="text-danger" *ngIf="form.controls.name.dirty && !form.controls.name.hasError('required') && form.controls.name.hasError('minlength')"><small>Too Short</small></span>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" ngControl="email" placeholder="e.g. john@aol.com" />
+      <span class="text-danger" *ngIf="form.controls.name.dirty && form.controls.email.hasError('required')"><small>*</small></span>
+      <span class="text-danger" *ngIf="form.controls.name.dirty && !form.controls.email.hasError('required') && form.controls.email.hasError('invalidEmail')"><small>Invalid Email</small></span>
+    </div>
+    <div class="form-group">
+      <label>Subject</label>
+      <select ngControl="subject">
+        <option *ngFor="#subject of subjects">{{ subject }}</option>
+      </select>
+      <span class="text-danger" *ngIf="form.controls.name.dirty && !form.controls.subject.valid"><small>Must Pick a Subject</small></span>
+      <span>{{ form.controls.subject.value }}</span>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea class="form-control" rows="6" cols="40" ngControl="msg" placeholder="e.g. Hey Shawn, you''"></textarea>
+      <span class="text-danger" *ngIf="form.controls.name.dirty && form.controls.msg.hasError('required')"><small>*</small></span>
+      <span class="text-danger" *ngIf="form.controls.name.dirty && !form.controls.msg.hasError('required') && form.controls.msg.hasError('minlength')"><small>Too Short</small></span>
+    </div>
+    <div class="form-group">
+      <div class="pull-right">
+        <a href="/" class="btn">Cancel</a>
+        <input type="submit" class="btn btn-success" value="Send Email" [disabled]="!theForm.valid" />
+      </div>
+    </div>
+  </form>
+</div>

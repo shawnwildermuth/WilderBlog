@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.ComponentModel.DataAnnotations;
 
 namespace WilderBlog.Data
 {
-  public class Category
+  public class EpisodeLink
   {
-    public int Id { get; set; }
     public string Name { get; set; }
+
+    public string Link { get; set; }
   }
 }

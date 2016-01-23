@@ -41,6 +41,9 @@ namespace WilderBlog
       services.AddIdentity<WilderUser, IdentityRole>()
           .AddEntityFrameworkStores<WilderContext>();
 
+      services.AddTransient<IWilderRepository, WilderRepository>();
+      services.AddTransient<WilderBlogDatabaseInitializer>();
+
       services.AddMvc()
         .AddJsonOptions(opts =>
         {
@@ -50,7 +53,8 @@ namespace WilderBlog
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
-                          IHostingEnvironment env)
+                          IHostingEnvironment env,
+                          WilderBlogDatabaseInitializer dbInit)
     {
       app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
@@ -73,6 +77,8 @@ namespace WilderBlog
 
       app.UseIdentity();
       app.UseMvc();
+
+      dbInit.InitializeAsync().Wait();
     }
 
     // Entry point for the application.
