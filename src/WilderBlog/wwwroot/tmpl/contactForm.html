@@ -14,11 +14,10 @@
     </div>
     <div class="form-group">
       <label>Subject</label>
-      <select ngControl="subject">
+      <select ngControl="subject" class="form-control c-select">
         <option *ngFor="#subject of subjects">{{ subject }}</option>
       </select>
-      <span class="text-danger" *ngIf="form.controls.name.dirty && !form.controls.subject.valid"><small>Must Pick a Subject</small></span>
-      <span>{{ form.controls.subject.value }}</span>
+      <span class="text-danger" *ngIf="!form.controls.subject.pristine && !form.controls.subject.valid"><small>Must Pick a Subject</small></span>
     </div>
     <div class="form-group">
       <label>Message</label>
@@ -29,7 +28,12 @@
     <div class="form-group">
       <div class="pull-right">
         <a href="/" class="btn">Cancel</a>
-        <input type="submit" class="btn btn-success" value="Send Email" [disabled]="!theForm.valid" />
+        <input type="submit" class="btn btn-success" value="Send Email" [disabled]="!theForm.valid || isBusy" />
+      </div>
+      <div>
+        <div *ngIf="statusMessage.length > 0" class="text-primary">{{ statusMessage }}</div>
+        <div *ngIf="errorMessage.length > 0" class="text-warning">{{ errorMessage }}</div>
+        <div [hidden]="!isBusy" class="text-primary">Sending...</div>
       </div>
     </div>
   </form>

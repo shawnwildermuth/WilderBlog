@@ -14,15 +14,20 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNet.Diagnostics.Entity;
+using WilderBlog.Services;
+using Microsoft.Extensions.Logging;
 
 namespace WilderBlog
 {
   public class Startup
   {
     private IConfigurationRoot _config;
+    private IHostingEnvironment _env;
 
     public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
     {
+      _env = env;
+
       var builder = new ConfigurationBuilder()
         .SetBasePath(appEnv.ApplicationBasePath)
         .AddJsonFile("config.json")
@@ -44,6 +49,16 @@ namespace WilderBlog
       services.AddTransient<IWilderRepository, WilderRepository>();
       services.AddTransient<WilderBlogDatabaseInitializer>();
 
+      if (_env.IsDevelopment())
+      {
+        services.AddTransient<IMailService, LoggingMailService>();
+      }
+      else
+      {
+        services.AddTransient<IMailService, MailService>();
+      }
+      services.AddInstance(_config);
+
       services.AddMvc()
         .AddJsonOptions(opts =>
         {
@@ -53,15 +68,15 @@ namespace WilderBlog
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
-                          IHostingEnvironment env,
+                          ILoggerFactory loggerFactory,
                           WilderBlogDatabaseInitializer dbInit)
     {
       app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
       // Add the following to the request pipeline only in development environment.
-      if (string.Equals(env.EnvironmentName, "Development", StringComparison.OrdinalIgnoreCase))
+      if (_env.IsDevelopment())
       {
-        //app.UseBrowserLink();
+        loggerFactory.AddDebug(LogLevel.Information);
         app.UseDeveloperExceptionPage();
         app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
       }
@@ -69,6 +84,7 @@ namespace WilderBlog
       {
         // Add Error handling middleware which catches all application specific errors and
         // send the request to the following path or controller action.
+        loggerFactory.AddDebug(LogLevel.Error);
         app.UseExceptionHandler("/Error");
       }
 
