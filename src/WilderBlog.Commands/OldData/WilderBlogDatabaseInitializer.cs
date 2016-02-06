@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Identity;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public class WilderBlogDatabaseInitializer
   {

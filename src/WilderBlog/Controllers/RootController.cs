@@ -12,19 +12,17 @@ namespace WilderBlog.Controllers
   [Route("")]
   public class RootController : Controller
   {
-    private IWilderRepository _repo;
     private IMailService _mailService;
 
-    public RootController(IWilderRepository repo, IMailService mailService)
+    public RootController(IMailService mailService)
     {
-      _repo = repo;
       _mailService = mailService;
     }
 
     [HttpGet("")]
     public IActionResult Index()
     {
-      return View(_repo.GetNewStories());
+      return View();
     }
 
     [HttpGet("contact")]

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public class WilderUser : IdentityUser
   {

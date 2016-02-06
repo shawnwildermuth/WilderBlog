@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "description": "WilderBlog.Data Class Library",
   "authors": [ "shawn" ],
@@ -14,7 +14,10 @@
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "dnx451": {
+      "dependencies": {
+        "Microsoft.Azure.DocumentDB": "1.5.2"
+      }
+    }
   }
 } 

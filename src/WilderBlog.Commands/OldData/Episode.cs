@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public enum EpisodeStatus
   {

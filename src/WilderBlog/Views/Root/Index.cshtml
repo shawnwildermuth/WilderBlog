@@ -4,10 +4,4 @@
   ViewBag.PageBlurb = "My Rants and Raves about technology, programming, everything else...";
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
 }
-@model IEnumerable<Story>
 
-@foreach (var story in Model)
-{
-  <h3>@story.Title</h3>
-  @Html.Raw(@story.Body)
-}

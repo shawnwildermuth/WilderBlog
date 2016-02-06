@@ -38,17 +38,6 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddEntityFramework()
-        .AddSqlServer()
-        .AddDbContext<WilderContext>(options =>
-          options.UseSqlServer(_config["Db:TheConnection"]));
-
-      services.AddIdentity<WilderUser, IdentityRole>()
-          .AddEntityFrameworkStores<WilderContext>();
-
-      services.AddTransient<IWilderRepository, WilderRepository>();
-      services.AddTransient<WilderBlogDatabaseInitializer>();
-
       if (_env.IsDevelopment())
       {
         services.AddTransient<IMailService, LoggingMailService>();
@@ -68,8 +57,7 @@ namespace WilderBlog
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
-                          ILoggerFactory loggerFactory,
-                          WilderBlogDatabaseInitializer dbInit)
+                          ILoggerFactory loggerFactory)
     {
       app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
@@ -94,7 +82,6 @@ namespace WilderBlog
       app.UseIdentity();
       app.UseMvc();
 
-      dbInit.InitializeAsync().Wait();
     }
 
     // Entry point for the application.

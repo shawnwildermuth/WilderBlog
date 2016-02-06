@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public class Story
   {

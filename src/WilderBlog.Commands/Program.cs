@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace WilderBlog.Commands
 {
@@ -9,8 +12,11 @@ namespace WilderBlog.Commands
   {
     public static void Main(string[] args)
     {
-      Console.WriteLine("Starting Site Migration");
+      Console.WriteLine("Starting WilderBlog Migration");
+      Console.WriteLine();
 
+      new SiteMigration().Run().Wait();
     }
+
   }
 }

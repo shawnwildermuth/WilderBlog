@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.Entity;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public class WilderRepository : IWilderRepository
   {

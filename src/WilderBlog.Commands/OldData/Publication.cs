@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public class Publication
   {

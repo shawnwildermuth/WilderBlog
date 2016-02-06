@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public class Comment
   {

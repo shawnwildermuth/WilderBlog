@@ -3,7 +3,7 @@ using System.Text;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Http.Extensions;
 
-namespace WilderBlog.Data
+namespace WilderBlog.OldData
 {
   public static class EntityExtensions
   {
