@@ -16,6 +16,8 @@ using Newtonsoft.Json.Serialization;
 using Microsoft.AspNet.Diagnostics.Entity;
 using WilderBlog.Services;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNet.StaticFiles;
+using Microsoft.AspNet.FileProviders;
 
 namespace WilderBlog
 {
@@ -36,19 +38,26 @@ namespace WilderBlog
       _config = builder.Build();
     }
 
-    public void ConfigureServices(IServiceCollection services)
+    public void ConfigureServices(IServiceCollection svcs)
     {
+      svcs.AddInstance(_config);
+
       if (_env.IsDevelopment())
       {
-        services.AddTransient<IMailService, LoggingMailService>();
+        svcs.AddTransient<IMailService, LoggingMailService>();
       }
       else
       {
-        services.AddTransient<IMailService, MailService>();
+        svcs.AddTransient<IMailService, MailService>();
       }
-      services.AddInstance(_config);
 
-      services.AddMvc()
+      svcs.AddEntityFramework()
+        .AddSqlServer()
+        .AddDbContext<WilderContext>();
+
+      svcs.AddScoped<IWilderRepository, WilderRepository>();
+
+      svcs.AddMvc()
         .AddJsonOptions(opts =>
         {
           opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
@@ -79,7 +88,6 @@ namespace WilderBlog
       app.UseIISPlatformHandler();
       app.UseStaticFiles();
 
-      app.UseIdentity();
       app.UseMvc();
 
     }

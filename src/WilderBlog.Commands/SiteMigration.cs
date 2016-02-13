@@ -6,16 +6,22 @@ using System;
 using Microsoft.Data.Entity;
 using WilderBlog.Data;
 using System.Threading.Tasks;
+using WilderBlog.Commands.OldDb;
+using System.Xml;
+using System.Xml.Linq;
+using System.Collections.Generic;
+using WilderBlog.Commands.Disqus;
 
 namespace WilderBlog.Commands
 {
   public class SiteMigration
   {
     private IConfigurationRoot _config;
-    private WilderContext _ctx;
-    private WilderBlogRepository _repo;
+    private OldWilderContext _ctx;
+    private WilderRepository _repo;
+    private WilderContext _newCtx;
 
-    public async Task Run()
+    public void Run()
     {
       try
       {
@@ -26,15 +32,13 @@ namespace WilderBlog.Commands
          .AddEnvironmentVariables();
 
         _config = builder.Build();
-        _ctx = new WilderContext(_config);
-        _repo = new WilderBlogRepository(_config);
-
-        Console.WriteLine("Clearing the DocumentDB Store");
-        await ClearDatabase();
+        _ctx = new OldWilderContext(_config);
+        _newCtx = new WilderContext(_config);
+        _repo = new WilderRepository(_config, _newCtx);
 
         Console.WriteLine("Migrating Stories");
-        await MigrateStories();
-        
+        MigrateStories();
+
         //TODO More migration
 
       }
@@ -45,56 +49,54 @@ namespace WilderBlog.Commands
       }
     }
 
-    private async Task ClearDatabase()
+    private void MigrateStories()
     {
-      await _repo.ClearDatabaseAsync();
-    }
+      _newCtx.Stories.RemoveRange(_newCtx.Stories.ToList());
 
-    private async Task MigrateStories()
-    {
-      var stories = _ctx.Stories.Include(s => s.Comments).Include(s => s.Categories).OrderByDescending(s => s.DatePosted).ToList();
+      var stories = _ctx.Stories
+        .Include(s => s.Comments)
+        .Include(s => s.StoryCategories)
+        .OrderByDescending(s => s.DatePosted).ToList();
+
       var counter = 1;
       foreach (var story in stories)
       {
         Console.SetCursorPosition(0, Console.CursorTop);
         Console.Write($"Migrating {counter} of {stories.Count()}");
-        await MigrateStory(story);
+        MigrateStory(story);
         counter++;
       }
+
+      var export = new DiscusImport();
+      export.CreateXml(stories);
+
+      _repo.SaveAll();
     }
 
-    private async Task MigrateStory(Story story)
+    private void MigrateStory(Stories story)
     {
       FixBody(story.Body);
 
-      await _repo.AddStory(new BlogStory()
+      var newStory = new BlogStory()
       {
         Title = story.Title,
         Body = story.Body,
         DatePublished = story.DatePosted,
         IsPublished = story.IsPublished,
         UniqueId = story.Permalink,
-        Slug = story.GetSlug(),
-        Categories = story.Categories.Select(s => s.Name).ToList()
-      });
+        Slug = story.GetSlug()
+      };
 
-      foreach (var comment in story.Comments)
-      {
-        MigrateComment();
-      }
-    }
+      newStory.Categories = string.Join(",", _ctx.StoryCategories.Include(c => c.Category).Where(s => s.Story_Id == story.Id).Select(s => s.Category.Name).ToArray());
 
-    private void MigrateComment()
-    {
-      // TODO Migrate to Disqus
+      _repo.AddStory(newStory);
     }
 
     private void FixBody(string body)
     {
       // TODO Fix Image Paths
       body.Replace("http://wildermuth.com/images/", "http://wildermuth.com/img/blog/");
-      // TODO Fix Download Paths
-      body.Replace("http://wildermuth.com/downloads/", "http://wildermuth.com/files/");
+      body.Replace("\"/images/", "\"/img/blog/");
     }
   }
 }

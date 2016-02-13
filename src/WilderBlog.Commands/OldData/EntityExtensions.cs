@@ -2,22 +2,23 @@
 using System.Text;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Http.Extensions;
+using WilderBlog.Commands.OldDb;
 
 namespace WilderBlog.OldData
 {
   public static class EntityExtensions
   {
-    public static string GetStoryUrl(this Story story)
+    public static string GetStoryUrl(this Stories story)
     {
       return string.Format("{0:0000}/{1:00}/{2:00}/{3}", story.DatePosted.Year, story.DatePosted.Month, story.DatePosted.Day, GetSlug(story));
     }
 
-    public static Uri GetStoryFullUri(this Story story, HttpRequest request)
+    public static Uri GetStoryFullUri(this Stories story, HttpRequest request)
     {
       return new Uri(new Uri(request.GetDisplayUrl()), string.Format("/{0:0000}/{1:00}/{2:00}/{3}", story.DatePosted.Year, story.DatePosted.Month, story.DatePosted.Day, GetSlug(story)));
     }
 
-    public static string GetSlug(this Story story)
+    public static string GetSlug(this Stories story)
     {
       // Characters to replace with underscore
       char[] replacements = @" ""'?*.,+&:;\/#".ToCharArray();
