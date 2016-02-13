@@ -11,6 +11,10 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Collections.Generic;
 using WilderBlog.Commands.Disqus;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System.IO;
+using Wildermuth.Models;
 
 namespace WilderBlog.Commands
 {
@@ -70,7 +74,35 @@ namespace WilderBlog.Commands
       var export = new DiscusImport();
       export.CreateXml(stories);
 
+      MigratePodcast();
+      MigratePublications();
+      MigrateCalendar();
+
       _repo.SaveAll();
+    }
+
+    private void MigratePodcast()
+    {
+      File.WriteAllText("episodeList.json", JsonConvert.SerializeObject(new EpisodeList(), new JsonSerializerSettings()
+      {
+        Formatting = Newtonsoft.Json.Formatting.Indented,
+        DateFormatString = "MM/dd/yy",
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+      }));
+    }
+
+    private void MigratePublications()
+    {
+    }
+
+    private void MigrateCalendar()
+    {
+      File.WriteAllText("calendar.json", JsonConvert.SerializeObject(EventCalendar.Events, new JsonSerializerSettings()
+      {
+        Formatting = Newtonsoft.Json.Formatting.Indented,
+        DateFormatString = "MM/dd/yy",
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+      }));
     }
 
     private void MigrateStory(Stories story)

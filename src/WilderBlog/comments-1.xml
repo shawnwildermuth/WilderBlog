@@ -10326,17 +10326,6 @@
       <wp:post_date_gmt>2012-06-03 18:35:00</wp:post_date_gmt>
       <wp:comment_status>closed</wp:comment_status>
       <wp:comment>
-        <wp:comment_id>23537</wp:comment_id>
-        <wp:comment_author>Wasim Alatrash</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-06-04 04:00:00</wp:comment_date_gmt>
-        <wp:comment_content>will be done tonight :)</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
         <wp:comment_id>23505</wp:comment_id>
         <wp:comment_author>Richard</wp:comment_author>
         <wp:comment_author_email></wp:comment_author_email>
@@ -10344,6 +10333,17 @@
         <wp:comment_author_IP />
         <wp:comment_date_gmt>2012-06-20 04:00:00</wp:comment_date_gmt>
         <wp:comment_content>Logged on especially to tell you how much I appreciate the course. I made several false starts trying to learn Firebug in the past but things never quite matched up to the tutorials. Your stuff is dead on. As luck would have it I just started a project where I have to match up a lot of styling between two sites. I was able to make a good start with just the overview - then I jumped ahead to the CSS section so now I have it knocked. Thanks again.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23537</wp:comment_id>
+        <wp:comment_author>Wasim Alatrash</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-06-04 04:00:00</wp:comment_date_gmt>
+        <wp:comment_content>will be done tonight :)</wp:comment_content>
         <wp:comment_approved>1</wp:comment_approved>
         <wp:comment_parent>0</wp:comment_parent>
       </wp:comment>
@@ -10448,6 +10448,17 @@
       <dsq:thread_identifier>/2012/6/22/Windows_Phone_8_-_What_do_I_think</dsq:thread_identifier>
       <wp:post_date_gmt>2012-06-22 06:14:00</wp:post_date_gmt>
       <wp:comment_status>closed</wp:comment_status>
+      <wp:comment>
+        <wp:comment_id>23442</wp:comment_id>
+        <wp:comment_author>Anjan Saha</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-06-22 04:00:00</wp:comment_date_gmt>
+        <wp:comment_content>Shawn! I agree with you on most of your points. And, if people feel the Start screen is a new refreshing from the previous ones, i still dont get it. The start screen looks more like a colorful wallpaper, and with tiles of different sizes it&amp;#39;s more likely that i may miss important messages, calls etc. They are deviating from the &amp;quot;Keep it uncluttered and Simple&amp;quot; design.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
       <wp:comment>
         <wp:comment_id>23554</wp:comment_id>
         <wp:comment_author>Brownish Monster</wp:comment_author>
@@ -10690,17 +10701,6 @@
         <wp:comment_approved>1</wp:comment_approved>
         <wp:comment_parent>0</wp:comment_parent>
       </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23442</wp:comment_id>
-        <wp:comment_author>Anjan Saha</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-06-22 04:00:00</wp:comment_date_gmt>
-        <wp:comment_content>Shawn! I agree with you on most of your points. And, if people feel the Start screen is a new refreshing from the previous ones, i still dont get it. The start screen looks more like a colorful wallpaper, and with tiles of different sizes it&amp;#39;s more likely that i may miss important messages, calls etc. They are deviating from the &amp;quot;Keep it uncluttered and Simple&amp;quot; design.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
     </item>
     <item>
       <title>New Era for Microsoft?</title>
@@ -10846,17 +10846,6 @@
       <wp:post_date_gmt>2012-09-27 08:58:00</wp:post_date_gmt>
       <wp:comment_status>closed</wp:comment_status>
       <wp:comment>
-        <wp:comment_id>23567</wp:comment_id>
-        <wp:comment_author>Chris Marisic</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-09-28 04:00:00</wp:comment_date_gmt>
-        <wp:comment_content>So does this mean you can basically boil down that if your entire usage of a property is &amp;lt;input data-bind=value:Foothat there is really no need for Foo to ever be an observable because it&amp;#39;s changes don&amp;#39;t need to notify other fields?</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
         <wp:comment_id>23471</wp:comment_id>
         <wp:comment_author>Jason</wp:comment_author>
         <wp:comment_author_email></wp:comment_author_email>
@@ -10955,6 +10944,17 @@
         <wp:comment_approved>1</wp:comment_approved>
         <wp:comment_parent>0</wp:comment_parent>
       </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23567</wp:comment_id>
+        <wp:comment_author>Chris Marisic</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-09-28 04:00:00</wp:comment_date_gmt>
+        <wp:comment_content>So does this mean you can basically boil down that if your entire usage of a property is &amp;lt;input data-bind=value:Foothat there is really no need for Foo to ever be an observable because it&amp;#39;s changes don&amp;#39;t need to notify other fields?</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
     </item>
     <item>
       <title>ASP.NET MVP</title>
@@ -10964,17 +10964,6 @@
       <wp:post_date_gmt>2012-10-01 15:26:00</wp:post_date_gmt>
       <wp:comment_status>closed</wp:comment_status>
       <wp:comment>
-        <wp:comment_id>23620</wp:comment_id>
-        <wp:comment_author>Glen Gordon</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-10-01 04:00:00</wp:comment_date_gmt>
-        <wp:comment_content>Congratulations, Shawn! Your contributions are really valuable. Oh and you might want to update that little bio at the top right corner of the page. :)</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
         <wp:comment_id>23125</wp:comment_id>
         <wp:comment_author>Marcelo Bernart</wp:comment_author>
         <wp:comment_author_email></wp:comment_author_email>
@@ -10982,6 +10971,17 @@
         <wp:comment_author_IP />
         <wp:comment_date_gmt>2012-10-01 04:00:00</wp:comment_date_gmt>
         <wp:comment_content>Congrats Shawn! I started to follow your work afer reading your contribution on the Self Paced Training Kit 70-536 and really liked what you did there. Congrats and keep it up the good work! Cheers, Marcelo.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23620</wp:comment_id>
+        <wp:comment_author>Glen Gordon</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-10-01 04:00:00</wp:comment_date_gmt>
+        <wp:comment_content>Congratulations, Shawn! Your contributions are really valuable. Oh and you might want to update that little bio at the top right corner of the page. :)</wp:comment_content>
         <wp:comment_approved>1</wp:comment_approved>
         <wp:comment_parent>0</wp:comment_parent>
       </wp:comment>
@@ -11407,127 +11407,6 @@
       <wp:post_date_gmt>2012-11-14 05:35:00</wp:post_date_gmt>
       <wp:comment_status>closed</wp:comment_status>
       <wp:comment>
-        <wp:comment_id>23568</wp:comment_id>
-        <wp:comment_author>Dan</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>You mention &amp;#39;better than WPF&amp;#39;  My problem with win 8 apps for LOB, is that you don&amp;#39;t have multiple windows visible you can switch back and forth from/move to the other screen.  The other thing my LOB programs need to do is print (with no dialog boxes), save and import documents quickly.  Plus I use telerik WPF client side reports to take a load off the server.  HTML 5 wouldn&amp;#39;t work very well for my accounting programs.  You don&amp;#39;t see WPF going anywhere do you?</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23630</wp:comment_id>
-        <wp:comment_author>Steven van Dijk</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>&amp;quot;In Windows 8 wehave a great XAML stack (better than WPFand Silverlight IMO)&amp;quot;Care to elaborate on that? At TechEd they told me at the Xaml open questions panel that Xaml on Win8 was somewhat equal in functionality to Silverlight 3. Your statement seems to contradict that, so what is true?</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23631</wp:comment_id>
-        <wp:comment_author>roetchield</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>&amp;quot;In Windows 8 we have a great XAML stack (better than WPF and Silverlight IMO)&amp;quot;And your opininion is based on what? No type converters, no data validation, no basic controls. Just some fancy transition effects.And if we look beyond XAML, there are more important things missing in WinRT like a fully functional MEF or RIA services.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23643</wp:comment_id>
-        <wp:comment_author>Stuart Lodge</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>Thanks for the article. Interesting reading.However, the line about:&amp;gt; crystal clear to anyone paying attentiondoesn&amp;#39;t tally with my recollection of the last few years.For my part, I was told by several MS Developer Evangelists in the UK that I could deploy Silverlight solutions to my customers with confidence. As evidence, they said that I should look at the amount of MS User Interfaces as a sign of confidence that MS was positioning Silverlight for the future - e.g. things like the Windows Phone store, the Azure management portal, SQL Azure management, the WP7 platform itself, etc.IMO, to suggest that the MS strategy was &amp;#39;crystal clear to anyone paying attention&amp;#39; is very incorrect.And while we&amp;#39;re on the topic... right now is the strategy crystal clear too? The push towards Javascript and C++ was pretty strong at BUILD, but where that left C# was really unclear (IMHO).Thanks again for the post - and for reading the comment too :)</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23640</wp:comment_id>
-        <wp:comment_author>Rick Hodder</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>Hi shawn, Thanks for this posting! I have to admit I&amp;#39;m just now getting into Windows 8. You mention above that &amp;quot;In Windows 8 we have a great XAML stack (better than WPF and Silverlight IMO) and that&amp;#39;s where we should be paying attention&amp;quot; - what technology are you referring too (what replaces silverlight and wpf?)</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23625</wp:comment_id>
-        <wp:comment_author>Anil Mujagic</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>They just need to tell us finally what is the strategy for enterprise/LOB development. Currently that is far from being clear.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23626</wp:comment_id>
-        <wp:comment_author>Noel</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>This is the internet so of course people will complain about everything, but for me what was cool about Silverlight was the cross platform Client capability (C# on the client). At one point it ran on top of Live Mesh, which they lead us to believe would eventually run on anything, phones, DVRs,... It could sync everything for us including Silverlight applications. Wicked cool ideas (Ray Ozzies I would guess).  But no app store to monetize the apps so that had to go. In any case RT is cool but its not cross platform, and by that I mean cross Win 8 and Win 7 Vista and XP. So no on ramp, from the past. And true cross platform has been left to the Web (HTML5)Which as a Line of Business developer leaves me where I have always been, building and using pretty crappy Web apps, I mean sure the business could build whizz bang, HTML 5, SPA apps, but they are not going to, it cost to much!</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23634</wp:comment_id>
-        <wp:comment_author>Andrew</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>I&amp;#39;m a WPF\Silverlight developer since 2008 but I have no problem rolling up my sleeves and learn something else. I am already doing that.But to me it looks like I can&amp;#39;t find the same quality tools. This is the problem. Some might say it&amp;#39;s comparable, but it&amp;#39;s really not.I agree that the app store apps use a very similar dev model as Silverlight.But in my opinion it&amp;#39;s a bit like comparing apples to oranges, only thing in commons is being fruits.You said that Silverlight&amp;#39;s death started with Steve Jobs not allowing Flash on iPhone.But Silverlight was already a cross desktop platform tool at that point. Flash never worked on iPhone, it&amp;#39;s not like Flash used to work and then support was removed by Apple. It never worked and Apple never said at any point they would consider it.Silverlight is a great cross platform desktop dev tool.I might be missing something, I would like to hear some entitled opinions.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23635</wp:comment_id>
-        <wp:comment_author>Dirk Richter</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>WinRT and XAML/C# targets only the customer market.XAML/C# feels Silverlight 2.In our company we are developing a Silverlight 4 desktop app for 1000 user (PRISM, WCF, EF, SQL Server): Fast, easy to use and easy to deploy. Now we have the requirement, to move some of the PRISM modules to tablets. So we aren’t thinking to move to WinRT/XAML/C# but thinking to create Metro styled controls for Silverlight, switching only the view and test the new Win8 tablets/surfaces with the full Win 8 OS.There is no need for WinRT in companies.HTML5/JS is for cross platform developers (iOS, Android, WP). And XAML/C# isn&amp;#39;t yet usable for multi target development (WinXP, Win7, Win8, Win desktop, WP, surface).So the corporate Windows developer have to stay with Silverlight/WPF until the end of the livecycle of Win 7.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23636</wp:comment_id>
-        <wp:comment_author>Fallon Massey</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>I&amp;#39;ve move on completely and embraced WinRT using both C++/XAML and C#/XAML.Sure your post was short, but so accepting of the fate of Silverlight. Wouldn&amp;#39;t it have been interesting to spend half a second looking for ways Silverlight could have succeeded, rather than all of the ways it could fail.What if Microsoft had made a low end tablet based on WP7?What if they tried half the things Xamarin does.Seriously, I can&amp;#39;t see it being hard to port C++ from Intel to ARM, I just don&amp;#39;t see the pain points, and it&amp;#39;s probably 10 thousandths of the effort to port an OS!Having said that, I do think the Win8 platform is higher performance, and love the DirectX integration.I guess my main complaint about your post is the way you rolled over so easily, but in the final analysis, you have the right to your own opinion, and my thoughts are moot at this point.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23650</wp:comment_id>
-        <wp:comment_author>Belikov Sergey</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
-        <wp:comment_content>I agree with Noel. Windows 8 XAML stack is cool, but who needs enterprise solution working only in Windows 8? Enterprise clients still use Windows XP and (some of them) Mac OS. HTML5 still crap for serious applications.Noone like browser plugins, but I still can&amp;#39;t understand why latest Silverlight engine is not embedded in IE10 (like flash)?And, IMHO, Silverlight OOB is still the only useful MS technology for small applications. Modern UI? Works only in windows 8. WPF? Requires .net 4 to be installed - pain for most users.Whats the problem to enable Silverlight applications to be published in Windows Store? This way you could create applications that runs native in Windows 8 (even on ARM), can run on earlier versions of Windows and even on Mac. If ther reason is to make users buy new Windows, I think good Metro-style applications that could run in older versions of Windows can make users get used with Metro and probably even convice some Mac users give Windows 8 a try.</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
         <wp:comment_id>23494</wp:comment_id>
         <wp:comment_author>john</wp:comment_author>
         <wp:comment_author_email></wp:comment_author_email>
@@ -11843,6 +11722,127 @@
         <wp:comment_author_IP />
         <wp:comment_date_gmt>2013-02-22 05:00:00</wp:comment_date_gmt>
         <wp:comment_content>The confusion is still great among windows developers.Also, the netflix comment was right on, silverlight is cancelled but just now it is being rolled out everywhere for video services that needs protection, what is going to replace that ?</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23568</wp:comment_id>
+        <wp:comment_author>Dan</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>You mention &amp;#39;better than WPF&amp;#39;  My problem with win 8 apps for LOB, is that you don&amp;#39;t have multiple windows visible you can switch back and forth from/move to the other screen.  The other thing my LOB programs need to do is print (with no dialog boxes), save and import documents quickly.  Plus I use telerik WPF client side reports to take a load off the server.  HTML 5 wouldn&amp;#39;t work very well for my accounting programs.  You don&amp;#39;t see WPF going anywhere do you?</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23630</wp:comment_id>
+        <wp:comment_author>Steven van Dijk</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>&amp;quot;In Windows 8 wehave a great XAML stack (better than WPFand Silverlight IMO)&amp;quot;Care to elaborate on that? At TechEd they told me at the Xaml open questions panel that Xaml on Win8 was somewhat equal in functionality to Silverlight 3. Your statement seems to contradict that, so what is true?</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23631</wp:comment_id>
+        <wp:comment_author>roetchield</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>&amp;quot;In Windows 8 we have a great XAML stack (better than WPF and Silverlight IMO)&amp;quot;And your opininion is based on what? No type converters, no data validation, no basic controls. Just some fancy transition effects.And if we look beyond XAML, there are more important things missing in WinRT like a fully functional MEF or RIA services.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23643</wp:comment_id>
+        <wp:comment_author>Stuart Lodge</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>Thanks for the article. Interesting reading.However, the line about:&amp;gt; crystal clear to anyone paying attentiondoesn&amp;#39;t tally with my recollection of the last few years.For my part, I was told by several MS Developer Evangelists in the UK that I could deploy Silverlight solutions to my customers with confidence. As evidence, they said that I should look at the amount of MS User Interfaces as a sign of confidence that MS was positioning Silverlight for the future - e.g. things like the Windows Phone store, the Azure management portal, SQL Azure management, the WP7 platform itself, etc.IMO, to suggest that the MS strategy was &amp;#39;crystal clear to anyone paying attention&amp;#39; is very incorrect.And while we&amp;#39;re on the topic... right now is the strategy crystal clear too? The push towards Javascript and C++ was pretty strong at BUILD, but where that left C# was really unclear (IMHO).Thanks again for the post - and for reading the comment too :)</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23640</wp:comment_id>
+        <wp:comment_author>Rick Hodder</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>Hi shawn, Thanks for this posting! I have to admit I&amp;#39;m just now getting into Windows 8. You mention above that &amp;quot;In Windows 8 we have a great XAML stack (better than WPF and Silverlight IMO) and that&amp;#39;s where we should be paying attention&amp;quot; - what technology are you referring too (what replaces silverlight and wpf?)</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23625</wp:comment_id>
+        <wp:comment_author>Anil Mujagic</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>They just need to tell us finally what is the strategy for enterprise/LOB development. Currently that is far from being clear.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23626</wp:comment_id>
+        <wp:comment_author>Noel</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>This is the internet so of course people will complain about everything, but for me what was cool about Silverlight was the cross platform Client capability (C# on the client). At one point it ran on top of Live Mesh, which they lead us to believe would eventually run on anything, phones, DVRs,... It could sync everything for us including Silverlight applications. Wicked cool ideas (Ray Ozzies I would guess).  But no app store to monetize the apps so that had to go. In any case RT is cool but its not cross platform, and by that I mean cross Win 8 and Win 7 Vista and XP. So no on ramp, from the past. And true cross platform has been left to the Web (HTML5)Which as a Line of Business developer leaves me where I have always been, building and using pretty crappy Web apps, I mean sure the business could build whizz bang, HTML 5, SPA apps, but they are not going to, it cost to much!</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23634</wp:comment_id>
+        <wp:comment_author>Andrew</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>I&amp;#39;m a WPF\Silverlight developer since 2008 but I have no problem rolling up my sleeves and learn something else. I am already doing that.But to me it looks like I can&amp;#39;t find the same quality tools. This is the problem. Some might say it&amp;#39;s comparable, but it&amp;#39;s really not.I agree that the app store apps use a very similar dev model as Silverlight.But in my opinion it&amp;#39;s a bit like comparing apples to oranges, only thing in commons is being fruits.You said that Silverlight&amp;#39;s death started with Steve Jobs not allowing Flash on iPhone.But Silverlight was already a cross desktop platform tool at that point. Flash never worked on iPhone, it&amp;#39;s not like Flash used to work and then support was removed by Apple. It never worked and Apple never said at any point they would consider it.Silverlight is a great cross platform desktop dev tool.I might be missing something, I would like to hear some entitled opinions.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23635</wp:comment_id>
+        <wp:comment_author>Dirk Richter</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>WinRT and XAML/C# targets only the customer market.XAML/C# feels Silverlight 2.In our company we are developing a Silverlight 4 desktop app for 1000 user (PRISM, WCF, EF, SQL Server): Fast, easy to use and easy to deploy. Now we have the requirement, to move some of the PRISM modules to tablets. So we aren’t thinking to move to WinRT/XAML/C# but thinking to create Metro styled controls for Silverlight, switching only the view and test the new Win8 tablets/surfaces with the full Win 8 OS.There is no need for WinRT in companies.HTML5/JS is for cross platform developers (iOS, Android, WP). And XAML/C# isn&amp;#39;t yet usable for multi target development (WinXP, Win7, Win8, Win desktop, WP, surface).So the corporate Windows developer have to stay with Silverlight/WPF until the end of the livecycle of Win 7.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23636</wp:comment_id>
+        <wp:comment_author>Fallon Massey</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>I&amp;#39;ve move on completely and embraced WinRT using both C++/XAML and C#/XAML.Sure your post was short, but so accepting of the fate of Silverlight. Wouldn&amp;#39;t it have been interesting to spend half a second looking for ways Silverlight could have succeeded, rather than all of the ways it could fail.What if Microsoft had made a low end tablet based on WP7?What if they tried half the things Xamarin does.Seriously, I can&amp;#39;t see it being hard to port C++ from Intel to ARM, I just don&amp;#39;t see the pain points, and it&amp;#39;s probably 10 thousandths of the effort to port an OS!Having said that, I do think the Win8 platform is higher performance, and love the DirectX integration.I guess my main complaint about your post is the way you rolled over so easily, but in the final analysis, you have the right to your own opinion, and my thoughts are moot at this point.</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
+        <wp:comment_id>23650</wp:comment_id>
+        <wp:comment_author>Belikov Sergey</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2012-11-14 05:00:00</wp:comment_date_gmt>
+        <wp:comment_content>I agree with Noel. Windows 8 XAML stack is cool, but who needs enterprise solution working only in Windows 8? Enterprise clients still use Windows XP and (some of them) Mac OS. HTML5 still crap for serious applications.Noone like browser plugins, but I still can&amp;#39;t understand why latest Silverlight engine is not embedded in IE10 (like flash)?And, IMHO, Silverlight OOB is still the only useful MS technology for small applications. Modern UI? Works only in windows 8. WPF? Requires .net 4 to be installed - pain for most users.Whats the problem to enable Silverlight applications to be published in Windows Store? This way you could create applications that runs native in Windows 8 (even on ARM), can run on earlier versions of Windows and even on Mac. If ther reason is to make users buy new Windows, I think good Metro-style applications that could run in older versions of Windows can make users get used with Metro and probably even convice some Mac users give Windows 8 a try.</wp:comment_content>
         <wp:comment_approved>1</wp:comment_approved>
         <wp:comment_parent>0</wp:comment_parent>
       </wp:comment>
@@ -13607,6 +13607,17 @@
       <wp:post_date_gmt>2013-10-29 09:00:00</wp:post_date_gmt>
       <wp:comment_status>closed</wp:comment_status>
       <wp:comment>
+        <wp:comment_id>23474</wp:comment_id>
+        <wp:comment_author>Stuart</wp:comment_author>
+        <wp:comment_author_email></wp:comment_author_email>
+        <wp:comment_author_url />
+        <wp:comment_author_IP />
+        <wp:comment_date_gmt>2013-10-29 04:00:00</wp:comment_date_gmt>
+        <wp:comment_content>I just downloaded for reading with Kindle on my phone.  Looking forward to digging in. Thanks!</wp:comment_content>
+        <wp:comment_approved>1</wp:comment_approved>
+        <wp:comment_parent>0</wp:comment_parent>
+      </wp:comment>
+      <wp:comment>
         <wp:comment_id>23566</wp:comment_id>
         <wp:comment_author>Johan Rydmark</wp:comment_author>
         <wp:comment_author_email></wp:comment_author_email>
@@ -13669,17 +13680,6 @@
         <wp:comment_author_IP />
         <wp:comment_date_gmt>2014-06-24 04:00:00</wp:comment_date_gmt>
         <wp:comment_content>Really want to read this.  Is there anywhere to buy a PDF?  (Not really interested in the other formats).</wp:comment_content>
-        <wp:comment_approved>1</wp:comment_approved>
-        <wp:comment_parent>0</wp:comment_parent>
-      </wp:comment>
-      <wp:comment>
-        <wp:comment_id>23474</wp:comment_id>
-        <wp:comment_author>Stuart</wp:comment_author>
-        <wp:comment_author_email></wp:comment_author_email>
-        <wp:comment_author_url />
-        <wp:comment_author_IP />
-        <wp:comment_date_gmt>2013-10-29 04:00:00</wp:comment_date_gmt>
-        <wp:comment_content>I just downloaded for reading with Kindle on my phone.  Looking forward to digging in. Thanks!</wp:comment_content>
         <wp:comment_approved>1</wp:comment_approved>
         <wp:comment_parent>0</wp:comment_parent>
       </wp:comment>
