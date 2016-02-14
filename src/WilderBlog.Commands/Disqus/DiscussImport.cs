@@ -15,8 +15,6 @@ namespace WilderBlog.Commands.Disqus
     {
       var posts = stories.Where(c => c.IsPublished).OrderBy(c => c.DatePosted).ToArray();
 
-      Console.WriteLine();
-
       var i = 1;
       while (true)
       { 
@@ -32,6 +30,8 @@ namespace WilderBlog.Commands.Disqus
         }
         posts = posts.Skip(complete).ToArray();
       }
+
+      Console.WriteLine();
     }
 
     int DumpComments(string file, IEnumerable<Stories> posts)

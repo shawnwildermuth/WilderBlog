@@ -71,8 +71,12 @@ namespace WilderBlog.Commands
         counter++;
       }
 
+      Console.WriteLine();
+
       var export = new DiscusImport();
       export.CreateXml(stories);
+
+      Console.WriteLine();
 
       MigratePodcast();
       MigratePublications();
@@ -83,6 +87,8 @@ namespace WilderBlog.Commands
 
     private void MigratePodcast()
     {
+      Console.WriteLine($"Migrating Podcast Episodes");
+
       File.WriteAllText("episodeList.json", JsonConvert.SerializeObject(new EpisodeList(), new JsonSerializerSettings()
       {
         Formatting = Newtonsoft.Json.Formatting.Indented,
@@ -93,10 +99,22 @@ namespace WilderBlog.Commands
 
     private void MigratePublications()
     {
+      Console.WriteLine($"Migrating Publications");
+
+      var publications = _ctx.Publications.ToList();
+      File.WriteAllText("publications.json", JsonConvert.SerializeObject(publications, new JsonSerializerSettings()
+      {
+        Formatting = Newtonsoft.Json.Formatting.Indented,
+        DateFormatString = "MM/dd/yy",
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+      }));
+
     }
 
     private void MigrateCalendar()
     {
+      Console.WriteLine($"Migrating Calendar");
+
       File.WriteAllText("calendar.json", JsonConvert.SerializeObject(EventCalendar.Events, new JsonSerializerSettings()
       {
         Formatting = Newtonsoft.Json.Formatting.Indented,

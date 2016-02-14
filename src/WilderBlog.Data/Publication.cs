@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
-
-namespace WilderBlog.Commands.OldDb
+﻿using System;
+namespace WilderBlog.Data
 {
-  public partial class Publications
+  public class Publications
   {
     public int Id { get; set; }
     public string Comments { get; set; }
