@@ -18,6 +18,7 @@ using WilderBlog.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNet.StaticFiles;
 using Microsoft.AspNet.FileProviders;
+using WilderBlog.MetaWeblog;
 
 namespace WilderBlog
 {
@@ -55,7 +56,12 @@ namespace WilderBlog
         .AddSqlServer()
         .AddDbContext<WilderContext>();
 
+      svcs.AddIdentity<WilderUser, IdentityRole>()
+        .AddEntityFrameworkStores<WilderContext>();
+
       svcs.AddScoped<IWilderRepository, WilderRepository>();
+      svcs.AddScoped<WilderInitializer>();
+      svcs.AddMetaWeblog();
 
       svcs.AddMvc()
         .AddJsonOptions(opts =>
@@ -66,7 +72,8 @@ namespace WilderBlog
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
-                          ILoggerFactory loggerFactory)
+                          ILoggerFactory loggerFactory,
+                          WilderInitializer initializer)
     {
       app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
@@ -85,10 +92,15 @@ namespace WilderBlog
         app.UseExceptionHandler("/Error");
       }
 
+      app.UseMetaWeblog("/livewriter");
       app.UseIISPlatformHandler();
       app.UseStaticFiles();
 
+      app.UseIdentity();
+
       app.UseMvc();
+
+      initializer.SeedAsync().Wait();
 
     }
 

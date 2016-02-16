@@ -134,7 +134,7 @@ namespace WilderBlog.Commands
         DatePublished = story.DatePosted,
         IsPublished = story.IsPublished,
         UniqueId = story.Permalink,
-        Slug = story.GetSlug()
+        Slug = story.GetStoryUrl()
       };
 
       newStory.Categories = string.Join(",", _ctx.StoryCategories.Include(c => c.Category).Where(s => s.Story_Id == story.Id).Select(s => s.Category.Name).ToArray());

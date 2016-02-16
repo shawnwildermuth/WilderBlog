@@ -31,5 +31,34 @@ namespace WilderBlog.Data
       return _ctx.Stories.OrderByDescending(s => s.DatePublished).Skip(count * page).Take(count).ToList();
     }
 
+    public BlogStory GetStory(int id)
+    {
+      return _ctx.Stories.Where(b => b.Id == id).FirstOrDefault();
+    }
+
+    public bool DeleteStory(string postid)
+    {
+      var id = int.Parse(postid);
+      var story = _ctx.Stories.Where(w => w.Id == id).FirstOrDefault();
+      if (story != null)
+      {
+        _ctx.Stories.Remove(story);
+      }
+
+      return false;
+    }
+
+    public IEnumerable<string> GetCategories()
+    {
+      var cats = _ctx.Stories
+                .Select(c => c.Categories.Split(','))
+                .ToList();
+
+      var result = new List<string>();
+      foreach (var s in cats) result.AddRange(s);
+
+      return result.Where(s => !string.IsNullOrWhiteSpace(s)).OrderBy(s => s).Distinct();
+
+    }
   }
 }

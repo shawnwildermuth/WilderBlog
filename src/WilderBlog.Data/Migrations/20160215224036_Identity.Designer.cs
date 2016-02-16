@@ -8,9 +8,10 @@ using WilderBlog.Data;
 namespace WilderBlog.Data.Migrations
 {
     [DbContext(typeof(WilderContext))]
-    partial class WilderContextModelSnapshot : ModelSnapshot
+    [Migration("20160215224036_Identity")]
+    partial class Identity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16341")

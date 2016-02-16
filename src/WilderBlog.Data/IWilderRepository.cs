@@ -4,8 +4,14 @@ namespace WilderBlog.Data
 {
   public interface IWilderRepository
   {
-    void AddStory(BlogStory story);
+    // Story
     IEnumerable<BlogStory> GetStories(int count = 10, int page = 0);
+    BlogStory GetStory(int id);
+    void AddStory(BlogStory story);
+
     void SaveAll();
+    bool DeleteStory(string postid);
+
+    IEnumerable<string> GetCategories();
   }
 }

@@ -1,0 +1,462 @@
+[
+  {
+    "id": 1,
+    "comments": "",
+    "datePublished": "11/01/02",
+    "isBook": true,
+    "link": "/Book",
+    "publicationName": "Addison-Wesley",
+    "publisher": "Addison-Wesley",
+    "title": "Pragmatic ADO.NET"
+  },
+  {
+    "id": 2,
+    "comments": "with Chris Sells",
+    "datePublished": "11/02/02",
+    "isBook": false,
+    "link": "http://www.intel.com/cd/ids/developer/asmo-na/eng/technologies/peertopeer/19322.htm?page=1",
+    "publicationName": "Intel Rich Client Series",
+    "publisher": "Intel Rich Client Series",
+    "title": "Enabling Mobile Rich Client Database Apps with ADO.NET and Web Services"
+  },
+  {
+    "id": 3,
+    "comments": "with Chris Sells",
+    "datePublished": "08/13/02",
+    "isBook": false,
+    "link": "http://www.intel.com/cd/ids/developer/asmo-na/eng/20137.htm",
+    "publicationName": "Intel Rich Client Series",
+    "publisher": "Intel Rich Client Series",
+    "title": "ADO.NET - Offline and On Tap: The Database Server Bottleneck"
+  },
+  {
+    "id": 4,
+    "comments": "",
+    "datePublished": "08/01/00",
+    "isBook": false,
+    "link": "http://www.windows2000mag.com/Articles/Index.cfm?ArticleID=8908",
+    "publicationName": "Windows .NET Magazine (Formerly Windows 2000)",
+    "publisher": "Windows .NET Magazine (Formerly Windows 2000)",
+    "title": "Scale Your Website"
+  },
+  {
+    "id": 5,
+    "comments": "",
+    "datePublished": "01/01/00",
+    "isBook": false,
+    "link": "http://www.microsoft.com/msj/0100/activedir/activedir.aspx",
+    "publicationName": "MSDN Magazine (Formerly MSJ Magazine)",
+    "publisher": "MSDN Magazine (Formerly MSJ Magazine)",
+    "title": "Active Directory Services in Windows 2000"
+  },
+  {
+    "id": 6,
+    "comments": "",
+    "datePublished": "10/27/03",
+    "isBook": false,
+    "link": "http://www.ondotnet.com/pub/a/dotnet/2003/10/27/pdc2003.htm",
+    "publicationName": "ONDotnet.com",
+    "publisher": "ONDotnet.com",
+    "title": "What Is Being Unveiled at the PDC this Year?"
+  },
+  {
+    "id": 7,
+    "comments": "",
+    "datePublished": "05/05/03",
+    "isBook": false,
+    "link": "http://www.ondotnet.com/pub/a/dotnet/2003/05/05/win2003.html",
+    "publicationName": "ONDotnet.com",
+    "publisher": "ONDotnet.com",
+    "title": "What's New in Windows Server 2003"
+  },
+  {
+    "id": 8,
+    "comments": "",
+    "datePublished": "03/31/03",
+    "isBook": false,
+    "link": "http://www.ondotnet.com/pub/a/dotnet/2003/03/31/typeddatasetannotations.html",
+    "publicationName": "ONDotnet.com",
+    "publisher": "ONDotnet.com",
+    "title": "Improving Typed DataSets"
+  },
+  {
+    "id": 9,
+    "comments": "",
+    "datePublished": "09/28/03",
+    "isBook": false,
+    "link": "http://www.informit.com/articles/article.aspx?p=100596",
+    "publicationName": "InformIT.com",
+    "publisher": "InformIT.com",
+    "title": "Create Your Own .NET Metadata with Attributes"
+  },
+  {
+    "id": 10,
+    "comments": "",
+    "datePublished": "11/13/03",
+    "isBook": false,
+    "link": "http://www.informit.com/articles/article.aspx?p=101752",
+    "publicationName": "InformIT.com",
+    "publisher": "InformIT.com",
+    "title": "Using Windows Media Player in .NET"
+  },
+  {
+    "id": 11,
+    "comments": "Data and Longhorn DevCenters",
+    "datePublished": "03/30/04",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnwinfsta/html/winfsdevpersp.asp",
+    "publicationName": "MSDN",
+    "publisher": "MSDN",
+    "title": "A Developers Perspective of WinFS, Part 1"
+  },
+  {
+    "id": 12,
+    "comments": "",
+    "datePublished": "07/29/04",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1759,1628735,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "Making Sense of ADAM "
+  },
+  {
+    "id": 13,
+    "comments": "",
+    "datePublished": "01/23/04",
+    "isBook": false,
+    "link": "http://www.informit.com/articles/article.aspx?p=169474",
+    "publicationName": "InformIT.com",
+    "publisher": "InformIT.com",
+    "title": "Creating Shell Extensions in .NET"
+  },
+  {
+    "id": 14,
+    "comments": "",
+    "datePublished": "03/23/04",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1759,1552911,00.asp",
+    "publicationName": "Ziff-Davis' DevSource website",
+    "publisher": "Ziff-Davis' DevSource website",
+    "title": "Reviewed: Three ASP.NET DataGrid Components"
+  },
+  {
+    "id": 15,
+    "comments": "",
+    "datePublished": "07/15/04",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnwinfsta/html/winfsdevpersppart2.asp",
+    "publicationName": "MSDN",
+    "publisher": "MSDN",
+    "title": "A Developers Perspective of WinFS, Part 2"
+  },
+  {
+    "id": 16,
+    "comments": "",
+    "datePublished": "01/09/05",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1759,1749646,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "Choosing a Database for Compact Framework Applications"
+  },
+  {
+    "id": 17,
+    "comments": "",
+    "datePublished": "05/02/05",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1759,1791675,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "SQL Server CLR Integration: Part 1"
+  },
+  {
+    "id": 18,
+    "comments": "",
+    "datePublished": "03/02/05",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1759,1772060,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "Streaming with Windows Media Services and ASP.NET "
+  },
+  {
+    "id": 19,
+    "comments": "",
+    "datePublished": "06/03/05",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1759,1821862,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "SQL Server CLR Integration: Part 2"
+  },
+  {
+    "id": 20,
+    "comments": "",
+    "datePublished": "09/27/05",
+    "isBook": false,
+    "link": "http://www.theserverside.net/articles/showarticle.tss?id=CreatingProfileProvider",
+    "publicationName": "The ServerSide .NET",
+    "publisher": "The ServerSide .NET",
+    "title": "Creating a Custom ASP.NET Profile Provider"
+  },
+  {
+    "id": 21,
+    "comments": "",
+    "datePublished": "12/31/10",
+    "isBook": true,
+    "link": "/Book",
+    "publicationName": "Addison-Wesley",
+    "publisher": "Addison-Wesley",
+    "title": "Prescriptive Data Architectures"
+  },
+  {
+    "id": 22,
+    "comments": "",
+    "datePublished": "04/03/06",
+    "isBook": false,
+    "link": "http://msdn2.microsoft.com/en-us/library/aa480224.aspx",
+    "publicationName": "MSDN",
+    "publisher": "MSDN",
+    "title": "XAML Data Binding Explained, Part 1"
+  },
+  {
+    "id": 23,
+    "comments": "",
+    "datePublished": "05/01/06",
+    "isBook": false,
+    "link": "http://msdn2.microsoft.com/en-us/library/aa480226.aspx",
+    "publicationName": "MSDN",
+    "publisher": "MSDN",
+    "title": "XAML Data Binding Explained, Part 2"
+  },
+  {
+    "id": 24,
+    "comments": "",
+    "datePublished": "02/11/06",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1895,1925698,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "Getting Started with NHibernate"
+  },
+  {
+    "id": 25,
+    "comments": "with Tony Northrup and Bill Ryan",
+    "datePublished": "06/07/06",
+    "isBook": true,
+    "link": "http://www.amazon.com/exec/obidos/ASIN/0735622779/comguru/",
+    "publicationName": "MS Press",
+    "publisher": "MS Press",
+    "title": "MCTS Self-Paced Training Kit (Exam 70-536): Microsoft .NET Framework 2.0 Application Development Foundation (Pro - Developer)"
+  },
+  {
+    "id": 26,
+    "comments": "with Chris Williams, Mike Snell, and Brian Lanham",
+    "datePublished": "12/31/10",
+    "isBook": true,
+    "link": "http://www.amazon.com/exec/obidos/ASIN/0735623406/comguru/",
+    "publicationName": "MS Press",
+    "publisher": "MS Press",
+    "title": "MCPD Self-Paced Training (70-547)"
+  },
+  {
+    "id": 27,
+    "comments": "with Chris Williams, Bruce Johnson and Mike Snell",
+    "datePublished": "12/31/10",
+    "isBook": true,
+    "link": "http://www.amazon.com/exec/obidos/ASIN/0735623392/comguru/",
+    "publicationName": "MS Press",
+    "publisher": "MS Press",
+    "title": "MCPD Self-Paced Training (70-548)"
+  },
+  {
+    "id": 28,
+    "comments": "with Chris Williams, Bruce Johnson and Mike Snell",
+    "datePublished": "12/31/10",
+    "isBook": true,
+    "link": "http://www.amazon.com/exec/obidos/ASIN/0735623384/comguru/",
+    "publicationName": "MS Press",
+    "publisher": "MS Press",
+    "title": "MCPD Self-Paced Training (70-549)"
+  },
+  {
+    "id": 29,
+    "comments": "",
+    "datePublished": "05/01/06",
+    "isBook": false,
+    "link": "http://www.code-magazine.com/Article.aspx?quickid=0605081",
+    "publicationName": "CoDe Magazine",
+    "publisher": "CoDe Magazine",
+    "title": "Making Sense of the XML DataType in SQL Server 2005"
+  },
+  {
+    "id": 30,
+    "comments": "",
+    "datePublished": "07/29/06",
+    "isBook": false,
+    "link": "http://www.devsource.com/article2/0,1895,2022541,00.asp",
+    "publicationName": "DevSource",
+    "publisher": "DevSource",
+    "title": "Writing Windows Messenger Addins with .NET"
+  },
+  {
+    "id": 31,
+    "comments": "MSDN Magazine",
+    "datePublished": "05/01/07",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/msdnmag/issues/07/05/WPF/default.aspx",
+    "publicationName": "",
+    "publisher": "",
+    "title": "Customizing Controls For Windows Presentation Foundation"
+  },
+  {
+    "id": 32,
+    "comments": "The ServerSide",
+    "datePublished": "05/11/07",
+    "isBook": false,
+    "link": "http://www.theserverside.net/tt/articles/showarticle.tss?id=IntroducingEntityFramework",
+    "publicationName": "",
+    "publisher": "",
+    "title": "Introducing the Entity Data Model"
+  },
+  {
+    "id": 33,
+    "comments": "www.cio.com",
+    "datePublished": "08/07/07",
+    "isBook": false,
+    "link": "http://www.cio.com/article/128700 ",
+    "publicationName": "",
+    "publisher": "",
+    "title": "10 Things You Should Know About Silverlight"
+  },
+  {
+    "id": 34,
+    "comments": "SearchWinDevelopment.com",
+    "datePublished": "02/25/08",
+    "isBook": false,
+    "link": "http://searchwindevelopment.techtarget.com/tip/0,289483,sid8_gci1301764,00.html",
+    "publicationName": "",
+    "publisher": "",
+    "title": "Introduction to Silverlight 1.0: Building your first Silverlight application"
+  },
+  {
+    "id": 35,
+    "comments": "ASP.NET Pro Magazine",
+    "datePublished": "03/29/08",
+    "isBook": false,
+    "link": "http://www.aspnetpro.com/features/2008/04/asp200804sw_f/asp200804sw_f.asp",
+    "publicationName": "",
+    "publisher": "",
+    "title": "Silverlight 1.0 + AJAX: A Nice Pairing"
+  },
+  {
+    "id": 36,
+    "comments": "MSDN Magazine",
+    "datePublished": "10/01/07",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/magazine/cc163328.aspx",
+    "publicationName": "",
+    "publisher": "",
+    "title": "Build More Responsive Apps With The Dispatcher"
+  },
+  {
+    "id": 37,
+    "comments": "",
+    "datePublished": "01/17/03",
+    "isBook": false,
+    "link": "http://www.informit.com/articles/article.aspx?p=30593",
+    "publicationName": "InformIT",
+    "publisher": "InformIT",
+    "title": "Typed DataSets in ADO.NET (Sample Chapter)"
+  },
+  {
+    "id": 38,
+    "comments": "",
+    "datePublished": "01/17/03",
+    "isBook": false,
+    "link": "http://www.informit.com/articles/article.aspx?p=30593",
+    "publicationName": "InformIT",
+    "publisher": "InformIT",
+    "title": "Typed DataSets in ADO.NET (Sample Chapter)"
+  },
+  {
+    "id": 39,
+    "comments": "",
+    "datePublished": "08/15/08",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/magazine/cc794279.aspx",
+    "publicationName": "MSDN Magazine",
+    "publisher": "MSDN Magazine",
+    "title": "Create Data-Centric Web Applications With Silverlight 2"
+  },
+  {
+    "id": 40,
+    "comments": "",
+    "datePublished": "02/04/09",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/library/dd441702.aspx",
+    "publicationName": "Oslo DevCenter",
+    "publisher": "Oslo DevCenter",
+    "title": "Textual Domain Specific Languages for Developers - Part 1"
+  },
+  {
+    "id": 41,
+    "comments": "",
+    "datePublished": "02/25/09",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/magazine/dd458800.aspx",
+    "publicationName": "MSDN Magazine",
+    "publisher": "MSDN Magazine",
+    "title": "Model-View-ViewModel In Silverlight 2 Apps"
+  },
+  {
+    "id": 42,
+    "comments": "",
+    "datePublished": "03/15/09",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/library/dd548006.aspx",
+    "publicationName": "Oslo DevCenter",
+    "publisher": "Oslo DevCenter",
+    "title": "Textual Domain Specific Languages for Developers - Part 2"
+  },
+  {
+    "id": 43,
+    "comments": "",
+    "datePublished": "04/13/09",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/library/dd789404.aspx",
+    "publicationName": "Oslo DevCenter",
+    "publisher": "Oslo DevCenter",
+    "title": "Textual Domain Specific Languages for Developers - Part 3"
+  },
+  {
+    "id": 44,
+    "comments": "",
+    "datePublished": "07/01/09",
+    "isBook": false,
+    "link": "http://msdn.microsoft.com/en-us/magazine/dd943055.aspx",
+    "publicationName": "MSDN",
+    "publisher": "MSDN",
+    "title": "Silverlight: Composite Web Apps With Prism"
+  },
+  {
+    "id": 45,
+    "comments": "",
+    "datePublished": "04/01/10",
+    "isBook": false,
+    "link": "http://www.devproconnections.com/article/silverlight-development/Silverlight-Data-Validation.aspx",
+    "publicationName": "DevConnectionsPro Magazine",
+    "publisher": "DevConnectionsPro Magazine",
+    "title": "Silverlight Data Validation"
+  },
+  {
+    "id": 46,
+    "comments": "",
+    "datePublished": "04/01/10",
+    "isBook": false,
+    "link": "http://www.devproconnections.com/article/silverlight-development/Expression-Blend-s-SketchFlow-Syncs-Up-Silverlight-Designers-and-Developers.aspx",
+    "publicationName": "DevConnectionsPro Magazine",
+    "publisher": "DevConnectionsPro Magazine",
+    "title": "Expression Blend's SketchFlow Syncs Up Silverlight Designers and Developers"
+  }
+]

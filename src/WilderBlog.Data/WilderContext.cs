@@ -6,16 +6,13 @@ using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog.Data
 {
-  public class WilderContext : DbContext
+  public class WilderContext : IdentityDbContext<WilderUser>
   {
     private IConfigurationRoot _config;
 
     public WilderContext(IConfigurationRoot config)
     {
       _config = config;
-
-      Database.EnsureCreated();
-      Database.Migrate();
     }
 
     public DbSet<BlogStory> Stories { get; set; }
@@ -30,6 +27,8 @@ namespace WilderBlog.Data
     protected override void OnModelCreating(ModelBuilder builder)
     {
       OnCreating(builder.Entity<BlogStory>());
+
+      base.OnModelCreating(builder);
     }
 
     private void OnCreating(EntityTypeBuilder<BlogStory> bldr)
