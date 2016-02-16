@@ -225,4 +225,5 @@ bower_components/
 node_modules/
 **/wwwroot/lib/
 **/wwwroot/app/
+**/wwwroot/img/media/
 .settings
