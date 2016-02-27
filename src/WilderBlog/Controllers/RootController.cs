@@ -27,6 +27,18 @@ namespace WilderBlog.Controllers
       return View(_repo.GetStories(10, page));
     }
 
+    [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]
+    public IActionResult Story(int year, int month, int day, string slug)
+    {
+      var fullSlug = $"{year}/{month:d2}/{day:d2}/{slug}";
+
+      var story = _repo.GetStory(fullSlug);
+
+      if (story == null) Redirect("/");
+
+      return View(story);
+    }
+
     [HttpGet("contact")]
     public IActionResult Contact()
     {

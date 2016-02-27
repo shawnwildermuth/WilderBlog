@@ -36,6 +36,12 @@ namespace WilderBlog.Data
       return _ctx.Stories.Where(b => b.Id == id).FirstOrDefault();
     }
 
+    public BlogStory GetStory(string slug)
+    {
+      return _ctx.Stories.Where(s => s.Slug == slug || s.Slug == slug.Replace('_', '-'))
+        .FirstOrDefault();
+    }
+
     public bool DeleteStory(string postid)
     {
       var id = int.Parse(postid);
@@ -60,5 +66,6 @@ namespace WilderBlog.Data
       return result.Where(s => !string.IsNullOrWhiteSpace(s)).OrderBy(s => s).Distinct();
 
     }
+
   }
 }

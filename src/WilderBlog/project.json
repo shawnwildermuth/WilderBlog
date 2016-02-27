@@ -19,7 +19,7 @@
     "SendGrid": "6.3.4",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "HtmlAgilityPack": "1.4.9",
-    "XmlRpcLight": "1.0.0" 
+    "WilderMinds.MetaWeblog": "0.0.2-*"
   },
 
   "commands": {
@@ -29,7 +29,8 @@
   },
 
   "frameworks": {
-    "dnx451": { }
+    "dnx451": {
+    }
   },
 
   "exclude": [

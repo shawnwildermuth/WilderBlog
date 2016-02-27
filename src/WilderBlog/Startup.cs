@@ -19,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNet.StaticFiles;
 using Microsoft.AspNet.FileProviders;
 using WilderBlog.MetaWeblog;
+using WilderMinds.MetaWeblog;
 
 namespace WilderBlog
 {
@@ -61,7 +62,9 @@ namespace WilderBlog
 
       svcs.AddScoped<IWilderRepository, WilderRepository>();
       svcs.AddScoped<WilderInitializer>();
-      svcs.AddMetaWeblog();
+
+      // Supporting Live Writer (MetaWeblogAPI)
+      svcs.AddMetaWeblog<WilderWeblogProvider>();
 
       svcs.AddMvc()
         .AddJsonOptions(opts =>
@@ -92,9 +95,11 @@ namespace WilderBlog
         app.UseExceptionHandler("/Error");
       }
 
-      app.UseMetaWeblog("/livewriter");
       app.UseIISPlatformHandler();
       app.UseStaticFiles();
+
+      // Support MetaWeblog API
+      app.UseMetaWeblog("/livewriter");
 
       app.UseIdentity();
 

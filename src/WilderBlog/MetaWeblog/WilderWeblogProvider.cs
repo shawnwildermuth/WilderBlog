@@ -7,12 +7,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
-using XmlRpcLight;
-using XmlRpcLight.Attributes;
+using WilderMinds.MetaWeblog;
 
 namespace WilderBlog.MetaWeblog
 {
-  public class MetaWeblogProcessor : XmlRpcService
+  public class WilderWeblogProvider : IMetaWeblogProvider
   {
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
@@ -20,7 +19,7 @@ namespace WilderBlog.MetaWeblog
     private string _mediaPath;
     private IApplicationEnvironment _appEnv;
 
-    public MetaWeblogProcessor(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfigurationRoot config, IApplicationEnvironment appEnv)
+    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfigurationRoot config, IApplicationEnvironment appEnv)
     {
       _repo = repo;
       _userMgr = userMgr;
@@ -35,7 +34,6 @@ namespace WilderBlog.MetaWeblog
 
     }
 
-    [XmlRpcMethod("metaWeblog.newPost")]
     public string AddPost(string blogid, string username, string password, Post post, bool publish)
     {
       EnsureUser(username, password).Wait();
@@ -56,13 +54,12 @@ namespace WilderBlog.MetaWeblog
       }
       catch (Exception)
       {
-        throw new XmlRpcFaultException(0, "Failed to save the post.");
+        throw new MetaWeblogException("Failed to save the post.");
       }
       return newStory.Id.ToString();
 
     }
 
-    [XmlRpcMethod("metaWeblog.editPost")]
     public bool EditPost(string postid, string username, string password, Post post, bool publish)
     {
       EnsureUser(username, password).Wait();
@@ -84,11 +81,10 @@ namespace WilderBlog.MetaWeblog
       }
       catch (Exception)
       {
-        throw new XmlRpcFaultException(0, "Failed to save the post.");
+        throw new MetaWeblogException( "Failed to save the post.");
       }
     }
 
-    [XmlRpcMethod("metaWeblog.getPost")]
     public Post GetPost(string postid, string username, string password)
     {
       EnsureUser(username, password).Wait();
@@ -111,11 +107,10 @@ namespace WilderBlog.MetaWeblog
       }
       catch (Exception)
       {
-        throw new XmlRpcFaultException(0, "Failed to get the post.");
+        throw new MetaWeblogException("Failed to get the post.");
       }
     }
 
-    [XmlRpcMethod("metaWeblog.newMediaObject")]
     public MediaObjectInfo NewMediaObject(string blogid, string username, string password, MediaObject mediaObject)
     {
       EnsureUser(username, password).Wait();
@@ -149,7 +144,7 @@ namespace WilderBlog.MetaWeblog
       return objectInfo;
     }
 
-    [XmlRpcMethod("metaWeblog.getCategories")]
+
     public CategoryInfo[] GetCategories(string blogid, string username, string password)
     {
       EnsureUser(username, password).Wait();
@@ -166,7 +161,6 @@ namespace WilderBlog.MetaWeblog
                   
     }
 
-    [XmlRpcMethod("metaWeblog.getRecentPosts")]
     public Post[] GetRecentPosts(string blogid, string username, string password, int numberOfPosts)
     {
       EnsureUser(username, password).Wait();
@@ -183,7 +177,6 @@ namespace WilderBlog.MetaWeblog
       }).ToArray();
     }
 
-    [XmlRpcMethod("blogger.deletePost")]
     public bool DeletePost(string key, string postid, string username, string password, bool publish)
     {
       EnsureUser(username, password).Wait();
@@ -200,7 +193,6 @@ namespace WilderBlog.MetaWeblog
       }
     }
 
-    [XmlRpcMethod("blogger.getUsersBlogs")]
     public BlogInfo[] GetUsersBlogs(string key, string username, string password)
     {
       EnsureUser(username, password).Wait();
@@ -215,7 +207,6 @@ namespace WilderBlog.MetaWeblog
       return new BlogInfo[] { blog };
     }
 
-    [XmlRpcMethod("blogger.getUserInfo")]
     public UserInfo GetUserInfo(string key, string username, string password)
     {
       EnsureUser(username, password).Wait();
@@ -241,7 +232,7 @@ namespace WilderBlog.MetaWeblog
         }
       }
 
-      throw new XmlRpcFaultException(0, "Authentication failed.");
+      throw new MetaWeblogException("Authentication failed.");
     }
 
     void EnsureDirectory(DirectoryInfo dir)

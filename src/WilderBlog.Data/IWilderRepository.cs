@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WilderBlog.Data
 {
@@ -7,6 +8,7 @@ namespace WilderBlog.Data
     // Story
     IEnumerable<BlogStory> GetStories(int count = 10, int page = 0);
     BlogStory GetStory(int id);
+    BlogStory GetStory(string slug);
     void AddStory(BlogStory story);
 
     void SaveAll();
