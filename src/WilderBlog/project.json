@@ -16,10 +16,9 @@
     "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
     "WilderBlog.Commands": "1.0.0-*",
     "WilderBlog.Data": "1.0.0-*",
-    "SendGrid": "6.3.4",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "HtmlAgilityPack": "1.4.9",
-    "WilderMinds.MetaWeblog": "0.0.2-*"
+    "WilderMinds.MetaWeblog": "0.1.1-beta"
   },
 
   "commands": {
@@ -29,7 +28,7 @@
   },
 
   "frameworks": {
-    "dnx451": {
+    "dnxcore50": {
     }
   },
 

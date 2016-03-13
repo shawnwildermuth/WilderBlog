@@ -65,7 +65,6 @@ namespace WilderBlog.Commands
       var counter = 1;
       foreach (var story in stories)
       {
-        Console.SetCursorPosition(0, Console.CursorTop);
         Console.Write($"Migrating {counter} of {stories.Count()}");
         MigrateStory(story);
         counter++;

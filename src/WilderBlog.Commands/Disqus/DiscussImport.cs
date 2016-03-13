@@ -19,7 +19,6 @@ namespace WilderBlog.Commands.Disqus
       while (true)
       { 
         var file = string.Format(@"comments-{0}.xml", i);
-        Console.SetCursorPosition(0, Console.CursorTop);
         Console.Write($"Migrating Comments, Creating Export File # {i}");
         i++;
 
