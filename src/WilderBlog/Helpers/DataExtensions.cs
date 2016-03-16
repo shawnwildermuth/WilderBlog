@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using HtmlAgilityPack;
+using System.Text.RegularExpressions;
 using WilderBlog.Data;
 
 namespace WilderBlog.Helpers
@@ -12,13 +12,15 @@ namespace WilderBlog.Helpers
     public static string GetSummary(this BlogStory me)
     {
       var MAXPARAGRAPHS = 2;
-      var doc = new HtmlDocument();
-      doc.LoadHtml(me.Body);
-      var paragraphs = doc.DocumentNode.SelectNodes("//p").Take(MAXPARAGRAPHS);
+      var regex = new Regex("(<p[^>]*>.*?</p>)", RegexOptions.IgnoreCase);
+      var result = regex.Matches(me.Body);
       StringBuilder bldr = new StringBuilder();
-      foreach (var item in paragraphs)
+      var x = 0;
+      foreach (Match m in result)
       {
-        bldr.Append(item.OuterHtml);
+        x++;
+        bldr.Append(m.Value);
+        if (x == MAXPARAGRAPHS) break;
       }
       return bldr.ToString();
 
