@@ -1,7 +1,32 @@
 ﻿@model BlogStory
+@inject WilderBlog.Services.AdService ads
 @{
   ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
   ViewBag.PageName = Model.Title;
-  ViewBag.PageBlurb = "";
+  var pubDate = Model.DatePublished.ToString("MMM dd, yyyy on H:mmtt zzz UTC");
+  ViewBag.PageAttribution = $"Posted by Shawn Wildermuth on {pubDate}";
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
+}
+@Html.Raw(Model.Body)
+<hr/>
+@ads.InlineAdd()
+<hr />
+<div id="disqus_thread"></div>
+@section Scripts {
+  <script>
+    var disqus_config = function () {
+    this.page.url = @Model.GetStoryUrl(); 
+      this.page.identifier = @Model.Slug; 
+    };
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//wildermuth.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 }

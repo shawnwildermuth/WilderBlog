@@ -227,3 +227,5 @@ node_modules/
 **/wwwroot/app/
 **/wwwroot/img/media/
 .settings
+**/PublishProfiles/
+**/PublishScripts/

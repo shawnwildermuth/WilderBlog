@@ -62,6 +62,7 @@ namespace WilderBlog
 
       svcs.AddScoped<IWilderRepository, WilderRepository>();
       svcs.AddScoped<WilderInitializer>();
+      svcs.AddScoped<AdService>();
 
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();
