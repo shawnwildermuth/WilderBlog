@@ -33,7 +33,6 @@ namespace WilderBlog.Data
       svc.AddEntityFramework()
         .AddSqlServer()
         .AddDbContext<WilderContext>();
-
     }
 
     public void Configure(IApplicationBuilder app)

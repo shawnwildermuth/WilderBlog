@@ -1,0 +1,151 @@
+﻿[
+  {
+    "name": "AngleBrackets/DevIntersection",
+    "eventDate": "2015-10-26",
+    "length": 4,
+    "url": "https://www.anglebrackets.org",
+    "location": "Las Vegas, NV",
+    "comment": "Use code 'Wildermuth' for a discount!"
+  },
+  {
+    "name": "Code Camp NYC",
+    "eventDate": "2015-10-10",
+    "length": 1,
+    "url": "http://www.codecampnyc.org/",
+    "location": "New York, NY"
+  },
+  {
+    "name": "MVP Summit",
+    "eventDate": "2015-11-02",
+    "length": 4,
+    "url": "https://www.mvpnov15.com/",
+    "location": "Seattle, WA"
+  },
+  {
+    "name": "Technorama",
+    "eventDate": "2016-05-03",
+    "length": 2,
+    "url": "http://www.techorama.be/",
+    "location": "Belgium"
+  },
+  {
+    "name": "Atlanta Code Camp",
+    "eventDate": "2015-10-24",
+    "length": 1,
+    "url": "http://atlantacodecamp.com/",
+    "location": "Atlanta, GA"
+  },
+  {
+    "name": "Atlanta Cloud Saturday",
+    "eventDate": "2015-9-26",
+    "length": 1,
+    "url": "http://atlanta.cloudsaturday.com/",
+    "location": "Atlanta, GA"
+  },
+
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-5",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/brussels",
+    "location": "Brussels, Belgium"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-9",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/paris",
+    "location": "Paris, France"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-12",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/barcelona",
+    "location": "Barcelona, Spain"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-19",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/washington",
+    "location": "Washington, DC"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-23",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/philadephia",
+    "location": "Philadephia, PA"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-26",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/new-york-city",
+    "location": "New York City, NY"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-5-31",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/boston",
+    "location": "Boston, MA"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-2",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/burlington",
+    "location": "Burlington, VT"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-6",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/montreal",
+    "location": "Montreal, QC"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-9",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/toronto",
+    "location": "Toronto, ON"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-13",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/detroit",
+    "location": "Detroit, MI"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-15",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/chicago",
+    "location": "Chicago, IL"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-20",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/st-louis",
+    "location": "St. Louis, MO"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-22",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/denver",
+    "location": "Denver, CO"
+  },
+  {
+    "name": "Hello World Road Trip",
+    "eventDate": "2016-6-27",
+    "length": 1,
+    "url": "http://hwroadtrip.com/city/portland",
+    "location": "Portland, OR"
+  }
+]

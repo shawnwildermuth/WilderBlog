@@ -30,7 +30,7 @@ namespace WilderBlog.Controllers
     [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]
     public IActionResult Story(int year, int month, int day, string slug)
     {
-      var fullSlug = $"{year}/{month:d2}/{day:d2}/{slug}";
+      var fullSlug = $"{year}/{month}/{day}/{slug}";
 
       var story = _repo.GetStory(fullSlug);
 

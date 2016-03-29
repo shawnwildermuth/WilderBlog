@@ -1,0 +1,77 @@
+﻿[
+  {
+    "id": "aspdotnet-5-ef7-bootstrap-angular-web-app",
+    "name": "Building a Web App with ASP.NET5, MVC6, EF7, and AngularJS",
+    "hint": "(New)"
+  },
+  {
+    "id": "aspdotnet-bestpractices-models",
+    "name": "Best Practices in ASP.NET: Entities, Validation, and View Models",
+    "hint": ""
+  },
+  {
+    "id": "webstorm-fundamentals",
+    "name": "Webstorm Fundamentals",
+    "hint": ""
+  },
+  {
+    "id": "front-end-web-app-html5-javascript-css",
+    "name": "Front-End Web Development Quick Start",
+    "hint": ""
+  },
+  {
+    "id": "dotnet-code-reviews-real-world-lessons",
+    "name": "Lessons from Real World .NET Code Reviews",
+    "hint": ""
+  },
+  {
+    "id": "nodejs-dotnet-developers",
+    "name": "Node.js for .NET Developers",
+    "hint": ""
+  },
+  {
+    "id": "large-scale-javascript",
+    "name": "Large Scale JavaScript",
+    "hint": ""
+  },
+  {
+    "id": "bootstrap-3",
+    "name": "Bootstrap 3",
+    "hint": ""
+  },
+  {
+    "id": "implementing-restful-aspdotnet-web-api",
+    "name": "Implementing ASP.NET Web API",
+    "hint": ""
+  },
+  {
+    "id": "site-building-bootstrap-angularjs-ef-azure",
+    "name": "Building a Site with Bootstrap, AngularJS, ASP.NET, et al.",
+    "hint": ""
+  },
+  {
+    "id": "web-api-design",
+    "name": "Web API Design",
+    "hint": ""
+  },
+  {
+    "id": "practical-phoneGap",
+    "name": "Practical PhoneGap",
+    "hint": ""
+  },
+  {
+    "id": "js4cs",
+    "name": "JavaScript for C# Developers",
+    "hint": ""
+  },
+  {
+    "id": "web-debug",
+    "name": "Debugging the Web with Firebug and Fiddler",
+    "hint": ""
+  },
+  {
+    "id": "better-css",
+    "name": "Better CSS: LESS and SASS",
+    "hint": ""
+  }
+]

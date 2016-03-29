@@ -1,2 +1,24 @@
-﻿<h3>Sidebar</h3>
-<p>TODO</p>
+﻿@inject WilderBlog.Services.AppearancesProvider appearances
+@inject WilderBlog.Services.CoursesProvider courses
+<h3>My Courses</h3>
+<a href="http://www.pluralsight.com/author/shawn-wildermuth" target="_blank"><img src="~/img/blog/pslogo_3.png" alt="pluralsight" /></a>
+<ul class="course-list">
+  @foreach (var c in courses.Get().Take(10))
+  {
+    <li><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></li>
+  }
+</ul>
+<hr />
+<h3>My Appearances</h3>
+@foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
+{
+  <div class="appearance-block">
+    <h6><a href="@ap.Url" target="_blank">@ap.Name</a></h6>
+    <div>@ap.Location - @ap.FormattedDate</div>
+    @if (!string.IsNullOrWhiteSpace(ap.Comment))
+    {
+      <div class="muted">@ap.Comment</div>
+    }
+  </div>
+  <hr class="tiny-hr" />
+}

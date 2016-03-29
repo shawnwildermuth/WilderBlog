@@ -60,9 +60,19 @@ namespace WilderBlog
       svcs.AddIdentity<WilderUser, IdentityRole>()
         .AddEntityFrameworkStores<WilderContext>();
 
-      svcs.AddScoped<IWilderRepository, WilderRepository>();
+      if (_config["WilderDb:TestData"] == "True")
+      {
+        svcs.AddScoped<IWilderRepository, MemoryRepository>();
+      }
+      else
+      {
+        svcs.AddScoped<IWilderRepository, WilderRepository>();
+      }
+
       svcs.AddScoped<WilderInitializer>();
       svcs.AddScoped<AdService>();
+      svcs.AddScoped<AppearancesProvider>();
+      svcs.AddScoped<CoursesProvider>();
 
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();
@@ -106,8 +116,10 @@ namespace WilderBlog
 
       app.UseMvc();
 
-      initializer.SeedAsync().Wait();
-
+      if (_config["WilderDb:TestData"] != "True")
+      {
+        initializer.SeedAsync().Wait();
+      }
     }
 
     // Entry point for the application.
