@@ -20,6 +20,7 @@ using Microsoft.AspNet.StaticFiles;
 using Microsoft.AspNet.FileProviders;
 using WilderBlog.MetaWeblog;
 using WilderMinds.MetaWeblog;
+using WilderBlog.Services.DataProviders;
 
 namespace WilderBlog
 {
@@ -71,12 +72,17 @@ namespace WilderBlog
 
       svcs.AddScoped<WilderInitializer>();
       svcs.AddScoped<AdService>();
+
+      // Data Providers (non-EF)
       svcs.AddScoped<AppearancesProvider>();
       svcs.AddScoped<CoursesProvider>();
+      svcs.AddScoped<PublicationsProvider>();
+      svcs.AddScoped<PodcastEpisodesProvider>();
 
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();
 
+      // Add MVC to the container
       svcs.AddMvc()
         .AddJsonOptions(opts =>
         {

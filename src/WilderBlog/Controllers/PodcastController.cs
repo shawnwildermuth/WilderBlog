@@ -6,7 +6,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace WilderBlog.Controllers
 {
-  [Route("podcast")]
+  [Route("[controller]")]
   public class PodcastController : Controller
   {
     [HttpGet("")]

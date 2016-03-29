@@ -17,10 +17,14 @@
       <i class="fa fa-tags"></i>
       @foreach (var tag in story.Categories.Split(','))
       {
-        <a href="">@tag</a>
+        <a asp-controller="Root" asp-action="tag" asp-route-id="@tag">@tag</a>
       }
     </p>
     @Html.Raw(story.GetSummary())
   </div>
   <hr />
+}
+@for (int x = 1; x <= ViewBag.TotalPages; ++x) 
+{
+  <a asp-controller="Root" asp-action="index" asp-route-page="@x">@x</a>
 }

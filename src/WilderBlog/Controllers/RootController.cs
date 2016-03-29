@@ -21,10 +21,24 @@ namespace WilderBlog.Controllers
       _repo = repo;
     }
 
-    [HttpGet("")]
-    public IActionResult Index(int page = 0)
+    [HttpGet("{page:int?}")]
+    public IActionResult Index(int page = 1)
     {
-      return View(_repo.GetStories(10, page));
+      var pageSize = 10;
+
+      ViewBag.TotalPages = _repo.GetStoryPageCount(pageSize);
+      return View(_repo.GetStories(pageSize, page));
+    }
+
+    [HttpGet("tag/{id}")]
+    public IActionResult Tag(string id)
+    {
+      // TODO Add Tag Search
+
+      var pageSize = 10;
+
+      ViewBag.TotalPages = _repo.GetStoryPageCount(pageSize);
+      return View(_repo.GetStories(pageSize, 0));
     }
 
     [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]

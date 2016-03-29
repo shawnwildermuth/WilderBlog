@@ -6,21 +6,14 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 
-namespace WilderBlog.Services
+namespace WilderBlog.Services.DataProviders
 {
-  public class CoursesProvider
+  public class CoursesProvider : DataProvider<Course>
   {
-    private string _basePath;
-
+  
     public CoursesProvider(IApplicationEnvironment env)
+      : base(env, "courses.json")
     {
-      _basePath = env.ApplicationBasePath;
-    }
-
-    public IEnumerable<Course> Get()
-    {
-      var json = File.ReadAllText(Path.Combine(_basePath, @"Data\courses.json"));
-      return JsonConvert.DeserializeObject<List<Course>>(json);
     }
   }
 

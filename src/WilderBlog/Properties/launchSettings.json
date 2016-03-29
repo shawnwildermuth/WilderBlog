@@ -13,13 +13,15 @@
       "launchBrowser": true,
       "environmentVariables": {
         "Hosting:Environment": "Development"
-      }
+      },
+      "sdkVersion": "dnx-coreclr-win-x86.1.0.0-rc1-update1"
     },
     "web": {
       "commandName": "web",
       "environmentVariables": {
         "Hosting:Environment": "Development"
-      }
+      },
+      "sdkVersion": "dnx-coreclr-win-x86.1.0.0-rc1-update1"
     }
   }
 }

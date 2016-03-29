@@ -69,6 +69,10 @@
         &#9776;
       </button>
       <div class="nav navbar-nav navbar-toggleable-sm collapse hidden-sm-down pull-lg-right">
+        <form class="form-inline pull-xs-right">
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-success btn-xs" type="submit">Search</button>
+        </form>
         @Html.Partial("_Menu")
       </div>
     </div>
@@ -106,6 +110,7 @@
       </div>
       <div class="col-lg-3 col-md-4">
         @Html.Partial("_Sidebar")
+        @RenderSection("Sidebar", false)
       </div>
     </div>
   </div>

@@ -11,6 +11,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WilderBlog.Commands", "Wild
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C285657-5BD7-4E8D-8E9F-49C24601AB82}"
 	ProjectSection(SolutionItems) = preProject
+		WilderBlog\Dockerfile = WilderBlog\Dockerfile
 		global.json = global.json
 	EndProjectSection
 EndProject

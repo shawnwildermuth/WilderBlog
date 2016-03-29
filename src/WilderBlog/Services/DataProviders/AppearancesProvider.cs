@@ -7,21 +7,18 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 
-namespace WilderBlog.Services
+namespace WilderBlog.Services.DataProviders
 {
-  public class AppearancesProvider
+  public class AppearancesProvider : DataProvider<Appearance>
   {
-    private string _basePath;
-
     public AppearancesProvider(IApplicationEnvironment env)
+      : base(env, "appearances.json")
     {
-      _basePath = env.ApplicationBasePath;
     }
 
-    public IEnumerable<Appearance> Get()
+    public override IEnumerable<Appearance> Get()
     {
-      var json = File.ReadAllText(Path.Combine(_basePath, @"Data\appearances.json"));
-      return JsonConvert.DeserializeObject<List<Appearance>>(json).OrderBy(a => a.EventDate).ToList();
+      return base.Get().OrderBy(a => a.EventDate).ToList();
     }
   }
 

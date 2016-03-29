@@ -27,9 +27,9 @@ namespace WilderBlog.Data
       _ctx.SaveChanges();
     }
 
-    public IEnumerable<BlogStory> GetStories(int count = 10, int page = 0)
+    public IEnumerable<BlogStory> GetStories(int count = 10, int page = 1)
     {
-      return _ctx.Stories.OrderByDescending(s => s.DatePublished).Skip(count * page).Take(count).ToList();
+      return _ctx.Stories.OrderByDescending(s => s.DatePublished).Skip(count * (page - 1)).Take(count).ToList();
     }
 
     public BlogStory GetStory(int id)
@@ -68,5 +68,10 @@ namespace WilderBlog.Data
 
     }
 
+    public int GetStoryPageCount(int pageSize)
+    {
+      var count = _ctx.Stories.Count();
+      return ((int)(count / pageSize)) + ((count % pageSize) > 0 ? 1 : 0);
+    }
   }
 }

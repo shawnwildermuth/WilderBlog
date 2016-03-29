@@ -36,9 +36,9 @@ namespace WilderBlog.Data
       return result.Where(s => !string.IsNullOrWhiteSpace(s)).OrderBy(s => s).Distinct();
     }
 
-    public IEnumerable<BlogStory> GetStories(int count = 10, int page = 0)
+    public IEnumerable<BlogStory> GetStories(int count = 10, int page = 1)
     {
-      return _stories.Skip(page * count).Take(count);
+      return _stories.Skip((page - 1) * count).Take(count);
     }
 
     public BlogStory GetStory(string slug)
@@ -55,6 +55,12 @@ namespace WilderBlog.Data
     {
       // NOOP
     }
+
+    public int GetStoryPageCount(int pageSize)
+    {
+      var count = _stories.Count();
+      return ((int)(count / pageSize)) + ((count % pageSize) > 0 ? 1 : 0);
+    } 
 
     static List<BlogStory> _stories = new List<BlogStory>()
     {
