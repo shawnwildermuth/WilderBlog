@@ -1,0 +1,4 @@
+﻿{
+  "server": "Microsoft.AspNetCore.Server.Kestrel",
+  "server.urls": "http://0.0.0.0:8088"
+}

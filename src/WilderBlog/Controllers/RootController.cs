@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using WilderBlog.Data;
@@ -34,6 +32,8 @@ namespace WilderBlog.Controllers
     public IActionResult Tag(string id)
     {
       // TODO Add Tag Search
+
+
 
       var pageSize = 10;
 
