@@ -1,0 +1,55 @@
+﻿@{
+  // Pager
+  var windowSize = 4;
+  var firstPage = ViewBag.CurrentPage - windowSize < 1 ? 1 : ViewBag.CurrentPage - windowSize;
+  var lastPage = ViewBag.CurrentPage + windowSize > ViewBag.TotalPages ? ViewBag.TotalPages : ViewBag.CurrentPage + windowSize;
+}
+<nav class="pull-right">
+  <ul class="pagination pagination-sm">
+    @if (ViewBag.CurrentPage != 1)
+    {
+      <li class="page-item">
+        <a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="index" aria-label="First">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">First</span>
+        </a>
+      </li>
+    }
+    @if (firstPage - 10 > 1)
+    {
+      <li class="page-item">
+        <a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@(firstPage - 10)" aria-label="Previous Pager">
+          <span aria-hidden="true">&lsaquo;</span>
+          <span class="sr-only">Previous Pager</span>
+        </a>
+      </li>
+    }
+    @for (int x = firstPage; x < ViewBag.CurrentPage; ++x)
+    {
+      <li class="page-item"><a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@x">@x</a></li>
+    }
+    <li class="page-item active"><a class="page-link">@ViewBag.CurrentPage</a></li>
+    @for (int x = ViewBag.CurrentPage + 1; x <= lastPage; ++x)
+    {
+      <li class="page-item"><a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@x">@x</a></li>
+    }
+    @if (lastPage + 10 < ViewBag.TotalPages)
+    {
+      <li class="page-item">
+        <a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@(lastPage + 10)" aria-label="Next Pager">
+          <span aria-hidden="true">&rsaquo;</span>
+          <span class="sr-only">Next Pager</span>
+        </a>
+      </li>
+    }
+    @if (ViewBag.CurrentPage != ViewBag.TotalPages)
+    {
+      <li class="page-item">
+        <a class="page-link" aria-label="Last" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@ViewBag.TotalPages">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Last</span>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

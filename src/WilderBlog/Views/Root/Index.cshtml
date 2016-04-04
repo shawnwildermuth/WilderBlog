@@ -4,7 +4,11 @@
   ViewBag.PageName = "Shawn Wildermuth";
   ViewBag.PageBlurb = "My Rants and Raves about technology, programming, everything else...";
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
+  ViewBag.ControllerName = "Root";
 }
+<div class="col-lg-12">
+  @Html.Partial("_Pager")
+</div>
 @foreach (var story in Model)
 {
   <div class="post-preview">
@@ -13,7 +17,7 @@
       <i class="fa fa-calendar"></i> @story.DatePublished.ToString("MMMM dd, yyyy")
       <i class="fa fa-edit"></i> Shawn Wildermuth
       <i class="fa fa-comments-o"></i> No Comments
-      <br/>
+      <br />
       <i class="fa fa-tags"></i>
       @foreach (var tag in story.Categories.Split(','))
       {
@@ -24,7 +28,7 @@
   </div>
   <hr />
 }
-@for (int x = 1; x <= ViewBag.TotalPages; ++x) 
-{
-  <a asp-controller="Root" asp-action="index" asp-route-page="@x">@x</a>
-}
+
+<div class="col-lg-12">
+  @Html.Partial("_Pager")
+</div>

@@ -19,14 +19,22 @@ namespace WilderBlog.Controllers
       _repo = repo;
     }
 
-    [HttpGet("{page:int?}")]
-    public IActionResult Index(int page = 1)
+    [HttpGet("")]
+    public IActionResult Index()
     {
-      var pageSize = 10;
-
-      ViewBag.TotalPages = _repo.GetStoryPageCount(pageSize);
-      return View(_repo.GetStories(pageSize, page));
+      return Pager(1);
     }
+
+    [HttpGet("blog/{page:int?}")]
+    public IActionResult Pager(int page)
+    {
+      var pageSize = 25;
+
+      ViewBag.CurrentPage = page;
+      ViewBag.TotalPages = _repo.GetStoryPageCount(pageSize);
+      return View("Index", _repo.GetStories(pageSize, page));
+    }
+
 
     [HttpGet("tag/{id}")]
     public IActionResult Tag(string id)
@@ -51,6 +59,12 @@ namespace WilderBlog.Controllers
       if (story == null) Redirect("/");
 
       return View(story);
+    }
+
+    [HttpGet("about")]
+    public IActionResult About()
+    {
+      return View();
     }
 
     [HttpGet("contact")]

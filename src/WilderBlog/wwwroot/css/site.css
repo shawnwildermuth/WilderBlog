@@ -1,6 +1,13 @@
 ﻿a {
   color: #744a00;
 }
+.page-link {
+  color: #744a00;
+}
+.page-item.active .page-link {
+  background-color: #744a00;
+  border-color: #744a00;
+}
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
