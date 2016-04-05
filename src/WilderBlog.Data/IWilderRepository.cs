@@ -6,9 +6,10 @@ namespace WilderBlog.Data
   public interface IWilderRepository
   {
     // Story
-    IEnumerable<BlogStory> GetStories(int count = 10, int page = 1);
+    BlogResult GetStories(int pageSize = 10, int page = 1);
+    BlogResult GetStoriesByTerm(string term, int pageSize, int page);
+
     BlogStory GetStory(int id);
-    int GetStoryPageCount(int pageSize);
     BlogStory GetStory(string slug);
     void AddStory(BlogStory story);
 

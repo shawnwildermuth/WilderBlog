@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WilderBlog.Data
 {
-  public class MemoryRepository : IWilderRepository
+  public class MemoryRepository : BaseRepository, IWilderRepository
   {
     public void AddStory(BlogStory story)
     {
@@ -36,9 +36,40 @@ namespace WilderBlog.Data
       return result.Where(s => !string.IsNullOrWhiteSpace(s)).OrderBy(s => s).Distinct();
     }
 
-    public IEnumerable<BlogStory> GetStories(int count = 10, int page = 1)
+    public BlogResult GetStories(int pageSize = 10, int page = 1)
     {
-      return _stories.Skip((page - 1) * count).Take(count);
+      return new BlogResult()
+      {
+        CurrentPage = page,
+        TotalResults = _stories.Count(),
+        TotalPages = CalculatePages(_stories.Count(), pageSize),
+        Stories = _stories.Skip((page - 1) * pageSize).Take(pageSize),
+      };
+    }
+
+    public BlogResult GetStoriesByTerm(string term, int pageSize, int page)
+    {
+      var lowerTerm = term.ToLowerInvariant();
+      var totalCount = _stories.Where(s =>
+          s.Body.ToLowerInvariant().Contains(lowerTerm) ||
+          s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
+          s.Title.ToLowerInvariant().Contains(lowerTerm)
+          ).Count();
+
+      return new BlogResult()
+      {
+        CurrentPage = page,
+        TotalResults = totalCount,
+        TotalPages = CalculatePages(totalCount, pageSize),
+        Stories = _stories
+        .Where(s =>
+        {
+          return s.Body.ToLowerInvariant().Contains(lowerTerm) ||
+                 s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
+                 s.Title.ToLowerInvariant().Contains(lowerTerm);
+        })
+        .Skip((page - 1) * pageSize).Take(pageSize)
+      };
     }
 
     public BlogStory GetStory(string slug)
@@ -55,12 +86,6 @@ namespace WilderBlog.Data
     {
       // NOOP
     }
-
-    public int GetStoryPageCount(int pageSize)
-    {
-      var count = _stories.Count();
-      return ((int)(count / pageSize)) + ((count % pageSize) > 0 ? 1 : 0);
-    } 
 
     static List<BlogStory> _stories = new List<BlogStory>()
     {

@@ -165,7 +165,7 @@ namespace WilderBlog.MetaWeblog
     {
       EnsureUser(username, password).Wait();
 
-      return _repo.GetStories(numberOfPosts).Select(s => new Post()
+      return _repo.GetStories(numberOfPosts).Stories.Select(s => new Post()
       {
         title = s.Title,
         description = s.Body,

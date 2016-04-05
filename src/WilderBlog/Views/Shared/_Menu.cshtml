@@ -1,6 +1,15 @@
-﻿<a class="nav-item nav-link active" asp-controller="Root" asp-action="Index">Home</a>
-<a class="nav-item nav-link" asp-controller="Podcast" asp-action="Index">Podcast</a>
+﻿@{
+  var ctrl = (string)ViewContext.RouteData.Values["controller"];
+  var action = (string)ViewContext.RouteData.Values["action"];
+  var isCurrent = new Func<string, string, string>((c, a) =>
+  {
+    if ((string.IsNullOrWhiteSpace(a) && c == ctrl) || (c == ctrl && a == action)) return "active";
+    return "";
+  });
+}
+<a class="nav-item nav-link @isCurrent("Root", "Index")" asp-controller="Root" asp-action="Index">Home</a>
+<a class="nav-item nav-link @isCurrent("Podcast", "")" asp-controller="Podcast" asp-action="Index">Podcast</a>
 <a class="nav-item nav-link" href="http://hwroadtrip.com">Road Trip</a>
-<a class="nav-item nav-link" asp-controller="Books" asp-action="Index">Books</a>
-<a class="nav-item nav-link" asp-controller="Courses" asp-action="Index">Courses</a>
-<a class="nav-item nav-link" asp-controller="Root" asp-action="Contact">Contact</a>
+<a class="nav-item nav-link @isCurrent("Root", "About")" asp-controller="Root" asp-action="About">About</a>
+<a class="nav-item nav-link @isCurrent("Root", "Contact")" asp-controller="Root" asp-action="Contact">Contact</a>
+<a class="nav-item nav-link @isCurrent("Search", "")" asp-controller="Search" asp-action="Index">Search</a>

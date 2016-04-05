@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BlogStory>
+﻿@model BlogResult
 @{
   ViewBag.Title = "Shawn Wildermuth's Rants and Raves";
   ViewBag.PageName = "Shawn Wildermuth";
@@ -9,7 +9,7 @@
 <div class="col-lg-12">
   @Html.Partial("_Pager")
 </div>
-@foreach (var story in Model)
+@foreach (var story in Model.Stories)
 {
   <div class="post-preview">
     <h3 class="post-title"><a href="@story.Slug">@story.Title</a></h3>

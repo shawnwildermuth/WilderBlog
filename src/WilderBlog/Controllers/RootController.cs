@@ -30,8 +30,6 @@ namespace WilderBlog.Controllers
     {
       var pageSize = 25;
 
-      ViewBag.CurrentPage = page;
-      ViewBag.TotalPages = _repo.GetStoryPageCount(pageSize);
       return View("Index", _repo.GetStories(pageSize, page));
     }
 
@@ -41,11 +39,8 @@ namespace WilderBlog.Controllers
     {
       // TODO Add Tag Search
 
-
-
       var pageSize = 10;
 
-      ViewBag.TotalPages = _repo.GetStoryPageCount(pageSize);
       return View(_repo.GetStories(pageSize, 0));
     }
 

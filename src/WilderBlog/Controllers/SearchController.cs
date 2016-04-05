@@ -17,12 +17,20 @@ namespace WilderBlog.Controllers
       _repo = repo;
     }
 
-    [HttpGet("{term}/{page:int?}")]
-    public IActionResult Get(string term, int page = 0)
+    [HttpGet("")]
+    public IActionResult Index()
     {
-      // TODO Change to search
-      var results = _repo.GetStories(10, page);
-      return View(results);
+      ViewBag.Term = "";
+      return View(new BlogResult());
+    }
+
+    [HttpGet("{term}/{page:int?}")]
+    public IActionResult Pager(string term, int page = 1)
+    {
+      ViewBag.Term = term;
+
+      var results = _repo.GetStoriesByTerm(term, 10, page);
+      return View("Index", results);
     }
   }
 }

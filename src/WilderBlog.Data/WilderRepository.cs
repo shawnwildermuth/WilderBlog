@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog.Data
 {
-  public class WilderRepository : IWilderRepository
+  public class WilderRepository : BaseRepository, IWilderRepository
   {
     private WilderContext _ctx;
 
@@ -27,9 +27,43 @@ namespace WilderBlog.Data
       _ctx.SaveChanges();
     }
 
-    public IEnumerable<BlogStory> GetStories(int count = 10, int page = 1)
+    public BlogResult GetStories(int pageSize = 25, int page = 1)
     {
-      return _ctx.Stories.OrderByDescending(s => s.DatePublished).Skip(count * (page - 1)).Take(count).ToList();
+      var count = _ctx.Stories.Count();
+
+      return new BlogResult()
+      {
+        CurrentPage = page,
+        TotalResults = count,
+        TotalPages = CalculatePages(count, pageSize),
+        Stories = _ctx.Stories
+          .OrderByDescending(s => s.DatePublished)
+          .Skip(pageSize * (page - 1))
+          .Take(pageSize)
+          .ToList(),
+      };
+    }
+
+    public BlogResult GetStoriesByTerm(string term, int pageSize, int page)
+    {
+      var lowerTerm = term.ToLowerInvariant();
+      var totalCount = _ctx.Stories.Where(s =>
+          s.Body.ToLowerInvariant().Contains(lowerTerm) ||
+          s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
+          s.Title.ToLowerInvariant().Contains(lowerTerm)
+          ).Count();
+
+      return new BlogResult()
+      {
+        CurrentPage = page,
+        TotalResults = totalCount,
+        TotalPages = CalculatePages(totalCount, pageSize),
+        Stories = _ctx.Stories
+        .Where(s => s.Body.ToLowerInvariant().Contains(lowerTerm) ||
+                 s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
+                 s.Title.ToLowerInvariant().Contains(lowerTerm))
+        .Skip((page - 1) * pageSize).Take(pageSize)
+      };
     }
 
     public BlogStory GetStory(int id)
@@ -68,10 +102,5 @@ namespace WilderBlog.Data
 
     }
 
-    public int GetStoryPageCount(int pageSize)
-    {
-      var count = _ctx.Stories.Count();
-      return ((int)(count / pageSize)) + ((count % pageSize) > 0 ? 1 : 0);
-    }
   }
 }
