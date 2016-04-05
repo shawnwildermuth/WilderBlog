@@ -325,7 +325,7 @@ footer .copyright {
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
-.btn {
+/*.btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -343,7 +343,7 @@ form .row:first-child .floating-label-form-group {
   background-color: #0085a1;
   border: 1px solid #0085a1;
   color: white;
-}
+}*/
 .pager {
   margin: 20px 0 0;
 }

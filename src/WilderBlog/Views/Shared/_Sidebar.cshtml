@@ -1,7 +1,25 @@
 ﻿@inject WilderBlog.Services.DataProviders.AppearancesProvider appearances
 @inject WilderBlog.Services.DataProviders.CoursesProvider courses
 
-<hr/>
+<a asp-controller="Root" asp-action="About"><img src="~/img/turning-2016.gif" alt="Shawn" class="img-fluid img-rounded" /></a>
+<div>
+  <div><strong>Shawn Wildermuth</strong></div>
+  <div><small>Author, Teacher, and Coach</small></div>
+
+</div>
+@if (((string)ViewContext.RouteData.Values["controller"]) != "Search")
+{
+  <hr />
+  <form id="searchForm" novalidate>
+    <div class="input-group">
+      <input type="text" class="form-control" id="search" value="@ViewBag.Term" placeholder="Search..." />
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </form>
+}
+<hr />
 <h3>My Courses</h3>
 <a href="http://www.pluralsight.com/author/shawn-wildermuth" target="_blank"><img src="~/img/blog/pslogo_3.png" alt="pluralsight" /></a>
 <ul class="course-list">
