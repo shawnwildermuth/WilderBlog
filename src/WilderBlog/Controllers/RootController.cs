@@ -15,6 +15,8 @@ namespace WilderBlog.Controllers
   [Route("")]
   public class RootController : Controller
   {
+    readonly int _pageSize = 25;
+
     private IMailService _mailService;
     private IWilderRepository _repo;
 
@@ -33,21 +35,11 @@ namespace WilderBlog.Controllers
     [HttpGet("blog/{page:int?}")]
     public IActionResult Pager(int page)
     {
-      var pageSize = 25;
-
-      return View("Index", _repo.GetStories(pageSize, page));
+      return View("Index", _repo.GetStories(_pageSize, page));
     }
 
 
-    [HttpGet("tag/{id}")]
-    public IActionResult Tag(string id)
-    {
-      // TODO Add Tag Search
 
-      var pageSize = 10;
-
-      return View(_repo.GetStories(pageSize, 0));
-    }
 
     [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]
     public IActionResult Story(int year, int month, int day, string slug)

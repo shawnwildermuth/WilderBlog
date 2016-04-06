@@ -1,0 +1,22 @@
+﻿@model BlogResult
+@{
+  ViewBag.Title = $"Tag: {ViewContext.RouteData.Values["tag"]} - Shawn Wildermuth's Rants and Raves";
+  ViewBag.PageName = $"Stories Tagged with '{ViewContext.RouteData.Values["tag"]}'";
+  ViewBag.PageBlurb = $"";
+  ViewBag.PageImage = "/img/blog/shawnteaching.png";
+  ViewBag.ControllerName = "Tag";
+}
+@if (Model.Stories != null)
+{
+  <div class="col-lg-12">
+    @Html.Partial("_Pager")
+  </div>
+  @foreach (var story in Model.Stories)
+  {
+    @Html.Partial("_StoryBrief", story)
+  }
+
+  <div class="col-lg-12">
+    @Html.Partial("_Pager")
+  </div>
+}

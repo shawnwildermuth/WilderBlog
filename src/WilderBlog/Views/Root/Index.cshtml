@@ -11,22 +11,7 @@
 </div>
 @foreach (var story in Model.Stories)
 {
-  <div class="post-preview">
-    <h3 class="post-title"><a href="@story.Slug">@story.Title</a></h3>
-    <p class="post-meta">
-      <i class="fa fa-calendar"></i> @story.DatePublished.ToString("MMMM dd, yyyy")
-      <i class="fa fa-edit"></i> Shawn Wildermuth
-      <i class="fa fa-comments-o"></i> No Comments
-      <br />
-      <i class="fa fa-tags"></i>
-      @foreach (var tag in story.Categories.Split(','))
-      {
-        <a asp-controller="Root" asp-action="tag" asp-route-id="@tag">@tag</a>
-      }
-    </p>
-    @Html.Raw(story.GetSummary())
-  </div>
-  <hr />
+  @Html.Partial("_StoryBrief", story)
 }
 
 <div class="col-lg-12">

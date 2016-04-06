@@ -102,5 +102,25 @@ namespace WilderBlog.Data
 
     }
 
+    public BlogResult GetStoriesByTag(string tag, int pageSize, int page)
+    {
+      var lowerTag = tag.ToLowerInvariant();
+      var totalCount = _ctx.Stories
+        .Where(s => s.Categories.ToLower().Contains(lowerTag)) // Limiting the search for perf
+        .ToArray()
+        .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag)).Count(); 
+
+      return new BlogResult()
+      {
+        CurrentPage = page,
+        TotalResults = totalCount,
+        TotalPages = CalculatePages(totalCount, pageSize),
+        Stories = _ctx.Stories
+          .Where(s => s.Categories.ToLower().Contains(lowerTag))
+          .ToArray()
+          .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag))
+          .Skip((page - 1) * pageSize).Take(pageSize)
+      };
+    }
   }
 }

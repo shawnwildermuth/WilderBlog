@@ -87,6 +87,22 @@ namespace WilderBlog.Data
       // NOOP
     }
 
+    public BlogResult GetStoriesByTag(string tag, int pageSize, int page)
+    {
+      var lowerTag = tag.ToLowerInvariant();
+      var totalCount = _stories.Where(s => s.Categories.ToLowerInvariant().Split(',').Contains(lowerTag)).Count();
+
+      return new BlogResult()
+      {
+        CurrentPage = page,
+        TotalResults = totalCount,
+        TotalPages = CalculatePages(totalCount, pageSize),
+        Stories = _stories
+        .Where(s => s.Categories.ToLowerInvariant().Split(',').Contains(lowerTag))
+        .Skip((page - 1) * pageSize).Take(pageSize)
+      };
+    }
+
     static List<BlogStory> _stories = new List<BlogStory>()
     {
       new BlogStory()

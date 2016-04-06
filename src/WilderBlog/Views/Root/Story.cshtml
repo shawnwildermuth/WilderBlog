@@ -3,25 +3,36 @@
 @{
   ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
   ViewBag.PageName = Model.Title;
-  var pubDate = Model.DatePublished.ToString("MMM dd, yyyy on H:mmtt zzz UTC");
+  var pubDate = Model.DatePublished.ToString("MMM dd, yyyy on H:mmtt");
   ViewBag.PageAttribution = $"Posted by Shawn Wildermuth on {pubDate}";
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
 }
+
 @Html.Raw(Model.Body)
-<div>
-  <div style="float: left;">
+<p class="post-meta">
+  <small>
+    <i class="fa fa-tags"></i>
+    @foreach (var tag in Model.Categories.Split(','))
+    {
+      <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
+    }
+  </small>
+</p>
+<div class="card">
+  <div class="pull-left" style="padding-right: 5px;">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-      <img alt="Creative Commons License" style="border-width: 0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
+      <img alt="Creative Commons License" class="img-fluid img-thumbnail" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
     </a>
   </div>
-  <div>
-    This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://wildermuth.com"
-                    property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
-    licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-      Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
-    </a>.<br />
-    Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://wildermuth.com"
-                          rel="dct:source">wildermuth.com</a>.
+  <div class="card-text">
+    <small>
+      This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://wildermuth.com"
+                      property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
+      licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+        Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+      </a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://wildermuth.com"
+                                  rel="dct:source">wildermuth.com</a>.
+    </small>
   </div>
 </div>
 <hr />
