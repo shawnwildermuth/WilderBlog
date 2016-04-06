@@ -8,15 +8,31 @@
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
 }
 @Html.Raw(Model.Body)
-<hr/>
+<div>
+  <div style="float: left;">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+      <img alt="Creative Commons License" style="border-width: 0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
+    </a>
+  </div>
+  <div>
+    This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://wildermuth.com"
+                    property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
+    licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+      Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+    </a>.<br />
+    Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://wildermuth.com"
+                          rel="dct:source">wildermuth.com</a>.
+  </div>
+</div>
+<hr />
 @ads.InlineAdd()
 <hr />
 <div id="disqus_thread"></div>
 @section Scripts {
   <script>
     var disqus_config = function () {
-    this.page.url = @Model.GetStoryUrl(); 
-      this.page.identifier = @Model.Slug; 
+      this.page.url = @Model.GetStoryUrl();
+      this.page.identifier = @Model.Slug;
     };
 
     (function () { // DON'T EDIT BELOW THIS LINE

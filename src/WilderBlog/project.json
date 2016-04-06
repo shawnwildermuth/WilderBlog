@@ -17,7 +17,8 @@
     "WilderBlog.Commands": "1.0.0-*",
     "WilderBlog.Data": "1.0.0-*",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "WilderMinds.MetaWeblog": "0.1.1-beta"
+    "WilderMinds.MetaWeblog": "0.1.1-beta",
+    "WilderMinds.RssSyndication": "1.0.1"
   },
 
   "commands": {
