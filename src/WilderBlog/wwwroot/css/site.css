@@ -1,16 +1,37 @@
-﻿a {
-  color: #744a00;
+﻿a,
+p a {
+  color: #004a9b;
+  text-decoration: none;
+}
+a:hover,
+p a:hover {
+  text-decoration: underline;
+  color: #1c88ff;
+}
+.fa-hover-spin:hover {
+  -webkit-animation: fa-spin 2s infinite linear;
+  -moz-animation: fa-spin 2s infinite linear;
+  -o-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+.sidebar-icon-list li.list-inline-item {
+  margin-left: -3px;
+  margin-right: -6px;
+}
+.pluralsight-logo.pluralsight-logo-small {
+  margin-left: -3px;
+  max-width: 22px;
 }
 .page-link {
-  color: #744a00;
+  color: #004a9b;
 }
 a img:hover,
 a img:focus {
   cursor: pointer;
 }
 .page-item.active .page-link {
-  background-color: #744a00;
-  border-color: #744a00;
+  background-color: #004a9b;
+  border-color: #004a9b;
 }
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -40,7 +61,7 @@ ul.course-list li {
   margin-left: -20px;
 }
 h3 {
-  color: #744a00;
+  color: #004a9b;
   font-weight: 600;
 }
 footer .list-inline {
@@ -66,7 +87,7 @@ blockquote {
   font-style: normal;
 }
 blockquote:hover {
-  border-left: 5px solid #744a00;
+  border-left: 5px solid #004a9b;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,

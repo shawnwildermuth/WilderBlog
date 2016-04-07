@@ -12,7 +12,7 @@ namespace WilderBlog.Services.DataProviders
   public class PodcastEpisodesProvider : DataProvider<PodcastEpisode>
   {
     public PodcastEpisodesProvider(IApplicationEnvironment env)
-      : base(env, "publications.json")
+      : base(env, "episodeList.json")
     {
     }
 
@@ -24,9 +24,10 @@ namespace WilderBlog.Services.DataProviders
 
   public class PodcastEpisode
   {
-    public string Blurb { get; set; }
+    public string[] Blurb { get; set; }
     public int EpisodeNumber { get; set; }
     public string[] GuestBio { get; set; }
+    public string GuestName { get; set; }
     public string GuestHeadshot { get; set; }
     public string GuestFirstMachine { get; set; }
     public string GuestFirstMachineLink { get; set; }

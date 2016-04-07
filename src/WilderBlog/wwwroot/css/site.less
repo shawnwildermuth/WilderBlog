@@ -1,8 +1,33 @@
 // Site.css
-@hoverColor: #744a00;
+@hoverColor: #004a9b;
 
-a {
-    color: @hoverColor;
+a, p a {
+  color: @hoverColor;
+  text-decoration: none;
+}
+
+a:hover, p a:hover {
+  text-decoration: underline;
+  color: lighten(@hoverColor, 25%);
+}
+
+.fa-hover-spin {
+  &:hover {
+    -webkit-animation: fa-spin 2s infinite linear;
+    -moz-animation: fa-spin 2s infinite linear;
+    -o-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+  }
+}
+
+.sidebar-icon-list li.list-inline-item {
+  margin-left: -3px;
+  margin-right: -6px;
+}
+
+.pluralsight-logo.pluralsight-logo-small {
+  margin-left: -3px;
+  max-width: 22px;
 }
 
 .page-link {
@@ -10,27 +35,26 @@ a {
 }
 
 a img:hover, a img:focus {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.page-item.active .page-link
-{
+.page-item.active .page-link {
   background-color: @hoverColor;
-  border-color:  @hoverColor;
+  border-color: @hoverColor;
 }
 
 .navbar {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 100;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 hr.tiny-hr {
-   padding: 0; 
-   margin: 2px 0;
+  padding: 0;
+  margin: 2px 0;
 }
 
 .appearance-block {
@@ -39,11 +63,11 @@ hr.tiny-hr {
 
 ul.course-list {
   font-size: 80%;
+
   li {
     list-style-type: square;
     list-style-position: outside;
-    margin-left: -20px
-
+    margin-left: -20px;
   }
 }
 

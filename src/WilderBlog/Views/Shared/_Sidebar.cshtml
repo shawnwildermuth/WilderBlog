@@ -1,10 +1,67 @@
-﻿@inject WilderBlog.Services.DataProviders.AppearancesProvider appearances
-@inject WilderBlog.Services.DataProviders.CoursesProvider courses
+﻿@inject WilderBlog.Services.DataProviders.CoursesProvider courses
 
 <a asp-controller="Root" asp-action="About"><img src="~/img/turning-2016.gif" alt="Shawn" class="img-fluid img-rounded" /></a>
 <div>
   <div><strong>Shawn Wildermuth</strong></div>
   <div><small>Author, Teacher, and Coach</small></div>
+  <ul class="list-inline  sidebar-icon-list">
+    <li class="list-inline-item">
+      <a href="http://feeds.feedburner.com/ShawnWildermuth">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://twitter.com/shawnwildermuth">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://instagram.com/shawnwildermuth">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="http://shawnw.me/psauthor">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <img src="/img/blog/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo pluralsight-logo-small" />
+        </span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://github.com/shawnwildermuth">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="http://stackoverflow.com/users/40125/shawn-wildermuth">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="http://www.amazon.com/-/e/B001H6ME46">
+        <span class="fa fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-amazon fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  </ul>
 
 </div>
 @if (((string)ViewContext.RouteData.Values["controller"]) != "Search")
@@ -22,23 +79,9 @@
 <hr />
 <h3>My Courses</h3>
 <a href="http://www.pluralsight.com/author/shawn-wildermuth" target="_blank"><img src="~/img/blog/pslogo_3.png" alt="pluralsight" /></a>
-<ul class="course-list">
+<table class="table table-condensed table-striped table-sm">
   @foreach (var c in courses.Get().Take(10))
   {
-    <li><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></li>
+    <tr><td><small><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
   }
-</ul>
-<hr />
-<h3>My Appearances</h3>
-@foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
-{
-  <div class="appearance-block">
-    <h6><a href="@ap.Url" target="_blank">@ap.Name</a></h6>
-    <div>@ap.Location - @ap.FormattedDate</div>
-    @if (!string.IsNullOrWhiteSpace(ap.Comment))
-    {
-      <div class="muted">@ap.Comment</div>
-    }
-  </div>
-  <hr class="tiny-hr" />
-}
+</table>

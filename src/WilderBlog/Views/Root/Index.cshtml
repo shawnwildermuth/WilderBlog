@@ -1,10 +1,27 @@
-﻿@model BlogResult
+﻿@inject WilderBlog.Services.DataProviders.AppearancesProvider appearances
+@model BlogResult
 @{
   ViewBag.Title = "Shawn Wildermuth's Rants and Raves";
   ViewBag.PageName = "Shawn Wildermuth";
   ViewBag.PageBlurb = "My Rants and Raves about technology, programming, everything else...";
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
   ViewBag.ControllerName = "Root";
+}
+@section Sidebar {
+  <hr />
+  <h3>My Appearances</h3>
+  @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
+  {
+    <div class="appearance-block">
+      <h6><a href="@ap.Url" target="_blank">@ap.Name</a></h6>
+      <div>@ap.Location - @ap.FormattedDate</div>
+      @if (!string.IsNullOrWhiteSpace(ap.Comment))
+      {
+        <div class="muted">@ap.Comment</div>
+      }
+    </div>
+    <hr class="tiny-hr" />
+  }
 }
 <div class="col-lg-12">
   @Html.Partial("_Pager")

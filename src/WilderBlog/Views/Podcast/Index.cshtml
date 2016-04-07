@@ -1,0 +1,18 @@
+﻿@inject  WilderBlog.Services.DataProviders.PodcastEpisodesProvider podcastProvider
+@{
+  var episodes = podcastProvider.Get()
+                                .Where(e => e.Status == WilderBlog.Services.DataProviders.PodcastEpisodeStatus.Live && e.PublishedDate < DateTime.Today)
+                                .ToList();
+  var latest = episodes.OrderByDescending(e => e.EpisodeNumber)
+                       .FirstOrDefault();
+
+}
+
+<div>
+  <div>@latest.GuestName</div>
+  <div>@latest.GuestBio</div>
+  <dl>
+    <dd>Published Date:</dd>
+    <dt>@latest.PublishedDate.ToShortDateString()</dt>
+  </dl>
+</div>
