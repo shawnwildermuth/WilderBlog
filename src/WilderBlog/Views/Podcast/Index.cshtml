@@ -1,18 +1,68 @@
-﻿@inject  WilderBlog.Services.DataProviders.PodcastEpisodesProvider podcastProvider
+﻿@model  Tuple<WilderBlog.Services.DataProviders.PodcastEpisode, IEnumerable<WilderBlog.Services.DataProviders.PodcastEpisode>>
 @{
-  var episodes = podcastProvider.Get()
-                                .Where(e => e.Status == WilderBlog.Services.DataProviders.PodcastEpisodeStatus.Live && e.PublishedDate < DateTime.Today)
-                                .ToList();
-  var latest = episodes.OrderByDescending(e => e.EpisodeNumber)
-                       .FirstOrDefault();
+  ViewBag.Title = "Hello World Podcast - Shawn Wildermuth's Rants and Raves";
+  ViewBag.PageName = "Hello World Podcast";
+  ViewBag.PageBlurb = "My Rants and Raves about technology, programming, everything else...";
+  ViewBag.PageImage = "/img/blog/shawnteaching.png";
+
+  var latest = Model.Item1;
+  var episodes = Model.Item2;
 
 }
+@section Styles {
+  <link href="~/3rdparty/css/audioplayer.css" rel="stylesheet" />
+}
+@section Scripts {
+  <script src="~/3rdparty/js/audioplayer.min.js"></script>
+  <script src="~/js/audio.js"></script>
+}
 
-<div>
-  <div>@latest.GuestName</div>
-  <div>@latest.GuestBio</div>
-  <dl>
-    <dd>Published Date:</dd>
-    <dt>@latest.PublishedDate.ToShortDateString()</dt>
-  </dl>
+<div class="row">
+  <div class="col-lg-12">
+    <ul role="menu" class="list-inline small pull-right">
+      <li class="muted list-inline-item"><a href="http://hwpod.libsyn.com/rss"><i class="icon icon-volume-up"></i> Subscribe</a></li>
+      <li class="list-inline-item">|</li>
+      <li class="muted list-inline-item"><a href="https://itunes.apple.com/us/podcast/the-hello-world-podcast/id768018561"><i class="icon icon-music"></i> iTunes</a></li>
+      <li class="list-inline-item">|</li>
+      <li class="muted list-inline-item"><a href="zune://subscribe/?Hello World Podcast=http://hwpod.libsyn.com/rss"><i class="icon icon-headphones"></i> Zune</a></li>
+      <li class="list-inline-item">|</li>
+      <li class="muted list-inline-item"><a href="http://www.stitcher.com/s?fid=48433&refid=stpr"><img src="http://cloudfront.assets.stitcher.com/promo.assets/stitcher-icon-50x50.jpg" width="15" height="15" alt="Listen to Stitcher"> Stitcher</a></li>
+      <li class="list-inline-item">|</li>
+      <li class="muted list-inline-item"><a href="http://www.youtube.com/user/hwpod"><i class="icon icon-facetime-video"></i> YouTube</a></li>
+    </ul>
+
+  </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="col-lg-12">
+    <a href="http://hwpod.com"><img class="pull-right img-responsive" src="http://wildermuth.com/images/hwpod/logo_125.jpg" alt="Hello World Podcast" /></a>Not just another technical podcast. Shawn Wildermuth brings you his
+    "Hello World" podcast where we learn about how your favorite developers
+    tell their story of how they got started writing software!
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-lg-12">
+    <div class="row">
+      <div class="col-lg-7"><h3><a asp-controller="Podcast" asp-action="Episode" asp-route-id="@latest.EpisodeNumber" asp-route-tag="@latest.GuestName.Replace(" ", "-")">Episode @latest.EpisodeNumber - @latest.GuestName</a></h3></div>
+      <div class="col-lg-5"><small class="pull-right"><i class="fa fa-calendar"></i> Released: @latest.PublishedDate.ToShortDateString()</small></div>
+    </div>
+  </div>
+</div>
+@Html.Partial("_Episode", latest)
+<hr />
+<h3>Upcoming Guests</h3>
+<div class="row">
+  @foreach (var upcoming in episodes.Where(e => e.Status == WilderBlog.Services.DataProviders.PodcastEpisodeStatus.Planned).OrderBy(e => e.PublishedDate))
+  {
+    @Html.Partial("_Headshot", upcoming)
+  }
+</div>
+<h3>Archive</h3>
+<div class="row">
+  @foreach (var upcoming in episodes.Where(e => e.Status == WilderBlog.Services.DataProviders.PodcastEpisodeStatus.Live && e != latest).OrderByDescending(e => e.PublishedDate))
+  {
+    @Html.Partial("_Headshot", upcoming)
+  }
 </div>

@@ -51,7 +51,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-  @RenderSection("Head", required: false)
+  @RenderSection("Styles", required: false)
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -81,7 +81,7 @@
   <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 col-md-12">
+        <div class="col-lg-12 col-md-12 col-xl-12">
           <div class="site-heading">
             <h2>@ViewBag.PageName</h2>
             <hr class="small">
@@ -101,10 +101,10 @@
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-9 col-md-8">
+      <div class="col-lg-9 col-sm-8">
         @RenderBody()
       </div>
-      <div class="col-lg-3 col-md-4">
+      <div class="col-lg-3 col-sm-4">
         @Html.Partial("_Sidebar")
         @RenderSection("Sidebar", false)
       </div>

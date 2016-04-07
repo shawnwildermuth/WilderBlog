@@ -1,0 +1,14 @@
+﻿@model WilderBlog.Services.DataProviders.PodcastEpisode
+<div class="col-lg-2 headshot">
+  <a asp-controller="Podcast" asp-action="Episode" asp-route-id="@Model.EpisodeNumber" asp-route-tag="@Model.GuestName.Replace(" ", "-")">
+    <div class="card">
+      <div class="overflow-hidden"><img src="@Model.GuestHeadshot" class="card-img-top" alt="@Model.GuestName " /></div>
+      <div>
+        <div class="text-info">@Model.GuestName</div>
+        <div class="text-muted">
+          <small>@Model.PublishedDate.ToShortDateString()</small>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

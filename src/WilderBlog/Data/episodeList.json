@@ -10,7 +10,7 @@
       "Peter has spoken internationally on a variety of topics including unit test design and management, asynchronous programming, advanced .NET language features and syntax, concurrent and parallel programming and distributed programming.  Peter is the author of Refactoring with Visual Studio 2010 and Visual Studio 2010 Best Practices."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/peter-ritchie.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2.jpg",
     "guestFirstMachineName": "Apple ][",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_II",
     "guestLinks": [
@@ -26,7 +26,7 @@
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode56.mp3",
     "publishedDate": "11/30/15",
-    "status": 1,
+    "status": 2,
 
     "youTubeLink": "https://youtu.be/LzXKuIVpVPs"
   },
@@ -40,7 +40,7 @@
       "Rick Strahl is the Big Kahuna and janitor at West Wind Technologies located on the beautiful island of Maui, Hawaii. Between windsurf sessions and spikey haired adventures, Rick has been a software developer for over 25 years, developing business and Web applications since the very early days of the Web when you needed a hand crank (or a pair of wire splicers) to get online. Today Rick builds client centric Web applications and services for customers with HTML5, JavaScript and mobile Web technologies, using AngularJS on the front end, and  the ASP.NET stack on the back end. Rick’s company West Wind Technologies also produces a number of developer related tools including West Wind WebSurge, West Wind Web Monitor and Html Help Builder.  He also maintains a host of open source libraries at  http://github.com/RickStrahl and you can find Rick’s blog at weblog.west-wind.com or contact him directly at rstrahl@west-wind.com."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/rick-strahl.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2e.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2e.jpg",
     "guestFirstMachineName": "Apple ][e",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIe",
     "guestLinks": [
@@ -74,7 +74,7 @@
       "Jeff Handley works at Concur and is focusing on the UI for web applications. He previously worked at Microsoft as the Development Lead for NuGet and WCF RIA Services. Jeff has been building and maturing software projects for 20 years. His largest projects have covered education, healthcare waste management, fantasy football, credit/mortgage, and point of sale. Throughout his career, he keeps getting drawn back to web application development."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/jeff-handley.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ibm-ps2.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ibm-ps2.jpg",
     "guestFirstMachineName": "IBM PS/2",
     "guestFirstMachineLink": "https://en.wikipedia.org/wiki/IBM_Personal_System/2",
     "guestLinks": [
@@ -104,7 +104,7 @@
       "Barry is the security czar for ASP.NET which means he gets to look at the framework, tools and template code, searching for potential insecurities and sometimes even fixing them. He also triages publically and privately reported vulnerabilities before getting someone else to fix them which means he gets all of the fun and none of the responsibility. He is rude and objectionable on twitter as @blowdart."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/barry-dorrans.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/zx-spectrum.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/zx-spectrum.jpg",
     "guestFirstMachineName": "Sinclair ZX Spectrum",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/ZX_Spectrum",
     "guestLinks": [
@@ -138,7 +138,7 @@
       "With over 25 years in the software industry, Matt Pietrek has had quite the interesting ride. Starting at Borland in the late 1980s during the heady days of the Microsoft/Borland “compilers wars”, he got his first, intoxicating taste of OS internals, debuggers and tools. From there he spent a decade at NuMega Technologies, working on seminal, award-winning products like BoundsChecker and SoftIce. Next was a seven year stint at Microsoft where he worked on the Visual Studio debugger & profiler teams, Red Dog (now known as Azure), and Hyper-V. He currently works at Skytap, a cloud computing company. Along the way, he wrote several books on Windows internals, as well as numerous articles and columns for magazines just as MSJ/MSDN, PC Magazine, and Byte. When not slinging Python code or groveling through logs, Matt indulges his passion for distilled spirits and cocktails. He’s got a serious, ever growing collection of rums, and writes the CocktailWonk blog about his spirited adventures: http://cocktailwonk.com"
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/matt-pietrek.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ti99.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ti99.jpg",
     "guestFirstMachineName": "TI-99",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Ti-99",
     "guestLinks": [
@@ -168,7 +168,7 @@
       "Frans Bouma is the creator and lead developer of LLBLGen Pro, a leading ORM and Entity Modeling solution for .NET. Programming professionally since '94, after he (finally) got his B.sc in Computer Science. Frans wrote his first code back in '86 on a Toshiba HX-10 MSX computer and has been fascinated about telling computer hardware to do what you want by writing software ever since. In his spare time he spent more than a decade in the underground scene called 'Demoscene', first on Commodore Amiga 500 and later on PC, writing graphical demos and computer music. "
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/frans-bouma.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/toshiba-msx-hx10.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/toshiba-msx-hx10.jpg",
     "guestFirstMachineName": "Toshiba HX-10 MSX",
     "guestFirstMachineLink": "http://www.msx.org/wiki/Toshiba_HX-10",
     "guestLinks": [
@@ -202,7 +202,7 @@
       "Keith Elder is the co-host of the popular online technology podcast Deep Fried Bytes. He is also a Director of Software Engineering at Quicken Loans, the nation’s largest online mortgage lender based in Detroit, MI. Keith is an experienced technologist, systems administrator, software engineer, speaker, trainer and all around geek. He speaks throughout the United States at major technical conferences, Code Camps, and .Net User Groups. Keith’s ability to explain complex topics with a friendly common sense southern attitude make him a highly regarded speaker at technical conferences. You can read more about Keith’s interests, hobbies, rants and raves on his blog at http://keithelder.net/ and follow him on twitter at http://twitter.com/keithelder."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/keith-elder.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/timexsinclair1000.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/timexsinclair1000.jpg",
     "guestFirstMachineName": "Timex Sinclair 1000",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Timex_Sinclair_1000",
     "guestLinks": [
@@ -233,7 +233,7 @@
       "Before starting Vertigo in 1997, Scott worked at Pixar in Point Richmond, California, which happens to be the current home of Vertigo. Scott holds a BS in Computer Science for Cal Poly, San Luis Obispo. Follow Scott on Twitter at @seesharp or email to scott@vertigo.com."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/scott-stanfield.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/atari800.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/atari800.jpg",
     "guestFirstMachineName": "Atari 800",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Atari_8-bit_family",
     "guestLinks": [
@@ -267,7 +267,7 @@
       "Dave Ward is an independent consultant and author, specializing in projects ranging from ASP.NET, to Node.js, to JavaScript single page applications, to hybrid mobile apps. With twenty years of experience developing for the web, he has been recognized as a Microsoft Regional Director, ASP.NET MVP, and member of the ASPInsiders. To learn more or to get in touch with Dave, you can visit his blog at http://Encosia.com or find him on Twitter as @Encosia."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/Dave-Ward.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80coco.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80coco.jpg",
     "guestFirstMachineName": "TRS-80 Color Computer",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80_Color_Computer",
     "guestLinks": [
@@ -297,7 +297,7 @@
       "Steve is an entrepreneur and software developer with a passion for building quality software as effectively as possible. He is currently the Chief Technology Officer of Falafel Software. Steve has published several courses on Pluralsight, covering DDD, SOLID, design patterns, and software architecture. He's a Microsoft Regional Director and MVP, a frequent speaker at developer conferences, an author, and a trainer. Along with his wife and business partner, Michelle Smith, Steve was also the founder of Lake Quincy Media (acquired by The Code Project) and NimblePros (acquired by Telerik). Steve's an ex-Army Engineer officer and Iraq veteran who enjoys playing games and spending time outdoors."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/steve-smith.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2plus.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2plus.jpg",
     "guestFirstMachineName": "Apple II+",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_II_Plus",
     "guestLinks": [
@@ -331,7 +331,7 @@
       "Rockford Lhotka is the CTO of Magenic, and is the creator of the widely used CSLA .NET development framework. He is the author of numerous books, and regularly speaks at major conferences around the world. Rockford is a Microsoft Regional Director and MVP. Magenic (www.magenic.com) is a company that specializes in planning, designing, building and maintaining your enterprise’s most mission critical systems. For more information go to www.lhotka.net."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/rocky-lhotka.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/cyber-mainframe.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/cyber-mainframe.jpg",
     "guestFirstMachineName": "Cyber Mainframe",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/CDC_Cyber",
     "guestLinks": [
@@ -370,7 +370,7 @@
       "Deborah has authored several programming books including the popular \"Doing Objects\" series and is a speaker at conferences such as VSLive! and TechEd. She is also the co-chair of the EastBay.NET user group in the San Francisco Bay/Silicon Valley area."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/deborah-kurata.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/mac-128k.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/mac-128k.jpg",
     "guestFirstMachineName": "Macintosh 128K",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Macintosh_128K",
     "guestLinks": [
@@ -413,7 +413,7 @@
       "You can follow his technical blog at http://www.LoudSteve.com or find him on twitter at@TheLoudSteve."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/Steve-Evans.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/kaypro.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/kaypro.jpg",
     "guestFirstMachineName": "Kaypro",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Kaypro",
     "guestLinks": [
@@ -448,7 +448,7 @@
       "He is also deeply involved in the local developer community — founding the .NET Developers Association in Redmond, WA and continues to help organize the Seattle Code Camp, developer hackathons and other local events."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/walt-ritscher.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2gs.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2gs.jpg",
     "guestFirstMachineName": "Apple IIGS",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_II_series#Apple_IIGS",
     "guestLinks": [
@@ -495,7 +495,7 @@
       "Kate runs a small consulting firm in rural Ontario and provides mentoring and management consultant services, as well as writing code every week. She has spoken all over the world, written over a dozen books, and helped thousands of developers to be better at what they do. Kate is a Microsoft Regional Director, and a Visual C++ MVP, an Imagine Cup judge and mentor, and an active contributor to StackOverflow and other StackExchange sites. She develops courses for Pluralsight, primarily on C++ and Visual Studio. In 2014 she was Open Content Chair for CppCon, the largest C++ conference ever held, where she also delivered sessions."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/kate-gregory.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ibm-3227.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ibm-3227.jpg",
     "guestFirstMachineName": "IBM 3277 Terminal (connected to IBM 370)",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/IBM_3270",
     "guestLinks": [
@@ -538,7 +538,7 @@
       "Carl Franklin is Executive Vice President of App vNext, a software development firm helping to bring about the Internet of Things revolution. Carl is a 20+ year veteran of the software industry, co-host and founder of .NET Rocks!, the first and most widely listened to podcast for .NET developers, a Microsoft MVP for Kinect for Windows, a Microsoft Regional Director, and Senior Executive of Pwop Studios, a full-service audio and video production/post production studio located in Southeastern Connecticut. Carl has been a leader in the .NET community since 2002, and in the Visual Basic (VB) community before that. In the very early days he wrote for Visual Basic Programmer’s Journal, authoring the Q&A column of that magazine as well as many feature articles for VBPJ and other magazines. He has authored two books for John Wiley & Sons on sockets programming in VB, and in 1994 he helped create the very first web site for VB developers, Carl & Gary's VB Home Page."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/Carl-Franklin.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80.jpg",
     "guestFirstMachineName": "TRS-80",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
     "guestLinks": [
@@ -576,7 +576,7 @@
       "Kathleen Dollard wants to teach you to code better. There’s more to learn about the tools you use every day and the tools you aren’t yet using.  Coding is our passion and debugging is our challenge - you’ll be happier if you do both better. Kathleen’s written dozens of articles, spoken at conferences and user groups around the world, and pushes Microsoft to respond to your real world needs as a long time MVP. Her Open Source project RoslynDom offers alterative access to information in the .NET Compiler Platform, Roslyn with a load/interrogate/mutate/build SyntaxTree model. She has courses in the Pluralsight library and a series of C# 6 webcasts now available for free on WintellectNOW."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/kathleen-dollard.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/hp-2100.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/hp-2100.jpg",
     "guestFirstMachineName": "HP-2116",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/HP_2100",
     "guestLinks": [
@@ -614,7 +614,7 @@
       "Tim Heuer is a program manager for Microsoft working on the client UI developer platforms working on XAML in Windows and previously Silverlight. Before joining the XAML engineering teams, Tim worked with technical communities across the country helping to foster and build user communities focused on software developer technologies. Tim has worked with Microsoft developer tools and technologies since the early 1990s. Prior to joining Microsoft, he worked as a consultant for 14 years helping to implement technology solutions to enable success in businesses across various industries such as health care, construction, real estate, and electronic commerce to name a few. He's inflicted with the unfortunate disease that his work is also his hobby and he loves technology. You can usually find him behind the keyboard trying to learn something new. You can find him online sharing his thoughts on technology at <a href='http://timheuer.com/blog/'>http://timheuer.com/blog/</a>."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/tim-heuer.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/compaq-portable.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/compaq-portable.jpg",
     "guestFirstMachineName": "Compaq Portable",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Compaq_Portable",
     "guestLinks": [
@@ -649,7 +649,7 @@
       "Stephen Forte is the Chief Strategy Officer of the venture backed company, Telerik, a leading vendor of developer and team productivity tools. He is the founder and executive director of Mach5, a Silicon Valley based startup accelerator and co-founder of AcceleratorHK, Hong Kong’s first startup accelerator. Involved in several startups, he was the co-founder of Triton Works, which was acquired by UBM (London: UBM.L) in 2010 and was the Chief Technology Officer and co-founder of Corzen, Inc., which was acquired by Wanted Technologies (TXV: WAN) in 2007. Prior to Corzen, Stephen served as the CTO of Zagat Survey in New York City (acquired by Google in 2011) and also was co-founder of the New York-based software consulting firm The Aurora Development Group. Stephen is also a Certified Scrum Master, Certified Scrum Professional, PMP, and also speaks regularly at industry conferences around the world. He has written several books on application and database development. Stephen has an MBA from the City University of New York. Stephen is also a board member of the Scrum Alliance. An avid mountain climber, Stephen leads a trek in the Mt. Everest region every fall to raise money for charity. After several years as an ex-pat in Hong Kong, Stephen now lives in Silicon Valley with his wife."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/stephen-forte.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/pc-clone.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/pc-clone.jpg",
     "guestFirstMachineName": "PC Clone",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Pc_clone",
     "guestLinks": [
@@ -679,7 +679,7 @@
       "Clemens Vasters is a Software Architect and currently works for Microsoft where he drives the technical strategy for Microsoft Azure Service Bus and other messaging-centric technologies. Before joining Microsoft, Clemens has worked on financial software solutions and in consulting, has spoken at hundreds of events in over 40 countries, and has contributed to a number of open source efforts including starting the dasBlog blog engine. Clemens has a long history educating developers, having taught some of the first available .NET training courses for developers in Europe in early 2002."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/Clemens-Vasters.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/zx81.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/zx81.jpg",
     "guestFirstMachineName": "Sinclair ZX-81",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/ZX81",
     "guestLinks": [
@@ -718,7 +718,7 @@
       "When not building or breaking, Troy’s into snowboarding, lots of tennis and fast cars."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/troy-hunt.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/pcclone.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/pcclone.jpg",
     "guestFirstMachineName": "PC Clone",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Pc_clone",
     "guestLinks": [
@@ -761,7 +761,7 @@
       "Mike is the VP of Developer Content - Enterprise Software at Pluralsight. A former Microsoft C# MVP and multiple U.S. patent holder, Mike has over 20 years of experience developing high performance software systems and training developers around the world. Mike is co-author of Win32 Multithreaded Programming and Debugging Windows Programs: Strategies, Tools, and Techniques for Visual C++ Programmers."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/mike-woodring.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ti99.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ti99.jpg",
     "guestFirstMachineName": "TI-99",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Ti-99",
     "guestLinks": [
@@ -800,7 +800,7 @@
       "Dan Wahlin founded Wahlin Consulting which provides consulting and training services on Web technologies such as JavaScript, AngularJS, HTML5, Node.js, C#, ASP.NET MVC, Web API, and SharePoint. He’s also a course author on Pluralsight.com and has published several courses covering a range of technologies including the new AngularJS JumpStart course on Udemy.com. Dan speaks at conferences and user groups around the world and has written several books on Web technologies.  Dan blogs at http://weblogs.asp.net/dwahlin, runs the Web Weekly newsletter (a great way to stay up on the latest technologies), and writes columns for various technical magazines. Follow Dan on Twitter @DanWahlin."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/dan-wahlin.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2c.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2c.jpg",
     "guestFirstMachineName": "Apple IIc",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIc",
     "guestLinks": [
@@ -835,7 +835,7 @@
       "Ian is an independent consultant, developer, speaker, and author. He has written books on Windows Presentation Foundation, Windows Forms, and Visual Studio. He lives in London but can often be found on various developer mailing lists and newsgroups, where a popular sport is to see who can get him to write the longest email in reply to the shortest possible question."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/ian-griffiths.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
     "guestFirstMachineName": "IBM Card Punch Machine",
     "guestFirstMachineLink": "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
     "guestLinks": [
@@ -873,7 +873,7 @@
       "Alain \"Lino\" Tadros is President & CEO of Falafel Software, a Silicon Valley based company, with presence in Colorado,Texas, Michigan, Florida and North Carolina, dedicated to providing world-class consulting, training, and software development for small, medium, and enterprise level businesses. Prior to founding Falafel, Lino was a member of the development team at Borland for Delphi and C++Builder. Lino has been awarded Microsoft MVP status twelve years in a row for his numerous contributions to the C# community and is an expert in .NET, LINQ, ASP.NET, MVC, XAML, Windows Phone and Web Services. Lino is an industry renowned speaker and has given numerous presentations on 5 different continents since 1994. He also currently sits on the Board of Directors of 4 Silicon Valley corporations."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/lino-tadros.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/zx-spectrum-128.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/zx-spectrum-128.jpg",
     "guestFirstMachineName": "Sinclair ZX Spectrum 128",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/ZX_Spectrum#ZX_Spectrum_128",
     "guestLinks": [
@@ -915,7 +915,7 @@
       "Joe is a front end web developer, consultant and freelance author for Pluralsight. Joe has always has worked both full and part time as a technical teacher for over ten years. He is a frequent blogger and speaker, organizer of ng-conf, the AngularJS conference (www.ng-conf.org), and a panelist on the JavaScript Jabber podcast (http://javascriptjabber.com/)"
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/joe-eames.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple3.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple3.jpg",
     "guestFirstMachineName": "Apple III",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_III",
     "guestLinks": [
@@ -947,7 +947,7 @@
       "He is the author or co-author of several books, including Professional F# 2.0, Effective Enterprise Java, C# In a Nutshell, SSCLI Essentials, Server-Based Java Programming, and a contributor to several technology journals. Ted is also a Microsoft F# MVP, BEA Technical Director, INETA speaker, former DevelopMentor instructor, frequent worldwide conference speaker, and a member of various Java JSRs. He lives in the Pacific Northwest with his wife, two sons, and eight PCs. "
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/ted-neward.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2plus.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2plus.jpg",
     "guestFirstMachineName": "Apple II+",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_II_Plus",
     "guestLinks": [
@@ -982,7 +982,7 @@
       "Rob Windsor is a Lead SharePoint Consultant with Portal Solutions - a Microsoft Gold Partner based in DC and Boston. He has twenty years experience developing rich-client and web applications with various languages and is currently spending a majority of his time working with SharePoint. Rob is a regular speaker at conferences and community events and he authors content for the Pluralsight On-Demand library. Rob is the founder and past-president of the North Toronto .NET User Group and has been recognized as a Microsoft Most Valuable Professional for his involvement in the developer community."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/rob-windsor.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/digital-vax.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/digital-vax.jpg",
     "guestFirstMachineName": "Digital VAX Machine",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/VAX",
     "guestLinks": [
@@ -1009,7 +1009,7 @@
       "Rachel is a 20+ year consultant, author, mentor, and former Microsoft employee in the IT industry who speaks at top industry conferences such as VSLive!, DevConnections, MIX, and more. During her career, Rachel has worked on projects of all sizes from the smallest of apps to the largest enterprise systems at some of the world’s leading companies."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/rachel-appel.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2e.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2e.jpg",
     "guestFirstMachineName": "Apple ][e",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIe",
     "guestLinks": [
@@ -1044,7 +1044,7 @@
       "John is a co-founder of Wintellect (http://www.wintellect) and a course author at WintellectNOW (http://www.wintellectnow.com). In our business it’s good to specialize in something so John specializes in pain: debugging and performance tuning. He’s debugged and tuned applications for companies such as eBay, Microsoft, AutoDesk, and everyone in between. As a 10 year MVP, John’s written countless articles and three books on debugging. Prior to starting Wintellect 14 years ago John was one of the earliest developers at the legendary debugging tools company, NuMega. He got a late start as a software developer after having spent five years as a paratrooper and Green Beret in the US Army."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/john-robbins.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/z-183.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/z-183.jpg",
     "guestFirstMachineName": "Zenith Z-183",
     "guestFirstMachineLink": "http://www.computinghistory.org.uk/det/24719/Zenith-Laptop-Computer-ZWL-183-92/",
     "guestLinks": [
@@ -1084,7 +1084,7 @@
       "In October 2010, the book 'Silverlight 4 Unleashed' that he wrote was published at Sams, an advanced sequel to 'Silverlight 2 Unleashed' (published Oct 2008). He writes for MSDN magazine and other publications, codes in Windows Phone, Windows 8, WPF, Silverlight, ASP.NET and his blog is on http://blog.galasoft.ch. 2014 is his 8th year as a Microsoft Most Valuable Professional (Client Dev) and his second year as a Microsoft Regional Director. He is also the author of the well-known open source framework MVVM Light for Windows Phone, Windows 8, WPF, Silverlight."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/laurent-bugnion.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/mac-lc-ii.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/mac-lc-ii.jpg",
     "guestFirstMachineName": "Macintosh LC II",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Macintosh_LC",
     "guestLinks": [
@@ -1118,7 +1118,7 @@
       "Jon is most at home spelunking, trying to figure out how things work from the inside out. Jon is the author of RESTful.NET from O'Reilly, as well as Essential ASP for Addison-Wesley, and was a co-author of Mastering Visual Studio.NET for O'Reilly. Jon is currently helping companies build applications for the iPhone and iPad using iOS."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/jon-flanders.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/vic20.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/vic20.jpg",
     "guestFirstMachineName": "Commodore Vic-20",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
     "guestLinks": [
@@ -1155,7 +1155,7 @@
       "Fritz lives in central Maine."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/fritz-onion.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/mac-128k.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/mac-128k.jpg",
     "guestFirstMachineName": "Macintosh (128K)",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Macintosh_128K",
     "guestLinks": [
@@ -1187,7 +1187,7 @@
       "Phil is a co-author of the popular Professional ASP.NET MVC series and regularly speaks at conferences around the world. He's also made several appearances on technology podcasts such as .NET Rocks, Hanselminutes, Herding Code, and The Official jQuery Podcast."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/phil-haack.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80coco.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80coco.jpg",
     "guestFirstMachineName": "TRS-80 Color Computer",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80_Color_Computer",
     "guestLinks": [
@@ -1223,7 +1223,7 @@
       "In his off hours, he's an avid musician, poker player, and photographer."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/brad-wilson.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/commodore-pet.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/commodore-pet.jpg",
     "guestFirstMachineName": "Commodore PET",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_PET",
     "guestLinks": [
@@ -1270,7 +1270,7 @@
       "In addition to speaking at conferences around the world, Richard is co-host of '.NET Rocks!, the Internet Audio Talk Show for .NET Developers' and the host of 'RunAs Radio, the Internet Audio Talk Show for IT Professionals'."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/richard-campbell.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80-m1.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80-m1.jpg",
     "guestFirstMachineName": "TRS-80 Model 1",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
     "guestLinks": [
@@ -1309,7 +1309,7 @@
       "Scott is currently working on a new book, Effective Modern C++: 40 Specific Ways to Improve Your Use of C++11 and C++14, which he desperately hopes to finish by summer."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/scott-meyers.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/teletype.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/teletype.jpg",
     "guestFirstMachineName": "Teletype Printer",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Teleprinter",
     "guestLinks": [
@@ -1348,7 +1348,7 @@
       "William R. Vaughn is the former principal of Beta V Corporation and Microsoft MVP who worked at Microsoft for fourteen years. His previous books include seven editions of the popular Hitchhiker's Guides (Microsoft Press, Addison Wesley), ADO Examples and Best Practices, and the bestseller ADO.NET Examples and Best Practices and a separate edition for C# Programmers (APress). Bill is a top-rated speaker at conferences worldwide, including VBits, Developer Connections and TechEd, and is the author of numerous articles for SQL Server Magazine, MSDN Online, and others. He’s currently lecturing for Progressive Business Technology doing online webinars on SQL Server Reporting Services."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/bill-vaughn.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/spectra-7046.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/spectra-7046.jpg",
     "guestFirstMachineName": "RCA Spectra 70 Model 46",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/RCA_Spectra_70#Model_70.2F46",
     "guestLinks": [
@@ -1388,7 +1388,7 @@
       "In 2013 she was awarded the MVP for SQL Server from Microsoft.  In 2012, 2013 and again in 2014 she was recognized by Google for her community education work around their commercial cloud and received the Google Developer Expert award for the Google Cloud. She is the author of 3 books on SQL Server Business Intelligence (OLAP) the most recent of which is 'Smart Business Intelligence with SQL Server 2008' from MS Press. Lynn is also the author of many articles on BigData Technologies."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/lynn-langit.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/compaq-3.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/compaq-3.jpg",
     "guestFirstMachineName": "Compaq III",
     "guestFirstMachineLink": "http://www.pcmuseum.ca/details.asp?id=50",
     "guestLinks": [
@@ -1423,7 +1423,7 @@
       "Jim Wilson is president of JW Hedgehog, Inc., a consulting firm specializing in solutions for the Android, iOS, and Microsoft platforms. Jim has nearly 30 years of software engineering experience with the past 12 years heavily focused on creating mobile device and location-based solutions. After nearly a decade as a Microsoft Device Application Development MVP, Jim now focuses on developing Android and iOS device applications. Jim has authored over 30 articles on device application development, and has developed mobility and smart client curriculums for several organizations. Although based in New Hampshire, Jim and his wife spend as much time as possible at their place in Celebration, Florida (just 3 miles from Walt Disney World). Checkout Jim’s blog where he talks about a variety of mobile development issues as well as the fun of life just 3 miles from the Home of The Mouse."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/jim-wilson.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80.jpg",
     "guestFirstMachineName": "TRS-80",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
     "guestLinks": [
@@ -1461,7 +1461,7 @@
       "Lars Klint suffers from split personality, as some would say. On the one hand he is a passionate programmer using the Microsoft Stack through .Net and C#. On the other hand he is a mad car guy. Lars loves to get his hands dirty and maintain his fleet of classic and off-road cars. When he is not in front of a phone, laptop, desktop or other gadget, he is out in the bush getting muddy or on a car club cruise. Lars has so far published two courses with Pluralsight: Building Windows Phone Apps that Stand Out and Windows Phone Testing and Error Management. As a frequent blogger, Lars has contributed articles to the Kiandra IT Blog, Nokia’s DVLUP portal and his own blog at klint.co, often presenting arguments that are not quite main stream, but with a dash of humour and a smidgen of cheekiness. If you want to ask Lars questions, suggest blog ideas, sell a car etc., shoot him an email or follow@larsklint on twitter."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/lars-klint.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/c64.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/c64.jpg",
     "guestFirstMachineName": "Commodore 64",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
@@ -1500,7 +1500,7 @@
       "John Papa is a well-known technology expert and is a former Evangelist for Microsoft on the Silverlight, Windows Phone and Windows 8 client teams. John is a Microsoft Regional Director and author of 100+ articles and 10 books, specializes in professional application development with technologies including HTML5, JavaScript, CSS, Angular, Durandal, Silverlight, WPF, C#, and .NET. He can often be found speaking around the world at keynotes and sessions for conferences such as Build, MIX, PDC, TechEd, VSLive and AngleBrackets. John was the host of the popular show Silverlight TV on Channel 9 and hosted many events including the MIXer and Open Source Fest at major conferences. He currently enjoys authoring courses for Pluralsight. You can always find John at johnpapa.net or on twitter at @john_papa."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/john-papa.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/c64.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/c64.jpg",
     "guestFirstMachineName": "Commodore 64",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
@@ -1531,7 +1531,7 @@
       "Julie Lerman is a Microsoft MVP, .NET mentor and consultant who lives in the hills of Vermont. You can find Julie presenting on Entity Framework and other Microsoft .NET topics at user groups and conferences around the world. Julie blogs at thedatafarm.com/blog, is the author of the highly acclaimed 'Programming Entity Framework' books, the MSDN Magazine Data Points column and popular videos on Pluralsight.com. Follow Julie on twitter at julielerman."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/julie-lerman.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/hp-41.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/hp-41.jpg",
     "guestFirstMachineName": "HP-41",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/HP-41",
     "guestLinks": [
@@ -1563,7 +1563,7 @@
       "Scott is also a Pluralsight author, a host on the podcast Herding Code, written a few books, and spoken at conferences around the world."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/k-scott-allen.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ti99.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ti99.jpg",
     "guestFirstMachineName": "TI-99",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Ti-99",
     "guestLinks": [
@@ -1594,7 +1594,7 @@
       "Scott is a web developer who has been blogging at http://hanselman.com for over a decade. He works in Open Source on ASP.NET and the Azure Cloud for Microsoft out of his home office in Portland, Oregon. Scott has three podcasts, http://hanselminutes.com for tech talk, http://thisdeveloperslife.com on developers' lives and loves, and http://ratchetandthegeek.com for pop culture and tech media. He's written a number of books and spoken in person to almost a half million developers worldwide."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/scott-hanselman.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/apple2.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/apple2.jpg",
     "guestFirstMachineName": "Apple II",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_II",
     "guestLinks": [
@@ -1633,7 +1633,7 @@
       "Mary Jo has covered the tech industry for 30 years for a variety of publications and Web sites, and is a frequent guest on radio, TV and podcasts, speaking about all things Microsoft-related. She is the author of Microsoft 2.0: How Microsoft plans to stay relevant in the post-Gates era (John Wiley & Sons, 2008). Her primary blog is at allaboutmicrosoft.com on ZDNet. She also is the cohost of the Windows Weekly podcast on TWiT"
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/mary-jo-foley.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/generic-cpm.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/generic-cpm.jpg",
     "guestFirstMachineName": "CP/M",
     "guestFirstMachineLink": "https://en.wikipedia.org/wiki/CP/M",
     "guestLinks": [
@@ -1664,7 +1664,7 @@
       "With 20 years of experience designing and implementing enterprise systems, Michele has held senior executive positions at several corporations, has assembled software development teams and implemented processes for all aspects of the software development lifecycle, and facilitated many successful large-scale enterprise application deployments. Michele specializes in scalable and secure web application and services architecture, cloud-enabled applications and operations, and identity & access management. Michele is a frequent conference presenter and keynote speaker, has chaired many conferences and events, and has been published regularly in several technology journals. Michele’s books include her best selling book Learning WCF (O’Reilly, 2007/2009)."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/michele-bustamante.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/pcclone.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/pcclone.jpg",
     "guestFirstMachineName": "PC Clone",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Pc_clone",
     "guestLinks": [
@@ -1702,7 +1702,7 @@
       "Glenn is a product manager for Splunk's developer experience. In his spare time he is also the author and a maintainer of scriptcs, an OSS tool for C# scripting. A hardcore coder professionally for almost 20 years, he cares deeply about making developers' lives easier.  Previously Glenn worked at Microsoft where he kickstarted ASP.NET Web API and spearheaded Microsoft's node.js story on Azure. Glenn is an active contributor to  Node.js and .NET OSS projects, a supporter of the community, and a frequent speaker internationally on software development. He is also a bit of a Web API fanatic and author of a new OReilly book on the subject. He lives with his wife and daughter in Seattle where rain and caffeine are a plenty."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/glenn-block.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80.jpg",
     "guestFirstMachineName": "TRS-80",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
     "guestLinks": [
@@ -1741,7 +1741,7 @@
       "Petzold is also the author of two unique books that explore the foundations of digital computing: Code: The Hidden Language of Hardware and Software (Microsoft Press, 1999) and The Annotated Turing: A Guided Tour through Alan Turing’s Historic Paper on Computability and the Turing Machine (Wiley, 2008)."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/charles-petzold.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/pdp-10.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/pdp-10.jpg",
     "guestFirstMachineName": "PDP-10",
     "guestFirstMachineLink": "https://en.wikipedia.org/wiki/PDP-10",
     "guestLinks": [
@@ -1779,7 +1779,7 @@
       "Hadi a Software Developer, who currently works at JetBrains. His passions include Web Development and Software Architecture. He’s written a few books and has been speaking at conferences for over a decade, on things he’s passionate about."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/hadi-hariri.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/cpc464.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/cpc464.jpg",
     "guestFirstMachineName": "Amstrad CPC-464",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Amstrad_CPC",
     "guestLinks": [
@@ -1805,7 +1805,7 @@
       "Ward is a Microsoft MVP and the V.P. of Technology at IdeaBlade (www.ideablade.com), makers of the \"DevForce\" .NET application development product and BreezeJS. Ward often obsesses on client technologies for business applications, data access, and development practices."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/ward-bell.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/IBM360Selectric.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/IBM360Selectric.jpg",
     "guestFirstMachineName": "IBM 360 - via Selectric Typewriter",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/IBM_System/360",
     "guestLinks": [
@@ -1843,7 +1843,7 @@
       "Jesse Liberty is a Master Consultant for <a href=\"http://falafel.com/\">Falafel Software</a>, a <a href=\"http://mvp.microsoft.com/en-us/mvp/Jesse%20Liberty-5000326\">Microsoft MVP</a>, a Telerik MVP, an <a href=\"http://www.amazon.com/Jesse-Liberty/e/B000APP6I6/ref=sr_tc_2_0?qid=1359124796&amp;sr=1-2-ent\">author</a>, and he creates courses for <a href=\"http://pluralsight.com/training\">Pluralsight</a>. Jesse hosts the popular <a href=\"http://jesseliberty.com/podcast/\">Yet Another Podcast</a> and his <a href=\"http://jesseliberty.com/\">blog</a> is considered required reading. He was a Senior Evangelist for Microsoft, a XAML Evangelist for Telerik, a Distinguished Software Engineer at AT&T; Software Architect for PBS and Vice President of Information Technology at Citibank. Jesse can be followed on twitter at <a href=\"http://twitter.com/jesseliberty\">@JesseLiberty</a>"
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/jesse-liberty.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/monrobot.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/monrobot.jpg",
     "guestFirstMachineName": "Monrobot",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Monroe_Calculator_Company",
     "guestLinks": [
@@ -1889,7 +1889,7 @@
       "Brian Noyes is a software architect, CTO of Solliance (www.solliance.net), Microsoft Regional Director, Microsoft MVP, and Pluralsight Author. Brian specializes in building rich client applications with XAML and HTML 5, as well as the services that back them with Web APIs and WCF Services. Brian has authored a number of books including Developers Guide to Microsoft Prism 4, Smart Client Deployment with ClickOnce, and Data Binding with Windows Forms 2.0, and speaks at conferences worldwide including Microsoft TechEd, VSLive!, DevIntersection, and others. Brian got started programming as a hobby while flying F-14 Tomcats in the U.S. Navy, later turning his passion for software into his current career. You can contact Brian on Twitter @briannoyes or through his blog http://briannoyes.net."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/brian-noyes.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/vt100.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/vt100.jpg",
     "guestFirstMachineName": "Mainframe (PDP)",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Programmed_Data_Processor",
     "guestLinks": [
@@ -1923,7 +1923,7 @@
       "Chris Sells has a long history as a contributing member of the Windows developer community. He enjoys long walks on the beach and various computer technologies."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/chris-sells.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/teletype.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/teletype.jpg",
     "guestFirstMachineName": "Teletype Printer",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Teleprinter",
     "guestLinks": [
@@ -1957,7 +1957,7 @@
       "Chris Woodruff (or Woody as he is commonly known as) has a degree in Computer Science from Michigan State University’s College of Engineering. Woody has been developing and architecting software solutions for almost 15 years and has worked in many different platforms and tools. He is a community leader, helping such events as Day of .NET Ann Arbor, West Michigan Day of .NET and CodeMash. He was also instrumental in bringing the popular Give Camp event to Western Michigan where technology professionals lend their time and development expertise to assist local non-profits. As a speaker and podcaster, Woody has spoken and discussed a variety of topics, including database design and open source. He is a Microsoft MVP in Visual C# and was recognized in 2010 as one of the top 20 MVPs world-wide."
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/chris-woodruff.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/trs80.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/trs80.jpg",
     "guestFirstMachineName": "TRS-80",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
     "guestLinks": [
@@ -1991,7 +1991,7 @@
       "Jeremy Likness is a principal consultant at Wintellect. He has 20 years of experience building enterprise applications and specializes in delivering web-based solutions using the Microsoft stack with client technologies like TypeScript and AngularJS. A 4-time Microsoft MVP, Jeremy is the author of several books that cover XAML technologies like Silverlight and Windows 8.1 and speaks frequently at user group events and conferences. Jeremy lives in Woodstock, GA with his wife, daughter, three dogs and an Ecclectus parrot. He loves hiking, running, skiing, shooting guns and shooting pool (9-ball is his favorite game). "
     ],
     "guestHeadshot": "http://wildermuth.com/images/hwpod/jeremy-likness.jpg",
-    "guestFirstMachine": "http://wildermuth.com/images/hwpod/ti99.jpg",
+    "guestFirstMachineImage": "http://wildermuth.com/images/hwpod/ti99.jpg",
     "guestFirstMachineName": "TI-99",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Ti-99",
     "guestLinks": [

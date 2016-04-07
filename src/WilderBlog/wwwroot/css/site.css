@@ -14,6 +14,34 @@ p a:hover {
   -o-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1540px;
+  }
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.headshot img {
+  max-width: 100%;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+.headshot img:hover {
+  -moz-transform: scale(1.25) rotate(-5deg);
+  -ms-transform: scale(1.25) rotate(-5deg);
+  -o-transform: scale(1.25) rotate(-5deg);
+  -webkit-transform: scale(1.25) rotate(-5deg);
+  transform: scale(1.25) rotate(-5deg);
+}
+.headshot .card {
+  min-height: 280px;
+}
+.headshot a:hover {
+  text-decoration: none;
+}
 .sidebar-icon-list li.list-inline-item {
   margin-left: -3px;
   margin-right: -6px;

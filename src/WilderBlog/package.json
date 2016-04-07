@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "ASP.NET",
+  "name": "WilderBlogDependenies",
   "private": true,
   "dependencies": {
     "angular2": "~2.0.0-beta.1",

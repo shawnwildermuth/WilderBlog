@@ -7,7 +7,6 @@
   ViewBag.PageAttribution = $"Posted by Shawn Wildermuth on {pubDate}";
   ViewBag.PageImage = "/img/blog/shawnteaching.png";
 }
-
 @Html.Raw(Model.Body)
 <p class="post-meta">
   <small>
@@ -39,6 +38,10 @@
 @ads.InlineAdd()
 <hr />
 <div id="disqus_thread"></div>
+@section Styles {
+  <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shCore.css" />
+  <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shThemeDefault.css" />
+}
 @section Scripts {
   <script>
     var disqus_config = function () {
@@ -56,4 +59,12 @@
     })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  <script type="text/javascript" src="~/3rdparty/js/sh/shCore.js"></script>
+  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushCSharp.js"></script>
+  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushJScript.js"></script>
+  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushXml.js"></script>
+  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushCss.js"></script>
+  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushSass.js"></script>
+  <script type="text/javascript" src="~/3rdparty/js/syntaxhighlight.js"></script>
 }

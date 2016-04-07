@@ -7,6 +7,7 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 var gulp = require('gulp');
 
 gulp.task("npmTasks", function () {
+  // Angular2 
   gulp.src([
      'node_modules/angular2/bundles/*.*',
      //'node_modules/angular2/bundles/js',
@@ -20,6 +21,8 @@ gulp.task("npmTasks", function () {
      //'node_modules/systemjs/dist/system.src.js',
      'node_modules/rxjs/bundles/rx.js',
   ]).pipe(gulp.dest("wwwroot/lib/angular2"));
+
+
 });
 
 gulp.task('default', ["npmTasks"]);

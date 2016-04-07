@@ -29,7 +29,7 @@ namespace WilderBlog.Services.DataProviders
     public string[] GuestBio { get; set; }
     public string GuestName { get; set; }
     public string GuestHeadshot { get; set; }
-    public string GuestFirstMachine { get; set; }
+    public string GuestFirstMachineImage { get; set; }
     public string GuestFirstMachineLink { get; set; }
     public string GuestFirstMachineName { get; set; }
     public ICollection<GuestLink> GuestLinks { get; set; }
