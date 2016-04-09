@@ -1,6 +1,25 @@
 // Site.css
 @hoverColor: #004a9b;
 
+body {
+  font-size: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  padding-right: .3rem;
+  padding-left: .3rem;
+
+}
+
+.navbar-nav .nav-item + .nav-item {
+  margin-left: .3rem;
+}
+
 a, p a {
   color: @hoverColor;
   text-decoration: none;
@@ -24,6 +43,24 @@ a:hover, p a:hover {
 @media (min-width: 1600px) {
   .container {
     max-width: 1540px;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #888;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 

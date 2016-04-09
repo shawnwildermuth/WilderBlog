@@ -78,6 +78,7 @@ namespace WilderBlog
       svcs.AddScoped<CoursesProvider>();
       svcs.AddScoped<PublicationsProvider>();
       svcs.AddScoped<PodcastEpisodesProvider>();
+      svcs.AddScoped<VideosProvider>();
 
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();
@@ -95,7 +96,11 @@ namespace WilderBlog
                           ILoggerFactory loggerFactory,
                           WilderInitializer initializer)
     {
+
+      // Early so we can catch the StatusCode error
       app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
+      app.UseUrlRewriter();
 
       // Add the following to the request pipeline only in development environment.
       if (_env.IsDevelopment())

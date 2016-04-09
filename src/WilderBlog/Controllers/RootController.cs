@@ -8,6 +8,7 @@ using Microsoft.Extensions.PlatformAbstractions;
 using WilderBlog.Data;
 using WilderBlog.Models;
 using WilderBlog.Services;
+using WilderBlog.Services.DataProviders;
 using WilderMinds.RssSyndication;
 
 namespace WilderBlog.Controllers
@@ -19,11 +20,13 @@ namespace WilderBlog.Controllers
 
     private IMailService _mailService;
     private IWilderRepository _repo;
+    private VideosProvider _videosProvider;
 
-    public RootController(IMailService mailService, IWilderRepository repo)
+    public RootController(IMailService mailService, IWilderRepository repo, VideosProvider videosProvider)
     {
       _mailService = mailService;
       _repo = repo;
+      _videosProvider = videosProvider;
     }
 
     [HttpGet("")]
@@ -57,6 +60,12 @@ namespace WilderBlog.Controllers
     public IActionResult About()
     {
       return View();
+    }
+
+    [HttpGet("videos")]
+    public IActionResult Videos()
+    {
+      return View(_videosProvider.Get());
     }
 
     [HttpGet("contact")]
@@ -95,6 +104,12 @@ namespace WilderBlog.Controllers
     public IActionResult Rss()
     {
       return RedirectPermanent("http://feeds.feedburner.com/ShawnWildermuth");
+    }
+
+    [HttpGet("Error/{code:int}")]
+    public IActionResult Error(int errorCode)
+    {
+      return View();
     }
 
     [HttpGet("feed")]

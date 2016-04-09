@@ -16875,7 +16875,7 @@
       <content:encoded />
       <dsq:thread_identifier>http://wildermuth.com/2016/1/22/Kicking_Off_The_Road_Trip!</dsq:thread_identifier>
       <wp:post_date_gmt>2016-01-22 22:45:00</wp:post_date_gmt>
-      <wp:comment_status>open</wp:comment_status>
+      <wp:comment_status>closed</wp:comment_status>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WilderBlog.Services.DataProviders.Video>
+@{
+  ViewBag.Title = "My Videos - Shawn Wildermuth's Rants and Raves";
+  ViewBag.PageName = "My Videos";
+  ViewBag.PageBlurb = "A collection of my instructional videos";
+  ViewBag.PageImage = "/img/headers/video.jpg";
+}
+<div class="row">
+  @foreach (var v in Model)
+  {
+    <div class="col-lg-6">
+      <div class="video-container">
+        @if (v.VideoType == WilderBlog.Services.DataProviders.VideoType.YouTube)
+        {
+          <iframe width="480" height="320" src="https://www.youtube.com/embed/@(v.Id)?rel=0" frameborder="0" allowfullscreen></iframe>
+        }
+      </div>
+    </div>
+  }
+</div>

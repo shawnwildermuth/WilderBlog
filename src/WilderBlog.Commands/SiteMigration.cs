@@ -65,7 +65,7 @@ namespace WilderBlog.Commands
       var counter = 1;
       foreach (var story in stories)
       {
-        Console.Write($"Migrating {counter} of {stories.Count()}");
+        Console.WriteLine($"Migrating {counter} of {stories.Count()}");
         MigrateStory(story);
         counter++;
       }
@@ -124,7 +124,7 @@ namespace WilderBlog.Commands
 
     private void MigrateStory(Stories story)
     {
-      FixBody(story.Body);
+      story.Body = FixBody(story.Body);
 
       var newStory = new BlogStory()
       {
@@ -136,16 +136,19 @@ namespace WilderBlog.Commands
         Slug = story.GetStoryUrl()
       };
 
-      newStory.Categories = string.Join(",", _ctx.StoryCategories.Include(c => c.Category).Where(s => s.Story_Id == story.Id).Select(s => s.Category.Name).ToArray());
-
+      var cats = string.Join(",", _ctx.StoryCategories.Include(c => c.Category).Where(s => s.Story_Id == story.Id).Select(s => s.Category.Name).ToArray());
+      newStory.Categories = cats;
+      
       _repo.AddStory(newStory);
     }
 
-    private void FixBody(string body)
+    private string FixBody(string body)
     {
       // TODO Fix Image Paths
-      body.Replace("http://wildermuth.com/images/", "http://wildermuth.com/img/blog/");
-      body.Replace("\"/images/", "\"/img/blog/");
+      return body.Replace("http://wildermuth.com/images/", "http://wilderminds.blob.core.windows.net/img/")
+        .Replace("\"/images/", "\"http://wilderminds.blob.core.windows.net/img/")
+        .Replace("http://wildermuth.com/downloads/", "http://wilderminds.blob.core.windows.net/downloads/")
+        .Replace("\"/downloads/", "\"http://wilderminds.blob.core.windows.net/downloads/");
     }
   }
 }

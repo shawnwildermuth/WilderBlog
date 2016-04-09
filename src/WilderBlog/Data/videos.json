@@ -1,0 +1,117 @@
+﻿[
+  {
+    "title": "Docker and ASP.NET Core",
+    "videoType": "YouTube",
+    "id": "PAmN-QUffbo",
+    "datePublished": "2016-04-08"
+  },
+  {
+    "title": "Visual Studio Tips: Shortcut Keys",
+    "videoType": "YouTube",
+    "id": "p0frVzOQC-U",
+    "datePublished": "2016-04-02"
+  },
+  {
+    "title": "Angular 2 and ASP.NET Core Projects",
+    "videoType": "YouTube",
+    "id": "ufBbGMLgSj0",
+    "datePublished": "2016-04-02"
+  },
+  {
+    "title": "Using Bower in ASP.NET 5 and Visual Studio 2015",
+    "videoType": "YouTube",
+    "id": "6N5EuxFFaOI",
+    "datePublished": "2015-11-10"
+  },
+  {
+    "title": "Learn about ASP.NET 5 with expert Shawn Wildermuth",
+    "videoType": "YouTube",
+    "id": "EghnSvJ8h68",
+    "datePublished": "2015-11-20"
+  },
+
+  {
+    "title": "Bootstrap 3 grid system explained",
+    "videoType": "YouTube",
+    "id": "XFrbkhWP0rM",
+    "datePublished": "2013-12-04"
+  },
+
+  {
+    "title": "Piggybacking on ASP.NET authentication with Web API",
+    "videoType": "YouTube",
+    "id": "o-F5sYdoiYo",
+    "datePublished": "2013-10-15"
+  },
+
+  {
+    "title": "Making scalable JavaScript",
+    "videoType": "YouTube",
+    "id": "dfSBKZ1lI8c",
+    "datePublished": "2014-07-08"
+  },
+
+  {
+    "title": "Building the Wireframe in Visual Studio with Zen Coding",
+    "videoType": "YouTube",
+    "id": "HDm_PdoygRI",
+    "datePublished": "2013-08-27"
+  },
+
+  {
+    "title": "Designing Web API URIs",
+    "videoType": "YouTube",
+    "id": "M9muQMMn__I",
+    "datePublished": "2013-07-10"
+  },
+
+  {
+    "title": "How to build AngularJS directives using Webstorm 9",
+    "videoType": "YouTube",
+    "id": "LT8XSNu5TQ4",
+    "datePublished": "2014-12-12"
+  },
+
+  {
+    "title": "Why Testing DOM-Centric JavaScript is Hard",
+    "videoType": "YouTube",
+    "id": "RE6ZQkzlLQ4",
+    "datePublished": "2014-02-05"
+  },
+  {
+    "title": "Scoping in JavaScript Functions",
+    "videoType": "YouTube",
+    "id": "LhL0gMJc2n8",
+    "datePublished": "2013-10-15"
+  },
+  {
+    "title": "Namespace Simulation Using C# in JavaScript",
+    "videoType": "YouTube",
+    "id": "FikQPn-VbpM",
+    "datePublished": "2012-09-04"
+  },
+  {
+    "title": "Refactoring CSS Rules to LESS",
+    "videoType": "YouTube",
+    "id": "LYwFA2eoUJk",
+    "datePublished": "2013-09-10"
+  },
+  {
+    "title": "CSS Debugging Tips",
+    "videoType": "YouTube",
+    "id": "5RfDcy-ekGM",
+    "datePublished": "2012-06-06"
+  },
+  {
+    "title": "What's new with WebStorm 9",
+    "videoType": "YouTube",
+    "id": "v-2XivlbkQ0",
+    "datePublished": "2014-11-24"
+  },
+  {
+    "title": "Modifying Styles with Firebug",
+    "videoType": "YouTube",
+    "id": "HvsI4RmUxrE",
+    "datePublished": "2013-09-30"
+  }
+]

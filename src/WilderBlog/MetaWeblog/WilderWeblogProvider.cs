@@ -8,6 +8,8 @@ using Microsoft.Extensions.PlatformAbstractions;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
 using WilderMinds.MetaWeblog;
+using Microsoft.WindowsAzure.Storage.Auth;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace WilderBlog.MetaWeblog
 {
@@ -16,7 +18,6 @@ namespace WilderBlog.MetaWeblog
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
     private IConfigurationRoot _config;
-    private string _mediaPath;
     private IApplicationEnvironment _appEnv;
 
     public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfigurationRoot config, IApplicationEnvironment appEnv)
@@ -25,13 +26,6 @@ namespace WilderBlog.MetaWeblog
       _userMgr = userMgr;
       _config = config;
       _appEnv = appEnv;
-
-      _mediaPath = _config["MetaWeblog:StoragePath"];
-      if (string.IsNullOrEmpty(_mediaPath) == true)
-      {
-        throw new InvalidOperationException(@"You need an AppSettings key named ""MetaWeblogAPIStoragePath"" that tells me where to put your files!");
-      }
-
     }
 
     public string AddPost(string blogid, string username, string password, Post post, bool publish)
@@ -81,7 +75,7 @@ namespace WilderBlog.MetaWeblog
       }
       catch (Exception)
       {
-        throw new MetaWeblogException( "Failed to save the post.");
+        throw new MetaWeblogException("Failed to save the post.");
       }
     }
 
@@ -117,33 +111,17 @@ namespace WilderBlog.MetaWeblog
 
       var filenameonly = mediaObject.name.Substring(mediaObject.name.LastIndexOf('/') + 1);
 
-      var newPath = Path.Combine(_mediaPath, filenameonly).Replace("/", "\\");
-
-      var filePath = Path.Combine(_appEnv.ApplicationBasePath, "wwwroot", newPath.StartsWith("\\") ? newPath.Substring(1) : newPath);
-
-      // Make sure the directory exists
-      var dirPath = Path.GetDirectoryName(filePath);
-      EnsureDirectory(new DirectoryInfo(dirPath));
-
-      // If the file exists, just punt
-      if (File.Exists(filePath))
-      {
-        var nonCollidingName = string.Concat(Guid.NewGuid(), ".", Path.GetExtension(filePath));
-        newPath = Path.Combine(_mediaPath, nonCollidingName);
-        filePath = Path.Combine(_appEnv.ApplicationBasePath, "wwwroot", newPath);
-      }
-
-      // Write the file.
-      File.WriteAllBytes(filePath, mediaObject.bits);
+      var url = $"https://wilderminds.blob.core.windows.net/img/{filenameonly}";
+      var creds = new StorageCredentials(_config["BlobStorage:Account"], _config["BlobStorage:Key"]);
+      var blob = new CloudBlockBlob(new Uri(url), creds);
+      blob.UploadFromByteArrayAsync(mediaObject.bits, 0, mediaObject.bits.Length).Wait();
 
       // Create the response
       MediaObjectInfo objectInfo = new MediaObjectInfo();
-
-      objectInfo.url = newPath;
+      objectInfo.url = url;
 
       return objectInfo;
     }
-
 
     public CategoryInfo[] GetCategories(string blogid, string username, string password)
     {
@@ -158,7 +136,7 @@ namespace WilderBlog.MetaWeblog
           htmlUrl = string.Concat("http://wildermuth.com/tags/", c),
           rssUrl = ""
         }).ToArray();
-                  
+
     }
 
     public Post[] GetRecentPosts(string blogid, string username, string password, int numberOfPosts)
