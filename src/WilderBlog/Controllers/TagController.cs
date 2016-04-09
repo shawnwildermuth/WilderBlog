@@ -14,10 +14,16 @@ namespace WilderBlog.Controllers
       _repo = repo;
     }
 
-    [HttpGet("{tag}/{page:int?}")]
-    public IActionResult Index(string tag, int page = 1)
+    [HttpGet("{tag}")]
+    public IActionResult Index(string tag)
     {
-      return View(_repo.GetStoriesByTag(tag, _pageSize, page));
+      return Pager(tag, 1);
+    }
+
+    [HttpGet("{tag}/{page}")]
+    public IActionResult Pager(string tag, int page)
+    {
+      return View("Index", _repo.GetStoriesByTag(tag, _pageSize, page));
     }
   }
 }

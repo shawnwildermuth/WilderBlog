@@ -51,6 +51,9 @@ namespace WilderBlog.Controllers
 
       var story = _repo.GetStory(fullSlug);
 
+      // Try with other slug if it doesn't work
+      if (story == null) story = _repo.GetStory($"{year:0000}/{month:00}/{day:00}/{slug}");
+
       if (story == null) return Redirect("/");
 
       return View(story);

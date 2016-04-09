@@ -62,6 +62,7 @@ namespace WilderBlog.Data
         .Where(s => s.Body.ToLowerInvariant().Contains(lowerTerm) ||
                  s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
                  s.Title.ToLowerInvariant().Contains(lowerTerm))
+        .OrderByDescending(o => o.DatePublished)
         .Skip((page - 1) * pageSize).Take(pageSize)
       };
     }
