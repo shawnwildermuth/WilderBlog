@@ -7,4 +7,8 @@
     e.preventDefault();
     return false;
   });
+  var $menu = $("#menu");
+  $("#toggle-menu").on("click", function (e) {
+    $menu.toggleClass("shown");
+  });
 })(jQuery);

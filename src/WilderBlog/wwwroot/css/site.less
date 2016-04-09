@@ -13,12 +13,70 @@ p {
   font-size: 1rem;
   padding-right: .3rem;
   padding-left: .3rem;
-
 }
 
 .navbar-nav .nav-item + .nav-item {
   margin-left: .3rem;
 }
+
+// Flyout Menu
+#menu {
+  background: #373737 none repeat scroll 0 0;
+  border: 1px solid black;
+  left: -175px;
+  padding: 2px;
+  position: fixed;
+  top: 60px;
+  width: 175px;
+  max-width: 50%;
+  z-index: 999;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -moz-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+  -moz-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  -webkit-transition-duration: .35s;
+  transition-duration: .35s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+
+  a {
+    color: white;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid #888;
+    }
+  }
+
+  &.shown {
+    left: 0;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -moz-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+  -moz-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  -webkit-transition-duration: .35s;
+  transition-duration: .35s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  }
+}
+
 
 a, p a {
   color: @hoverColor;

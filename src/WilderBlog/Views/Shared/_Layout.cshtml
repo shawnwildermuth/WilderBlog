@@ -65,7 +65,7 @@
   <nav class="navbar navbar-fixed-top navbar-dark" style="background-color: rgba(0,0,0,0.8)">
     <div>
       <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
-      <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#menu">
+      <button class="navbar-toggler hidden-md-up pull-right" type="button" id="toggle-menu">
         &#9776;
       </button>
       <div class="nav navbar-nav navbar-toggleable-xs nav-pills collapse hidden-sm-down pull-lg-right">
@@ -73,7 +73,7 @@
       </div>
     </div>
   </nav>
-  <div id="menu" class="responsiveMenu nav collapse hidden-md-up nav-stacked" style="color: #fff">
+  <div id="menu" class="nav hidden-md-up nav-pills nav-stacked" style="color: #fff">
     @Html.Partial("_Menu")
   </div>
   <!-- Page Header -->

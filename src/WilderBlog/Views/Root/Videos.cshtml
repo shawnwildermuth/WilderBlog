@@ -5,13 +5,16 @@
   ViewBag.PageBlurb = "A collection of my instructional videos";
   ViewBag.PageImage = "/img/headers/video.jpg";
 }
+@section Scripts {
+  <script src="~/js/video.js"></script>
+}
 <div class="row">
   @foreach (var v in Model)
   {
     <div class="col-xl-8 col-xl-offset-2 col-lg-12">
       <div class="card ">
         <div class="card-block">
-          <button class="btn pull-right btn-primary-outline" data-toggle="collapse" data-target="#video-@v.Id">Watch</button>
+          <button class="btn pull-right btn-primary-outline video-toggle" data-id="@v.Id">Show Video</button>
           <h3 class="card-title">@v.Title</h3>
           <div class="card-text"><small>Published: @v.DatePublished.ToLongDateString()</small></div>
           <p class="card-text">@v.Description</p>
@@ -20,7 +23,7 @@
         <div class="video-container collapse" id="video-@v.Id">
           @if (v.VideoType == WilderBlog.Services.DataProviders.VideoType.YouTube)
         {
-            <iframe width="480" height="320" src="https://www.youtube.com/embed/@(v.VideoCode)?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="480" height="320" data-src="https://www.youtube.com/embed/@(v.VideoCode)?rel=0" frameborder="0" allowfullscreen></iframe>
           }
         </div>
       </div>
