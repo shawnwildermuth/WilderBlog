@@ -1,117 +1,153 @@
 ﻿[
   {
+    "id": 1,
     "title": "Docker and ASP.NET Core",
+    "description": "Some learnings from my fun with hosting ASP.NET Core in a Docker container, both on a local machine and in Azure.",
     "videoType": "YouTube",
-    "id": "PAmN-QUffbo",
+    "videoCode": "PAmN-QUffbo",
     "datePublished": "2016-04-08"
   },
   {
+    "id": 2,
     "title": "Visual Studio Tips: Shortcut Keys",
+    "description": "I get asked a lot about what keys I tap during my courses, so I thought I'd put together some of my favorite trips with shortcut keys in Visual Studio.",
     "videoType": "YouTube",
-    "id": "p0frVzOQC-U",
+    "videoCode": "p0frVzOQC-U",
     "datePublished": "2016-04-02"
   },
   {
+    "id": 3,
     "title": "Angular 2 and ASP.NET Core Projects",
+    "description": "Originally a webcast where I build an Angular 2 project in a ASP.NET Project live, it's not without some bumps and bruises but hopefully there are some things to learn here.",
     "videoType": "YouTube",
-    "id": "ufBbGMLgSj0",
+    "videoCode": "ufBbGMLgSj0",
     "datePublished": "2016-04-02"
   },
   {
-    "title": "Using Bower in ASP.NET 5 and Visual Studio 2015",
+    "id": 4,
+    "title": "Using Bower in ASP.NET Core and Visual Studio 2015",
+    "description": "A video where I show how to use Bower to do your ASP.NET 5 (ASP.NET Core) projects.",
     "videoType": "YouTube",
-    "id": "6N5EuxFFaOI",
+    "videoCode": "6N5EuxFFaOI",
     "datePublished": "2015-11-10"
   },
   {
+    "id": 5,
     "title": "Learn about ASP.NET 5 with expert Shawn Wildermuth",
+    "description": "In this Pluralsight webcast, I show you how to build an ASP.NET Core (e.g. ASP.NET 5) project from scratch!",
     "videoType": "YouTube",
-    "id": "EghnSvJ8h68",
+    "videoCode": "EghnSvJ8h68",
     "datePublished": "2015-11-20"
   },
 
   {
+    "id": 6,
     "title": "Bootstrap 3 grid system explained",
+    "description": "In this preview of my Pluralsight Bootstrap 3 course, I show how the grid system works.",
     "videoType": "YouTube",
-    "id": "XFrbkhWP0rM",
+    "videoCode": "XFrbkhWP0rM",
     "datePublished": "2013-12-04"
   },
 
   {
+    "id": 7,
     "title": "Piggybacking on ASP.NET authentication with Web API",
+    "description": "In this preview of Preview of my Pluralsight ASP.NET Web API course, I show how to use cookie authentication to secure your REST APIs.",
     "videoType": "YouTube",
-    "id": "o-F5sYdoiYo",
+    "videoCode": "o-F5sYdoiYo",
     "datePublished": "2013-10-15"
   },
 
   {
+    "id": 8,
     "title": "Making scalable JavaScript",
+    "description": "In thie preview of my Pluralsight Course on Large Scale JavaScript, I talk about how scalability in JavaScript.",
     "videoType": "YouTube",
-    "id": "dfSBKZ1lI8c",
+    "videoCode": "dfSBKZ1lI8c",
     "datePublished": "2014-07-08"
   },
 
   {
+    "id": 9,
     "title": "Building the Wireframe in Visual Studio with Zen Coding",
+    "description": "In this preview from my Pluralsight course on ASP.NET 4 (end-to-end), I show Zen Coding in Visual Studio.",
     "videoType": "YouTube",
-    "id": "HDm_PdoygRI",
+    "videoCode": "HDm_PdoygRI",
     "datePublished": "2013-08-27"
   },
 
   {
+    "id": 10,
     "title": "Designing Web API URIs",
+    "description": "In this preview of my Pluralsight course on Designing APIs, I talk about starting a Web API by designing the URLs.",
     "videoType": "YouTube",
-    "id": "M9muQMMn__I",
+    "videoCode": "M9muQMMn__I",
     "datePublished": "2013-07-10"
   },
 
   {
+    "id": 11,
     "title": "How to build AngularJS directives using Webstorm 9",
+    "description": "In this preview of my Webstorm 9 course for Pluralsight, I show how to build directives directly in Webstorm.",
     "videoType": "YouTube",
-    "id": "LT8XSNu5TQ4",
+    "videoCode": "LT8XSNu5TQ4",
     "datePublished": "2014-12-12"
   },
 
   {
+    "id": 12,
     "title": "Why Testing DOM-Centric JavaScript is Hard",
+    "description": "In this free clip from Large Scale JavaScript for Client and Server, I show you why testing your DOM-Centric JavaScript is difficult.",
     "videoType": "YouTube",
-    "id": "RE6ZQkzlLQ4",
+    "videoCode": "RE6ZQkzlLQ4",
     "datePublished": "2014-02-05"
   },
   {
+    "id": 13,
     "title": "Scoping in JavaScript Functions",
+    "description": "In this excerpt from my \"JavaScript for C# Developers\", I show you how scoping in JavaScript is different from C# so you don't make the same mistakes he did when he first was dabbling in the language.",
     "videoType": "YouTube",
-    "id": "LhL0gMJc2n8",
+    "videoCode": "LhL0gMJc2n8",
     "datePublished": "2013-10-15"
   },
   {
+    "id": 14,
     "title": "Namespace Simulation Using C# in JavaScript",
+    "description": "Too many globally scoped variables and functions can make Javascript code difficult to work with, particularly on large projects. In this video excerpt fromm course JavaScript for C# Developers you'll see how to simulate the concept of namespaces using objects. ",
     "videoType": "YouTube",
-    "id": "FikQPn-VbpM",
+    "videoCode": "FikQPn-VbpM",
     "datePublished": "2012-09-04"
   },
   {
+    "id": 15,
     "title": "Refactoring CSS Rules to LESS",
+    "description": "In this demo from his A Better CSS: LESS and SASS course, I show you how to take nested CSS Rules and refactoring them using LESS into more maintainable code.",
     "videoType": "YouTube",
-    "id": "LYwFA2eoUJk",
+    "videoCode": "LYwFA2eoUJk",
     "datePublished": "2013-09-10"
   },
   {
+    "id": 16,
     "title": "CSS Debugging Tips",
+    "description": "Getting your web applications styled just right can sometimes require a bit of iteration. In this video excerpt from my course \"Debugging the Web\" you'll see how to edit the CSS rules in the browser where you can see the affects immediately and then how to move those changes back to your source stylesheet.",
     "videoType": "YouTube",
-    "id": "5RfDcy-ekGM",
+    "videoCode": "5RfDcy-ekGM",
     "datePublished": "2012-06-06"
   },
   {
+    "id": 17,
     "title": "What's new with WebStorm 9",
+    "description": "In this webinar, I will walk through the new features in WebStorm 9, a full web IDE from JetBrains.",
     "videoType": "YouTube",
-    "id": "v-2XivlbkQ0",
+    "videoCode": "v-2XivlbkQ0",
     "datePublished": "2014-11-24"
   },
   {
+    "id": 18,
     "title": "Modifying Styles with Firebug",
+    "description": "In this course excerpt from Debugging the Web, I show you how you can change styling information using Firebug and see the results in real-time.",
     "videoType": "YouTube",
-    "id": "HvsI4RmUxrE",
+    "videoCode": "HvsI4RmUxrE",
     "datePublished": "2013-09-30"
   }
 ]

@@ -8,12 +8,21 @@
 <div class="row">
   @foreach (var v in Model)
   {
-    <div class="col-lg-6">
-      <div class="video-container">
-        @if (v.VideoType == WilderBlog.Services.DataProviders.VideoType.YouTube)
+    <div class="col-xl-8 col-xl-offset-2 col-lg-12">
+      <div class="card ">
+        <div class="card-block">
+          <button class="btn pull-right btn-primary-outline" data-toggle="collapse" data-target="#video-@v.Id">Watch</button>
+          <h3 class="card-title">@v.Title</h3>
+          <div class="card-text"><small>Published: @v.DatePublished.ToLongDateString()</small></div>
+          <p class="card-text">@v.Description</p>
+
+        </div>
+        <div class="video-container collapse" id="video-@v.Id">
+          @if (v.VideoType == WilderBlog.Services.DataProviders.VideoType.YouTube)
         {
-          <iframe width="480" height="320" src="https://www.youtube.com/embed/@(v.Id)?rel=0" frameborder="0" allowfullscreen></iframe>
-        }
+            <iframe width="480" height="320" src="https://www.youtube.com/embed/@(v.VideoCode)?rel=0" frameborder="0" allowfullscreen></iframe>
+          }
+        </div>
       </div>
     </div>
   }

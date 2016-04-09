@@ -33,7 +33,9 @@ namespace WilderBlog.Services.DataProviders
   public class Video
   {
     public string Title { get; set; }
-    public string Id { get; set; }
+    public int Id { get; set; }
+    public string Description { get; set; }
+    public string VideoCode { get; set; }
     public VideoType VideoType { get; set; }
     public DateTime DatePublished { get; set; }
   }
