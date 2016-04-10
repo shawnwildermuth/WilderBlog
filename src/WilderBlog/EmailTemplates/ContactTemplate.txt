@@ -2,6 +2,5 @@
    Name: {1}
 Subject: {2}
 
-From the Wildermuth.com Contact Page: 
-
+Message:
 {3}

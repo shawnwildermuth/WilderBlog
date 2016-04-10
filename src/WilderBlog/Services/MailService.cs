@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -35,19 +36,21 @@ namespace WilderBlog.Services
         var uri = $"https://api.sendgrid.com/api/mail.send.json";
         var post = new KeyValuePair<string, string>[]
               {
-              new KeyValuePair<string, string>("to", email),
-              new KeyValuePair<string, string>("toname", name),
-              new KeyValuePair<string, string>("subject", subject),
-              new KeyValuePair<string, string>("text", body),
-              new KeyValuePair<string, string>("from", _config["MailService:Sender"]),
+                new KeyValuePair<string, string>("api_user", _config["MailService:ApiUser"]),
+                new KeyValuePair<string, string>("api_key", _config["MailService:ApiKey"]),
+                new KeyValuePair<string, string>("to", _config["MailService:Receiver"]),
+                new KeyValuePair<string, string>("toname", name),
+                new KeyValuePair<string, string>("subject", $"Wildermuth.com Site Mail"),
+                new KeyValuePair<string, string>("text", string.Format(body, email, name, subject, msg)),
+                new KeyValuePair<string, string>("from", _config["MailService:Receiver"])
               };
 
         var client = new HttpClient();
-        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "key");
         var response = await client.PostAsync(uri, new FormUrlEncodedContent(post));
         if (!response.IsSuccessStatusCode)
         {
-          _logger.LogError("Failed to send message via SendGrid");
+          var result = await response.Content.ReadAsStringAsync();
+          _logger.LogError($"Failed to send message via SendGrid: {Environment.NewLine}Body: {post}{Environment.NewLine}Result: {result}");
         }
       }
       catch (Exception ex)
