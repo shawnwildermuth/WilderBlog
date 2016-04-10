@@ -1,6 +1,17 @@
 ﻿[
   {
     "outputFile": "wwwroot/css/site.css",
-    "inputFile": "wwwroot/css/site.less"
+    "inputFile": "wwwroot/css/site.less",
+    "minify": {
+      "enabled": true
+    }
+  },
+  {
+    "outputFile": "wwwroot/css/clean-blog.css",
+    "inputFile": "wwwroot/css/clean-blog.less",
+    "minify": {
+      "enabled": true
+    }
   }
+
 ]

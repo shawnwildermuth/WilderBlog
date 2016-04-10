@@ -12,7 +12,7 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "Hosting:Environment": "Development"
+        "Hosting:Environment": "Production"
       },
       "sdkVersion": "dnx-clr-win-x86.1.0.0-rc1-update2"
     },

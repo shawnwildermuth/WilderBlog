@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "WilderBlogDependenies",
+  "name": "wilderblog",
   "private": true,
   "dependencies": {
     "angular2": "~2.0.0-beta.1",
@@ -8,6 +8,9 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "typescript": "~1.7.5"
+    "typescript": "~1.7.5",
+    "gulp-uglify": "~1.5.3",
+    "gulp-concat": "~2.6.0",
+    "gulp-bower-files": "~0.2.7"
   }
 }

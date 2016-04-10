@@ -11,7 +11,7 @@
       }
       $video.show(0);
     } else {
-      $btn.text("show Video");
+      $btn.text("Show Video");
       $video.hide(0);
     }
   });

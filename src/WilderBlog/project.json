@@ -48,7 +48,7 @@
   ],
   "scripts": {
     "prebuild": [
-      "gulp npmTasks"
+      "gulp"
     ]
   },
   "userSecretsId": "aspnet5-WilderBlog-20160203121239"

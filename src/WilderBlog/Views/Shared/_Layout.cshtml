@@ -41,13 +41,13 @@
   <environment names="Development">
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="~/siteTemplate/css/clean-blog.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
   </environment>
   <environment names="Production">
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/siteTemplate/css/clean-blog.min.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.min.css" rel="stylesheet" />
     <link href="~/css/site.min.css" rel="stylesheet" />
   </environment>
 
@@ -187,12 +187,18 @@
   <environment names="Development">
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/clean-blog.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/about.js"></script>
+    <script src="~/js/audio.js"></script>
+    <script src="~/js/video.js"></script>
   </environment>
   <environment names="Production">
     <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
             asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
             asp-fallback-test="window.jQuery"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/site/wilderblog.min.js"></script>
     <!-- Google -->
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -210,8 +216,6 @@
     </script>
   </environment>
 
-  <script src="~/siteTemplate/js/clean-blog.min.js"></script>
-  <script src="~/js/site.js"></script>
   @RenderSection("Scripts", required: false)
 
 </body>
