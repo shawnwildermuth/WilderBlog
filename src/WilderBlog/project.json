@@ -49,10 +49,10 @@
   "scripts": {
     "postbuild": [
       "gulp default"
-
     ],
     "prerestore": [
-      "npm install"
+      "npm install",
+      "gulp default"
     ]
   },
   "userSecretsId": "aspnet5-WilderBlog-20160203121239"
