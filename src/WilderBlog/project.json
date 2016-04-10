@@ -47,7 +47,7 @@
     "**.vspscc"
   ],
   "scripts": {
-    "prebuild": [
+    "postrestore": [
       "npm install",
       "gulp default"
     ]
