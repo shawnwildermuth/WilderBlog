@@ -48,6 +48,7 @@
   ],
   "scripts": {
     "prebuild": [
+      "npm install",
       "gulp default"
     ]
   },
