@@ -47,9 +47,12 @@
     "**.vspscc"
   ],
   "scripts": {
-    "postrestore": [
-      "npm install",
+    "postbuild": [
       "gulp default"
+
+    ],
+    "prerestore": [
+      "npm install"
     ]
   },
   "userSecretsId": "aspnet5-WilderBlog-20160203121239"
