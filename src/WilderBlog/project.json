@@ -50,10 +50,11 @@
     "postbuild": [
       "gulp default"
     ],
-    "prerestore": [
+    "prepublish": [
       "npm install",
+      "bower install",
       "gulp default"
-    ]
+    ]  
   },
   "userSecretsId": "aspnet5-WilderBlog-20160203121239"
 }
