@@ -5,22 +5,39 @@
   ViewBag.PageImage = "/img/headers/about.jpg";
 }
 @section Scripts {
-  <!-- IE required polyfills, in this exact order -->
-  <script src="~/lib/angular2/es6-shim.js"></script>
-  <script src="~/lib/angular2/system-polyfills.js"></script>
-  <script src="~/lib/angular2/angular2-polyfills.js"></script>
+  <environment names="Development">
+    <!-- IE required polyfills, in this exact order -->
+    <script src="~/lib/angular2/es6-shim.js"></script>
+    <script src="~/lib/angular2/system-polyfills.src.js"></script>
+    <script src="~/lib/angular2/angular2-polyfills.js"></script>
 
-  <script src="~/lib/angular2/system.src.js"></script>
-  <script src="~/lib/angular2/Rx.js"></script>
-  <script src="~/lib/angular2/angular2.dev.js"></script>
-  <script src="~/lib/angular2/http.dev.js"></script>
+    <script src="~/lib/angular2/system.src.js"></script>
+    <script src="~/lib/angular2/Rx.js"></script>
+    <script src="~/lib/angular2/angular2.dev.js"></script>
+    <script src="~/lib/angular2/http.dev.js"></script>
 
-  <script src="~/app/config.js"></script>
+    <script src="~/app/config.js"></script>
+  </environment>
+  <environment names="Development">
+    <!-- IE required polyfills, in this exact order -->
+    <script src="~/lib/angular2/es6-shim.min.js"></script>
+    <script src="~/lib/angular2/system-polyfills.src.js"></script>
+    <script src="~/lib/angular2/angular2-polyfills.min.js"></script>
+
+    <script src="~/lib/angular2/system.js"></script>
+    <script src="~/lib/angular2/Rx.min.js"></script>
+    <script src="~/lib/angular2/angular2.js"></script>
+    <script src="~/lib/angular2/http.js"></script>
+
+    <script src="~/app/config.js"></script>
+  </environment>
   <script>
     System.import('./app/main')
           .then(null, console.error.bind(console));
   </script>
 }
-<div class="col-lg-6 col-lg-offset-3">
-  <contact-form><div style="text-align: center;"><i class="fa fa-rebel fa-spin fa-lg"></i></div></contact-form>
+<div class="row">
+  <div class="offset-lg-3 col-lg-6">
+    <contact-form><div style="text-align: center;"><i class="fa fa-rebel fa-spin fa-lg"></i></div></contact-form>
+  </div>
 </div>

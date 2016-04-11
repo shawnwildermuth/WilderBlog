@@ -40,12 +40,14 @@
 
   <environment names="Development">
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/tether/dist/css/tether.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/css/clean-blog.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
   </environment>
   <environment names="Production">
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/tether/dist/css/tether.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/css/clean-blog.min.css" rel="stylesheet" />
     <link href="~/css/site.min.css" rel="stylesheet" />
@@ -117,7 +119,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1  text-center">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1  text-center">
           <ul class="list-inline">
             <li class="list-inline-item">
               <a href="http://feeds.feedburner.com/ShawnWildermuth">
@@ -186,12 +188,14 @@
 
   <environment names="Development">
     <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/tether/dist/js/tether.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
   </environment>
   <environment names="Production">
     <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
             asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
             asp-fallback-test="window.jQuery"></script>
+    <script src="~/lib/tether/dist/js/tether.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
   </environment>
 

@@ -13,9 +13,9 @@ gulp.task("npmTasks", function () {
   // Angular2 
   gulp.src([
      'node_modules/angular2/bundles/*.*',
-     'node_modules/es6-shim/es6-shim.js*',
+     'node_modules/es6-shim/es6-shim.*',
      'node_modules/systemjs/dist/*.*',
-     'node_modules/rxjs/bundles/rx.js',
+     'node_modules/rxjs/bundles/*.*',
   ]).pipe(gulp.dest("wwwroot/lib/angular2"));
 });
 
