@@ -1,0 +1,44 @@
+﻿@inject Microsoft.AspNet.Hosting.IHostingEnvironment env
+@inject Microsoft.Extensions.PlatformAbstractions.IApplicationEnvironment app
+@inject Microsoft.Extensions.PlatformAbstractions.IRuntimeEnvironment run;
+<div class="container">
+  <div class="row">
+    <button class="btn btn-sm btn-info-outline" data-toggle="collapse" data-target="#info-table">Show Info</button>
+    <div class="collapse" id="info-table">
+      <div class="col-md-12">
+        <table class="table table-sm table-striped">
+          <tr>
+            <td>Application Name</td>
+            <td><strong>@app.ApplicationName</strong></td>
+            <td>Environment Name</td>
+            <td><strong>@env.EnvironmentName</strong></td>
+          </tr>
+          <tr>
+            <td>Application Ver</td>
+            <td><strong>@app.ApplicationVersion</strong></td>
+            <td>Runtime Framework</td>
+            <td><strong>@app.RuntimeFramework</strong></td>
+          </tr>
+          <tr>
+            <td>App Path</td>
+            <td><strong>@app.ApplicationBasePath</strong></td>
+            <td>Runtime Type</td>
+            <td><strong>@run.RuntimeType</strong></td>
+          </tr>
+          <tr>
+            <td>Operating System</td>
+            <td><strong>@run.OperatingSystem</strong></td>
+            <td>Runtime Version</td>
+            <td><strong>@run.RuntimeVersion</strong></td>
+          </tr>
+          <tr>
+            <td>O/S Version</td>
+            <td><strong>@run.OperatingSystemVersion</strong></td>
+            <td>Runtime Arch</td>
+            <td><strong>@run.RuntimeArchitecture</strong></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
