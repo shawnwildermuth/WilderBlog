@@ -131,7 +131,7 @@ namespace WilderBlog.Commands
         Body = story.Body,
         DatePublished = story.DatePosted,
         IsPublished = story.IsPublished,
-        UniqueId = story.Permalink,
+        UniqueId = story.GetStoryUrl(),
         Slug = story.GetStoryUrl()
       };
 

@@ -57,7 +57,7 @@ namespace WilderBlog.Commands.Disqus
           new XElement("title", p.Title),
           new XElement("link", $"http://wildermuth.com/{p.GetStoryUrl()}"),
           new XElement(contentNS + "encoded", null),
-          new XElement(dsqNS + "thread_identifier", p.Permalink),
+          new XElement(dsqNS + "thread_identifier", p.Permalink != null ? p.Permalink : p.GetStoryUrl()),
           new XElement(wpNS + "post_date_gmt", p.DatePosted.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss")),
           new XElement(wpNS + "comment_status", p.DatePosted.AddDays(30) > DateTime.Today ? "open" : "closed")
         );

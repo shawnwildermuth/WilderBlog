@@ -1,0 +1,26 @@
+﻿{
+  "WilderDb": {
+    "OldConnectionString": "Server=.;Database=OldWilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=30;",
+    "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=WilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=30;",
+    "TestData": "True"
+  },
+  "MailService": {
+    "ApiKey": "FOOBAR",
+    "ApiUser": "FOOBAR",
+    "Receiver": "shawn@wildermuth.com"
+  },
+  "MetaWeblog": {
+    "StoragePath": "/img/media/"
+  },
+  "AdService": {
+    "Client": "Add Google Client ID",
+    "Slot": "Add Ad Slot Number"
+  },
+  "Google": {
+    "Analytics": "Get Your GA Number"
+  },
+  "BlobService": {
+    "Account": "FOO",
+    "Key":  "BAR"
+  }
+}

@@ -1,0 +1,6 @@
+﻿{
+  "WilderDb": {
+    "OldConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=OldWilderDb;Trusted_Connection=True;MultipleActiveResultsets=true;",
+    "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=WilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;"
+  }
+}

@@ -45,8 +45,8 @@
 @section Scripts {
   <script>
     var disqus_config = function () {
-      this.page.url = @Model.GetStoryUrl();
-      this.page.identifier = @Model.Slug;
+      this.page.url = "@("http://wildermuth.com/" + Model.GetStoryUrl())";
+      this.page.identifier = "@Model.UniqueId";
     };
 
     (function () { // DON'T EDIT BELOW THIS LINE
