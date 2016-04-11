@@ -14,7 +14,6 @@ using WilderBlog.Commands.Disqus;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.IO;
-using Wildermuth.Models;
 
 namespace WilderBlog.Commands
 {

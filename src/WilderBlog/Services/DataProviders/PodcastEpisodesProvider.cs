@@ -42,9 +42,9 @@ namespace WilderBlog.Services.DataProviders
 
   public enum PodcastEpisodeStatus
   {
-    Invalid = 0,
-    Live = 1,
-    Planned = 2
+    Planned,
+    Live,
+    Staged
   }
 
   public class GuestLink

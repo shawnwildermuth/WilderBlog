@@ -1,4 +1,4 @@
-﻿@inject WilderBlog.Services.DataProviders.AppearancesProvider appearances
+﻿@inject WilderBlog.Services.DataProviders.CalendarProvider appearances
 @{
   ViewBag.Title = "About Me - Shawn Wildermuth's Rants and Raves";
   ViewBag.PageName = "About Me";
@@ -27,11 +27,11 @@
       @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
       {
         <div class="card-block">
-          <h6><a href="@ap.Url" target="_blank">@ap.Name</a></h6>
+          <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>
           <div class="card-text"><small>@ap.Location - @ap.FormattedDate</small></div>
-          @if (!string.IsNullOrWhiteSpace(ap.Comment))
+          @if (!string.IsNullOrWhiteSpace(ap.Note))
           {
-            <div class="muted"><small>@ap.Comment</small></div>
+            <div class="muted"><small>@ap.Note</small></div>
           }
         </div>
       }

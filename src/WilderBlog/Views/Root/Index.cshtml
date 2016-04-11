@@ -1,4 +1,4 @@
-﻿@inject WilderBlog.Services.DataProviders.AppearancesProvider appearances
+﻿@inject WilderBlog.Services.DataProviders.CalendarProvider appearances
 @model BlogResult
 @{
   ViewBag.Title = "Shawn Wildermuth's Rants and Raves";
@@ -13,11 +13,11 @@
   @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
   {
     <div class="appearance-block">
-      <h6><a href="@ap.Url" target="_blank">@ap.Name</a></h6>
+      <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>
       <div>@ap.Location - @ap.FormattedDate</div>
-      @if (!string.IsNullOrWhiteSpace(ap.Comment))
+      @if (!string.IsNullOrWhiteSpace(ap.Note))
       {
-        <div class="muted">@ap.Comment</div>
+        <div class="muted">@ap.Note</div>
       }
     </div>
     <hr class="tiny-hr" />

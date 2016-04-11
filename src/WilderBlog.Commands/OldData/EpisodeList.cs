@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WilderBlog.OldData
 {
@@ -13,6 +14,357 @@ namespace WilderBlog.OldData
     void CreateEpisodes()
     {
       this.AddRange(new Episode[] {
+
+        //new Episode()
+        //{
+        //  EpisodeNumber = 69,
+        //  Blurb = new string[]
+        //  {
+        //    ""
+        //  },
+        //  PodcastName = "hwpod",
+        //  Status = EpisodeStatus.Planned,
+        //  GuestName = "Julie Yack",
+        //  GuestHeadshot = "http://wildermuth.com/images/hwpod/julie-yack.jpg",
+        //  GuestBio = new string[]
+        //  {
+        //    @"Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love.",
+        //  },
+        //  GuestLinks = new EpisodeLink[]
+        //  {
+        //    new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/billyhollis" },
+        //    new EpisodeLink() { Name = "Blog", Link = "http://nextver.com/site/blog/" },
+        //  },
+        //  GuestFirstMachineLink = "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+        //  GuestFirstMachineName = "IBM Card Punch Machine",
+        //  GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+        //  AudioLink = "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+        //  YouTubeLink = "https://youtu.be/U8ExXjrkgS0",
+        //  Length = new TimeSpan(),
+        //  PublishedDate = DateTime.Parse("2016/05/09")
+        //},
+
+        new Episode()
+        {
+          EpisodeNumber = 68,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Planned,
+          GuestName = "Merrick Christensen",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/Merrick-Christensen.jpg",
+          GuestBio = new string[]
+          {
+            @"Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/billyhollis" },
+            new EpisodeLink() { Name = "Blog", Link = "http://nextver.com/site/blog/" },
+          },
+          GuestFirstMachineLink = "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+          GuestFirstMachineName = "IBM Card Punch Machine",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+          YouTubeLink = "https://youtu.be/U8ExXjrkgS0",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/04/25")
+        },
+
+        new Episode()
+        {
+          EpisodeNumber = 67,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Planned,
+          GuestName = "Richard Hundhausen",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/Richard-Hundhausen.jpg",
+          GuestBio = new string[]
+          {
+            @"Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/billyhollis" },
+            new EpisodeLink() { Name = "Blog", Link = "http://nextver.com/site/blog/" },
+          },
+          GuestFirstMachineLink = "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+          GuestFirstMachineName = "IBM Card Punch Machine",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+          YouTubeLink = "https://youtu.be/U8ExXjrkgS0",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/04/18")
+        },
+
+        new Episode()
+        {
+          EpisodeNumber = 63,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Scott Guthrie",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/scott-guthrie.jpg",
+          GuestBio = new string[]
+          {
+            @"As executive vice president of the Microsoft Cloud and Enterprise group, Scott Guthrie is responsible for the company’s cloud infrastructure, server, database, management and development tools businesses. His engineering team builds Microsoft Azure, Windows Server, SQL Server, Active Directory, System Center, Visual Studio and .NET.",
+            @"Prior to leading the Cloud and Enterprise group, Guthrie helped lead Microsoft Azure, Microsoft’s public cloud platform. Since joining the company in 1997, he has made critical contributions to many of Microsoft’s key cloud, server and development technologies and was one of the original founders of the .NET project. Guthrie graduated with a bachelor’s degree in computer science from Duke University. He lives in Seattle with his wife and two children.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/scottgu" },
+            new EpisodeLink() { Name = "Blog", Link = "https://weblogs.asp.net/scottgu" },
+            new EpisodeLink() { Name = "Microsoft Azure", Link = "http://azure.microsoft.com" },
+          },
+          GuestFirstMachineLink = "https://en.wikipedia.org/wiki/IBM_Personal_Computer",
+          GuestFirstMachineName = "IBM PC",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-pc.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode63.mp3",
+          YouTubeLink = "https://youtu.be/nVE7yp_yeBU",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/04/11")
+        },
+
+        //new Episode()
+        //{
+        //  EpisodeNumber = 64,
+        //  Blurb = new string[]
+        //  {
+        //    ""
+        //  },
+        //  PodcastName = "hwpod",
+        //  Status = EpisodeStatus.Planned,
+        //  GuestName = "Erik Mork",
+        //  GuestHeadshot = "http://wildermuth.com/images/hwpod/erik-mork.jpg",
+        //  GuestBio = new string[]
+        //  {
+        //    @"Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love.",
+        //  },
+        //  GuestLinks = new EpisodeLink[]
+        //  {
+        //    new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/billyhollis" },
+        //    new EpisodeLink() { Name = "Blog", Link = "http://nextver.com/site/blog/" },
+        //  },
+        //  GuestFirstMachineLink = "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+        //  GuestFirstMachineName = "IBM Card Punch Machine",
+        //  GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+        //  AudioLink = "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+        //  YouTubeLink = "https://youtu.be/U8ExXjrkgS0",
+        //  Length = new TimeSpan(),
+        //  PublishedDate = DateTime.Parse("2016/04/04")
+        //},
+
+        new Episode()
+        {
+          EpisodeNumber = 62,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Beth Massi",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/beth-massi.jpg",
+          GuestBio = new string[]
+          {
+            @"Beth is a Senior Product Manager for .NET at Microsoft and a long-time community champion for .NET developers. She helps developers build amazing things. Before Microsoft, she spent many years building business apps for small businesses as well as large enterprises, primarily on the .NET stack, and was a Microsoft MVP. She is a speaker at various software development events and you can find her on a variety of developer sites. Follow her on twitter and GitHub: @BethMassi",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/bethmassi" },
+            new EpisodeLink() { Name = "GitHub", Link = "http://github.com/bethmassi" },
+          },
+          GuestFirstMachineLink = "https://en.wikipedia.org/wiki/Atari_8-bit_family#The_early_machines:_400_and_800",
+          GuestFirstMachineName = "Atari 400",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/atari400.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode62.mp3",
+          YouTubeLink = "https://youtu.be/Rn40N7q-6AI",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/04/04")
+        },
+
+        new Episode()
+        {
+          EpisodeNumber = 61,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Tim Huckaby",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/tim-huckaby.jpg",
+          GuestBio = new string[]
+          {
+            @"Tim Huckaby is an industry luminary focused on Emerging User Experiences, User Interaction Design and the Natural User Interface (NUI). Mr. Huckaby has been awarded many times for the highest rated keynotes & presentations for Microsoft and many other industry & technology conferences like CES and events world-wide. Mr. Huckaby is consistently rated in the top 10% of all speakers at these events. Having worked for or with Microsoft for over 25 years, Mr. Huckaby has been on stage with, and done numerous keynote demos for many Microsoft executives including Bill Gates and Steve Ballmer.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/timhuckaby" },
+            new EpisodeLink() { Name = "Blog", Link = "http://blogs.interknowlogy.com/author/timhuckaby/" },
+          },
+          GuestFirstMachineLink = "https://en.wikipedia.org/wiki/Mainframe_computer",
+          GuestFirstMachineName = "Mainframe Computers",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/mainframe.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode61.mp3",
+          YouTubeLink = "https://youtu.be/ynLSt78h2is",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/03/21")
+        },
+
+        //new Episode()
+        //{
+        //  EpisodeNumber = 61,
+        //  Blurb = new string[]
+        //  {
+        //    ""
+        //  },
+        //  PodcastName = "hwpod",
+        //  Status = EpisodeStatus.Planned,
+        //  GuestName = "Joseph Guadagno",
+        //  GuestHeadshot = "http://wildermuth.com/images/hwpod/Joseph-Guadagno.jpg",
+        //  GuestBio = new string[]
+        //  {
+        //    @"Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love.",
+        //  },
+        //  GuestLinks = new EpisodeLink[]
+        //  {
+        //    new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/billyhollis" },
+        //    new EpisodeLink() { Name = "Blog", Link = "http://nextver.com/site/blog/" },
+        //  },
+        //  GuestFirstMachineLink = "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+        //  GuestFirstMachineName = "IBM Card Punch Machine",
+        //  GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+        //  AudioLink = "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+        //  YouTubeLink = "https://youtu.be/U8ExXjrkgS0",
+        //  Length = new TimeSpan(),
+        //  PublishedDate = DateTime.Parse("2016/03/21")
+        //},
+
+        new Episode()
+        {
+          EpisodeNumber = 60,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Rod Paddock",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/rod-paddock.jpg",
+          GuestBio = new string[]
+          {
+            @"Rod Paddock is the editor of CODE Magazine. Rod has been a software developer for more than 10 years and has worked with tools like Visual Studio .NET SQL Server, Visual Basic, Visual FoxPro, Delphi and numerous others. Rod is president of Dash Point Software, Inc. Dash Point is an award winning software development firm that specializes in developing applications for small to large businesses. Dash Point has delivered applications for numerous corporations like: Six Flags, First Premier Bank, Intel, Microsoft and the US Coast Guard. Rod is also VP of Development for SQL Server tools maker, Red Matrix Technologies. (www.redmatrix.com).",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "https://twitter.com/rodpaddock" },
+            new EpisodeLink() { Name = "Editor for CODE Magazine", Link = "http://www.codemag.com/People/Bio/Rod.Paddock" },
+            new EpisodeLink() { Name = "Blog", Link = "https://lostechies.com/rodpaddock/" }
+          },
+          GuestFirstMachineLink = "http://en.wikipedia.org/wiki/Apple_IIe",
+          GuestFirstMachineName = "Apple ][e",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/apple2e.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode60.mp3",
+          YouTubeLink = "https://youtu.be/HmFwtMyTrpU",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/03/14")
+        },
+
+        new Episode()
+        {
+          EpisodeNumber = 59,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Todd Miranda",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/todd-miranda.jpg",
+          GuestBio = new string[]
+          {
+            @"Todd Miranda is a consultant, trainer, and author. He has been developing on various platforms for over 20 years and has been involved with .NET since it was first released in 2000. He has worked with many of the .NET platforms but focuses primarily on ASP.NET. He is the owner of NxtDimension Solutions and provides consulting and training on the Microsoft stack. Todd has been awarded a Microsoft MVP for the last 7 years. He is the co-founder of the Birmingham .NET User Group and remains active in the development community. He has recorded hundreds of online training videos on Microsoft development topics including security, JavaScript, Silverlight, WPF, Expression and ASP.NET. He is an INETA speaker and regularly presents at user groups, community events, and technical conferences.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/toddmiranda" },
+            new EpisodeLink() { Name = "Nxt Dimension Solutions", Link = "http://www.nxtdimension.com/" },
+          },
+          GuestFirstMachineLink = "http://en.wikipedia.org/wiki/commodore_64",
+          GuestFirstMachineName = "Commodore 64",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/c64.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode59.mp3",
+          YouTubeLink = "https://youtu.be/AePsZF9AAFk",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/03/07")
+        },
+
+        new Episode()
+        {
+          EpisodeNumber = 58,
+          Blurb = new string[]
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Jim Wooley",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/jim-wooley.jpg",
+          GuestBio = new string[]
+          {
+            @"By day, Jim Wooley is a consultant for Slalom Consulting, In his free time, Jim is a frequent speaker, INETA Regional Speaker, MVP, and author of ""LINQ in Action"". He is always striving to stay at the forefront of technology and enjoys the thrill of a new challenge. He has been active evangelizing LINQ since it's announcement in 2005. In addition, he attempts to pass on the insights he has gained by being active in the community, including organizing and speaking at code camps and regional events, including DevLink, DevWeek, CodeMash, CodeStock, VS Live, and MIX.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/jimwooley" },
+            new EpisodeLink() { Name = "Blog", Link = "http://www.thinqlinq.com/" },
+          },
+          GuestFirstMachineLink = "https://en.wikipedia.org/wiki/Mainframe_computer",
+          GuestFirstMachineName = "Mainframe Computers",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/mainframe.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode58.mp3",
+          YouTubeLink = "https://www.youtube.com/watch?v=6Ug42XGdAiE",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/02/29")
+        },
+
+        new Episode()
+        {
+          EpisodeNumber = 57,
+          Blurb = new string[] 
+          {
+            ""
+          },
+          PodcastName = "hwpod",
+          Status = EpisodeStatus.Live,
+          GuestName = "Billy Hollis",
+          GuestHeadshot = "http://wildermuth.com/images/hwpod/billy-hollis.jpg",
+          GuestBio = new string[] 
+          {
+            @"Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love.",
+          },
+          GuestLinks = new EpisodeLink[]
+          {
+            new EpisodeLink() { Name = "Twitter", Link = "http://twitter.com/billyhollis" },
+            new EpisodeLink() { Name = "Blog", Link = "http://nextver.com/site/blog/" },
+          },
+          GuestFirstMachineLink = "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+          GuestFirstMachineName = "IBM Card Punch Machine",
+          GuestFirstMachine = "http://wildermuth.com/images/hwpod/ibm-cardpunch.jpg",
+          AudioLink = "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+          YouTubeLink = "https://youtu.be/U8ExXjrkgS0",
+          Length = new TimeSpan(),
+          PublishedDate = DateTime.Parse("2016/01/11")
+        },
 
         new Episode()
         {

@@ -74,7 +74,7 @@ namespace WilderBlog
       svcs.AddScoped<AdService>();
 
       // Data Providers (non-EF)
-      svcs.AddScoped<AppearancesProvider>();
+      svcs.AddScoped<CalendarProvider>();
       svcs.AddScoped<CoursesProvider>();
       svcs.AddScoped<PublicationsProvider>();
       svcs.AddScoped<PodcastEpisodesProvider>();
@@ -97,8 +97,11 @@ namespace WilderBlog
                           WilderInitializer initializer)
     {
 
-      // Early so we can catch the StatusCode error
-      app.UseStatusCodePagesWithReExecute("/Error/{0}");
+      if (_env.IsProduction())
+      {
+        // Early so we can catch the StatusCode error
+        app.UseStatusCodePagesWithReExecute("/Error/{0}");
+      }
 
       app.UseUrlRewriter();
 
