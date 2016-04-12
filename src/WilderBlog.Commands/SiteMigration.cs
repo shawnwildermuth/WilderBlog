@@ -24,7 +24,7 @@ namespace WilderBlog.Commands
     private WilderRepository _repo;
     private WilderContext _newCtx;
 
-    public void Run()
+    public void Run(string command)
     {
       try
       {
@@ -39,10 +39,23 @@ namespace WilderBlog.Commands
         _newCtx = new WilderContext(_config);
         _repo = new WilderRepository(_config, _newCtx);
 
-        Console.WriteLine("Migrating Stories");
-        MigrateStories();
 
-        //TODO More migration
+        if (command == "" || command == "stories" || command == "comments")
+        {
+          MigrateStories(command == "comments");
+        }
+        if (command == "" || command == "podcast")
+        {
+          MigratePodcast();
+        }
+        if (command == "" || command == "publications")
+        {
+          MigratePublications();
+        }
+        if (command == "" || command == "calendar")
+        {
+          MigrateCalendar();
+        }
 
       }
       catch (Exception ex)
@@ -52,33 +65,38 @@ namespace WilderBlog.Commands
       }
     }
 
-    private void MigrateStories()
+    private void MigrateStories(bool onlyComments = false)
     {
-      _newCtx.Stories.RemoveRange(_newCtx.Stories.ToList());
+      Console.WriteLine("Migrating Stories");
+
+      if (!onlyComments)
+      {
+        _newCtx.Stories.RemoveRange(_newCtx.Stories.ToList());
+      }
 
       var stories = _ctx.Stories
         .Include(s => s.Comments)
         .Include(s => s.StoryCategories)
         .OrderByDescending(s => s.DatePosted).ToList();
 
-      var counter = 1;
-      foreach (var story in stories)
+      if (!onlyComments)
       {
-        Console.WriteLine($"Migrating {counter} of {stories.Count()}");
-        MigrateStory(story);
-        counter++;
+        var counter = 1;
+        foreach (var story in stories)
+        {
+          Console.WriteLine($"Migrating {counter} of {stories.Count()}");
+          MigrateStory(story);
+          counter++;
+        }
       }
 
       Console.WriteLine();
 
+      Console.WriteLine("Migrating Comments");
       var export = new DiscusImport();
       export.CreateXml(stories);
 
       Console.WriteLine();
-
-      MigratePodcast();
-      MigratePublications();
-      MigrateCalendar();
 
       _repo.SaveAll();
     }
@@ -137,7 +155,7 @@ namespace WilderBlog.Commands
 
       var cats = string.Join(",", _ctx.StoryCategories.Include(c => c.Category).Where(s => s.Story_Id == story.Id).Select(s => s.Category.Name).ToArray());
       newStory.Categories = cats;
-      
+
       _repo.AddStory(newStory);
     }
 

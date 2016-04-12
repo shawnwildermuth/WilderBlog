@@ -15,7 +15,8 @@ namespace WilderBlog.Commands
       Console.WriteLine("Starting WilderBlog Migration");
       Console.WriteLine();
 
-      new SiteMigration().Run();
+      string command = args == null ? "" : args[0].ToLower();
+      new SiteMigration().Run(command);
     }
 
   }

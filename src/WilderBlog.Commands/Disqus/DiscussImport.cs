@@ -18,7 +18,7 @@ namespace WilderBlog.Commands.Disqus
       var i = 1;
       while (true)
       { 
-        var file = string.Format(@"comments-{0}.xml", i);
+        var file = string.Format(@"comments.xml", i);
         Console.Write($"Migrating Comments, Creating Export File # {i}");
         i++;
 
@@ -59,7 +59,7 @@ namespace WilderBlog.Commands.Disqus
           new XElement(contentNS + "encoded", null),
           new XElement(dsqNS + "thread_identifier", p.Permalink != null ? p.Permalink : p.GetStoryUrl()),
           new XElement(wpNS + "post_date_gmt", p.DatePosted.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss")),
-          new XElement(wpNS + "comment_status", p.DatePosted.AddDays(30) > DateTime.Today ? "open" : "closed")
+          new XElement(wpNS + "comment_status", p.DatePosted.AddDays(90) > DateTime.Today ? "open" : "closed")
         );
 
         foreach (var c in p.Comments.Where(c => c.IsApproved))

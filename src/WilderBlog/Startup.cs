@@ -1,26 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
-using Microsoft.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.PlatformAbstractions;
-using WilderBlog.Data;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Newtonsoft.Json.Serialization;
-using Microsoft.AspNet.Diagnostics.Entity;
-using WilderBlog.Services;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNet.StaticFiles;
-using Microsoft.AspNet.FileProviders;
+using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json.Serialization;
+using WilderBlog.Data;
 using WilderBlog.MetaWeblog;
-using WilderMinds.MetaWeblog;
+using WilderBlog.Services;
 using WilderBlog.Services.DataProviders;
+using WilderMinds.MetaWeblog;
 
 namespace WilderBlog
 {
