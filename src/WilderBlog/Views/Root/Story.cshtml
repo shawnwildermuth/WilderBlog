@@ -1,5 +1,6 @@
 ﻿@model BlogStory
 @inject WilderBlog.Services.AdService ads
+@inject Microsoft.Extensions.Configuration.IConfigurationRoot config
 @{
   ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
   ViewBag.PageName = Model.Title;
@@ -7,16 +8,16 @@
   ViewBag.PageAttribution = $"Posted by Shawn Wildermuth on {pubDate}";
   ViewBag.PageImage = "/img/headers/code.jpg";
 }
-@Html.Raw(Model.Body)
 <p class="post-meta">
-  <small>
     <i class="fa fa-tags"></i>
     @foreach (var tag in Model.Categories.Split(','))
     {
       <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
     }
-  </small>
+    <br/><i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
 </p>
+
+@Html.Raw(Model.Body)
 <div class="card">
   <div class="pull-left" style="padding-right: 5px;">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
@@ -52,7 +53,7 @@
     (function () { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
 
-      s.src = '//wildermuth.disqus.com/embed.js';
+      s.src = '//@(config["Disqus:BlogName").disqus.com/embed.js';
 
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);

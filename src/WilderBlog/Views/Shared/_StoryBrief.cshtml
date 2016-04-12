@@ -5,7 +5,7 @@
     <p class="post-meta">
       <i class="fa fa-calendar"></i> @Model.DatePublished.ToString("MMMM dd, yyyy")
       <i class="fa fa-edit"></i> Shawn Wildermuth
-      <i class="fa fa-comments-o"></i> No Comments
+      <i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
       <br />
       <i class="fa fa-tags"></i>
       @foreach (var tag in Model.Categories.Split(','))

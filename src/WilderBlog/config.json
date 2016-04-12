@@ -4,6 +4,9 @@
     "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=WilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=30;",
     "TestData": "True"
   },
+  "Disqus": {
+    "BlogName": "testwilder"
+  },
   "MailService": {
     "ApiKey": "FOOBAR",
     "ApiUser": "FOOBAR",
