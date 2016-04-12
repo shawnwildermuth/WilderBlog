@@ -90,6 +90,7 @@ namespace WilderBlog
       if (_env.IsProduction())
       {
         // Early so we can catch the StatusCode error
+        app.UseExceptionHandler("/Error/{0}");
         app.UseStatusCodePagesWithReExecute("/Error/{0}");
       }
 

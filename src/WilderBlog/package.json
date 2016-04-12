@@ -5,7 +5,10 @@
   "dependencies": {
     "angular2": "~2.0.0-beta.14",
     "systemjs": "~0.19.25",
-    "es6-shim": "^0.35.0"
+    "es6-shim": "^0.35.0",
+    "es6-promise": "^0.33.3",
+    "reflect-metadata": "5.0.0-alpha.14",
+    "zone.js":"0.5.8"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
