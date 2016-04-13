@@ -37,6 +37,7 @@ namespace WilderBlog.Data
         TotalResults = count,
         TotalPages = CalculatePages(count, pageSize),
         Stories = _ctx.Stories
+          .Where( s => s.IsPublished)
           .OrderByDescending(s => s.DatePublished)
           .Skip(pageSize * (page - 1))
           .Take(pageSize)
@@ -48,9 +49,10 @@ namespace WilderBlog.Data
     {
       var lowerTerm = term.ToLowerInvariant();
       var totalCount = _ctx.Stories.Where(s =>
-          s.Body.ToLowerInvariant().Contains(lowerTerm) ||
+          s.IsPublished &&
+          (s.Body.ToLowerInvariant().Contains(lowerTerm) ||
           s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
-          s.Title.ToLowerInvariant().Contains(lowerTerm)
+          s.Title.ToLowerInvariant().Contains(lowerTerm))
           ).Count();
 
       return new BlogResult()
@@ -59,9 +61,9 @@ namespace WilderBlog.Data
         TotalResults = totalCount,
         TotalPages = CalculatePages(totalCount, pageSize),
         Stories = _ctx.Stories
-        .Where(s => s.Body.ToLowerInvariant().Contains(lowerTerm) ||
+        .Where(s => s.IsPublished && (s.Body.ToLowerInvariant().Contains(lowerTerm) ||
                  s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
-                 s.Title.ToLowerInvariant().Contains(lowerTerm))
+                 s.Title.ToLowerInvariant().Contains(lowerTerm)))
         .OrderByDescending(o => o.DatePublished)
         .Skip((page - 1) * pageSize).Take(pageSize)
       };
@@ -107,7 +109,7 @@ namespace WilderBlog.Data
     {
       var lowerTag = tag.ToLowerInvariant();
       var totalCount = _ctx.Stories
-        .Where(s => s.Categories.ToLower().Contains(lowerTag)) // Limiting the search for perf
+        .Where(s => s.IsPublished && s.Categories.ToLower().Contains(lowerTag)) // Limiting the search for perf
         .ToArray()
         .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag)).Count(); 
 
@@ -117,7 +119,7 @@ namespace WilderBlog.Data
         TotalResults = totalCount,
         TotalPages = CalculatePages(totalCount, pageSize),
         Stories = _ctx.Stories
-          .Where(s => s.Categories.ToLower().Contains(lowerTag))
+          .Where(s => s.IsPublished && s.Categories.ToLower().Contains(lowerTag))
           .ToArray()
           .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag))
           .Skip((page - 1) * pageSize).Take(pageSize)
