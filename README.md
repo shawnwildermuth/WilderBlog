@@ -1,5 +1,7 @@
 # WilderBlog
 
+Current Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/58roluat93x105o5?svg=true)](https://ci.appveyor.com/project/shawnwildermuth/wilderblog)
+
 I re-wrote my blog using a new stack of web technologies including:
 
  - ASP.NET Core 1.0 RC1
