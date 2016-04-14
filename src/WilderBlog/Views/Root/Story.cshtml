@@ -4,7 +4,7 @@
 @{
   ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
   ViewBag.PageName = Model.Title;
-  var pubDate = Model.DatePublished.ToString("MMM dd, yyyy on H:mmtt");
+  var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy on H:mmtt");
   ViewBag.PageAttribution = $"Posted by Shawn Wildermuth on {pubDate}";
   ViewBag.PageImage = "/img/headers/code.jpg";
 }

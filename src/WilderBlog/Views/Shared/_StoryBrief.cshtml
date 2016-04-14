@@ -3,7 +3,7 @@
   <div class="post-preview">
     <h3 class="post-title"><a href="/@Model.Slug">@Model.Title</a></h3>
     <p class="post-meta">
-      <i class="fa fa-calendar"></i> @Model.DatePublished.ToString("MMMM dd, yyyy")
+      <i class="fa fa-calendar"></i> @Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")
       <i class="fa fa-edit"></i> Shawn Wildermuth
       <i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
       <br />
