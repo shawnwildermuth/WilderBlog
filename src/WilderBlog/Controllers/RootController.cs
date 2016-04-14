@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http.Extensions;
 using Microsoft.AspNet.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using WilderBlog.Data;
 using WilderBlog.Models;
 using WilderBlog.Services;
@@ -21,12 +28,14 @@ namespace WilderBlog.Controllers
     private IMailService _mailService;
     private IWilderRepository _repo;
     private VideosProvider _videosProvider;
+    private IMemoryCache _memoryCache;
 
-    public RootController(IMailService mailService, IWilderRepository repo, VideosProvider videosProvider)
+    public RootController(IMailService mailService, IWilderRepository repo, VideosProvider videosProvider, IMemoryCache memoryCache)
     {
       _mailService = mailService;
       _repo = repo;
       _videosProvider = videosProvider;
+      _memoryCache = memoryCache;
     }
 
     [HttpGet("")]
@@ -162,6 +171,26 @@ namespace WilderBlog.Controllers
       }
 
       return File(Encoding.UTF8.GetBytes(feed.Serialize()), "text/xml");
+
+    }
+
+    [HttpGet("psstats")]
+    public async Task<IActionResult> PsStats()
+    {
+      var CACHEKEY = "PSSTATS";
+      string cached;
+      
+      if (!_memoryCache.TryGetValue(CACHEKEY, out cached))
+      { 
+        var client = new HttpClient();
+        cached = await client.GetStringAsync(new Uri("http://www.pluralsight.com/data/Courses/Popular"));
+        _memoryCache.Set(CACHEKEY, cached,new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(2) });
+      }
+
+      var converter = new ExpandoObjectConverter();
+      dynamic courses = JsonConvert.DeserializeObject<IEnumerable<ExpandoObject>>(cached, converter);
+
+      return View(courses);
 
     }
 

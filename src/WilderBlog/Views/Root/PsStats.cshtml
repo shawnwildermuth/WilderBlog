@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+@model IEnumerable<dynamic>
+@{
+  Layout = null;
+  var num = 0;
+  var author = "shawn-wildermuth";
+  if (this.Context.Request.Query["author"].Any())
+  {
+    author = this.Context.Request.Query["author"].First();
+  }
+}
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title></title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/site.min.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Course Info:</h3>
+    <div>
+      @foreach (dynamic item in Model)
+      {
+        var isMe = item.authors[0].handle == author;
+        <div class='course-block'>
+          <div>
+            @if (isMe)
+            {
+              @:<strong>
+            }
+            @(++num): "@item.title" by @item.authors[0].firstName @item.authors[0].lastName - @(item.courseRating.rating) by @(item.courseRating.numberOfRaters) raters
+            @if (isMe)
+            {
+              @:</strong>
+              }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</body>
+</html>

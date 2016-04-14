@@ -75,6 +75,9 @@ namespace WilderBlog
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();
 
+      // Add Caching Support
+      svcs.AddCaching();
+
       // Add MVC to the container
       svcs.AddMvc()
         .AddJsonOptions(opts =>
