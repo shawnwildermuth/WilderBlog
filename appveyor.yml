@@ -1,0 +1,36 @@
+version: 1.0.0.{build}.{branch}
+
+nuget:
+  account_feed: true
+  
+init:
+ - git config --global core.autocrlf true
+ 
+services:
+  - mssql2014
+
+cache:
+  - AllReadyApp\Web-App\AllReady\node_modules   #node modules for the app
+  - '%APPDATA%\npm-cache'             # npm cache
+  
+install:
+ - cmd: nuget sources add -Name api.nuget.org -Source https://api.nuget.org/v3/index.json
+ 
+before_build:
+ - ps: "&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
+ - cmd: dnvm install 1.0.0-rc1-update2
+ - cmd: dnvm upgrade
+ - cmd: dnvm update-self
+ - cmd: dnvm list
+ - cmd: dnvm use 1.0.0-rc1-update2
+ - cmd: dnu restore WilderBlog/src/WilderBlog.Data
+ - cmd: dnu restore WilderBlog/src/WilderBlog.Commands
+ - cmd: dnu restore WilderBlog/src/WilderBlog
+ - cmd: npm install gulp bower -g
+
+build_script:
+ - cmd: dnu build WilderBlog/src/WilderBlog.Data
+ - cmd: dnu build WilderBlog/src/WilderBlog.Commands
+ - cmd: dnu build WilderBlog/src/WilderBlog
+
+
