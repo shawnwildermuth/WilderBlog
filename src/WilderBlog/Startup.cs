@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNet.Builder;
+﻿using System.IO;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.Configuration;
@@ -86,6 +88,14 @@ namespace WilderBlog
                           ILoggerFactory loggerFactory,
                           WilderInitializer initializer)
     {
+      var log = loggerFactory.CreateLogger("Request");
+
+      //app.Run(async context =>
+      //  {
+      //    log.LogInformation($"Request: {context.Request.Path.Value}");
+      //    var content = await (new StreamReader(context.Request.Body)).ReadToEndAsync();
+      //    log.LogInformation($"Request Body: {content}");
+      //  });
 
       if (_env.IsProduction())
       {

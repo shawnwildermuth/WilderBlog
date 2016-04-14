@@ -10,6 +10,7 @@ using WilderBlog.Helpers;
 using WilderMinds.MetaWeblog;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System.Text;
 
 namespace WilderBlog.MetaWeblog
 {
@@ -37,7 +38,7 @@ namespace WilderBlog.MetaWeblog
       {
         newStory.Title = post.title;
         newStory.Body = post.description;
-        newStory.DatePublished = post.dateCreated;
+        newStory.DatePublished = post.dateCreated == DateTime.MinValue ? DateTime.UtcNow : post.dateCreated;
         newStory.Categories = string.Join(",", post.categories);
         newStory.IsPublished = publish;
         newStory.Slug = newStory.GetStoryUrl();
@@ -64,7 +65,7 @@ namespace WilderBlog.MetaWeblog
 
         story.Title = post.title;
         story.Body = post.description;
-        story.DatePublished = post.dateCreated;
+        story.DatePublished = post.dateCreated == DateTime.MinValue ? DateTime.UtcNow : post.dateCreated;
         story.Categories = string.Join(",", post.categories);
         story.IsPublished = publish;
         story.Slug = story.GetStoryUrl();
@@ -114,7 +115,8 @@ namespace WilderBlog.MetaWeblog
       var url = $"https://wilderminds.blob.core.windows.net/img/{filenameonly}";
       var creds = new StorageCredentials(_config["BlobStorage:Account"], _config["BlobStorage:Key"]);
       var blob = new CloudBlockBlob(new Uri(url), creds);
-      blob.UploadFromByteArrayAsync(mediaObject.bits, 0, mediaObject.bits.Length).Wait();
+      var bits = Convert.FromBase64String(mediaObject.bits);
+      blob.UploadFromByteArrayAsync(bits, 0, bits.Length).Wait();
 
       // Create the response
       MediaObjectInfo objectInfo = new MediaObjectInfo();
