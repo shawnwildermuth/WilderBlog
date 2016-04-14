@@ -23,14 +23,14 @@ before_build:
  - cmd: dnvm update-self
  - cmd: dnvm list
  - cmd: dnvm use 1.0.0-rc1-update2
- - cmd: dnu restore WilderBlog/src/WilderBlog.Data
- - cmd: dnu restore WilderBlog/src/WilderBlog.Commands
- - cmd: dnu restore WilderBlog/src/WilderBlog
+ - cmd: dnu restore ./src/WilderBlog.Data
+ - cmd: dnu restore ./src/WilderBlog.Commands
+ - cmd: dnu restore ./src/WilderBlog
  - cmd: npm install gulp bower -g
 
 build_script:
- - cmd: dnu build WilderBlog/src/WilderBlog.Data
- - cmd: dnu build WilderBlog/src/WilderBlog.Commands
- - cmd: dnu build WilderBlog/src/WilderBlog
+ - cmd: dnu build ./src/WilderBlog.Data
+ - cmd: dnu build ./src/WilderBlog.Commands
+ - cmd: dnu build ./src/WilderBlog
 
 
