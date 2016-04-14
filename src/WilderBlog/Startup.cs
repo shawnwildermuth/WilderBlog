@@ -88,14 +88,6 @@ namespace WilderBlog
                           ILoggerFactory loggerFactory,
                           WilderInitializer initializer)
     {
-      var log = loggerFactory.CreateLogger("Request");
-
-      //app.Run(async context =>
-      //  {
-      //    log.LogInformation($"Request: {context.Request.Path.Value}");
-      //    var content = await (new StreamReader(context.Request.Body)).ReadToEndAsync();
-      //    log.LogInformation($"Request Body: {content}");
-      //  });
 
       if (_env.IsProduction())
       {

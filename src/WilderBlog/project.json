@@ -17,7 +17,7 @@
     "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
     "WilderBlog.Commands": "1.0.0-*",
     "WilderBlog.Data": "1.0.0-*",
-    "WilderMinds.MetaWeblog": "0.2.6-beta",
+    "WilderMinds.MetaWeblog": "0.3.1-beta", 
     "WilderMinds.RssSyndication": "1.0.1",
     "WindowsAzure.Storage": "6.1.1-preview"
   },
