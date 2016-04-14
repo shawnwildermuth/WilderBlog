@@ -1,11 +1,11 @@
 {
 	"name": "ASP.NET",
 	"private": true,
-  "dependencies": {
-    "jquery": "~2.1.4",
-    "bootstrap": "git://github.com/twbs/bootstrap#v4-dev",
-    "font-awesome": "~4.5.0",
-    "respond": "~1.4.2",
-    "lodash": "4.8.2"
-  }
+    "dependencies": {
+        "jquery": "~2.1.4",
+        "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
+        "font-awesome": "~4.5.0",
+        "respond": "~1.4.2",
+        "lodash": "4.8.2"
+    }
 }
