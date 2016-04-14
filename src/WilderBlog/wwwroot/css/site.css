@@ -16,6 +16,9 @@ p {
 #info-table {
   font-size: .9rem;
 }
+.center-block {
+  margin: 0 auto;
+}
 #menu {
   background: #373737 none repeat scroll 0 0;
   border: 1px solid black;

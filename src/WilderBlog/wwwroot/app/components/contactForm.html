@@ -20,7 +20,7 @@
     </div>
     <div class="form-group">
       <label>Message</label>
-      <textarea class="form-control" rows="6" cols="40" ngControl="msg" placeholder="e.g. Hey Shawn, you''"></textarea>
+      <textarea class="form-control" rows="6" cols="40" ngControl="msg" placeholder="e.g. Hey Shawn, you magnificent beast."></textarea>
       <span class="text-danger" *ngIf="form.controls.name.dirty && form.controls.msg.hasError('required')"><small>*</small></span>
       <span class="text-danger" *ngIf="form.controls.name.dirty && !form.controls.msg.hasError('required') && form.controls.msg.hasError('minlength')"><small>Too Short</small></span>
     </div>

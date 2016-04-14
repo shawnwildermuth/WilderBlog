@@ -1,10 +1,12 @@
 ﻿@inject WilderBlog.Services.DataProviders.CoursesProvider courses
 
-<a asp-controller="Root" asp-action="About"><img src="~/img/turning-2016.gif" alt="Shawn" class="img-fluid img-rounded" /></a>
-<div>
-  <div><strong>Shawn Wildermuth</strong></div>
-  <div><small>Author, Teacher, and Coach</small></div>
-  <ul class="list-inline  sidebar-icon-list">
+<div class="col-lg-12">
+  <a asp-controller="Root" asp-action="About" class="text-xs-center"><img src="~/img/turning-2016.gif" alt="Shawn" class="img-fluid img-rounded center-block" /></a>
+</div>
+<div class="col-lg-12">
+  <div class="text-xs-center"><strong>Shawn Wildermuth</strong></div>
+  <div class="text-xs-center"><small>Author, Teacher, and Coach</small></div>
+  <ul class="list-inline  sidebar-icon-list text-xs-center">
     <li class="list-inline-item">
       <a href="http://feeds.feedburner.com/ShawnWildermuth">
         <span class="fa fa-stack">
@@ -62,7 +64,6 @@
       </a>
     </li>
   </ul>
-
 </div>
 @if (((string)ViewContext.RouteData.Values["controller"]) != "Search")
 {
