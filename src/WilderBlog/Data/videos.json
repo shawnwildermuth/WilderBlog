@@ -149,5 +149,29 @@
     "videoType": "YouTube",
     "videoCode": "HvsI4RmUxrE",
     "datePublished": "2013-09-30"
+  },
+  {
+    "id": 19,
+    "title": "What is Bootstrap 4",
+    "description": "From NDC London 2016: After a couple of years in the planning, Bootstrap 4 is finally coming. If you’re already using Bootstrap or if you want a responsive framework to start building websites, this talk will introduce you to the newest version of this popular framework.",
+    "videoType": "Vimeo",
+    "videoCode": "158181618",
+    "datePublished": "2016-03-08"
+  },
+  {
+    "id": 20,
+    "title": "aspConf 2012: Modern Web Development",
+    "description": "In this talk, Shawn will walk the attendees through the new way that web applications are being built today using the latest in client-side development the best practices of how to carry that out with ASP.NET MVC.",
+    "videoType": "Channel9",
+    "videoCode": "events/aspConf/aspConf/Modern-Web-Development",
+    "datePublished": "2012-07-21"
+  },
+  {
+    "id": 21,
+    "title": "aspConf 2012: Responsive Design",
+    "description": "Instead of creating separate sites for the different sized mobile experiences, you should be creating sites that adapt to the screen they're shown on. In this talk, Shawn Wildermuth will show you the basics of making CSS work for you with responsive design techniques.",
+    "videoType": "Channel9",
+    "videoCode": "Events/aspConf/aspConf/Responsive-Design",
+    "datePublished": "2012-07-21"
   }
 ]

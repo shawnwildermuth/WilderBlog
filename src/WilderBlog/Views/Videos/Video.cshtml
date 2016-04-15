@@ -1,0 +1,14 @@
+@model WilderBlog.Services.DataProviders.Video
+@{
+  ViewBag.Title = $"{Model.Title} - Shawn Wildermuth's Rants and Raves";
+  ViewBag.PageName = Model.Title;
+  ViewBag.PageBlurb = Model.Description;
+  ViewBag.PageImage = "/img/headers/video.jpg";
+}
+<div class="row">
+  <div class="col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="video-container auto-load">
+      @Html.Partial("_VideoFrame", Model)
+    </div>
+  </div>
+</div>

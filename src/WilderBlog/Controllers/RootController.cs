@@ -27,14 +27,12 @@ namespace WilderBlog.Controllers
 
     private IMailService _mailService;
     private IWilderRepository _repo;
-    private VideosProvider _videosProvider;
     private IMemoryCache _memoryCache;
 
-    public RootController(IMailService mailService, IWilderRepository repo, VideosProvider videosProvider, IMemoryCache memoryCache)
+    public RootController(IMailService mailService, IWilderRepository repo, IMemoryCache memoryCache)
     {
       _mailService = mailService;
       _repo = repo;
-      _videosProvider = videosProvider;
       _memoryCache = memoryCache;
     }
 
@@ -72,12 +70,6 @@ namespace WilderBlog.Controllers
     public IActionResult About()
     {
       return View();
-    }
-
-    [HttpGet("videos")]
-    public IActionResult Videos()
-    {
-      return View(_videosProvider.Get());
     }
 
     [HttpGet("contact")]

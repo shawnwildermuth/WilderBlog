@@ -1,5 +1,5 @@
 // Site.css
-@hoverColor: #004a9b;
+@linkColor: #003772;
 
 body {
   font-size: 20px;
@@ -88,14 +88,14 @@ p {
 }
 
 
-a, p a {
-  color: @hoverColor;
+a:not(.btn), p a:not(.btn) {
+  color: @linkColor;
   text-decoration: none;
 }
 
-a:hover, p a:hover {
+a:not(.btn):hover, p a:not(.btn):hover {
   text-decoration: underline;
-  color: lighten(@hoverColor, 25%);
+  color: lighten(@linkColor, 40%);
 }
 
 .fa-hover-spin {
@@ -173,7 +173,7 @@ a:hover, p a:hover {
 }
 
 .page-link {
-  color: @hoverColor;
+  color: @linkColor;
 }
 
 a img:hover, a img:focus {
@@ -181,8 +181,8 @@ a img:hover, a img:focus {
 }
 
 .page-item.active .page-link {
-  background-color: @hoverColor;
-  border-color: @hoverColor;
+  background-color: @linkColor;
+  border-color: @linkColor;
 }
 
 .navbar {
@@ -218,7 +218,7 @@ ul.course-list {
 }
 
 h3 {
-  color: @hoverColor;
+  color: @linkColor;
   font-weight: 600;
 }
 
@@ -234,7 +234,7 @@ blockquote {
 }
 
 blockquote:hover {
-  border-left: 5px solid @hoverColor;
+  border-left: 5px solid @linkColor;
 }
 
 .intro-header {

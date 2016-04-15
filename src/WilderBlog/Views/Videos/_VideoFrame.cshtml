@@ -1,0 +1,13 @@
+@model WilderBlog.Services.DataProviders.Video
+@if (Model.VideoType == WilderBlog.Services.DataProviders.VideoType.YouTube)
+{
+  <iframe width="480" height="320" data-src="https://www.youtube.com/embed/@(Model.VideoCode)?rel=0" frameborder="0" allowfullscreen></iframe>
+}
+else if (Model.VideoType == WilderBlog.Services.DataProviders.VideoType.Vimeo)
+{
+  <iframe data-src="https://player.vimeo.com/video/@(Model.VideoCode)" width="480" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+}
+else if (Model.VideoType == WilderBlog.Services.DataProviders.VideoType.Channel9)
+{
+  <iframe data-src="https://channel9.msdn.com/@(Model.VideoCode)/player" width="480" height="270" allowFullScreen frameBorder="0"></iframe>
+}

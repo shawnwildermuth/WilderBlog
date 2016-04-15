@@ -73,15 +73,15 @@ p {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-a,
-p a {
-  color: #004a9b;
+a:not(.btn),
+p a:not(.btn) {
+  color: #003772;
   text-decoration: none;
 }
-a:hover,
-p a:hover {
+a:not(.btn):hover,
+p a:not(.btn):hover {
   text-decoration: underline;
-  color: #1c88ff;
+  color: #3f9cff;
 }
 .fa-hover-spin:hover {
   -webkit-animation: fa-spin 2s infinite linear;
@@ -142,15 +142,15 @@ p a:hover {
   max-width: 22px;
 }
 .page-link {
-  color: #004a9b;
+  color: #003772;
 }
 a img:hover,
 a img:focus {
   cursor: pointer;
 }
 .page-item.active .page-link {
-  background-color: #004a9b;
-  border-color: #004a9b;
+  background-color: #003772;
+  border-color: #003772;
 }
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -184,7 +184,7 @@ ul.course-list li {
   margin-left: -20px;
 }
 h3 {
-  color: #004a9b;
+  color: #003772;
   font-weight: 600;
 }
 footer .list-inline {
@@ -197,7 +197,7 @@ blockquote {
   font-style: normal;
 }
 blockquote:hover {
-  border-left: 5px solid #004a9b;
+  border-left: 5px solid #003772;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
