@@ -228,5 +228,12 @@ namespace WilderBlog.MetaWeblog
       }
     }
 
+    public int AddCategory(string key, string username, string password, NewCategory category)
+    {
+      EnsureUser(username, password).Wait();
+
+      // We don't store these, just query them from the list of stories so don't do anything
+      return 1;
+    }
   }
 }
