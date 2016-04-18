@@ -3,7 +3,7 @@
     "blurb": [
       ""
     ],
-    "episodeNumber": 68,
+    "episodeNumber": 65,
     "guestName": "Merrick Christensen",
     "guestBio": [
       "Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love."
@@ -33,31 +33,31 @@
     "blurb": [
       ""
     ],
-    "episodeNumber": 67,
+    "episodeNumber": 64,
     "guestName": "Richard Hundhausen",
     "guestBio": [
-      "Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love."
+      "Richard is the president of Accentient, a company that helps software teams develop better products by leveraging ALM tools and Scrum. He is a Professional Scrum Trainer, author of Professional Scrum Development with Microsoft Visual Studio, and co-creator of the Scaled Professional Scrum framework. As a software developer and consultant with over 30 years of experience, he understands that software is built and delivered by people and not by processes or tools."
     ],
     "guestHeadshot": "/img/hwpod/Richard-Hundhausen.jpg",
-    "guestFirstMachineImage": "/img/hwpod/ibm-cardpunch.jpg",
-    "guestFirstMachineName": "IBM Card Punch Machine",
-    "guestFirstMachineLink": "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+    "guestFirstMachineImage": "/img/hwpod/trs80-m1.jpg",
+    "guestFirstMachineName": "TRS-80 Model 1",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "http://twitter.com/billyhollis"
+        "link": "http://twitter.com/rhundhausen"
       },
       {
         "name": "Blog",
-        "link": "http://nextver.com/site/blog/"
+        "link": "http://blog.accentient.com/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode53.mp3",
     "publishedDate": "04/18/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/U8ExXjrkgS0"
+    "youTubeLink": "https://youtu.be/sSC1XCUtcVQ"
   },
   {
     "blurb": [

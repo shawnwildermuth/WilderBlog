@@ -35,9 +35,10 @@ namespace WilderBlog.Controllers
     {
       var episode = _podcastProvider.Get()
                                      .Where(e => e.Status == PodcastEpisodeStatus.Live && 
-                                                 e.PublishedDate.AddHours(14) <= DateTime.UtcNow && 
                                                  e.EpisodeNumber == id)
                                      .FirstOrDefault();
+
+      if (episode == null) return RedirectToAction("Index");
 
       return View(episode);
     }
