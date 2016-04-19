@@ -1,5 +1,13 @@
 ﻿[
   {
+    "id": 22,
+    "title": "Visual Studio Tips: Refactoring and Building Classes",
+    "description": "In this video, I show you how to build classes and types with Visual Studio's built-in refactoring support.",
+    "videoType": "YouTube",
+    "videoCode": "EihHxxqSx80",
+    "datePublished": "2016-04-19"
+  },
+  {
     "id": 1,
     "title": "Docker and ASP.NET Core",
     "description": "Some learnings from my fun with hosting ASP.NET Core in a Docker container, both on a local machine and in Azure.",
