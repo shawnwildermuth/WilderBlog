@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
+using WilderBlog.Logger;
 using WilderBlog.MetaWeblog;
 using WilderBlog.Services;
 using WilderBlog.Services.DataProviders;
@@ -89,32 +91,31 @@ namespace WilderBlog
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
                           ILoggerFactory loggerFactory,
-                          WilderInitializer initializer)
+                          WilderInitializer initializer,
+                          IMailService mailService)
     {
-
-      if (_env.IsProduction())
-      {
-        // Early so we can catch the StatusCode error
-        app.UseExceptionHandler("/Error/{0}");
-        app.UseStatusCodePagesWithReExecute("/Error/{0}");
-      }
-
-      app.UseUrlRewriter();
 
       // Add the following to the request pipeline only in development environment.
       if (_env.IsDevelopment())
       {
         loggerFactory.AddDebug(LogLevel.Information);
-        app.UseDeveloperExceptionPage();
-        app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
+        app.UseStatusCodePagesWithReExecute("/Error/{0}");
+        app.UseExceptionHandler("/Exception");
+        //app.UseDeveloperExceptionPage();
+        //app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
       }
       else
       {
-        // Add Error handling middleware which catches all application specific errors and
-        // send the request to the following path or controller action.
-        loggerFactory.AddDebug(LogLevel.Error);
-        app.UseExceptionHandler("/Error");
+        // Early so we can catch the StatusCode error
+        app.UseStatusCodePagesWithReExecute("/Error/{0}");
+        app.UseExceptionHandler("/Exception");
+
+        // Support logging to email
+        loggerFactory.AddEmail(mailService, LogLevel.Error);
       }
+
+      // Rewrite old URLs to new URLs
+      app.UseUrlRewriter();
 
       app.UseIISPlatformHandler();
       app.UseStaticFiles();

@@ -9,6 +9,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http.Extensions;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -28,12 +29,14 @@ namespace WilderBlog.Controllers
     private IMailService _mailService;
     private IWilderRepository _repo;
     private IMemoryCache _memoryCache;
+    private ILogger<RootController> _logger;
 
-    public RootController(IMailService mailService, IWilderRepository repo, IMemoryCache memoryCache)
+    public RootController(IMailService mailService, IWilderRepository repo, IMemoryCache memoryCache, ILogger<RootController> logger)
     {
       _mailService = mailService;
       _repo = repo;
       _memoryCache = memoryCache;
+      _logger = logger;
     }
 
     [HttpGet("")]
@@ -113,8 +116,19 @@ namespace WilderBlog.Controllers
     [HttpGet("Error/{code:int}")]
     public IActionResult Error(int errorCode)
     {
+      _logger.LogError($"Error Page Called: Error Code: {Response.StatusCode}");
+
+      if (Response.StatusCode == (int)HttpStatusCode.NotFound) return View("NotFound");
+
       return View();
     }
+
+    [HttpGet("Exception")]
+    public IActionResult Exception(int errorCode)
+    {
+      return View();
+    }
+
 
     [HttpGet("feed")]
     public IActionResult Feed()
