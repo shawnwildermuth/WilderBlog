@@ -51,9 +51,6 @@ namespace WilderBlog.Controllers
       return View("Index", _repo.GetStories(_pageSize, page));
     }
 
-
-
-
     [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]
     public IActionResult Story(int year, int month, int day, string slug)
     {
@@ -116,7 +113,7 @@ namespace WilderBlog.Controllers
     [HttpGet("Error/{code:int}")]
     public IActionResult Error(int errorCode)
     {
-      _logger.LogError($"Error Page Called: Error Code: {Response.StatusCode}");
+      _logger.LogError($"Error Page Called: Error Code: {Response.StatusCode} \r\nUrl: {Request.GetDisplayUrl()}");
 
       if (Response.StatusCode == (int)HttpStatusCode.NotFound) return View("NotFound");
 

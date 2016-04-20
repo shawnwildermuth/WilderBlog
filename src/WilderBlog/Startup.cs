@@ -99,10 +99,8 @@ namespace WilderBlog
       if (_env.IsDevelopment())
       {
         loggerFactory.AddDebug(LogLevel.Information);
-        app.UseStatusCodePagesWithReExecute("/Error/{0}");
-        app.UseExceptionHandler("/Exception");
-        //app.UseDeveloperExceptionPage();
-        //app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
+        app.UseDeveloperExceptionPage();
+        app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
       }
       else
       {
