@@ -31,6 +31,10 @@ namespace WilderBlog.Data
     {
       var count = _ctx.Stories.Count();
 
+      // Fix random SQL Errors due to bad offset
+      if (page < 1) page = 1;
+      if (pageSize > 100) pageSize = 100;
+
       return new BlogResult()
       {
         CurrentPage = page,
