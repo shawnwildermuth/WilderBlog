@@ -31,7 +31,10 @@ namespace WilderBlog.Controllers
     private IMemoryCache _memoryCache;
     private ILogger<RootController> _logger;
 
-    public RootController(IMailService mailService, IWilderRepository repo, IMemoryCache memoryCache, ILogger<RootController> logger)
+    public RootController(IMailService mailService, 
+                          IWilderRepository repo, 
+                          IMemoryCache memoryCache, 
+                          ILogger<RootController> logger)
     {
       _mailService = mailService;
       _repo = repo;
@@ -96,9 +99,9 @@ namespace WilderBlog.Controllers
           return HttpBadRequest(ModelState);
         }
       }
-      catch (Exception)
+      catch (Exception ex)
       {
-        // TODO
+        _logger.LogError("Failed to send email from contact page", ex);
         return HttpBadRequest(new { Reason = "Error Occurred" });
       }
 

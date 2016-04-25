@@ -10,7 +10,9 @@ namespace WilderBlog.Logger
 {
   public static class EmailLoggerExtensions
   {
-    public static ILoggerFactory AddEmail(this ILoggerFactory factory, IMailService mailService, Func<string, LogLevel, bool> filter = null)
+    public static ILoggerFactory AddEmail(this ILoggerFactory factory, 
+                                          IMailService mailService, 
+                                          Func<string, LogLevel, bool> filter = null)
     {
       factory.AddProvider(new EmailLoggerProvider(filter, mailService));
       return factory;
@@ -19,9 +21,9 @@ namespace WilderBlog.Logger
     public static ILoggerFactory AddEmail(this ILoggerFactory factory, IMailService mailService, LogLevel minLevel)
     {
       return AddEmail(
-         factory,
-         mailService,
-         (_, logLevel) => logLevel >= minLevel);
+          factory,
+          mailService,
+          (_, logLevel) => logLevel >= minLevel);
     }
   }
 }

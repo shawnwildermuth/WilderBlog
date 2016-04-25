@@ -6,28 +6,28 @@
     "episodeNumber": 65,
     "guestName": "Merrick Christensen",
     "guestBio": [
-      "Billy is internationally known for his work on user experience design and native software development. His team, based in Nashville, Tennessee, has created modern apps hailed around the world for innovation and effective use of advanced user interface technologies. Billy offers training on user experience design for any platform, and technical classes on XAML technologies, including the Universal Windows Platform. You can see Billy at major conferences all over the world, usually doing sessions to help developers to become more focused on designing and developing software that users love."
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
     ],
     "guestHeadshot": "/img/hwpod/Merrick-Christensen.jpg",
-    "guestFirstMachineImage": "/img/hwpod/ibm-cardpunch.jpg",
-    "guestFirstMachineName": "IBM Card Punch Machine",
-    "guestFirstMachineLink": "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "http://twitter.com/billyhollis"
+        "link": "https://twitter.com/iammerrick"
       },
       {
         "name": "Blog",
-        "link": "http://nextver.com/site/blog/"
+        "link": "http://merrickchristensen.com/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode57.mp3",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
     "publishedDate": "04/25/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/U8ExXjrkgS0"
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
   },
   {
     "blurb": [

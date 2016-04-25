@@ -4,6 +4,7 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -81,11 +82,11 @@ namespace WilderBlog
       svcs.AddCaching();
 
       // Add MVC to the container
-      svcs.AddMvc()
-        .AddJsonOptions(opts =>
-        {
-          opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-        });
+      var mvcBuilder = svcs.AddMvc();
+      mvcBuilder.AddJsonOptions(opts => opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
+
+      // Add Https - renable once Azure Certs work
+      //if (_env.IsProduction()) mvcBuilder.AddMvcOptions(options => options.Filters.Add(new RequireHttpsAttribute()));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
