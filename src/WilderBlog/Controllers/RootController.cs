@@ -117,7 +117,7 @@ namespace WilderBlog.Controllers
     public IActionResult Error(int errorCode)
     {
 
-      if (Response.StatusCode == (int)HttpStatusCode.NotFound) return View("NotFound");
+      if (Response.StatusCode == (int)HttpStatusCode.NotFound || errorCode == (int)HttpStatusCode.NotFound) return View("NotFound");
 
       _logger.LogError($"Error Page Called: Error Code: {Response.StatusCode} \r\nUrl: {Request.GetDisplayUrl()}");
 
