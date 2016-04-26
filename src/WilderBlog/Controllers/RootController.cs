@@ -116,10 +116,12 @@ namespace WilderBlog.Controllers
     [HttpGet("Error/{code:int}")]
     public IActionResult Error(int errorCode)
     {
-
-      if (Response.StatusCode == (int)HttpStatusCode.NotFound || errorCode == (int)HttpStatusCode.NotFound) return View("NotFound");
-
-      _logger.LogError($"Error Page Called: Error Code: {Response.StatusCode} \r\nUrl: {Request.GetDisplayUrl()}");
+      if (Response.StatusCode == (int)HttpStatusCode.NotFound ||
+          errorCode == (int)HttpStatusCode.NotFound ||
+          Request.Path.Value.EndsWith("404"))
+      {
+        return View("NotFound");
+      }
 
       return View();
     }
