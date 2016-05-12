@@ -49,7 +49,9 @@ namespace WilderBlog.Logger
         return;
       }
 
-      message = $"{ logLevel }: {message}";
+      message = $@"Level: {logLevel}
+
+{message}";
 
       if (exception != null)
       {

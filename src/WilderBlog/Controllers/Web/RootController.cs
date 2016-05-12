@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net;
@@ -18,6 +19,8 @@ using WilderBlog.Models;
 using WilderBlog.Services;
 using WilderBlog.Services.DataProviders;
 using WilderMinds.RssSyndication;
+using Microsoft.AspNet.Diagnostics;
+using Microsoft.AspNet.Http.Features;
 
 namespace WilderBlog.Controllers
 {
@@ -59,14 +62,22 @@ namespace WilderBlog.Controllers
     {
       var fullSlug = $"{year}/{month}/{day}/{slug}";
 
-      var story = _repo.GetStory(fullSlug);
+      try
+      {
+        var story = _repo.GetStory(fullSlug);
 
-      // Try with other slug if it doesn't work
-      if (story == null) story = _repo.GetStory($"{year:0000}/{month:00}/{day:00}/{slug}");
+        // Try with other slug if it doesn't work
+        if (story == null) story = _repo.GetStory($"{year:0000}/{month:00}/{day:00}/{slug}");
 
-      if (story == null) return Redirect("/");
+        if (story != null) return View(story);
+      }
+      catch
+      {
+        _logger.LogWarning($"Couldn't find the ${fullSlug} story");
+      }
 
-      return View(story);
+      return Redirect("/");
+
     }
 
     [HttpGet("about")]
@@ -127,11 +138,28 @@ namespace WilderBlog.Controllers
     }
 
     [HttpGet("Exception")]
-    public IActionResult Exception(int errorCode)
+    public IActionResult Exception()
     {
+      var exception = HttpContext.Features.Get<IExceptionHandlerFeature>();
+      var request = HttpContext.Features.Get<IHttpRequestFeature>();
+
+      if (exception != null && request != null)
+      {
+        var message = $@"RequestUrl: ${request.Path}
+
+Exception: ${exception.Error}";
+
+        _mailService.SendMail("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", message);
+      }
+
       return View();
     }
 
+    [HttpGet("testerror")]
+    public IActionResult TestError()
+    {
+      throw new InvalidOperationException("Failure");
+    }
 
     [HttpGet("feed")]
     public IActionResult Feed()

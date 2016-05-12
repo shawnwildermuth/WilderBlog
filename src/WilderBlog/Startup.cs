@@ -115,12 +115,12 @@ namespace WilderBlog
       }
       else
       {
+        // Support logging to email
+        loggerFactory.AddEmail(mailService, LogLevel.Critical);
+
         // Early so we can catch the StatusCode error
         app.UseStatusCodePagesWithReExecute("/Error/{0}");
         app.UseExceptionHandler("/Exception");
-
-        // Support logging to email
-        loggerFactory.AddEmail(mailService, LogLevel.Error);
       }
 
       // Rewrite old URLs to new URLs
