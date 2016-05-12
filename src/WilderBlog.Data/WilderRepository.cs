@@ -35,7 +35,7 @@ namespace WilderBlog.Data
       if (page < 1) page = 1;
       if (pageSize > 100) pageSize = 100;
 
-      return new BlogResult()
+      var result = new BlogResult()
       {
         CurrentPage = page,
         TotalResults = count,
@@ -47,6 +47,8 @@ namespace WilderBlog.Data
           .Take(pageSize)
           .ToList(),
       };
+
+      return FixResults(result);
     }
 
     public BlogResult GetStoriesByTerm(string term, int pageSize, int page)
@@ -88,7 +90,10 @@ namespace WilderBlog.Data
 
     private void FixStory(BlogStory s)
     {
-      if (s != null) s.Body = s.Body.Replace("http://wilderminds.blob.core.windows.net/img/", "//wilderminds.blob.core.windows.net/img/");
+      if (s != null)
+      {
+        s.Body = s.Body.Replace("http://wilderminds.blob.core.windows.net/img/", "//wilderminds.blob.core.windows.net/img/");
+      }
     }
 
     public BlogStory GetStory(int id)
