@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using Glimpse;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Hosting;
@@ -81,6 +82,8 @@ namespace WilderBlog
       // Add Caching Support
       svcs.AddCaching();
 
+      svcs.AddGlimpse();
+
       // Add MVC to the container
       var mvcBuilder = svcs.AddMvc();
       mvcBuilder.AddJsonOptions(opts => opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
@@ -116,8 +119,16 @@ namespace WilderBlog
       // Rewrite old URLs to new URLs
       app.UseUrlRewriter();
 
-      app.UseIISPlatformHandler();
       app.UseStaticFiles();
+
+      // Support showing Runtime info
+      app.UseRuntimeInfoPage(new RuntimeInfoPageOptions()
+      {
+        Path = "/siteinfo"
+      });
+
+      // Support Glimpse on the site
+      app.UseGlimpse();
 
       // Support MetaWeblog API
       app.UseMetaWeblog("/livewriter");

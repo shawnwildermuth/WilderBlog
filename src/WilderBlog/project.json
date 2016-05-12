@@ -8,7 +8,6 @@
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
     "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
-    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
     "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
@@ -21,7 +20,8 @@
     "WilderBlog.Data": "1.0.0-*",
     "WilderMinds.MetaWeblog": "0.4.0-beta",
     "WilderMinds.RssSyndication": "1.0.1",
-    "WindowsAzure.Storage": "6.1.1-preview"
+    "WindowsAzure.Storage": "6.1.1-preview",
+    "Glimpse": "2.0.0-beta1"
   },
 
   "commands": {

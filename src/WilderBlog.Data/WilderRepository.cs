@@ -88,7 +88,7 @@ namespace WilderBlog.Data
 
     private void FixStory(BlogStory s)
     {
-      s.Body = s.Body.Replace("http://wilderminds.blob.core.windows.net/img/", "//wilderminds.blob.core.windows.net/img/");
+      if (s != null) s.Body = s.Body.Replace("http://wilderminds.blob.core.windows.net/img/", "//wilderminds.blob.core.windows.net/img/");
     }
 
     public BlogStory GetStory(int id)
