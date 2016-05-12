@@ -59,7 +59,7 @@ namespace WilderBlog.Data
           s.Title.ToLowerInvariant().Contains(lowerTerm))
           ).Count();
 
-      return new BlogResult()
+      var result = new BlogResult()
       {
         CurrentPage = page,
         TotalResults = totalCount,
@@ -71,17 +71,41 @@ namespace WilderBlog.Data
         .OrderByDescending(o => o.DatePublished)
         .Skip((page - 1) * pageSize).Take(pageSize)
       };
+
+      return FixResults(result);
+
+    }
+
+    private BlogResult FixResults(BlogResult result)
+    {
+      foreach (var s in result.Stories)
+      {
+        FixStory(s);
+      }
+
+      return result;
+    }
+
+    private void FixStory(BlogStory s)
+    {
+      s.Body = s.Body.Replace("http://wilderminds.blob.core.windows.net/img/", "//wilderminds.blob.core.windows.net/img/");
     }
 
     public BlogStory GetStory(int id)
     {
-      return _ctx.Stories.Where(b => b.Id == id).FirstOrDefault();
+      var result = _ctx.Stories.Where(b => b.Id == id).FirstOrDefault();
+      FixStory(result);
+      return result;
     }
 
     public BlogStory GetStory(string slug)
     {
-      return _ctx.Stories.Where(s => s.Slug == slug || s.Slug == slug.Replace('_', '-'))
+      var result = _ctx.Stories
+        .Where(s => s.Slug == slug || s.Slug == slug.Replace('_', '-'))
         .FirstOrDefault();
+
+      FixStory(result);
+      return result;
     }
 
     public bool DeleteStory(string postid)
@@ -117,7 +141,7 @@ namespace WilderBlog.Data
         .ToArray()
         .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag)).Count(); 
 
-      return new BlogResult()
+      var result = new BlogResult()
       {
         CurrentPage = page,
         TotalResults = totalCount,
@@ -128,6 +152,8 @@ namespace WilderBlog.Data
           .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag))
           .Skip((page - 1) * pageSize).Take(pageSize)
       };
+
+      return FixResults(result);
     }
   }
 }

@@ -20,7 +20,7 @@ gulp.task("npmTasks", function () {
 });
 
 gulp.task("minify", function () {
-  gulp.src(["wwwroot/js/*.js"])
+  gulp.src(["wwwroot/js/*.js", '!wwwroot/tour*.js'])
     .pipe(uglify())
     .pipe(concat("wilderblog.min.js"))
     .pipe(gulp.dest("wwwroot/lib/site"));
