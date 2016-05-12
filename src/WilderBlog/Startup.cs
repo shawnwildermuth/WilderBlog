@@ -126,6 +126,7 @@ namespace WilderBlog
       // Rewrite old URLs to new URLs
       app.UseUrlRewriter();
 
+      app.UseIISPlatformHandler();
       app.UseStaticFiles();
 
       // Support showing Runtime info

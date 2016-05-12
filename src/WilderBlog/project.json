@@ -16,6 +16,7 @@
     "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-final",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
     "WilderBlog.Commands": "1.0.0-*",
     "WilderBlog.Data": "1.0.0-*",
     "WilderMinds.MetaWeblog": "0.4.0-beta",
