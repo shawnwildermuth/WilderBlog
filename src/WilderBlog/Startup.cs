@@ -82,7 +82,10 @@ namespace WilderBlog
       // Add Caching Support
       svcs.AddCaching();
 
-      svcs.AddGlimpse();
+      if (_env.IsDevelopment())
+      {
+        svcs.AddGlimpse();
+      }
 
       // Add MVC to the container
       var mvcBuilder = svcs.AddMvc();
@@ -105,6 +108,10 @@ namespace WilderBlog
         loggerFactory.AddDebug(LogLevel.Information);
         app.UseDeveloperExceptionPage();
         app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
+
+        // Support Glimpse on the site
+        app.UseGlimpse();
+
       }
       else
       {
@@ -126,9 +133,6 @@ namespace WilderBlog
       {
         Path = "/siteinfo"
       });
-
-      // Support Glimpse on the site
-      app.UseGlimpse();
 
       // Support MetaWeblog API
       app.UseMetaWeblog("/livewriter");
