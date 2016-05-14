@@ -1,5 +1,13 @@
 ﻿[
   {
+    "id": 23,
+    "title": "Creating the Smallest ASP.NET Core RC2 App",
+    "description": "This short tutorial shows you how to convert a new console app to a web server to see how the pieces fit together with the upcoming RC2.",
+    "videoType": "YouTube",
+    "videoCode": "1Z44fdcvIg",
+    "datePublished": "2016-05-14"
+  },
+  {
     "id": 22,
     "title": "Visual Studio Tips: Refactoring and Building Classes",
     "description": "In this video, I show you how to build classes and types with Visual Studio's built-in refactoring support.",
