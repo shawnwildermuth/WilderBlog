@@ -1,12 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using WilderBlog.Data;
 
 namespace WilderBlog.Controllers
 {
-  [Route("[controller]")]
+    [Route("[controller]")]
   public class AdminController : Controller
   {
     private UserManager<WilderUser> _userManager;

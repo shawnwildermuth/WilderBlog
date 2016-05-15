@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http.Extensions;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using WilderBlog.Data;
 using WilderBlog.Models;
 using WilderBlog.Services;
-using WilderBlog.Services.DataProviders;
 using WilderMinds.RssSyndication;
 using Microsoft.AspNet.Diagnostics;
 using Microsoft.AspNet.Http.Features;
 
 namespace WilderBlog.Controllers
 {
-  [Route("")]
+    [Route("")]
   public class RootController : Controller
   {
     readonly int _pageSize = 25;

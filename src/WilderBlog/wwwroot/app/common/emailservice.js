@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 // emailService.ts
-var core_1 = require('angular2/core');
-var http_1 = require('angular2/http');
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 var EmailService = (function () {
     function EmailService(http) {
         this._http = http;

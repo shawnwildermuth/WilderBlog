@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using WilderBlog.Data;
 using WilderBlog.Services.DataProviders;
 
 namespace WilderBlog.Controllers
 {
-  [Route("hwpod")]
+    [Route("hwpod")]
   public class PodcastController : Controller
   {
     private PodcastEpisodesProvider _podcastProvider;

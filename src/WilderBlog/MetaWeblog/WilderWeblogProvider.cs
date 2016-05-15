@@ -10,7 +10,6 @@ using WilderBlog.Helpers;
 using WilderMinds.MetaWeblog;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
-using System.Text;
 
 namespace WilderBlog.MetaWeblog
 {

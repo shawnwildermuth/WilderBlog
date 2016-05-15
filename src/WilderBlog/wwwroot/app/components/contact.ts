@@ -1,6 +1,6 @@
 ﻿// contact.ts
-import { Component } from 'angular2/core';
-import { FormBuilder, Validators, Control, ControlGroup } from 'angular2/common';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators, Control, ControlGroup } from '@angular/common';
 import { CustomValidators } from '../common/validators';
 import { EmailService, IContactMessage } from "../common/emailservice";
 
@@ -50,10 +50,10 @@ export class ContactForm {
       if (value.success) {
         this.statusMessage = "Sent...";
         // Reset the controls
-        this.form.controls["name"].updateValue("");
-        this.form.controls["email"].updateValue("");
-        this.form.controls["subject"].updateValue(this.subjects[0]);
-        this.form.controls["msg"].updateValue("");
+        (<Control>this.form.controls['name']).updateValue("");
+        (<Control>this.form.controls['email']).updateValue("");
+        (<Control>this.form.controls['subject']).updateValue(this.subjects[0]);
+        (<Control>this.form.controls['msg']).updateValue("");
       } else {
         this.errorMessage = value.message;
       }

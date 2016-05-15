@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using WilderBlog.Data;
@@ -28,7 +27,8 @@ namespace WilderBlog.Helpers
 
     public static string GetStoryUrl(this BlogStory story)
     {
-      return string.Format("{0:0000}/{1:00}/{2:00}/{3}", story.DatePublished.Year, story.DatePublished.Month, story.DatePublished.Day, GetUrlSafeTitle(story));
+      return
+          $"{story.DatePublished.Year:0000}/{story.DatePublished.Month:00}/{story.DatePublished.Day:00}/{GetUrlSafeTitle(story)}";
     }
 
     //public static Uri GetStoryFullUri(this BlogStory story, HttpRequest request)

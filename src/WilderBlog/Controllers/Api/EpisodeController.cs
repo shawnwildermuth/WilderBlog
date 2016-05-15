@@ -1,15 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
 using WilderBlog.Services.DataProviders;
 
 namespace WilderBlog.Controllers.Api
 {
-  [Route("/api/episodes")]
+    [Route("/api/episodes")]
   public class EpisodeController : Controller
   {
     private PodcastEpisodesProvider _provider;
