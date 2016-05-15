@@ -3,6 +3,67 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 67,
+    "guestName": "Rui Carvalho",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/Rui-Carvalho.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "05/23/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 66,
+    "guestName": "Bill Wagner",
+    "guestBio": [
+      "Bill Wagner is one of the world’s foremost C# developers and a member of the ECMA C# Standards Committee. He is President of the Humanitarian Toolbox, has been awarded Microsoft Regional Director and .NET MVP for 10+years, and was recently appointed to the .NET Foundation Advisory Board. Wagner currently works with companies ranging from start-ups to enterprises improving the software development process and growing their software development teams.",
+      "As a thought leader on C# programming language, Bill Wagner has authored 2 books; a best seller, “Effective C#”, and “More Effective C#”. Bill authors video training through Microsoft Virtual Academy on C# and .NET development. B ill has also written hundreds of technical articles (MSDN Magazine, .NET Developers Journal, Visual Studio Magazine, and many others), as well as actively blogs at http://www.thebillwagner.com/."
+    ],
+    "guestHeadshot": "/img/hwpod/bill-wagner.jpg",
+    "guestFirstMachineImage": "/img/hwpod/ohioscientific.jpg",
+    "guestFirstMachineName": "Ohio Scientific",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Ohio_Scientific",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/billwagner"
+      },
+      {
+        "name": "Blog",
+        "link": "http://www.thebillwagner.com/blo6"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode66.mp3",
+    "publishedDate": "05/16/16",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 65,
     "guestName": "Merrick Christensen",
     "guestBio": [
