@@ -1,4 +1,5 @@
-﻿@model  Tuple<WilderBlog.Services.DataProviders.PodcastEpisode, IEnumerable<WilderBlog.Services.DataProviders.PodcastEpisode>>
+﻿@using WilderBlog.Services.DataProviders
+@model  Tuple<WilderBlog.Services.DataProviders.PodcastEpisode, IEnumerable<WilderBlog.Services.DataProviders.PodcastEpisode>>
 @{
   ViewBag.Title = "Hello World Podcast - Shawn Wildermuth's Rants and Raves";
   ViewBag.PageName = "Hello World Podcast";
@@ -7,7 +8,6 @@
 
   var latest = Model.Item1;
   var episodes = Model.Item2;
-
 }
 @section Styles {
   <link href="~/3rdparty/css/audioplayer.css" rel="stylesheet" />
@@ -53,14 +53,14 @@
 <hr />
 <h3>Upcoming Guests</h3>
 <div class="row">
-  @foreach (var upcoming in episodes.Where(e => e.Status == WilderBlog.Services.DataProviders.PodcastEpisodeStatus.Planned).OrderBy(e => e.PublishedDate))
+  @foreach (var upcoming in episodes.Where(e => e.Status == PodcastEpisodeStatus.Planned || (e.Status == PodcastEpisodeStatus.Live && e.PublishedDate.AddHours(14) > DateTime.UtcNow)).OrderBy(e => e.PublishedDate))
   {
     @Html.Partial("_Headshot", upcoming)
   }
 </div>
 <h3>Archive</h3>
 <div class="row">
-  @foreach (var upcoming in episodes.Where(e => e.Status == WilderBlog.Services.DataProviders.PodcastEpisodeStatus.Live && e != latest).OrderByDescending(e => e.PublishedDate))
+  @foreach (var upcoming in episodes.Where(e => e.Status == PodcastEpisodeStatus.Live && e != latest && e.PublishedDate.AddHours(14) <= DateTime.UtcNow).OrderByDescending(e => e.PublishedDate))
   {
     @Html.Partial("_Headshot", upcoming)
   }

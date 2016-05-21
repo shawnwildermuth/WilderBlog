@@ -22,7 +22,7 @@ namespace WilderBlog.Controllers
     public IActionResult Index()
     {
       var episodes = _podcastProvider.Get();
-      var latest = episodes.Where(e => e.Status == PodcastEpisodeStatus.Live &&
+      var latest = _podcastProvider.Get().Where(e => e.Status == PodcastEpisodeStatus.Live &&
                                        e.PublishedDate.AddHours(14) <= DateTime.UtcNow)
                            .OrderByDescending(e => e.EpisodeNumber)
                            .FirstOrDefault();
