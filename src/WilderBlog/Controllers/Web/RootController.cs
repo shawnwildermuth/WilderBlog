@@ -6,9 +6,9 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http.Extensions;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
@@ -19,8 +19,8 @@ using WilderBlog.Models;
 using WilderBlog.Services;
 using WilderBlog.Services.DataProviders;
 using WilderMinds.RssSyndication;
-using Microsoft.AspNet.Diagnostics;
-using Microsoft.AspNet.Http.Features;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace WilderBlog.Controllers
 {

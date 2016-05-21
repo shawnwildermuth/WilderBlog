@@ -1,7 +1,6 @@
 ﻿using System;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Metadata.Builders;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog.Data
@@ -24,15 +23,5 @@ namespace WilderBlog.Data
       base.OnConfiguring(optionsBuilder);
     }
 
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-      OnCreating(builder.Entity<BlogStory>());
-
-      base.OnModelCreating(builder);
-    }
-
-    private void OnCreating(EntityTypeBuilder<BlogStory> bldr)
-    {
-    }
   }
 }

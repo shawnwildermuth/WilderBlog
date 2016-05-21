@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WilderBlog", "WilderBlog\WilderBlog.xproj", "{4FB63E39-5177-4332-ACD6-4F0FDBA65D73}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WilderBlog.Data", "WilderBlog.Data\WilderBlog.Data.xproj", "{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WilderBlog.Commands", "WilderBlog.Commands\WilderBlog.Commands.xproj", "{ACCE0603-4090-41E7-A8DA-98C085542694}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C285657-5BD7-4E8D-8E9F-49C24601AB82}"
 	ProjectSection(SolutionItems) = preProject
@@ -29,10 +27,6 @@ Global
 		{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACCE0603-4090-41E7-A8DA-98C085542694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACCE0603-4090-41E7-A8DA-98C085542694}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACCE0603-4090-41E7-A8DA-98C085542694}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACCE0603-4090-41E7-A8DA-98C085542694}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using WilderBlog.Data;
