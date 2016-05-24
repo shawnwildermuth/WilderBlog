@@ -12,7 +12,7 @@ namespace WilderBlog.Helpers
     public static string GetSummary(this BlogStory me)
     {
       var MAXPARAGRAPHS = 2;
-      var regex = new Regex("(<p[^>]*>.*?</p>)", RegexOptions.IgnoreCase);
+      var regex = new Regex("(<p[^>]*>.*?</p>)", RegexOptions.IgnoreCase | RegexOptions.Singleline);
       var result = regex.Matches(me.Body);
       StringBuilder bldr = new StringBuilder();
       var x = 0;
