@@ -7,6 +7,10 @@ namespace WilderBlog.Data
 {
   public class WilderContext : IdentityDbContext<WilderUser>
   {
+    public WilderContext(DbContextOptions options) : base(options)
+    {
+    }
+
     private IConfigurationRoot _config;
 
     public WilderContext(IConfigurationRoot config)

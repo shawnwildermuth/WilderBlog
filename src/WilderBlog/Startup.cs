@@ -1,15 +1,12 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using Glimpse;
+﻿using Glimpse;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.Extensions.Caching;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
 using WilderBlog.Logger;
@@ -25,13 +22,13 @@ namespace WilderBlog
     private IConfigurationRoot _config;
     private IHostingEnvironment _env;
 
-    public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
+    public Startup(IHostingEnvironment env)
     {
       _env = env;
 
       var builder = new ConfigurationBuilder()
-        .SetBasePath(appEnv.ApplicationBasePath)
-        .AddJsonFile("config.json")
+        .SetBasePath(env.ContentRootPath)
+        .AddJsonFile("config.json", false, true)
         .AddEnvironmentVariables();
 
       _config = builder.Build();
@@ -39,7 +36,7 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      svcs.AddInstance(_config);
+      svcs.AddSingleton<IConfigurationRoot>(_config);
 
       if (_env.IsDevelopment())
       {
@@ -50,8 +47,7 @@ namespace WilderBlog
         svcs.AddTransient<IMailService, MailService>();
       }
 
-      svcs.AddEntityFramework()
-        .AddSqlServer()
+      svcs.AddEntityFrameworkSqlServer()
         .AddDbContext<WilderContext>();
 
       svcs.AddIdentity<WilderUser, IdentityRole>()
@@ -126,7 +122,6 @@ namespace WilderBlog
       // Rewrite old URLs to new URLs
       app.UseUrlRewriter();
 
-      app.UseIISPlatformHandler();
       app.UseStaticFiles();
 
       // Support showing Runtime info
@@ -147,8 +142,5 @@ namespace WilderBlog
         initializer.SeedAsync().Wait();
       }
     }
-
-    // Entry point for the application.
-    public static void Main(string[] args) => WebApplication.Run<Startup>(args);
   }
 }
