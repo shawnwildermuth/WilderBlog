@@ -3,12 +3,12 @@
     "blurb": [
       ""
     ],
-    "episodeNumber": 67,
-    "guestName": "Rui Carvalho",
+    "episodeNumber": 70,
+    "guestName": "Nick Landry",
     "guestBio": [
       "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
     ],
-    "guestHeadshot": "/img/hwpod/Rui-Carvalho.jpg",
+    "guestHeadshot": "/img/hwpod/nick-landry.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
     "guestFirstMachineName": "Gateway PCs",
     "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
@@ -24,8 +24,98 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
-    "publishedDate": "05/23/16",
+    "publishedDate": "06/13/16",
     "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 69,
+    "guestName": "John Petersen",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/john-petersen.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "06/13/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 68,
+    "guestName": "G. Andrew Duthie",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/g-andrew-duthie.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "06/06/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 67,
+    "guestName": "Rui Carvalho",
+    "guestBio": [
+      "Rui is a software craftsman mostly working on Microsoft and web areas since 20 years, from the early Asp 2.0 to the latest DNX stuff. After a long time acting as a consultant for big companies, he focuses today on developing, teaching and mentoring teams on smaller projects like startups to build the right products with simplicity. He use to speak at different conferences about .net web, agility and developer’s practices, he also advocates for open source and open minds in the .net community and that’s why he leads today the alt.net group in France. Since 2014, he organize a professional developer’s conference in Paris, NCrafts with strong focus on new technologies, great practices and design and more globally about crafting software with love."
+    ],
+    "guestHeadshot": "/img/hwpod/Rui-Carvalho.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/rhwy"
+      },
+      {
+        "name": "Blog",
+        "link": "http://rui.io/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode67.mp3",
+    "publishedDate": "05/31/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
   },
