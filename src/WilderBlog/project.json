@@ -32,13 +32,7 @@
   },
 
   "frameworks": {
-    "dnx451": {},
-    "dnxcore50": {
-      "dependencies": {
-        "System.Collections": "4.0.11-beta-23509",
-        "System.Reflection.Extensions": "4.0.1-beta-23516"
-      }
-    }
+    "dnx451": {}
   },
 
   "exclude": [
