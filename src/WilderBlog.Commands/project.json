@@ -8,10 +8,6 @@
   },
 
   "dependencies": {
-    "Microsoft.NETCore.App": {
-      "version": "1.0.0-rc2-*",
-      "type": "platform"
-    },
     "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.Identity": "1.0.0-rc2-final",
@@ -24,12 +20,19 @@
   },
 
   "frameworks": {
-    "netcoreapp1.0": {
-      "imports": [
-        "dotnet5.6",
-        "dnxcore50",
-        "portable-net45+win8"
-      ]
-    }
+    //"netcoreapp1.0": {
+    //  "imports": [
+    //    "dotnet5.6",
+    //    "dnxcore50",
+    //    "portable-net45+win8"
+    //  ],
+    //  "dependencies": {
+    //    "Microsoft.NETCore.App": {
+    //      "version": "1.0.0-rc2-*",
+    //      "type": "platform"
+    //    }
+    //  }
+    //},
+    "net46": {}
   }
 }
