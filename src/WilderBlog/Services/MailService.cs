@@ -26,7 +26,7 @@ namespace WilderBlog.Services
     {
       try
       {
-        var path = $"{_env.WebRootPath}\\EmailTemplates\\{template}";
+        var path = $"{_env.ContentRootPath}\\EmailTemplates\\{template}";
         var body = File.ReadAllText(path);
 
         var key = _config["MailService:ApiKey"];
