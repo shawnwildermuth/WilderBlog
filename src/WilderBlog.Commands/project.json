@@ -6,7 +6,7 @@
   "projectUrl": "",
   "licenseUrl": "",
 
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true
   },
 

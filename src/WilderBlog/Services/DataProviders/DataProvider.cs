@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
 
 namespace WilderBlog.Services.DataProviders
@@ -9,9 +9,9 @@ namespace WilderBlog.Services.DataProviders
   {
     protected string _path;
 
-    public DataProvider(IApplicationEnvironment env, string path)
+    public DataProvider(IHostingEnvironment env, string path)
     {
-      _path = Path.Combine(env.ApplicationBasePath, $@"Data\{path}");
+      _path = Path.Combine(env.ContentRootPath, $@"Data\{path}");
     }
 
     public virtual IEnumerable<T> Get()

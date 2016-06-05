@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.WindowsAzure.Storage.Auth;
+using Microsoft.WindowsAzure.Storage.Blob;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
 using WilderMinds.MetaWeblog;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
-using System.Text;
 
 namespace WilderBlog.MetaWeblog
 {
@@ -19,9 +18,9 @@ namespace WilderBlog.MetaWeblog
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
     private IConfigurationRoot _config;
-    private IApplicationEnvironment _appEnv;
+    private IHostingEnvironment _appEnv;
 
-    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfigurationRoot config, IApplicationEnvironment appEnv)
+    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfigurationRoot config, IHostingEnvironment appEnv)
     {
       _repo = repo;
       _userMgr = userMgr;

@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WilderBlog.Services.DataProviders;
 
@@ -46,7 +44,7 @@ namespace WilderBlog.Controllers.Api
       catch (Exception ex)
       {
         _logger.LogError("Failed to get episodes from the API", ex);
-        return HttpBadRequest();
+        return BadRequest();
       }
 
     }
@@ -65,7 +63,7 @@ namespace WilderBlog.Controllers.Api
       {
         _logger.LogError("Failed to get episode from the API", ex);
 
-        return HttpBadRequest();
+        return BadRequest();
       }
     }
 

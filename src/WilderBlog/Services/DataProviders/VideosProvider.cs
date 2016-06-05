@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.PlatformAbstractions;
-using Newtonsoft.Json;
+using Microsoft.AspNetCore.Hosting;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class VideosProvider : DataProvider<Video>
   {
-    public VideosProvider(IApplicationEnvironment env) 
+    public VideosProvider(IHostingEnvironment env) 
       : base(env, "videos.json")
     {
     }
