@@ -1,12 +1,10 @@
-﻿using Glimpse;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Caching;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
 using WilderBlog.Logger;
@@ -36,7 +34,7 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      svcs.AddSingleton<IConfigurationRoot>(_config);
+      svcs.AddSingleton(_config);
 
       if (_env.IsDevelopment())
       {
@@ -47,8 +45,7 @@ namespace WilderBlog
         svcs.AddTransient<IMailService, MailService>();
       }
 
-      svcs.AddEntityFrameworkSqlServer()
-        .AddDbContext<WilderContext>();
+      svcs.AddDbContext<WilderContext>();
 
       svcs.AddIdentity<WilderUser, IdentityRole>()
         .AddEntityFrameworkStores<WilderContext>();
@@ -62,7 +59,7 @@ namespace WilderBlog
         svcs.AddScoped<IWilderRepository, WilderRepository>();
       }
 
-      svcs.AddScoped<WilderInitializer>();
+      svcs.AddTransient<WilderInitializer>();
       svcs.AddScoped<AdService>();
 
       // Data Providers (non-EF)
@@ -76,12 +73,7 @@ namespace WilderBlog
       svcs.AddMetaWeblog<WilderWeblogProvider>();
 
       // Add Caching Support
-      svcs.AddCaching();
-
-      if (_env.IsDevelopment())
-      {
-        svcs.AddGlimpse();
-      }
+      svcs.AddMemoryCache();
 
       // Add MVC to the container
       var mvcBuilder = svcs.AddMvc();
@@ -103,11 +95,7 @@ namespace WilderBlog
       {
         loggerFactory.AddDebug(LogLevel.Information);
         app.UseDeveloperExceptionPage();
-        app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
-
-        // Support Glimpse on the site
-        app.UseGlimpse();
-
+        app.UseDatabaseErrorPage();
       }
       else
       {

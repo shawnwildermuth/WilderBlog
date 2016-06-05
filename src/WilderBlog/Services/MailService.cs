@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 
 namespace WilderBlog.Services
 {
   public class MailService : IMailService
   {
     private IConfigurationRoot _config;
-    private IApplicationEnvironment _env;
+    private IHostingEnvironment _env;
     private ILogger<MailService> _logger;
 
-    public MailService(IApplicationEnvironment env, IConfigurationRoot config, ILogger<MailService> logger)
+    public MailService(IHostingEnvironment env, IConfigurationRoot config, ILogger<MailService> logger)
     {
       _env = env;
       _config = config;
@@ -28,7 +26,7 @@ namespace WilderBlog.Services
     {
       try
       {
-        var path = $"{_env.ApplicationBasePath}\\EmailTemplates\\{template}";
+        var path = $"{_env.WebRootPath}\\EmailTemplates\\{template}";
         var body = File.ReadAllText(path);
 
         var key = _config["MailService:ApiKey"];

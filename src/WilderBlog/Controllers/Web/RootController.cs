@@ -1,26 +1,22 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using WilderBlog.Data;
 using WilderBlog.Models;
 using WilderBlog.Services;
-using WilderBlog.Services.DataProviders;
 using WilderMinds.RssSyndication;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http.Features;
 
 namespace WilderBlog.Controllers
 {
@@ -107,13 +103,13 @@ namespace WilderBlog.Controllers
         else
         {
           ModelState.AddModelError("", "Failed to send email");
-          return HttpBadRequest(ModelState);
+          return BadRequest(ModelState);
         }
       }
       catch (Exception ex)
       {
         _logger.LogError("Failed to send email from contact page", ex);
-        return HttpBadRequest(new { Reason = "Error Occurred" });
+        return BadRequest(new { Reason = "Error Occurred" });
       }
 
     }
