@@ -80,27 +80,23 @@ IF "%DEPLOYMENT_TARGET:~-1%"=="\" (
 
 
 :: 1. Set DNX Path
-echo Setting Paths
 set DNVM_CMD_PATH_FILE="%USERPROFILE%\.dnx\temp-set-envvars.cmd"
 set DNX_RUNTIME="%USERPROFILE%\.dnx\runtimes\dnx-CLR-win-x64.1.0.0-rc1-update2"
 
 :: 2. Install DNX
-echo Getting the Runtime
-call :ExecuteCmd PowerShell -NoProfile -NoLogo -ExecutionPolicy unrestricted -Command "[System.Threading.Thread]::CurrentThread.CurrentCulture = ''; [System.Threading.Thread]::CurrentThread.CurrentUICulture = '';$CmdPathFile='%DNVM_CMD_PATH_FILE%';& '%SCM_DNVM_PS_PATH%' " install 1.0.0-rc1-update2 -arch x64 -r CLR %SCM_DNVM_INSTALL_OPTIONS%
+call :ExecuteCmd PowerShell -NoProfile -NoLogo -ExecutionPolicy unrestricted -Command "[System.Threading.Thread]::CurrentThread.CurrentCulture = ''; [System.Threading.Thread]::CurrentThread.CurrentUICulture = '';$CmdPathFile='%DNVM_CMD_PATH_FILE%';& '%SCM_DNVM_PS_PATH%' " install 1.0.0-rc1-update1 -arch x64 -r CLR %SCM_DNVM_INSTALL_OPTIONS%
 IF !ERRORLEVEL! NEQ 0 goto error
 
+
 :: 3. Run DNU Restore
-echo Restoring Packages
 call %DNX_RUNTIME%\bin\dnu restore "%DEPLOYMENT_SOURCE%" %SCM_DNU_RESTORE_OPTIONS%
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 4. Run DNU Bundle
-echo Publishing the App
 call %DNX_RUNTIME%\bin\dnu publish "D:\home\site\repository\src\WilderBlog\project.json" --runtime %DNX_RUNTIME% --out "%DEPLOYMENT_TEMP%" %SCM_DNU_PUBLISH_OPTIONS%
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 5. KuduSync
-echo Setting Kudu Sync
 call %KUDU_SYNC_CMD% -v 50 -f "%DEPLOYMENT_TEMP%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
 IF !ERRORLEVEL! NEQ 0 goto error
 )
