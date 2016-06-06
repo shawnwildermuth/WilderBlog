@@ -1,5 +1,4 @@
 {
-  "version": "1.0.0-*",
   "description": "WilderBlog.Commands Console Application",
   "authors": [ "shawn" ],
 
@@ -20,19 +19,18 @@
   },
 
   "frameworks": {
-    //"netcoreapp1.0": {
-    //  "imports": [
-    //    "dotnet5.6",
-    //    "dnxcore50",
-    //    "portable-net45+win8"
-    //  ],
-    //  "dependencies": {
-    //    "Microsoft.NETCore.App": {
-    //      "version": "1.0.0-rc2-*",
-    //      "type": "platform"
-    //    }
-    //  }
-    //},
-    "net46": {}
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ],
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-rc2-*",
+          "type": "platform"
+        }
+      }
+    }
   }
 }
