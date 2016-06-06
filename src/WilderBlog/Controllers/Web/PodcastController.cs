@@ -34,7 +34,7 @@ namespace WilderBlog.Controllers
     public IActionResult Episode(int id, string tag)
     {
       var episode = _podcastProvider.Get()
-                                     .Where(e => e.Status == PodcastEpisodeStatus.Live && 
+                                     .Where(e => e.Status == PodcastEpisodeStatus.Live &&
                                                  e.EpisodeNumber == id)
                                      .FirstOrDefault();
 

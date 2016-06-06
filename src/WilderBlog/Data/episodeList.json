@@ -3,6 +3,66 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 72,
+    "guestName": "Rob Hale",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/rob-hale.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "07/11/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 71,
+    "guestName": "Miguel de Icaza",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/miguel-de-icaza.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "06/27/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 70,
     "guestName": "Nick Landry",
     "guestBio": [
@@ -24,7 +84,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
-    "publishedDate": "06/13/16",
+    "publishedDate": "06/20/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
@@ -66,28 +126,28 @@
     "episodeNumber": 68,
     "guestName": "G. Andrew Duthie",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "G. Andrew Duthie, aka devhammer, is the founder and chief consultant for Devhammer Enterprises. Andrew is a consultant focused on helping clients meet their business goals through software. Andrew is also a trainer and writer with more than 15 years of industry experience, including nearly 10 years as a Technical Evangelist for Microsoft’s Mid-Atlantic States district, where he provided support and education for developers working with the Microsoft development platform. In addition to his work with Microsoft, Andrew is the author of several books on ASP.NET and web development, and has spoken at numerous industry conferences from VSLive! and ASP.NET Connections, to Microsoft’s Professional Developer Conference (PDC) and Tech-Ed. Andrew has been participating in the user group community since way back in 1997, when one of his co-workers dragged him out to the Internet Developers User Group in Tyson’s Corner, VA, and he’s been hooked ever since. Andrew is also the creator and developer of Community Megaphone, a site designed for promoting and finding developer community events."
     ],
     "guestHeadshot": "/img/hwpod/g-andrew-duthie.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/commodore-pet.jpg",
+    "guestFirstMachineName": "Commodore PET",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_PET",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/devhammer"
       },
       {
-        "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "name": "DevHammer Enterprises",
+        "link": "http://devhammer.net/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode68.mp3",
     "publishedDate": "06/06/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
