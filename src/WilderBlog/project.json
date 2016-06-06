@@ -1,92 +1,56 @@
 {
   "version": "1.0.0-*",
-
-  "buildOptions": {
-    "emitEntryPoint": true,
-    "preserveCompilationContext": true
+  "compilationOptions": {
+    "emitEntryPoint": true
   },
 
   "dependencies": {
-    "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Identity": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
-    "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Caching.Memory": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
-    "WilderBlog.Data": { "target": "project" },
-    "WilderMinds.MetaWeblog": "1.0.1-rc2",
-    "WilderMinds.RssSyndication": "1.0.3-rc2",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
+    "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
+    "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
+    "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-final",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
+    "WilderBlog.Commands": "1.0.0-*",
+    "WilderBlog.Data": "1.0.0-*",
+    "WilderMinds.MetaWeblog": "0.4.0-beta",
+    "WilderMinds.RssSyndication": "1.0.1",
     "WindowsAzure.Storage": "6.1.1-preview",
-    "Microsoft.AspNetCore.Razor.Tools": {
-      "version": "1.0.0-preview1-final",
-      "type": "build"
-    },
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview1-final",
-      "type": "build"
-    },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
-      "version": "1.0.0-preview1-final",
-      "type": "build"
-    }
+    "Glimpse": "2.0.0-beta1"
   },
 
-  "tools": {
-    "Microsoft.AspNetCore.Razor.Tools": {
-      "version": "1.0.0-preview1-final",
-      "imports": "portable-net45+win8+dnxcore50"
-    },
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
-      "version": "1.0.0-preview1-final",
-      "imports": "portable-net45+win8+dnxcore50"
-    },
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview1-final",
-      "imports": [
-        "portable-net45+win8+dnxcore50",
-        "portable-net45+win8"
-      ]
-    }
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel",
+    "ef": "EntityFramework.Commands",
+    "migrate": "WilderBlog.Commands"
   },
 
   "frameworks": {
-    //"netcoreapp1.0": {
-    //  "imports": [
-    //    "dotnet5.6",
-    //    "dnxcore50",
-    //    "portable-net45+win8"
-    //  ],
-    //  "dependencies": {
-    //    "Microsoft.NETCore.App": {
-    //      "version": "1.0.0-rc2-*",
-    //      "type": "platform"
-    //    }
-    //  }
-    //},
-    "net46": { }
+    "dnx451": {}
   },
 
-  "publishOptions": {
-    "include": [
-      "wwwroot",
-      "Views",
-      "config.json",
-      "web.config",
-      "data"
-    ]
-  },
-
+  "exclude": [
+    "wwwroot",
+    "node_modules"
+  ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ],
+  "content": [
+    "config.json"
+  ],
   "scripts": {
     "prepublish": [
       "npm install",
       "bower install",
       "gulp default"
-    ]
+    ]  
   }
 }

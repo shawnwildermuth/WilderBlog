@@ -1,16 +1,19 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.PlatformAbstractions;
 using WilderBlog.OldData;
 using System.Linq;
 using System;
+using Microsoft.Data.Entity;
 using WilderBlog.Data;
+using System.Threading.Tasks;
 using WilderBlog.Commands.OldDb;
+using System.Xml;
+using System.Xml.Linq;
+using System.Collections.Generic;
 using WilderBlog.Commands.Disqus;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.IO;
-using Microsoft.Extensions.PlatformAbstractions;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
 
 namespace WilderBlog.Commands
 {
@@ -33,7 +36,7 @@ namespace WilderBlog.Commands
 
         _config = builder.Build();
         _ctx = new OldWilderContext(_config);
-        _newCtx = new WilderContext(new DbContextOptions<WilderContext>(), _config);
+        _newCtx = new WilderContext(_config);
         _repo = new WilderRepository(_config, _newCtx);
 
 

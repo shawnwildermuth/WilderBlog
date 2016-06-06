@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Http;
 
 namespace WilderBlog.Services
 {

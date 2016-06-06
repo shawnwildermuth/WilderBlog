@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNet.Mvc;
 using WilderBlog.Data;
 
 namespace WilderBlog.Controllers

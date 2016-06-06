@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WilderBlog.Services;
@@ -19,7 +19,7 @@ namespace WilderBlog.Logger
       _mailService = mailService;
     }
 
-    public IDisposable BeginScope<TState>(TState state)
+    public IDisposable BeginScopeImpl(object state)
     {
       // Not necessary
       return null;
@@ -60,11 +60,6 @@ namespace WilderBlog.Logger
 
       _mailService.SendMail("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Log Message]", message);
 
-    }
-
-    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
-    {
-      throw new NotImplementedException();
     }
   }
 }

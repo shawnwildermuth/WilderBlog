@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Http.Extensions;
 using WilderBlog.Commands.OldDb;
 
 namespace WilderBlog.OldData

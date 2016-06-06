@@ -14,7 +14,7 @@
             <button class="btn btn-outline-primary pull-right video-toggle" data-id="@v.Id">Show Video</button>
             <a class="btn btn-outline-primary pull-right" asp-controller="Videos" asp-action="Video" asp-route-id="@v.Id" target="_blank" role="button">View in new Tab</a>
           <h3 class="card-title">@v.Title</h3>
-          <div class="card-text"><small>Published: @v.DatePublished.ToString("D")</small></div>
+          <div class="card-text"><small>Published: @v.DatePublished.ToLongDateString()</small></div>
           <p class="card-text">@v.Description</p>
 
         </div>

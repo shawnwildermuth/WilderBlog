@@ -1,11 +1,17 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class CoursesProvider : DataProvider<Course>
   {
   
-    public CoursesProvider(IHostingEnvironment env)
+    public CoursesProvider(IApplicationEnvironment env)
       : base(env, "courses.json")
     {
     }

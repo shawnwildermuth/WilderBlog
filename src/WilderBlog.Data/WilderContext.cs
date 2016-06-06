@@ -1,18 +1,19 @@
 ﻿using System;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Data.Entity;
+using Microsoft.Data.Entity.Metadata.Builders;
 using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog.Data
 {
   public class WilderContext : IdentityDbContext<WilderUser>
   {
-    public WilderContext(DbContextOptions<WilderContext> options, IConfigurationRoot config) : base(options)
+    private IConfigurationRoot _config;
+
+    public WilderContext(IConfigurationRoot config)
     {
       _config = config;
     }
-
-    private IConfigurationRoot _config;
 
     public DbSet<BlogStory> Stories { get; set; }
 
@@ -23,5 +24,15 @@ namespace WilderBlog.Data
       base.OnConfiguring(optionsBuilder);
     }
 
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+      OnCreating(builder.Entity<BlogStory>());
+
+      base.OnModelCreating(builder);
+    }
+
+    private void OnCreating(EntityTypeBuilder<BlogStory> bldr)
+    {
+    }
   }
 }

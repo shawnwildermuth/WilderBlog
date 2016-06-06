@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class CalendarProvider : DataProvider<CalendarEntry>
   {
-    public CalendarProvider(IHostingEnvironment env)
+    public CalendarProvider(IApplicationEnvironment env)
       : base(env, "calendar.json")
     {
     }

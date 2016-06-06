@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.IO;
+using System.Threading.Tasks;
+using Glimpse;
+using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Diagnostics;
+using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
 using WilderBlog.Logger;
@@ -20,13 +25,13 @@ namespace WilderBlog
     private IConfigurationRoot _config;
     private IHostingEnvironment _env;
 
-    public Startup(IHostingEnvironment env)
+    public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
     {
       _env = env;
 
       var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("config.json", false, true)
+        .SetBasePath(appEnv.ApplicationBasePath)
+        .AddJsonFile("config.json")
         .AddEnvironmentVariables();
 
       _config = builder.Build();
@@ -34,7 +39,7 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      svcs.AddSingleton(_config);
+      svcs.AddInstance(_config);
 
       if (_env.IsDevelopment())
       {
@@ -45,7 +50,9 @@ namespace WilderBlog
         svcs.AddTransient<IMailService, MailService>();
       }
 
-      svcs.AddDbContext<WilderContext>();
+      svcs.AddEntityFramework()
+        .AddSqlServer()
+        .AddDbContext<WilderContext>();
 
       svcs.AddIdentity<WilderUser, IdentityRole>()
         .AddEntityFrameworkStores<WilderContext>();
@@ -59,7 +66,7 @@ namespace WilderBlog
         svcs.AddScoped<IWilderRepository, WilderRepository>();
       }
 
-      svcs.AddTransient<WilderInitializer>();
+      svcs.AddScoped<WilderInitializer>();
       svcs.AddScoped<AdService>();
 
       // Data Providers (non-EF)
@@ -73,7 +80,12 @@ namespace WilderBlog
       svcs.AddMetaWeblog<WilderWeblogProvider>();
 
       // Add Caching Support
-      svcs.AddMemoryCache();
+      svcs.AddCaching();
+
+      if (_env.IsDevelopment())
+      {
+        svcs.AddGlimpse();
+      }
 
       // Add MVC to the container
       var mvcBuilder = svcs.AddMvc();
@@ -95,7 +107,11 @@ namespace WilderBlog
       {
         loggerFactory.AddDebug(LogLevel.Information);
         app.UseDeveloperExceptionPage();
-        app.UseDatabaseErrorPage();
+        app.UseDatabaseErrorPage(options => options.ShowExceptionDetails = true);
+
+        // Support Glimpse on the site
+        app.UseGlimpse();
+
       }
       else
       {
@@ -110,6 +126,7 @@ namespace WilderBlog
       // Rewrite old URLs to new URLs
       app.UseUrlRewriter();
 
+      app.UseIISPlatformHandler();
       app.UseStaticFiles();
 
       // Support showing Runtime info
@@ -130,5 +147,8 @@ namespace WilderBlog
         initializer.SeedAsync().Wait();
       }
     }
+
+    // Entry point for the application.
+    public static void Main(string[] args) => WebApplication.Run<Startup>(args);
   }
 }
