@@ -1,5 +1,4 @@
 {
-  "version": "1.0.0-*",
 
   "buildOptions": {
     "emitEntryPoint": true,
@@ -79,8 +78,13 @@
       "Views",
       "config.json",
       "web.config",
-      "data"
+      "data",
+      "EmailTemplates"
     ]
+  },
+
+  "runtimeOptions": {
+    "gcServer": true
   },
 
   "scripts": {
