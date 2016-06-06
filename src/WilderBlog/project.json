@@ -34,7 +34,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview1-final",
       "type": "build"
-    }
+    },
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final"
   },
 
   "tools": {

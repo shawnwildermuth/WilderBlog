@@ -101,6 +101,7 @@ namespace WilderBlog
       {
         // Support logging to email
         loggerFactory.AddEmail(mailService, LogLevel.Critical);
+        loggerFactory.AddConsole(LogLevel.Warning);
 
         // Early so we can catch the StatusCode error
         app.UseStatusCodePagesWithReExecute("/Error/{0}");
