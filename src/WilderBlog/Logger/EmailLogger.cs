@@ -30,7 +30,7 @@ namespace WilderBlog.Logger
       return (_filter == null || _filter(_categoryName, logLevel));
     }
 
-    public void Log(LogLevel logLevel, int eventId, object state, Exception exception, Func<object, Exception, string> formatter)
+    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
     {
       if (!IsEnabled(logLevel))
       {
@@ -60,11 +60,6 @@ namespace WilderBlog.Logger
 
       _mailService.SendMail("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Log Message]", message);
 
-    }
-
-    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
-    {
-      throw new NotImplementedException();
     }
   }
 }

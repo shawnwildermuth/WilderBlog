@@ -28,7 +28,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview1-final",
       "type": "build"
-    }
+    },
+    "System.Diagnostics.TraceSource": "4.0.0-rc2-24027"
   },
 
   "tools": {

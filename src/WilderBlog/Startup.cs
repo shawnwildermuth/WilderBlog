@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -101,7 +102,7 @@ namespace WilderBlog
       {
         // Support logging to email
         loggerFactory.AddEmail(mailService, LogLevel.Critical);
-        loggerFactory.AddConsole(LogLevel.Warning);
+        loggerFactory.AddConsole(LogLevel.Error);
 
         // Early so we can catch the StatusCode error
         app.UseStatusCodePagesWithReExecute("/Error/{0}");

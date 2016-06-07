@@ -21,7 +21,7 @@
     "WilderBlog.Data": { "target": "project" },
     "WilderMinds.MetaWeblog": "1.0.1-rc2",
     "WilderMinds.RssSyndication": "1.0.3-rc2",
-    "WindowsAzure.Storage": "6.1.1-preview",
+    "WindowsAzure.Storage": "7.0.2-preview",
     "Microsoft.AspNetCore.Razor.Tools": {
       "version": "1.0.0-preview1-final",
       "type": "build"
