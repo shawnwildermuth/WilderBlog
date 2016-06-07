@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
-using Newtonsoft.Json;
 
 namespace WilderBlog.Services.DataProviders
 {

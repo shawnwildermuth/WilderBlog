@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WilderBlog.Data
+﻿namespace WilderBlog.Data
 {
   public class BaseRepository
   {

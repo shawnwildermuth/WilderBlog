@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace WilderBlog.Commands.OldDb
 {
     public partial class StoryCategories
