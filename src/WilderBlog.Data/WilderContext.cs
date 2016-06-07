@@ -16,10 +16,17 @@ namespace WilderBlog.Data
 
     public DbSet<BlogStory> Stories { get; set; }
 
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+      base.OnModelCreating(builder);
+
+      // Override the name of the table because of a RC2 change
+      builder.Entity<BlogStory>().ToTable("BlogStory");
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseSqlServer(_config["WilderDb:ConnectionString"]);
-
       base.OnConfiguring(optionsBuilder);
     }
 
