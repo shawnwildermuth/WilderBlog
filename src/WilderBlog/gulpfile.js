@@ -12,7 +12,7 @@ var bower = require('gulp-bower-files');
 gulp.task("npmTasks", function () {
   // Angular2 
   gulp.src([
-     'node_modules/angular2/bundles/*.*',
+     'node_modules/@angular/**/*.*',
      'node_modules/es6-shim/es6-shim.*',
      'node_modules/systemjs/dist/*.*',
      'node_modules/rxjs/bundles/*.*',

@@ -9,27 +9,21 @@
     <!-- IE required polyfills, in this exact order -->
     <script src="~/lib/angular2/es6-shim.js"></script>
     <script src="~/lib/angular2/system-polyfills.src.js"></script>
-    <script src="~/lib/angular2/angular2-polyfills.js"></script>
 
     <script src="~/lib/angular2/system.src.js"></script>
     <script src="~/lib/angular2/Rx.js"></script>
-    <script src="~/lib/angular2/angular2.dev.js"></script>
-    <script src="~/lib/angular2/http.dev.js"></script>
 
-    <script src="~/app/config.js"></script>
+    <script src="~/app/systemjs.config.js"></script>
   </environment>
   <environment names="Production">
     <!-- IE required polyfills, in this exact order -->
     <script src="~/lib/angular2/es6-shim.min.js"></script>
     <script src="~/lib/angular2/system-polyfills.src.js"></script>
-    <script src="~/lib/angular2/angular2-polyfills.min.js"></script>
 
     <script src="~/lib/angular2/system.js"></script>
     <script src="~/lib/angular2/Rx.min.js"></script>
-    <script src="~/lib/angular2/angular2.js"></script>
-    <script src="~/lib/angular2/http.js"></script>
 
-    <script src="~/app/config.js"></script>
+    <script src="~/app/systemjs.config.js"></script>
   </environment>
   <script>
     System.import('./app/main')
