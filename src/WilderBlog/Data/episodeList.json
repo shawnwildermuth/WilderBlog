@@ -3,6 +3,66 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 74,
+    "guestName": "Atley Hunter",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/atley-hunter.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "08/02/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 73,
+    "guestName": "Mario Cardinal",
+    "guestBio": [
+      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+    ],
+    "guestHeadshot": "/img/hwpod/mario-cardinal.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "publishedDate": "07/25/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 72,
     "guestName": "Rob Hale",
     "guestBio": [
@@ -24,7 +84,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
-    "publishedDate": "07/11/16",
+    "publishedDate": "07/18/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
@@ -54,7 +114,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
-    "publishedDate": "06/27/16",
+    "publishedDate": "07/11/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
@@ -84,7 +144,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
-    "publishedDate": "06/20/16",
+    "publishedDate": "06/27/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
@@ -114,7 +174,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
-    "publishedDate": "06/13/16",
+    "publishedDate": "06/20/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
@@ -144,10 +204,10 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode68.mp3",
-    "publishedDate": "06/06/16",
+    "publishedDate": "06/13/16",
     "status": 1,
     "length": "00:00:00",
-    "youTubeLink": ""
+    "youTubeLink": "https://youtu.be/DvM_B8xHEU8"
   },
   {
     "blurb": [
