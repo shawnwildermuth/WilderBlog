@@ -3,10 +3,10 @@
     "blurb": [
       ""
     ],
-    "episodeNumber": 74,
-    "guestName": "Atley Hunter",
+    "episodeNumber": 75,
+    "guestName": "Brian Friesen",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
     ],
     "guestHeadshot": "/img/hwpod/atley-hunter.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -23,11 +23,41 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "",
+    "publishedDate": "08/09/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 74,
+    "guestName": "Atley Hunter",
+    "guestBio": [
+      "Atley Hunter is a passionate developer with over 20 years’ experience. As one of the most prolific Modern UI developers in the world, he has hundreds of unique apps in the running on millions of Windows devices worldwide. A Microsoft Windows Platform MVP, and Telerik MVP & Insider, he is constantly working with developers worldwide to improve both skills and the platforms themselves. Atley is always sharing his knowledge and connecting with developers through events, his blog, email (devMentor@outlook.com), Twitter (@atleyhunter), Skype (Atley.Hunter) and LinkedIn."
+    ],
+    "guestHeadshot": "/img/hwpod/atley-hunter.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "",
     "publishedDate": "08/02/16",
     "status": 0,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
@@ -36,7 +66,7 @@
     "episodeNumber": 73,
     "guestName": "Mario Cardinal",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "A long-time agile coach specializing in software architecture, Mario Cardinal is the co-founder of Slingboards Lab, a productivity software publisher that help people achieve what is important in their day. An experimenter and an entrepreneur, he love to seize the opportunities that emerge from the unexpected. Since 2004, year after year, he received the Most Valuable Professional (MVP) award from Microsoft. MVP status is awarded to credible technology experts who are among the very best community members willing to share their experience to helping others realize their potential. An experienced Scrum practitioner, he has spent more than 20 years designing large-scale information systems. He is the author of the book \"Executable Specifications with Scrum\". His friends like to describe him as someone who can extract the essence of a complicated situation, sort out the core ideas from the incidental distractions and provide a summary that is easy to understand."
     ],
     "guestHeadshot": "/img/hwpod/mario-cardinal.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -53,11 +83,11 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "",
     "publishedDate": "07/25/16",
     "status": 0,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
@@ -66,7 +96,9 @@
     "episodeNumber": 72,
     "guestName": "Rob Hale",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "Rob Hale has over 20 years of software development experience creating solutions for a variety of industries including health and human services, ecommerce, and energy. He currently serves as a Principle Software Engineer at Renewable NRG Systems in Hinesburg, Vermont (http://www.renewablenrgsystems.com/). Rob has presented to user groups in the northeast and the occasional small conference.",
+      "Building effective communities and teams is a passion of Rob's. He is co-founder of the Vermont Code Camp (http://www.vtcodecamp.org/), co-organizer of the Vermont Coders Connection (http://www.meetup.com/VTCode/), and co-organizer/emcee of HackVT (http://www.hackvt.com/) an annual hackathon in the state of Vermont.",
+      "Rob is the proud father of two sons and husband to his wonderful wife. Follow him on Twitter at @rob_hale_vt"
     ],
     "guestHeadshot": "/img/hwpod/rob-hale.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -83,11 +115,11 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "",
     "publishedDate": "07/18/16",
     "status": 0,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
@@ -96,7 +128,7 @@
     "episodeNumber": 71,
     "guestName": "Miguel de Icaza",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "Miguel de Icaza, co-founder and CTO of Ximian, is one of the foremost luminaries in the Linux development community and one of the world's most prominent advocates for Free Software. Before co-founding Ximian, Miguel was instrumental in the development of Linux for SPARC systems and the Midnight Commander file manager. Miguel is the founder and President of the GNOME Foundation. He was also the first recipient of the prestigious MIT Innovator of the Year award in 1999. Miguel has galvanized Ximian's efforts to make Linux accessible and available to the average computer user, and continues to reach out globally by working with international organizations such as eMexico to introduce affordable technology alternatives, like Linux, to other nations."
     ],
     "guestHeadshot": "/img/hwpod/miguel-de-icaza.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -113,11 +145,11 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "",
     "publishedDate": "07/11/16",
     "status": 0,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
@@ -126,7 +158,8 @@
     "episodeNumber": 70,
     "guestName": "Nick Landry",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "Nick Landry (@ActiveNick) is a mobility pioneer and expert specializing in the design and production of mobile applications for consumers and the enterprise using diverse cross-platform technologies including Windows Phone, Windows 8, iOS, Android, Mobile Web, Xamarin and PhoneGap. Nick is a Senior Technical Evangelist with Microsoft in the New York Metro area and works with developers, students and IT pros to help them learn, adopt and use the Microsoft developer platform to design and build the next generation of apps for Windows Phone, Windows 8 and Windows Azure. Nick is also a Nokia Developer Ambassador whose mandate is to educate and support Windows Phone developers to maximize their success.",
+      "Prior to joining Microsoft, Nick spent almost two years as a Senior Product Manager for mobile, data visualization and geospatial developer tools across multiple technologies and platforms. He previously spent most his career in IT consulting and services organizations across various technical and business roles, designing, building, managing and selling innovative software solutions for some of the world’s top brands and Fortune 500 companies."
     ],
     "guestHeadshot": "/img/hwpod/nick-landry.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -143,11 +176,11 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "",
     "publishedDate": "06/27/16",
     "status": 0,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
@@ -156,28 +189,30 @@
     "episodeNumber": 69,
     "guestName": "John Petersen",
     "guestBio": [
-      "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
+      "John Petersen has been developing software for over 20 years. It all started when, as a staff accountant, he was asked to get involved in a system upgrade to replace an old IBM Series 1 computer (about the size of a large refrigerator!). Those first programs were written in Clipper in the summer of 1987. Since that time, tools he has used include dBase, FoxBase, Visual FoxPro, and Visual Basic.",
+      "An early adopter of .NET, he then decided to go to law school. After practicing law for a few years, John realized that technology was a lot more interesting than the law. Today, John focuses on ASP.NET development and is having more fun than ever solving problems for clients.",
+      "John is a Practice Director for Custom Application Development at Neudesic, a Microsoft Gold Partner and the Trusted Technology Partner in Business Innovation. A 9-time recipient of Microsoft’s Most Valuable Professional (MVP) Award, John is currently an ASP.NET/IIS MVP. John is also an ASP Insider and is the INETA Mentor for Pennsylvania and West Virginia. John is the author of several books and is a frequent contributor to Code Magazine and DevConnections Magazines. John holds a BS in Business Administration from Mansfield University, an MBA in Information Systems from St. Joseph’s University, and a JD from the Rutgers School of Law – Camden."
     ],
     "guestHeadshot": "/img/hwpod/john-petersen.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/c64.jpg",
+    "guestFirstMachineName": "Commodore 64",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/johnvpetersen"
       },
       {
-        "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "name": "Neudesic",
+        "link": "https://www.neudesic.com/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode65.mp3",
+    "audioLink": "",
     "publishedDate": "06/20/16",
     "status": 0,
     "length": "00:00:00",
-    "youTubeLink": "https://youtu.be/gXhFJMD2twQ"
+    "youTubeLink": ""
   },
   {
     "blurb": [
