@@ -3,12 +3,12 @@
     "blurb": [
       ""
     ],
-    "episodeNumber": 75,
-    "guestName": "Brian Friesen",
+    "episodeNumber": 76,
+    "guestName": "David Giard",
     "guestBio": [
       "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
     ],
-    "guestHeadshot": "/img/hwpod/atley-hunter.jpg",
+    "guestHeadshot": "/img/hwpod/david-giard.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
     "guestFirstMachineName": "Gateway PCs",
     "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
@@ -23,7 +23,37 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
+    "publishedDate": "08/16/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 75,
+    "guestName": "Brian Friesen",
+    "guestBio": [
+      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+    ],
+    "guestHeadshot": "/img/hwpod/brian-friesen.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode75.mp3",
     "publishedDate": "08/09/16",
     "status": 0,
     "length": "00:00:00",
@@ -53,7 +83,7 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode74.mp3",
     "publishedDate": "08/02/16",
     "status": 0,
     "length": "00:00:00",
@@ -83,7 +113,7 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode73.mp3",
     "publishedDate": "07/25/16",
     "status": 0,
     "length": "00:00:00",
@@ -115,7 +145,7 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode72.mp3",
     "publishedDate": "07/18/16",
     "status": 0,
     "length": "00:00:00",
@@ -145,7 +175,7 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode71.mp3",
     "publishedDate": "07/11/16",
     "status": 0,
     "length": "00:00:00",
@@ -176,7 +206,7 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode70.mp3",
     "publishedDate": "06/27/16",
     "status": 0,
     "length": "00:00:00",
@@ -208,9 +238,9 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode69.mp3",
     "publishedDate": "06/20/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
