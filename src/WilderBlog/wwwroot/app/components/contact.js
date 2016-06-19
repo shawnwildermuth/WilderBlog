@@ -69,10 +69,9 @@ var ContactForm = (function () {
             selector: "contact-form",
             templateUrl: "./app/components/contactForm.html"
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof common_1.FormBuilder !== 'undefined' && common_1.FormBuilder) === 'function' && _a) || Object, emailservice_1.EmailService])
+        __metadata('design:paramtypes', [common_1.FormBuilder, emailservice_1.EmailService])
     ], ContactForm);
     return ContactForm;
-    var _a;
 }());
 exports.ContactForm = ContactForm;
 //# sourceMappingURL=contact.js.map
