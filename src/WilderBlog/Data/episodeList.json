@@ -3,6 +3,66 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 78,
+    "guestName": "Julie Yack",
+    "guestBio": [
+      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+    ],
+    "guestHeadshot": "/img/hwpod/julie-yack.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
+    "publishedDate": "08/30/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 77,
+    "guestName": "Kevin Grossnicklaus",
+    "guestBio": [
+      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+    ],
+    "guestHeadshot": "/img/hwpod/Kevin-Grossnicklaus.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
+    "publishedDate": "08/23/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 76,
     "guestName": "David Giard",
     "guestBio": [
@@ -192,25 +252,21 @@
       "Prior to joining Microsoft, Nick spent almost two years as a Senior Product Manager for mobile, data visualization and geospatial developer tools across multiple technologies and platforms. He previously spent most his career in IT consulting and services organizations across various technical and business roles, designing, building, managing and selling innovative software solutions for some of the world’s top brands and Fortune 500 companies."
     ],
     "guestHeadshot": "/img/hwpod/nick-landry.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/vic20.jpg",
+    "guestFirstMachineName": "Commodore Vic-20",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
-      },
-      {
-        "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "https://twitter.com/activenick"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode70.mp3",
     "publishedDate": "06/27/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
-    "youTubeLink": ""
+    "youTubeLink": "https://youtu.be/tvCNcaxez1E"
   },
   {
     "blurb": [
