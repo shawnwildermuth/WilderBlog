@@ -114,12 +114,6 @@ namespace WilderBlog
 
       app.UseStaticFiles();
 
-      // Support showing Runtime info
-      app.UseRuntimeInfoPage(new RuntimeInfoPageOptions()
-      {
-        Path = "/siteinfo"
-      });
-
       // Support MetaWeblog API
       app.UseMetaWeblog("/livewriter");
 
