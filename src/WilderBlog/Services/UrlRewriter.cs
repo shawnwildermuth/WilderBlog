@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Http;
-using System.Text;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 
 namespace WilderBlog.Services
 {
@@ -35,16 +33,11 @@ namespace WilderBlog.Services
       }
 
       // Specialized for hwpod
-      var ex = new Regex(@"\/hwpod\/([0-9]*)_([a-zA-Z]*)_([a-zA-Z]*)_?([a-zA-Z]*)?", RegexOptions.IgnoreCase);
+      var ex = new Regex(@"\/hwpod\/([0-9]*)_([a-zA-Z]*)_([a-zA-Z]*)", RegexOptions.IgnoreCase);
       var match = ex.Match(context.Request.Path);
       if (match.Success)
       {
-        var names = new List<string>();
-        for (var x = 2; x < match.Groups.Count; ++x)
-        {
-          names.Add(match.Groups[x].Value);
-        }
-        context.Response.Redirect($"/hwpod/{match.Groups[1]}/{string.Join("-", names)}", true);
+        context.Response.Redirect($"/hwpod/{match.Groups[1]}/{match.Groups[2]}-{match.Groups[3]}", true);
       }
       else
       {

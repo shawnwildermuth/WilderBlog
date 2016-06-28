@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 // contact.ts
-var core_1 = require('angular2/core');
-var common_1 = require('angular2/common');
+var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
 var validators_1 = require('../common/validators');
 var emailservice_1 = require("../common/emailservice");
 var ContactForm = (function () {
@@ -49,10 +49,10 @@ var ContactForm = (function () {
             if (value.success) {
                 _this.statusMessage = "Sent...";
                 // Reset the controls
-                _this.form.controls["name"].updateValue("");
-                _this.form.controls["email"].updateValue("");
-                _this.form.controls["subject"].updateValue(_this.subjects[0]);
-                _this.form.controls["msg"].updateValue("");
+                _this.form.controls['name'].updateValue("");
+                _this.form.controls['email'].updateValue("");
+                _this.form.controls['subject'].updateValue(_this.subjects[0]);
+                _this.form.controls['msg'].updateValue("");
             }
             else {
                 _this.errorMessage = value.message;

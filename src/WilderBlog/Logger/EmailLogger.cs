@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.AspNet.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WilderBlog.Services;
@@ -19,7 +19,7 @@ namespace WilderBlog.Logger
       _mailService = mailService;
     }
 
-    public IDisposable BeginScopeImpl(object state)
+    public IDisposable BeginScope<TState>(TState state)
     {
       // Not necessary
       return null;
@@ -30,7 +30,7 @@ namespace WilderBlog.Logger
       return (_filter == null || _filter(_categoryName, logLevel));
     }
 
-    public void Log(LogLevel logLevel, int eventId, object state, Exception exception, Func<object, Exception, string> formatter)
+    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
     {
       if (!IsEnabled(logLevel))
       {

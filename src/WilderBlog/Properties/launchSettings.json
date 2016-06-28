@@ -11,22 +11,9 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "/",
       "environmentVariables": {
-        "Hosting:Environment": "Development"
-      },
-      "sdkVersion": "dnx-clr-win-x86.1.0.0-rc1-update2"
-    },
-    "web": {
-      "commandName": "web",
-      "environmentVariables": {
-        "Hosting:Environment": "Development"
-      },
-      "sdkVersion": "dnx-clr-win-x86.1.0.0-rc1-update1"
-    },
-    "migrate": {
-      "commandName": "migrate",
-      "commandLineArgs": "calendar"
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

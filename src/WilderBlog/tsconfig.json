@@ -11,6 +11,9 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts",
+    "wwwroot/lib"
   ]
 }

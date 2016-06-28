@@ -14,7 +14,7 @@
     <div class="form-group">
       <label>Subject</label>
       <select ngControl="subject" class="form-control c-select">
-        <option *ngFor="#subject of subjects">{{ subject }}</option>
+        <option *ngFor="let subject of subjects">{{ subject }}</option>
       </select>
       <span class="text-danger" *ngIf="!form.controls.subject.pristine && !form.controls.subject.valid"><small>Must Pick a Subject</small></span>
     </div>

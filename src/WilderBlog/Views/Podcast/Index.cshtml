@@ -1,4 +1,5 @@
 ﻿@using WilderBlog.Services.DataProviders
+@using System
 @model  Tuple<WilderBlog.Services.DataProviders.PodcastEpisode, IEnumerable<WilderBlog.Services.DataProviders.PodcastEpisode>>
 @{
   ViewBag.Title = "Hello World Podcast - Shawn Wildermuth's Rants and Raves";
@@ -45,7 +46,7 @@
   <div class="col-lg-12">
     <div class="row">
       <div class="col-lg-7"><h3><a asp-controller="Podcast" asp-action="Episode" asp-route-id="@latest.EpisodeNumber" asp-route-tag="@latest.GuestName.Replace(" ", "-")">Episode @latest.EpisodeNumber - @latest.GuestName</a></h3></div>
-      <div class="col-lg-5"><small class="pull-right"><i class="fa fa-calendar"></i> Released: @latest.PublishedDate.ToShortDateString()</small></div>
+      <div class="col-lg-5"><small class="pull-right"><i class="fa fa-calendar"></i> Released: @latest.PublishedDate.ToString("d")</small></div>
     </div>
   </div>
 </div>

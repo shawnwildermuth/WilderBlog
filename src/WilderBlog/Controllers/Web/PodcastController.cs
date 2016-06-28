@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using WilderBlog.Data;
 using WilderBlog.Services.DataProviders;
 
@@ -34,7 +34,7 @@ namespace WilderBlog.Controllers
     public IActionResult Episode(int id, string tag)
     {
       var episode = _podcastProvider.Get()
-                                     .Where(e => e.Status == PodcastEpisodeStatus.Live &&
+                                     .Where(e => e.Status == PodcastEpisodeStatus.Live && 
                                                  e.EpisodeNumber == id)
                                      .FirstOrDefault();
 

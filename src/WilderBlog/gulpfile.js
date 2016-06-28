@@ -10,13 +10,19 @@ var concat = require('gulp-concat');
 var bower = require('gulp-bower-files');
 
 gulp.task("npmTasks", function () {
-  // Angular2 
-  gulp.src([
-     'node_modules/angular2/bundles/*.*',
-     'node_modules/es6-shim/es6-shim.*',
-     'node_modules/systemjs/dist/*.*',
-     'node_modules/rxjs/bundles/*.*',
-  ]).pipe(gulp.dest("wwwroot/lib/angular2"));
+  var libs = {
+    "angular2": '@angular/**/*.*',
+    "systemjs": 'systemjs/dist/*.*',
+    "rxjs": 'rxjs/**/*.*',
+    "core-js": "core-js/client/*.js",
+    "zone.js": "zone.js/dist/*.js",
+    "reflect-metadata": "reflect-metadata/*.js"
+  };
+
+  for (var name in libs) {
+    gulp.src("node_modules/" + libs[name])
+      .pipe(gulp.dest("wwwroot/lib/" + name));
+  }
 });
 
 gulp.task("minify", function () {

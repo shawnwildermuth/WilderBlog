@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.PlatformAbstractions;
 
 namespace WilderBlog.Data
 {
@@ -15,11 +11,11 @@ namespace WilderBlog.Data
   {
     private IConfigurationRoot _config;
 
-    public Startup(IApplicationEnvironment env)
+    public Startup(IHostingEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ApplicationBasePath)
-        .AddJsonFile("config.json")
+        .SetBasePath(env.ContentRootPath)
+        .AddJsonFile("config.json", false, true)
         .AddEnvironmentVariables();
 
       _config = builder.Build();
@@ -28,10 +24,9 @@ namespace WilderBlog.Data
 
     public void ConfigureServices(IServiceCollection svc)
     {
-      svc.AddInstance(_config);
+      svc.AddSingleton<IConfigurationRoot>(_config);
 
-      svc.AddEntityFramework()
-        .AddSqlServer()
+      svc.AddEntityFrameworkSqlServer()
         .AddDbContext<WilderContext>();
     }
 
