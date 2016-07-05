@@ -21,7 +21,6 @@ install:
  - cmd: nuget sources add -Name api.nuget.org -Source https://api.nuget.org/v3/index.json
  
 before_build:
- - ps: "&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
  - cmd: dotnet restore ./src/WilderBlog.Data
  - cmd: dotnet restore ./src/WilderBlog.Commands
  - cmd: dotnet restore ./src/WilderBlog
