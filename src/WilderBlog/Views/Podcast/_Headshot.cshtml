@@ -1,6 +1,8 @@
 ﻿@model WilderBlog.Services.DataProviders.PodcastEpisode
+@using WilderBlog.Services.DataProviders
 <div class="col-lg-2 headshot">
-  <a asp-controller="Podcast" asp-action="Episode" asp-route-id="@Model.EpisodeNumber" asp-route-tag="@Model.GuestName.Replace(" ", "-")">
+  @if (Model.Status == PodcastEpisodeStatus.Planned || (Model.Status == PodcastEpisodeStatus.Live && Model.PublishedDate.AddHours(14) > DateTime.UtcNow))
+  {
     <div class="card">
       <div class="overflow-hidden"><img src="@Model.GuestHeadshot" class="card-img-top" alt="@Model.GuestName " /></div>
       <div>
@@ -10,5 +12,20 @@
         </div>
       </div>
     </div>
-  </a>
+  }
+  else
+  {
+    <a asp-controller="Podcast" asp-action="Episode" asp-route-id="@Model.EpisodeNumber" asp-route-tag="@Model.GuestName.Replace(" ", "-")">
+
+      <div class="card">
+        <div class="overflow-hidden"><img src="@Model.GuestHeadshot" class="card-img-top" alt="@Model.GuestName " /></div>
+        <div>
+          <div class="text-info">@Model.GuestName</div>
+          <div class="text-muted">
+            <small>@Model.PublishedDate.ToString("d")</small>
+          </div>
+        </div>
+      </div>
+    </a>
+  }
 </div>

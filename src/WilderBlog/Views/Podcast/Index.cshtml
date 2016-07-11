@@ -61,8 +61,8 @@
 </div>
 <h3>Archive</h3>
 <div class="row">
-  @foreach (var upcoming in episodes.Where(e => e.Status == PodcastEpisodeStatus.Live && e != latest && e.PublishedDate.AddHours(14) <= DateTime.UtcNow).OrderByDescending(e => e.PublishedDate))
+  @foreach (var archived in episodes.Where(e => e.Status == PodcastEpisodeStatus.Live && e != latest && e.PublishedDate.AddHours(14) <= DateTime.UtcNow).OrderByDescending(e => e.PublishedDate))
   {
-    @Html.Partial("_Headshot", upcoming)
+    @Html.Partial("_Headshot", archived)
   }
 </div>
