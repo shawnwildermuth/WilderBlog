@@ -227,19 +227,19 @@
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/migueldeicaza"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://tirania.org/blog/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode71.mp3",
     "publishedDate": "07/11/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
-    "youTubeLink": ""
+    "youTubeLink": "https://youtu.be/gp5hoSdyIsQ"
   },
   {
     "blurb": [
