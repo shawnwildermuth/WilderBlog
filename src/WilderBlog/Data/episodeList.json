@@ -221,9 +221,9 @@
       "Miguel de Icaza, co-founder and CTO of Ximian, is one of the foremost luminaries in the Linux development community and one of the world's most prominent advocates for Free Software. Before co-founding Ximian, Miguel was instrumental in the development of Linux for SPARC systems and the Midnight Commander file manager. Miguel is the founder and President of the GNOME Foundation. He was also the first recipient of the prestigious MIT Innovator of the Year award in 1999. Miguel has galvanized Ximian's efforts to make Linux accessible and available to the average computer user, and continues to reach out globally by working with international organizations such as eMexico to introduce affordable technology alternatives, like Linux, to other nations."
     ],
     "guestHeadshot": "/img/hwpod/miguel-de-icaza.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/c64.jpg",
+    "guestFirstMachineName": "Commodore 64",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
       {
         "name": "Twitter",
