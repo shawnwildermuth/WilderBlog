@@ -26,9 +26,14 @@ gulp.task("npmTasks", function () {
 });
 
 gulp.task("minify", function () {
-  gulp.src(["wwwroot/js/*.js", '!wwwroot/tour*.js'])
+  gulp.src(["wwwroot/js/*.js", '!wwwroot/js/tour*.js'])
     .pipe(uglify())
     .pipe(concat("wilderblog.min.js"))
+    .pipe(gulp.dest("wwwroot/lib/site"));
+
+  gulp.src("wwwroot/app/**/*.*.js")
+    .pipe(uglify())
+    .pipe(concat("app.bundle.min.js"))
     .pipe(gulp.dest("wwwroot/lib/site"));
 });
 
