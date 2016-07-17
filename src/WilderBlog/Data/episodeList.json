@@ -3,6 +3,66 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 80,
+    "guestName": "Stacey Mulcahy",
+    "guestBio": [
+      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+    ],
+    "guestHeadshot": "/img/hwpod/stacey-mulcahy.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
+    "publishedDate": "09/13/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 79,
+    "guestName": "Jennifer Marsman",
+    "guestBio": [
+      "Jennifer Marsman is a Principal Developer Evangelist in Microsoft’s Developer and Platform Evangelism group, where she educates developers on Microsoft’s new technologies.  In this role, Jennifer is a frequent speaker at software development conferences around the world.  In 2016, Jennifer was recognized as one of the “top 100 most influential individuals in artificial intelligence and machine learning” by Onalytica.  She has been featured in Bloomberg for her work using EEG and machine learning to perform lie detection.  In 2009, Jennifer was chosen as \"Techie whose innovation will have the biggest impact\" by X-OLOGY for her work with GiveCamps, a weekend-long event where developers code for charity.  She has also received many honors from Microsoft, including the Central Region Top Contributor Award, Heartland District Top Contributor Award, DPE Community Evangelist Award, CPE Champion Award, MSUS Diversity & Inclusion Award, Gold Club, and Platinum Club.  Prior to becoming a Developer Evangelist, Jennifer was a software developer in Microsoft’s Natural Interactive Services division.  In this role, she earned two patents for her work in search and data mining algorithms.  Jennifer has also held positions with Ford Motor Company, National Instruments, and Soar Technology.  Jennifer holds a Bachelor’s Degree in Computer Engineering and Master’s Degree in Computer Science and Engineering from the University of Michigan in Ann Arbor.  Her graduate work specialized in artificial intelligence and computational theory.  Jennifer blogs at http://blogs.msdn.com/jennifer and tweets at http://twitter.com/jennifermarsman."
+    ],
+    "guestHeadshot": "/img/hwpod/jennifer-marsman.jpg",
+    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
+    "guestFirstMachineName": "Gateway PCs",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/iammerrick"
+      },
+      {
+        "name": "Blog",
+        "link": "http://merrickchristensen.com/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode79.mp3",
+    "publishedDate": "09/06/16",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 78,
     "guestName": "Julie Yack",
     "guestBio": [
@@ -191,23 +251,19 @@
       "Rob is the proud father of two sons and husband to his wonderful wife. Follow him on Twitter at @rob_hale_vt"
     ],
     "guestHeadshot": "/img/hwpod/rob-hale.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/c64.jpg",
+    "guestFirstMachineName": "Commodore 64",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
-      },
-      {
-        "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "https://twitter.com/rob_hale_vt"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode72.mp3",
     "publishedDate": "07/18/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
