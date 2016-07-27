@@ -2,7 +2,7 @@
 @{
   ViewBag.Title = $"Hello World Podcast: Episode {Model.EpisodeNumber} - {Model.GuestName}";
   ViewBag.PageName = $"Episode {Model.EpisodeNumber} - {Model.GuestName}";
-  ViewBag.PageBlurb = $"Relased: {Model.PublishedDate.ToShortDateString()}";
+  ViewBag.PageBlurb = $"Relased: {Model.PublishedDate.ToString("d")}";
   ViewBag.PageImage = "/img/headers/podcast.jpg";
 
 
@@ -16,4 +16,4 @@
 }
 @Html.Partial("_Episode", Model)
 <hr />
-<a asp-controller="Podcast" asp-action="Index" class="btn btn-secondary"><i class="fa fa-arrow-circle-left"></i> All Episodes</a>
+<a asp-controller="Podcast" asp-action="Index" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> All Episodes</a>

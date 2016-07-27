@@ -15,13 +15,12 @@
   </environment>
   <environment names="Production,Staging">
     <!-- IE required polyfills, in this exact order -->
-    <script src="~/lib/angular2/es6-shim.min.js"></script>
-    <script src="~/lib/angular2/system-polyfills.src.js"></script>
+    <script src="~/lib/core-js/shim.min.js"></script>
+    <script src="~/lib/zone.js/zone.min.js"></script>
+    <script src="~/lib/reflect-metadata/Reflect.js"></script>
+    <script src="~/lib/systemjs/system.js"></script>
 
-    <script src="~/lib/angular2/system.js"></script>
-    <script src="~/lib/angular2/Rx.min.js"></script>
-
-    <script src="~/app/systemjs.config.js"></script>
+    <script src="~/lib/site/app.bundle.min.js"></script>
   </environment>
   <script>
     System.import('./app/main')

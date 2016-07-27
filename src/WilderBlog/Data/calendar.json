@@ -5,8 +5,7 @@
     "link": "http://www.techorama.be/",
     "location": "Belgium",
     "note": "",
-    "length": 2,
-    "formattedEventDate": "May 3-4, 2016"
+    "length": 2
   },
   {
     "eventName": "Hello World Road Trip",
@@ -14,8 +13,7 @@
     "link": "http://hwroadtrip.com/city/brussels",
     "location": "Brussels, Belgium",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 5, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -23,8 +21,7 @@
     "link": "http://hwroadtrip.com/city/paris",
     "location": "Paris, France",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 9, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -32,8 +29,7 @@
     "link": "http://hwroadtrip.com/city/barcelona",
     "location": "Barcelona, Spain",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 12, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -41,8 +37,7 @@
     "link": "http://hwroadtrip.com/city/washington",
     "location": "Washington, DC",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 19, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -50,8 +45,7 @@
     "link": "http://hwroadtrip.com/city/philadephia",
     "location": "Philadephia, PA",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 23, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -59,8 +53,7 @@
     "link": "http://hwroadtrip.com/city/new-york-city",
     "location": "New York City, NY",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 26, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -68,8 +61,7 @@
     "link": "http://hwroadtrip.com/city/boston",
     "location": "Boston, MA",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "May 31, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -77,8 +69,7 @@
     "link": "http://hwroadtrip.com/city/burlington",
     "location": "Burlington, VT",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 2, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -86,8 +77,7 @@
     "link": "http://hwroadtrip.com/city/montreal",
     "location": "Montreal, QC",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 6, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -95,8 +85,7 @@
     "link": "http://hwroadtrip.com/city/toronto",
     "location": "Toronto, ON",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 9, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -104,8 +93,7 @@
     "link": "http://hwroadtrip.com/city/detroit",
     "location": "Detroit, MI",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 13, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -113,8 +101,7 @@
     "link": "http://hwroadtrip.com/city/chicago",
     "location": "Chicago, IL",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 15, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -122,8 +109,7 @@
     "link": "http://hwroadtrip.com/city/st-louis",
     "location": "St. Louis, MO",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 20, 2016"
+    "length": 1
   },
   {
     "eventName": "Hello World Road Trip",
@@ -131,7 +117,38 @@
     "link": "http://hwroadtrip.com/city/denver",
     "location": "Denver, CO",
     "note": "",
-    "length": 1,
-    "formattedEventDate": "Jun 22, 2016"
+    "length": 1
+  },
+  {
+    "eventName": "NDC Sydney",
+    "eventDate": "08/01/16",
+    "link": "http://ndcsydney.com/speaker/shawn-wildermuth/",
+    "location": "Sydney, NSW, Australia",
+    "note": "",
+    "length": 5
+  },
+  {
+    "eventName": "DDD Melbourne",
+    "eventDate": "08/13/16",
+    "link": "http://www.dddmelbourne.com/",
+    "location": "Melbourne, VC, Australia",
+    "note": "",
+    "length": 1
+  },
+  {
+    "eventName": "Atlanta Code Camp",
+    "eventDate": "10/15/16",
+    "link": "http://atlantacodecamp.com",
+    "location": "Atlanta, GA",
+    "note": "",
+    "length": 1
+  },
+  {
+    "eventName": "DevDataDay",
+    "eventDate": "08/20/16",
+    "link": "http://devdataday.azurewebsite.net",
+    "location": "Birmingham, AL",
+    "note": "",
+    "length": 1
   }
 ]

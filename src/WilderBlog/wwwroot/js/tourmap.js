@@ -9,7 +9,6 @@
     $('head').append("<style> #map img{max-width: inherit;} .gm-style-iw{ overflow: hidden !important;}</style>")
 
     var url = "//wildermuth.com/js/tourdates.js";
-    //var url = "/js/tourdates.js";
 
 
     $.get(url, function (data) {

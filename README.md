@@ -4,9 +4,9 @@ Current Build Status: [![Build status](https://ci.appveyor.com/api/projects/stat
 
 I re-wrote my blog using a new stack of web technologies including:
 
- - ASP.NET Core 1.0 RC1
- - Entity Framework Core 1.0 RC1
- - Angular 2 Beta
+ - ASP.NET Core 1.0 RTM
+ - Entity Framework Core 1.0 RTM
+ - Angular 2 RC3
  - Bootstrap 4 Alpha
  - Azure Websites and Azure Blob Storage
  
