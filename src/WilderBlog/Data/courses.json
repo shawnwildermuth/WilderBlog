@@ -1,8 +1,13 @@
 ﻿[
   {
+    "id": "aspdotnetcore-efcore-bootstrap-angular-web-app",
+    "name": "Building a Web App with ASP.NET Core, MVC6, EF Core and AngularJS",
+    "hint": "(New)"
+  },
+  {
     "id": "aspdotnet-5-ef7-bootstrap-angular-web-app",
     "name": "Building a Web App with ASP.NET5, MVC6, EF7, and AngularJS",
-    "hint": "(New)"
+    "hint": "(Retired)"
   },
   {
     "id": "aspdotnet-bestpractices-models",
