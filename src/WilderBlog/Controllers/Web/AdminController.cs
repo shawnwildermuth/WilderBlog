@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using WilderBlog.Data;
 
 namespace WilderBlog.Controllers
@@ -8,19 +9,15 @@ namespace WilderBlog.Controllers
   [Route("[controller]")]
   public class AdminController : Controller
   {
-    private UserManager<WilderUser> _userManager;
-
-    public AdminController(UserManager<WilderUser> userManager)
-    {
-      _userManager = userManager;
-    }
-
     [Route("changepwd")]
-    public async Task<IActionResult> ChangePwd(string username, string oldPwd, string newPwd)
+    public async Task<IActionResult> ChangePwd([FromServices] UserManager<WilderUser> userManager, 
+      string username, 
+      string oldPwd, 
+      string newPwd)
     {
-      var user = await _userManager.FindByEmailAsync(username);
+      var user = await userManager.FindByEmailAsync(username);
       if (user == null) return BadRequest(new { success = false });
-      var result = await _userManager.ChangePasswordAsync(user, oldPwd, newPwd);
+      var result = await userManager.ChangePasswordAsync(user, oldPwd, newPwd);
       if (result.Succeeded) return Ok(new { success = true });
       else return BadRequest(new { success = false, errors = result.Errors });
     }
