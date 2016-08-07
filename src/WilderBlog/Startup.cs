@@ -47,7 +47,7 @@ namespace WilderBlog
         svcs.AddTransient<IMailService, MailService>();
       }
 
-      svcs.AddDbContext<WilderContext>();
+      svcs.AddDbContext<WilderContext>(ServiceLifetime.Scoped);
 
       svcs.AddIdentity<WilderUser, IdentityRole>()
         .AddEntityFrameworkStores<WilderContext>();
@@ -89,8 +89,8 @@ namespace WilderBlog
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
                           ILoggerFactory loggerFactory,
-                          WilderInitializer initializer,
-                          IMailService mailService)
+                          IMailService mailService,
+                          IServiceScopeFactory scopeFactory)
     {
 
       // Add the following to the request pipeline only in development environment.
@@ -125,7 +125,11 @@ namespace WilderBlog
 
       if (_config["WilderDb:TestData"] != "True")
       {
-        initializer.SeedAsync().Wait();
+        using (var scope = scopeFactory.CreateScope())
+        {
+          var initializer = scope.ServiceProvider.GetService<WilderInitializer>();
+          initializer.SeedAsync().Wait();
+        }
       }
     }
   }
