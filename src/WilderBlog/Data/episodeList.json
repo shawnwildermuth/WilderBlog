@@ -24,7 +24,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
-    "publishedDate": "09/13/16",
+    "publishedDate": "10/17/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -54,7 +54,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode79.mp3",
-    "publishedDate": "09/06/16",
+    "publishedDate": "10/10/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -84,7 +84,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "08/30/16",
+    "publishedDate": "10/03/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -114,7 +114,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "08/23/16",
+    "publishedDate": "09/26/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -144,7 +144,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "08/16/16",
+    "publishedDate": "09/19/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -174,7 +174,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode75.mp3",
-    "publishedDate": "08/09/16",
+    "publishedDate": "09/12/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -204,7 +204,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode74.mp3",
-    "publishedDate": "08/02/16",
+    "publishedDate": "09/05/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -219,23 +219,23 @@
       "A long-time agile coach specializing in software architecture, Mario Cardinal is the co-founder of Slingboards Lab, a productivity software publisher that help people achieve what is important in their day. An experimenter and an entrepreneur, he love to seize the opportunities that emerge from the unexpected. Since 2004, year after year, he received the Most Valuable Professional (MVP) award from Microsoft. MVP status is awarded to credible technology experts who are among the very best community members willing to share their experience to helping others realize their potential. An experienced Scrum practitioner, he has spent more than 20 years designing large-scale information systems. He is the author of the book \"Executable Specifications with Scrum\". His friends like to describe him as someone who can extract the essence of a complicated situation, sort out the core ideas from the incidental distractions and provide a summary that is easy to understand."
     ],
     "guestHeadshot": "/img/hwpod/mario-cardinal.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/mainframe.jpg",
+    "guestFirstMachineName": "Mainframe Computers",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Mainframe_computer",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/mario_cardinal"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://mariocardinal.com/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode73.mp3",
-    "publishedDate": "07/25/16",
-    "status": 0,
+    "publishedDate": "08/22/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
