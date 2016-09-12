@@ -10,8 +10,8 @@
     ],
     "guestHeadshot": "/img/hwpod/stacey-mulcahy.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineName": "8088/86 XT Compatible/Clone",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/IBM_PC_compatible",
     "guestLinks": [
       {
         "name": "Twitter",
@@ -159,23 +159,23 @@
       "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
     ],
     "guestHeadshot": "/img/hwpod/brian-friesen.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/pc-clone.jpg",
+    "guestFirstMachineName": "PC Clone",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Pc_clone",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/brianfriesen"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://www.randomskunk.com/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode75.mp3",
     "publishedDate": "09/19/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
