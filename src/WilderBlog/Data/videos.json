@@ -1,5 +1,13 @@
 ﻿[
   {
+    "id": 24,
+    "title": "Tech and Friends - Episode 437: Shawn Wildermuth on the \"Hello World\" Road Trip",
+    "description": "I'm interviewed by David Giard about the Road Trip!",
+    "videoType": "Channel9",
+    "videoCode": "Blogs/Technology-and-Friends/tf437",
+    "datePublished": "2016-06-18"
+  },
+  {
     "id": 23,
     "title": "Creating the Smallest ASP.NET Core RC2 App",
     "description": "This short tutorial shows you how to convert a new console app to a web server to see how the pieces fit together with the upcoming RC2.",
