@@ -115,7 +115,7 @@
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
     "publishedDate": "10/03/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
@@ -145,7 +145,7 @@
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
     "publishedDate": "09/26/16",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
