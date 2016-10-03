@@ -24,7 +24,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
-    "publishedDate": "10/31/16",
+    "publishedDate": "11/07/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -54,7 +54,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode79.mp3",
-    "publishedDate": "10/24/16",
+    "publishedDate": "10/31/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -84,7 +84,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "10/17/16",
+    "publishedDate": "10/24/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -96,7 +96,7 @@
     "episodeNumber": 77,
     "guestName": "Kevin Grossnicklaus",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "Over the past 15 years, Kevin Grossnicklaus has established himself as a go-to expert and a local and regional community leader for the software development industry. Prior to founding ArchitectNow in 2009, Kevin spent over a decade as the Chief Architect and Practice Leader for a large St. Louis IT firm. He also spent many years as an instructor at Washington University’s Center for the Application of Information Technology (CAIT) where he taught continuing education courses on a wide array of development technologies. Since 2009, Kevin has been recognized annually as a Microsoft Most Valuable Professional (MVP). This prestigious award puts Kevin in the company of just over 4,000 technology professionals worldwide and recognizes his commitment to technology and working to further the understanding of software development within the region.Kevin has been heavily involved in the Midwest development community and has traveled the world as a consultant and a trainer."
     ],
     "guestHeadshot": "/img/hwpod/Kevin-Grossnicklaus.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -113,8 +113,8 @@
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "10/10/16",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode77.mp3",
+    "publishedDate": "10/17/16",
     "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -126,7 +126,7 @@
     "episodeNumber": 76,
     "guestName": "David Giard",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "David Giard is a former accountant and a former biochemist, who has been developing solutions using Microsoft technologies for over 2 decades. Currently, David helps people build solutions in his role as a Microsoft Technical Evangelist. David has been very active in the developer community, speaking at numerous major conferences, code camps, and user groups around the world; helping to lead user groups; and helping to organize conferences and other geek events. He is the host and producer of the mildly popular online TV show Technology and Friends. He is the co-author of the Wrox book Real World .NET, C#, and Silverlight. You can read his latest thoughts at www.DavidGiard.com. His hobbies include video, photography, sports, and embarrassing his sons."
     ],
     "guestHeadshot": "/img/hwpod/david-giard.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -144,7 +144,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "10/03/16",
+    "publishedDate": "10/10/16",
     "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
