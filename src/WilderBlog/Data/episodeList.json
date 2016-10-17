@@ -24,7 +24,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
-    "publishedDate": "11/07/16",
+    "publishedDate": "11/14/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -54,7 +54,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode79.mp3",
-    "publishedDate": "10/31/16",
+    "publishedDate": "11/07/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -84,7 +84,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "10/24/16",
+    "publishedDate": "10/31/16",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -99,23 +99,23 @@
       "Over the past 15 years, Kevin Grossnicklaus has established himself as a go-to expert and a local and regional community leader for the software development industry. Prior to founding ArchitectNow in 2009, Kevin spent over a decade as the Chief Architect and Practice Leader for a large St. Louis IT firm. He also spent many years as an instructor at Washington University’s Center for the Application of Information Technology (CAIT) where he taught continuing education courses on a wide array of development technologies. Since 2009, Kevin has been recognized annually as a Microsoft Most Valuable Professional (MVP). This prestigious award puts Kevin in the company of just over 4,000 technology professionals worldwide and recognizes his commitment to technology and working to further the understanding of software development within the region.Kevin has been heavily involved in the Midwest development community and has traveled the world as a consultant and a trainer."
     ],
     "guestHeadshot": "/img/hwpod/Kevin-Grossnicklaus.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/apple2e.jpg",
+    "guestFirstMachineName": "Apple ][e",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIe",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/kvgros"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://architectnow.net"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode77.mp3",
-    "publishedDate": "10/17/16",
-    "status": 1,
+    "publishedDate": "10/24/16",
+    "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
   },
