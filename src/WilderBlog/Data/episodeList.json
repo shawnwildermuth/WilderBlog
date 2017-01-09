@@ -24,7 +24,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
-    "publishedDate": "11/21/16",
+    "publishedDate": "01/23/17",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -54,7 +54,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode79.mp3",
-    "publishedDate": "11/14/16",
+    "publishedDate": "01/16/17",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -66,26 +66,26 @@
     "episodeNumber": 78,
     "guestName": "Julie Yack",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "Julie Yack is a Colorado-based Microsoft Dynamics CRM MVP serving clients across the globe, providing training, implementation, analysis and insight for companies wanting to take their service to the next level. Julie’s blog, www.julieyack.com, addresses pertinent topics of the day, ranging from Dynamics CRM to technology in education to travel to voting rights. Julie is an accomplished author and publisher with several books on different technologies under her belt. Julie is a community leader, nationally, locally and online, serving on education committees and curriculum boards in Colorado and as a founding member of SouthColorado.net and xRMVirtual online. She knows how important it is to have your voice heard and has been honored to speak to elected officials at the US Capitol and to the Executive Staff at the White House on topics of technology legislation and the importance of STEM education in our k-12 schools. Julie loves to spend her free time traveling with her husband and kids."
     ],
     "guestHeadshot": "/img/hwpod/julie-yack.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/c64.jpg",
+    "guestFirstMachineName": "Commodore 64",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "coloradojules"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://julieyack.blogs.com/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "11/07/16",
-    "status": 0,
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode78.mp3",
+    "publishedDate": "01/09/17",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
