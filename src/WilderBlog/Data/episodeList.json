@@ -10,8 +10,8 @@
     ],
     "guestHeadshot": "/img/hwpod/stacey-mulcahy.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineName": "8088/86 XT Compatible/Clone",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/IBM_PC_compatible",
     "guestLinks": [
       {
         "name": "Twitter",
@@ -24,7 +24,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
-    "publishedDate": "09/13/16",
+    "publishedDate": "01/23/17",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -54,7 +54,7 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode79.mp3",
-    "publishedDate": "09/06/16",
+    "publishedDate": "01/16/17",
     "status": 0,
     "length": "00:00:00",
     "youTubeLink": ""
@@ -66,26 +66,26 @@
     "episodeNumber": 78,
     "guestName": "Julie Yack",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "Julie Yack is a Colorado-based Microsoft Dynamics CRM MVP serving clients across the globe, providing training, implementation, analysis and insight for companies wanting to take their service to the next level. Julie’s blog, www.julieyack.com, addresses pertinent topics of the day, ranging from Dynamics CRM to technology in education to travel to voting rights. Julie is an accomplished author and publisher with several books on different technologies under her belt. Julie is a community leader, nationally, locally and online, serving on education committees and curriculum boards in Colorado and as a founding member of SouthColorado.net and xRMVirtual online. She knows how important it is to have your voice heard and has been honored to speak to elected officials at the US Capitol and to the Executive Staff at the White House on topics of technology legislation and the importance of STEM education in our k-12 schools. Julie loves to spend her free time traveling with her husband and kids."
     ],
     "guestHeadshot": "/img/hwpod/julie-yack.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/c64.jpg",
+    "guestFirstMachineName": "Commodore 64",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "coloradojules"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://julieyack.blogs.com/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "08/30/16",
-    "status": 0,
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode78.mp3",
+    "publishedDate": "01/09/17",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
@@ -96,26 +96,26 @@
     "episodeNumber": 77,
     "guestName": "Kevin Grossnicklaus",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "Over the past 15 years, Kevin Grossnicklaus has established himself as a go-to expert and a local and regional community leader for the software development industry. Prior to founding ArchitectNow in 2009, Kevin spent over a decade as the Chief Architect and Practice Leader for a large St. Louis IT firm. He also spent many years as an instructor at Washington University’s Center for the Application of Information Technology (CAIT) where he taught continuing education courses on a wide array of development technologies. Since 2009, Kevin has been recognized annually as a Microsoft Most Valuable Professional (MVP). This prestigious award puts Kevin in the company of just over 4,000 technology professionals worldwide and recognizes his commitment to technology and working to further the understanding of software development within the region.Kevin has been heavily involved in the Midwest development community and has traveled the world as a consultant and a trainer."
     ],
     "guestHeadshot": "/img/hwpod/Kevin-Grossnicklaus.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/apple2e.jpg",
+    "guestFirstMachineName": "Apple ][e",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIe",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/kvgros"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://architectnow.net/blog/"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "08/23/16",
-    "status": 0,
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode77.mp3",
+    "publishedDate": "10/24/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
@@ -126,7 +126,7 @@
     "episodeNumber": 76,
     "guestName": "David Giard",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "David Giard is a former accountant and a former biochemist, who has been developing solutions using Microsoft technologies for over 2 decades. Currently, David helps people build solutions in his role as a Microsoft Technical Evangelist. David has been very active in the developer community, speaking at numerous major conferences, code camps, and user groups around the world; helping to lead user groups; and helping to organize conferences and other geek events. He is the host and producer of the mildly popular online TV show Technology and Friends. He is the co-author of the Wrox book Real World .NET, C#, and Silverlight. You can read his latest thoughts at www.DavidGiard.com. His hobbies include video, photography, sports, and embarrassing his sons."
     ],
     "guestHeadshot": "/img/hwpod/david-giard.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
@@ -144,8 +144,8 @@
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode76.mp3",
-    "publishedDate": "08/16/16",
-    "status": 0,
+    "publishedDate": "10/10/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
@@ -159,23 +159,23 @@
       "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
     ],
     "guestHeadshot": "/img/hwpod/brian-friesen.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/pc-clone.jpg",
+    "guestFirstMachineName": "PC Clone",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Pc_clone",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/brianfriesen"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://www.randomskunk.com/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode75.mp3",
-    "publishedDate": "08/09/16",
-    "status": 0,
+    "publishedDate": "09/19/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
@@ -189,23 +189,23 @@
       "Atley Hunter is a passionate developer with over 20 years’ experience. As one of the most prolific Modern UI developers in the world, he has hundreds of unique apps in the running on millions of Windows devices worldwide. A Microsoft Windows Platform MVP, and Telerik MVP & Insider, he is constantly working with developers worldwide to improve both skills and the platforms themselves. Atley is always sharing his knowledge and connecting with developers through events, his blog, email (devMentor@outlook.com), Twitter (@atleyhunter), Skype (Atley.Hunter) and LinkedIn."
     ],
     "guestHeadshot": "/img/hwpod/atley-hunter.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/ibm-cardpunch.jpg",
+    "guestFirstMachineName": "IBM Card Punch Machine",
+    "guestFirstMachineLink": "http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV4002.html",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/atleyhunter"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://www.atleyhunter.com/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode74.mp3",
-    "publishedDate": "08/02/16",
-    "status": 0,
+    "publishedDate": "09/12/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
@@ -219,23 +219,23 @@
       "A long-time agile coach specializing in software architecture, Mario Cardinal is the co-founder of Slingboards Lab, a productivity software publisher that help people achieve what is important in their day. An experimenter and an entrepreneur, he love to seize the opportunities that emerge from the unexpected. Since 2004, year after year, he received the Most Valuable Professional (MVP) award from Microsoft. MVP status is awarded to credible technology experts who are among the very best community members willing to share their experience to helping others realize their potential. An experienced Scrum practitioner, he has spent more than 20 years designing large-scale information systems. He is the author of the book \"Executable Specifications with Scrum\". His friends like to describe him as someone who can extract the essence of a complicated situation, sort out the core ideas from the incidental distractions and provide a summary that is easy to understand."
     ],
     "guestHeadshot": "/img/hwpod/mario-cardinal.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "Gateway PCs",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
+    "guestFirstMachineImage": "/img/hwpod/mainframe.jpg",
+    "guestFirstMachineName": "Mainframe Computers",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Mainframe_computer",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/mario_cardinal"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://mariocardinal.com/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode73.mp3",
-    "publishedDate": "07/25/16",
-    "status": 0,
+    "publishedDate": "08/22/16",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
