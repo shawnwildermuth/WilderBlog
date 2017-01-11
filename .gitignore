@@ -228,3 +228,4 @@ node_modules/
 .settings
 **/PublishProfiles/
 **/PublishScripts/
+*.d.ts
