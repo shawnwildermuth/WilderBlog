@@ -11,7 +11,7 @@ namespace WilderBlog.Services.DataProviders
 
     public DataProvider(IHostingEnvironment env, string path)
     {
-      _path = Path.Combine(env.ContentRootPath, $@"Data\{path}");
+      _path = Path.Combine(env.ContentRootPath, $@"Data{Path.DirectorySeparatorChar}{path}");
     }
 
     public virtual IEnumerable<T> Get()
