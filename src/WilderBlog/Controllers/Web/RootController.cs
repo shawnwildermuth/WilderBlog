@@ -207,6 +207,12 @@ Exception: ${exception.Error}";
 
     }
 
+    [HttpGet("calendar")]
+    public IActionResult Calendar()
+    {
+      return View();
+    }
+
     [HttpGet("psstats")]
     public async Task<IActionResult> PsStats()
     {

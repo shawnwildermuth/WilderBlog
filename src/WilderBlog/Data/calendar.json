@@ -1,5 +1,41 @@
 [
   {
+    "eventName": "DNNSummit 2017",
+    "eventDate": "01/18/17",
+    "logo": "http://www.dnnsummit.org/Portals/0/Images/Summit2017/dnn-summit-denver-logo.png",
+    "link": "http://www.dnnsummit.org",
+    "location": "Denver, CO",
+    "note": "I'm talking about VSCode + ASP.NET Core",
+    "length": 5
+  },
+  {
+    "eventName": "Wroc#",
+    "eventDate": "03/3/17",
+    "logo": "http://www.wroclaw.pl/files/cmsdocuments/15939201/630x350/wroc.JPG",
+    "link": "http://wrocsharp.com/",
+    "location": "Wroclaw, Poland",
+    "note": "",
+    "length": 1
+  },
+  {
+    "eventName": "DevSum",
+    "eventDate": "06/8/17",
+    "logo": "http://www.devsum.se/wp-content/uploads/2016/09/logo_header_196x60.png",
+    "link": "http://www.devsum.se/",
+    "location": "Stockholm, Sweden",
+    "note": "",
+    "length": 2
+  },
+  {
+    "eventName": "Technorama",
+    "eventDate": "05/22/17",
+    "logo": "http://www.microsoft.com/nl-be/msdn/applause/img/apps/Techorama.png",
+    "link": "http://www.techorama.be/",
+    "location": "Belgium",
+    "note": "I'm talking about ASP.NET Core",
+    "length": 3
+  },
+  {
     "eventName": "Technorama",
     "eventDate": "05/03/16",
     "link": "http://www.techorama.be/",
