@@ -65,20 +65,17 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-fixed-top navbar-dark" style="background-color: rgba(0,0,0,0.8)">
-    <div>
-      <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
-      <button class="navbar-toggler hidden-md-up pull-right" type="button" id="toggle-menu">
-        &#9776;
-      </button>
-      <div class="nav navbar-nav navbar-toggleable-xs nav-pills collapse hidden-sm-down pull-lg-right">
+  <nav class="navbar navbar-toggleable-sm navbar-fixed-top navbar-inverse" style="background-color: rgba(0,0,0,0.8)">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#theMenu">
+      &#9776;
+    </button>
+    <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
+    <div class="collapse navbar-collapse" id="theMenu">
+      <ul class="navbar-nav nav-pills ml-auto">
         @Html.Partial("_Menu")
-      </div>
+      </ul>
     </div>
   </nav>
-  <div id="menu" class="nav hidden-md-up nav-pills nav-stacked" style="color: #fff">
-    @Html.Partial("_Menu")
-  </div>
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
   <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">

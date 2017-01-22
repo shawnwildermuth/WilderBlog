@@ -1,8 +1,13 @@
 ﻿[
   {
+    "id": "aspdotnetcore-implementing-securing-api",
+    "name": "Implementing and Securing an API with ASP.NET Core",
+    "hint": "(new)"
+  },
+  {
     "id": "aspdotnetcore-efcore-bootstrap-angular-web-app",
     "name": "Building a Web App with ASP.NET Core, MVC6, EF Core and AngularJS",
-    "hint": "(New)"
+    "hint": ""
   },
   {
     "id": "aspdotnet-5-ef7-bootstrap-angular-web-app",

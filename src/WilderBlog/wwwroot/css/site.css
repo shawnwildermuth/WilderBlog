@@ -1,6 +1,5 @@
 ﻿body {
   font-size: 20px;
-  margin-top: 60px;
 }
 p {
   font-size: 1.1rem;
@@ -17,6 +16,9 @@ pre {
 }
 .navbar-nav .nav-item + .nav-item {
   margin-left: .3rem;
+}
+.navbar-nav .nav-item .nav-link a:hover {
+  text-decoration: none;
 }
 #info-table {
   font-size: .9rem;
@@ -76,6 +78,9 @@ pre {
   -o-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
+}
+.navbar-nav a.nav-link:hover {
+  text-decoration: none;
 }
 a:not(.btn),
 p a:not(.btn) {
@@ -159,7 +164,6 @@ a img:focus {
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  height: 60px;
 }
 .navbar .navbar-toggler {
   color: #fff;

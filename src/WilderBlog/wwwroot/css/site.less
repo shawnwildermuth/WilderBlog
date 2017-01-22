@@ -3,7 +3,6 @@
 
 body {
   font-size: 20px;
-  margin-top: 60px;
 }
 
 p {
@@ -24,6 +23,10 @@ pre {
 
 .navbar-nav .nav-item + .nav-item {
   margin-left: .3rem;
+}
+
+.navbar-nav .nav-item .nav-link a:hover {
+  text-decoration: none;
 }
 
 #info-table {
@@ -92,6 +95,9 @@ pre {
   }
 }
 
+.navbar-nav a.nav-link:hover {
+  text-decoration: none;
+}
 
 a:not(.btn), p a:not(.btn) {
   color: @linkColor;
@@ -193,7 +199,6 @@ a img:hover, a img:focus {
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  height: 60px;
   .navbar-toggler {
     color: #fff;
   }
