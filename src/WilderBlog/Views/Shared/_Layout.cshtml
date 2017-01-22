@@ -48,8 +48,8 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/tether/dist/css/tether.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/css/clean-blog.min.css" rel="stylesheet" />
-    <link href="~/css/site.min.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
   </environment>
 
 
@@ -206,7 +206,7 @@
     <script src="~/js/video.js"></script>
   </environment>
   <environment names="Production,Staging">
-    <script src="~/lib/site/wilderblog.min.js"></script>
+    <script src="~/lib/site/wilderblog.min.js" asp-append-version="true"></script>
 
     <!-- Google -->
     <script type="text/javascript">
