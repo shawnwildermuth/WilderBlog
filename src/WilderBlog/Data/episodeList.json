@@ -6,26 +6,26 @@
     "episodeNumber": 80,
     "guestName": "Stacey Mulcahy",
     "guestBio": [
-      "Brian Friesen has been pretending to be a developer for the last 9 years and lives in constant fear of being found out. He suspects that someone has been bribing Microsoft on his behalf, as he has received the C# MVP award for the past three years. His presentations always involve live-coding and he prefers topics that don't get much attention. He lives near Detroit and works for an awesome company, Quicken Loans."
+      "Stacey Mulcahy is a technical evangelist for Microsoft who focuses on IoT, Web Development and Open Source. She is a tinkerer and maker, and has a love for all things microprocessor. She has spoken at several international conferences, has course up on MVA , is a technical editor, associate adjunct professor at NYU ITP and just generally likes stuff."
     ],
     "guestHeadshot": "/img/hwpod/stacey-mulcahy.jpg",
-    "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
-    "guestFirstMachineName": "8088/86 XT Compatible/Clone",
-    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/IBM_PC_compatible",
+    "guestFirstMachineImage": "/img/hwpod/apple2e.jpg",
+    "guestFirstMachineName": "Apple ][e",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIe",
     "guestLinks": [
       {
         "name": "Twitter",
-        "link": "https://twitter.com/iammerrick"
+        "link": "https://twitter.com/bitchwhocodes"
       },
       {
         "name": "Blog",
-        "link": "http://merrickchristensen.com/"
+        "link": "http://www.thebitchwhocodes.com/"
       }
     ],
     "podcastName": "hwpod",
     "audioLink": "http://traffic.libsyn.com/hwpod/Episode80.mp3",
-    "publishedDate": "01/23/17",
-    "status": 0,
+    "publishedDate": "01/24/17",
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
