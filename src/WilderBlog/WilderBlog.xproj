@@ -16,7 +16,8 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <TypeScriptEnabled>false</TypeScriptEnabled>
+  	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <CompileTypeScriptWithTSConfig>false</CompileTypeScriptWithTSConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <ProduceOutputsOnBuild>True</ProduceOutputsOnBuild>
