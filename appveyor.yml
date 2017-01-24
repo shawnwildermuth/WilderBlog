@@ -23,7 +23,8 @@ install:
 before_build:
  - cmd: dotnet restore ./src/WilderBlog.Data
  - cmd: dotnet restore ./src/WilderBlog
- - cmd: npm install gulp bower -g
+ - cmd: npm install
+ - cmd: gulp bower -g
 
 build_script:
  - cmd: dotnet build ./src/WilderBlog.Data
