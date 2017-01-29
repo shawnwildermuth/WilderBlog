@@ -3,6 +3,40 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 81,
+    "guestName": "Cory House",
+    "guestBio": [
+      "Cory is an international speaker, Pluralsight author, Microsoft MVP, Software Architect, independent consultant, and teacher. He has trained over 10,000 software developers at conferences worldwide on front-end development, testing, and software architecture. He currently specializes in front-end development using React. Cory is author of multiple Pluralsight courses and is active on Twitter as @housecor."
+    ],
+    "guestHeadshot": "/img/hwpod/corey-house.jpg",
+    "guestFirstMachineImage": "/img/hwpod/tandy-1000hx.jpg",
+    "guestFirstMachineName": "Tandy 1000HX",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_HX_.26_TX",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/housecor"
+      },
+      {
+        "name": "Blog",
+        "link": "https://medium.com/@housecor"
+      },
+      {
+        "name": "Pluralsight Author",
+        "link": "https://www.pluralsight.com/authors/cory-house"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode81.mp3",
+    "publishedDate": "01/30/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 80,
     "guestName": "Stacey Mulcahy",
     "guestBio": [
