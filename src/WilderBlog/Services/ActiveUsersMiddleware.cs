@@ -14,8 +14,9 @@ namespace WilderBlog.Services
 {
   public class ActiveUsersMiddleware
   {
-    public const string CookieName = ".Vanity.WilderBlog";
-    private const int TIMEOUTMINUTES = 5;
+    public const string COOKIENAME = ".Vanity.WilderBlog";
+    const string PREFIX = "ActiveUser_";
+    private const int TIMEOUTMINUTES = 1;
     private IMemoryCache _cache;
     private RequestDelegate _next;
     private ILogger<ActiveUsersMiddleware> _logger;
@@ -31,19 +32,23 @@ namespace WilderBlog.Services
     {
       try
       {
-        string cookie;
-        if (context.Request.Cookies.ContainsKey(CookieName))
+        if (!context.Request.Path.StartsWithSegments("/api"))
         {
-          cookie = context.Request.Cookies[CookieName];
-        }
-        else
-        {
-          cookie = Guid.NewGuid().ToString();
-        }
+          string cookie;
+          if (context.Request.Cookies.ContainsKey(COOKIENAME))
+          {
+            cookie = context.Request.Cookies[COOKIENAME];
+          }
+          else
+          {
+            cookie = Guid.NewGuid().ToString();
+          }
 
-        var key = $"ActiveUser_{cookie}";
-        _cache.Set<object>(key, new object(), TimeSpan.FromMinutes(TIMEOUTMINUTES));
-        context.Response.Cookies.Append(CookieName, cookie, new CookieOptions() { Expires = DateTimeOffset.Now.AddMinutes(TIMEOUTMINUTES) });
+          var key = $"{PREFIX}{cookie}";
+          var expiration = DateTime.UtcNow.AddMinutes(TIMEOUTMINUTES);
+          _cache.Set<object>(key, expiration, expiration);
+          context.Response.Cookies.Append(COOKIENAME, cookie, new CookieOptions() { Expires = DateTimeOffset.Now.AddMinutes(TIMEOUTMINUTES) });
+        }
       }
       catch
       {
@@ -66,7 +71,19 @@ namespace WilderBlog.Services
           _dictionary = (IDictionary)fieldInfo.GetValue(cache);
         }
 
-        return _dictionary.Keys.Cast<object>().Count(k => k is string && ((string)k).StartsWith("ActiveUser_"));
+        return _dictionary.Keys.Cast<object>().Count(k =>
+        {
+          var key = k as string;
+          if (key != null && key.StartsWith(PREFIX))
+          {
+            var expiration = cache.Get<DateTime>(k);
+            if (expiration > DateTime.UtcNow)
+            {
+              return true;
+            }
+          }
+          return false;
+        });
       }
       catch
       {
@@ -74,6 +91,6 @@ namespace WilderBlog.Services
       }
 
     }
-    
+
   }
 }
