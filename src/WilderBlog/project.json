@@ -23,6 +23,7 @@
     "WilderMinds.MetaWeblog": "1.0.2",
     "WilderMinds.RssSyndication": "1.0.4",
     "WindowsAzure.Storage": "7.0.2-preview",
+    "Microsoft.Extensions.Logging.Console": "1.1.0",
     "Microsoft.AspNetCore.Razor.Tools": {
       "version": "1.1.0-preview4-final",
       "type": "build"
@@ -34,8 +35,7 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.1.0-preview4-final",
       "type": "build"
-    },
-    "Microsoft.Extensions.Logging.Console": "1.1.0"
+    }
   },
 
   "tools": {
