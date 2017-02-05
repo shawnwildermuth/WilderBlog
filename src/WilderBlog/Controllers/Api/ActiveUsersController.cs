@@ -26,9 +26,9 @@ namespace WilderBlog.Controllers.Api
         var users = ActiveUsersMiddleware.GetActiveUserCount(_cache);
         return Ok(new { ActiveUsers = users, Message = $"{users} active on the site" });
       }
-      catch
+      catch (Exception ex)
       {
-        return Ok(new { ActiveUsers = 0, Message = "Exception Thrown during process" });
+        return Ok(new { ActiveUsers = 0, Message = $"Exception Thrown during process: {ex.Message}" });
       }
     }
   }

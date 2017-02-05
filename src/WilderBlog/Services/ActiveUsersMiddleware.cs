@@ -74,7 +74,8 @@ namespace WilderBlog.Services
         var key = k as string;
         if (key != null && key.StartsWith(PREFIX))
         {
-          var expiration = cache.Get<DateTime>(k);
+          var val = cache.Get(k);
+          var expiration = val is DateTime ? (DateTime)val : DateTime.MinValue;
           if (expiration > DateTime.UtcNow)
           {
             return true;
