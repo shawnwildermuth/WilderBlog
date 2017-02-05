@@ -16,7 +16,7 @@ namespace WilderBlog.Services
   {
     public const string COOKIENAME = ".Vanity.WilderBlog";
     const string PREFIX = "ActiveUser_";
-    private const int TIMEOUTMINUTES = 10;
+    private const int TIMEOUTMINUTES = 5;
     private IMemoryCache _cache;
     private RequestDelegate _next;
     private ILogger<ActiveUsersMiddleware> _logger;
@@ -46,6 +46,7 @@ namespace WilderBlog.Services
 
           var key = $"{PREFIX}{cookie}";
           var expiration = DateTime.UtcNow.AddMinutes(TIMEOUTMINUTES);
+          _cache.Remove(key);
           _cache.Set<object>(key, expiration, expiration);
           context.Response.Cookies.Append(COOKIENAME, cookie, new CookieOptions() { Expires = DateTimeOffset.Now.AddMinutes(TIMEOUTMINUTES) });
         }
