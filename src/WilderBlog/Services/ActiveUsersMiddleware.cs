@@ -16,7 +16,7 @@ namespace WilderBlog.Services
   {
     public const string COOKIENAME = ".Vanity.WilderBlog";
     const string PREFIX = "ActiveUser_";
-    private const int TIMEOUTMINUTES = 1;
+    private const int TIMEOUTMINUTES = 10;
     private IMemoryCache _cache;
     private RequestDelegate _next;
     private ILogger<ActiveUsersMiddleware> _logger;
