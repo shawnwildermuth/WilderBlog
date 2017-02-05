@@ -58,27 +58,24 @@ namespace WilderBlog.Services
       await _next.Invoke(context);
     }
 
-    static IDictionary _dictionary = null;
-
     public static long GetActiveUserCount(IMemoryCache cache)
     {
-      if (_dictionary == null)
-      {
-        var cacheType = cache.GetType();
-        var fieldInfo = cacheType.GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
-        _dictionary = (IDictionary)fieldInfo.GetValue(cache);
-      }
+      var cacheType = cache.GetType();
+      var fieldInfo = cacheType.GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
+      var dict = (IDictionary)fieldInfo.GetValue(cache);
 
-      return _dictionary.Keys.Cast<object>().Count(k =>
+      return dict.Keys.Cast<object>().Count(k =>
       {
         var key = k as string;
         if (key != null && key.StartsWith(PREFIX))
         {
-          var val = cache.Get(k);
-          var expiration = val is DateTime ? (DateTime)val : DateTime.MinValue;
-          if (expiration > DateTime.UtcNow)
+          DateTime expiration;
+          if (cache.TryGetValue<DateTime>(k, out expiration))
           {
-            return true;
+            if (expiration > DateTime.UtcNow)
+            {
+              return true;
+            }
           }
         }
         return false;
