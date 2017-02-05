@@ -64,18 +64,20 @@ namespace WilderBlog.Services
       var fieldInfo = cacheType.GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
       var dict = (IDictionary)fieldInfo.GetValue(cache);
 
-      return dict.Keys.Cast<object>().Count(k =>
+      var keys = dict.Keys
+        .Cast<object>()
+        .Where(k => k is string && ((string)k).StartsWith(PREFIX))
+        .Cast<string>()
+        .ToList();
+
+      return keys.Count(k =>
       {
-        var key = k as string;
-        if (key != null && key.StartsWith(PREFIX))
+        DateTime expiration;
+        if (cache.TryGetValue<DateTime>(k, out expiration))
         {
-          DateTime expiration;
-          if (cache.TryGetValue<DateTime>(k, out expiration))
+          if (expiration > DateTime.UtcNow)
           {
-            if (expiration > DateTime.UtcNow)
-            {
-              return true;
-            }
+            return true;
           }
         }
         return false;

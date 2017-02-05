@@ -28,7 +28,7 @@ namespace WilderBlog.Controllers.Api
       }
       catch (Exception ex)
       {
-        return Ok(new { ActiveUsers = 0, Message = $"Exception Thrown during process: {ex.Message}" });
+        return Ok(new { ActiveUsers = 0, Message = $"Exception Thrown during process: {ex}" });
       }
     }
   }
