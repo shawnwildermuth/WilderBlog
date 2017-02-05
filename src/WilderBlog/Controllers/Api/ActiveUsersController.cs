@@ -21,7 +21,15 @@ namespace WilderBlog.Controllers.Api
     [HttpGet("/api/active/users")]
     public IActionResult Get()
     {
-      return Ok( new { ActiveUsers = ActiveUsersMiddleware.GetActiveUserCount(_cache) } );
+      try
+      {
+        var users = ActiveUsersMiddleware.GetActiveUserCount(_cache);
+        return Ok(new { ActiveUsers = users, Message = $"{users} active on the site" });
+      }
+      catch
+      {
+        return Ok(new { ActiveUsers = 0, Message = "Exception Thrown during process" });
+      }
     }
   }
 }

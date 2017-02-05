@@ -62,33 +62,26 @@ namespace WilderBlog.Services
 
     public static long GetActiveUserCount(IMemoryCache cache)
     {
-      try
+      if (_dictionary == null)
       {
-        if (_dictionary == null)
-        {
-          var cacheType = cache.GetType();
-          var fieldInfo = cacheType.GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
-          _dictionary = (IDictionary)fieldInfo.GetValue(cache);
-        }
+        var cacheType = cache.GetType();
+        var fieldInfo = cacheType.GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
+        _dictionary = (IDictionary)fieldInfo.GetValue(cache);
+      }
 
-        return _dictionary.Keys.Cast<object>().Count(k =>
-        {
-          var key = k as string;
-          if (key != null && key.StartsWith(PREFIX))
-          {
-            var expiration = cache.Get<DateTime>(k);
-            if (expiration > DateTime.UtcNow)
-            {
-              return true;
-            }
-          }
-          return false;
-        });
-      }
-      catch
+      return _dictionary.Keys.Cast<object>().Count(k =>
       {
-        return 0; // if fails, just punt
-      }
+        var key = k as string;
+        if (key != null && key.StartsWith(PREFIX))
+        {
+          var expiration = cache.Get<DateTime>(k);
+          if (expiration > DateTime.UtcNow)
+          {
+            return true;
+          }
+        }
+        return false;
+      });
 
     }
 
