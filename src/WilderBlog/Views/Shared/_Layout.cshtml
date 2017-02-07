@@ -78,26 +78,33 @@
   </nav>
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-xl-12">
-          <div class="site-heading">
-            <h2>@ViewBag.PageName</h2>
-            <hr class="small">
-            @if (ViewBag.PageBlurb != null)
-            {
-              <span class="subheading">@ViewBag.PageBlurb</span>
-            }
-            @if (ViewBag.PageAttribution != null)
-            {
-              <span class="meta">@ViewBag.PageAttribution</span>
-            }
+  @if (ViewBag.PageImage != null && !string.IsNullOrWhiteSpace(ViewBag.PageImage))
+  {
+    <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xl-12">
+            <div class="site-heading">
+              <h2>@ViewBag.PageName</h2>
+              <hr class="small">
+              @if (ViewBag.PageBlurb != null)
+              {
+                <span class="subheading">@ViewBag.PageBlurb</span>
+              }
+              @if (ViewBag.PageAttribution != null)
+              {
+                <span class="meta">@ViewBag.PageAttribution</span>
+              }
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  }
+  else
+  {
+    <div class="row">&nbsp;</div>
+  }
   <!-- Main Content -->
   <div class="container">
     <div class="row">

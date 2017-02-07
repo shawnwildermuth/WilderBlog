@@ -122,6 +122,9 @@ p a:not(.btn):hover {
 .overflow-hidden {
   overflow: hidden;
 }
+.post-card {
+  margin-bottom: 5px;
+}
 .headshot img {
   max-width: 100%;
   -moz-transition: all 0.8s ease-in-out;
@@ -190,6 +193,10 @@ ul.course-list li {
   list-style-type: square;
   list-style-position: outside;
   margin-left: -20px;
+}
+.story-title {
+  color: #003772;
+  font-weight: 600;
 }
 h3 {
   color: #003772;
