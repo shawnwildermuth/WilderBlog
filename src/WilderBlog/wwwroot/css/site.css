@@ -103,6 +103,9 @@ p a:not(.btn):hover {
     max-width: 1540px;
   }
 }
+.form-control.inline {
+  display: inline;
+}
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
