@@ -26,6 +26,9 @@ pre {
 .center-block {
   margin: 0 auto;
 }
+[v-cloak] {
+  display: none;
+}
 #menu {
   background: #373737 none repeat scroll 0 0;
   border: 1px solid black;

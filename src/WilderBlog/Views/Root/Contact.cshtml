@@ -16,9 +16,9 @@
     <script src="~/lib/vee-validate/dist/vee-validate.min.js"></script>
   </environment>
 }
-<div class="row" id="contact-form">
+<div class="row" id="contact-form" v-cloak="true">
   <div class="offset-lg-2 col-lg-8">
-    <form novalidate v-on:submit.prevent="onSubmit" v-cloak>
+    <form novalidate v-on:submit.prevent="onSubmit" >
       <div class="form-group">
         <label>Your Name</label>
         <input type="text" class="form-control col-lg-11 inline" v-model="mail.name" placeholder="e.g. John Smith" autofocus name="name" v-validate="'required|min:5'" />
