@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -96,14 +98,19 @@ namespace WilderBlog.Controllers
       {
         if (ModelState.IsValid)
         {
+          var spamState = VerifyNoSpam(model);
+          if (!spamState.Success)
+          {
+            return BadRequest(new { Reason = spamState.Reason });
+          }
+            
           await _mailService.SendMail("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg);
 
           return Ok(new { Success = true, Message = "Message Sent" });
         }
         else
         {
-          ModelState.AddModelError("", "Failed to send email");
-          return BadRequest(ModelState);
+          return BadRequest(new { Reason = "Failed to send email..." });
         }
       }
       catch (Exception ex)
@@ -112,6 +119,30 @@ namespace WilderBlog.Controllers
         return BadRequest(new { Reason = "Error Occurred" });
       }
 
+    }
+
+    // Brute Force getting rid of my worst emails
+    private SpamState VerifyNoSpam(ContactModel model)
+    {
+      var tests = new string[]
+      {
+        "improve your seo",
+        "improved seo",
+        "generate leads",
+        "viagra",
+        "your team",
+        "PHP Developers",
+        "working remotely",
+        "google search results"
+      };
+
+      if (tests.Any(t => {
+        return new Regex(t, RegexOptions.IgnoreCase).Match(model.Msg).Success;
+      }))
+      {
+        return new SpamState() { Reason = "Spam Email Detected. Sorry." };
+      }
+      return new SpamState() { Success = true };
     }
 
     [HttpGet("rss")]

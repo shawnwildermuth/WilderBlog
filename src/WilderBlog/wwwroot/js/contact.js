@@ -42,16 +42,21 @@
             return;
           }
           me.statusMessage = "Sending...";
-          me.$http.post("/contact", this.mail)
+          me.$http.post("/contact", me.mail)
             .then(function () {
+              me.mail.name = "";
+              me.mail.email = "";
+              me.mail.subject = me.subjects[0];
+              me.mail.msg = "";
               me.statusMessage = "Message Sent...";
-              me.name = "";
-              me.email = "";
-              me.subject = this.subjects[0];
-              me.msg = "";
-            }, function () {
+            }, function (response) {
               me.statusMessage = "";
-              me.errorMessage = "Failed to send message!"
+              if (response.body && response.body.reason) {
+                me.errorMessage = response.body.reason;
+              }
+              else {
+                me.errorMessage = "Failed to send message!";
+              }
             });
         });
       }

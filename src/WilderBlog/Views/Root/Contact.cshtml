@@ -21,7 +21,7 @@
     <form novalidate v-on:submit.prevent="onSubmit" v-cloak>
       <div class="form-group">
         <label>Your Name</label>
-        <input type="text" class="form-control col-lg-11 inline" v-model="mail.name" placeholder="e.g. John Smith" autofocus name="name" v-validate="'required|alpha|min:5'" />
+        <input type="text" class="form-control col-lg-11 inline" v-model="mail.name" placeholder="e.g. John Smith" autofocus name="name" v-validate="'required|min:5'" />
         <span class="text-danger small align-top" v-show="errors.has('name')"><i class="fa fa-warning"></i></span>
         <div class="text-danger font-italic small" v-show="errors.has('name')">{{ errors.first('name') }}</div>
       </div>

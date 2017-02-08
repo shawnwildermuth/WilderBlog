@@ -8,7 +8,13 @@
     <PackageId>WilderBlog</PackageId>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50;portable-net45+win8</PackageTargetFallback>
     <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\wilderblogsite - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\wilderblogsite-staging - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\WildermuthBlog - Web Deploy.pubxml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="wwwroot\js\contact.js" />
   </ItemGroup>
@@ -47,7 +53,7 @@
   <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
     <Exec Command="npm install" />
     <Exec Command="bower install" />
-    <Exec Command="gulp default" />
+    <Exec Command="node node_modules\\gulp\\bin\\gulp.js" />
   </Target>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.1.0-preview4-final" />

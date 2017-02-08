@@ -8,18 +8,9 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "gulp": "^3.9.0",
-    "typescript": "~1.8.10",
     "gulp-uglify": "~1.5.3",
     "gulp-concat": "~2.6.0",
-    "gulp-bower-files": "~0.2.7",
-    "typings": "~0.8.1"
-  },
-  "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "lite": "lite-server",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "gulp-bower-files": "~0.2.7"
   }
+
 }
