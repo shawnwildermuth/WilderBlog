@@ -12,6 +12,7 @@
     "Microsoft.Extensions.Configuration.Abstractions": "1.1.0",
     "Microsoft.EntityFrameworkCore": "1.1.0",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
+    "Microsoft.EntityFrameworkCore.Design": "1.1.0",
     "Microsoft.AspNetCore.Identity": "1.1.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.0",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
@@ -21,7 +22,7 @@
       "version": "1.1.0-preview4-final",
       "type": "build"
     },
-    "Microsoft.EntityFrameworkCore.Tools": {
+    "Microsoft.EntityFrameworkCore.Tools.DotNet": {
       "version": "1.1.0-preview4-final",
       "type": "build"
     },
@@ -41,13 +42,7 @@
       "version": "1.1.0-preview4-final",
       "imports": "portable-net45+win8+dnxcore50"
     },
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.1.0-preview4-final",
-      "imports": [
-        "portable-net45+win8+dnxcore50",
-        "portable-net45+win8"
-      ]
-    }
+    "Microsoft.EntityFrameworkCore.Tools.DotNet": "1.1.0-preview4"
   },
 
   "frameworks": {

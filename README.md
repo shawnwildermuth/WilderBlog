@@ -1,11 +1,9 @@
 # WilderBlog
 
-Current Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/58roluat93x105o5?svg=true)](https://ci.appveyor.com/project/shawnwildermuth/wilderblog)
-
 I re-wrote my blog using a new stack of web technologies including:
 
- - ASP.NET Core 1.0 RTM
- - Entity Framework Core 1.0 RTM
+ - ASP.NET Core 1.1 RTM
+ - Entity Framework Core 1.1 RTM
  - Angular 2 RC3
  - Bootstrap 4 Alpha
  - Azure Websites and Azure Blob Storage

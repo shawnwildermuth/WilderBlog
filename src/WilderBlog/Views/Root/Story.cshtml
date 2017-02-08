@@ -3,20 +3,25 @@
 @inject Microsoft.Extensions.Configuration.IConfigurationRoot config
 @{
   ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
-  ViewBag.PageName = Model.Title;
   var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy on H:mmtt");
-  ViewBag.PageAttribution = $"Posted by Shawn Wildermuth on {pubDate}";
-  ViewBag.PageImage = "/img/headers/code.jpg";
 }
-<p class="post-meta">
+
+<div>
+  <h2 class="story-title">@Model.Title</h2>
+  <hr/>
+  <p class="post-meta">
+    <i class="fa fa-pencil"></i>
+    Shawn Wildermuth<br />
+    <i class="fa fa-calendar"></i>
+    @pubDate<br />
     <i class="fa fa-tags"></i>
     @foreach (var tag in Model.Categories.Split(','))
     {
       <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
     }
-    <br/><i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
-</p>
-
+    <br /><i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+  </p>
+</div>
 @Html.Raw(Model.Body)
 <div class="card">
   <div class="pull-left" style="padding-right: 5px;">

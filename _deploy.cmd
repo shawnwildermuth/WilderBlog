@@ -2,7 +2,7 @@
 
 :: ----------------------
 :: KUDU Deployment Script
-:: Version: 1.0.6
+:: Version: 1.0.10
 :: ----------------------
 
 :: Prerequisites
@@ -64,46 +64,29 @@ SET MSBUILD_PATH=%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe
 :: Deployment
 :: ----------
 
-echo Handling ASP.NET 5 Web Application deployment.
+echo Handling ASP.NET Core Web Application deployment with MSBuild.
 
-:: Remove wwwroot if deploying to default location
-IF "%DEPLOYMENT_TARGET%" == "%WEBROOT_PATH%" (
-    FOR /F %%i IN ("%DEPLOYMENT_TARGET%") DO IF "%%~nxi"=="wwwroot" (
-    SET DEPLOYMENT_TARGET=%%~dpi
-    )
-)
-
-:: Remove trailing slash if present
-IF "%DEPLOYMENT_TARGET:~-1%"=="\" (
-    SET DEPLOYMENT_TARGET=%DEPLOYMENT_TARGET:~0,-1%
-)
-
-
-:: 1. Set DNX Path
-echo Setting Paths
-set DNVM_CMD_PATH_FILE="%USERPROFILE%\.dnx\temp-set-envvars.cmd"
-set DNX_RUNTIME="%USERPROFILE%\.dnx\runtimes\dnx-CLR-win-x64.1.0.0-rc1-update2"
-
-:: 2. Install DNX
-echo Getting the Runtime
-call :ExecuteCmd PowerShell -NoProfile -NoLogo -ExecutionPolicy unrestricted -Command "[System.Threading.Thread]::CurrentThread.CurrentCulture = ''; [System.Threading.Thread]::CurrentThread.CurrentUICulture = '';$CmdPathFile='%DNVM_CMD_PATH_FILE%';& '%SCM_DNVM_PS_PATH%' " install 1.0.0-rc1-update2 -arch x64 -r CLR %SCM_DNVM_INSTALL_OPTIONS%
+:: 1. Restore nuget packages
+call :ExecuteCmd nuget.exe restore -packagesavemode nuspec "%DEPLOYMENT_SOURCE%\src\WilderBlog.sln"
 IF !ERRORLEVEL! NEQ 0 goto error
 
-:: 3. Run DNU Restore
-echo Restoring Packages
-call %DNX_RUNTIME%\bin\dnu restore "%DEPLOYMENT_SOURCE%" %SCM_DNU_RESTORE_OPTIONS%
+call :ExecuteCmd npm install "%DEPLOYMENT_SOURCE%\src\WilderBlog\"
 IF !ERRORLEVEL! NEQ 0 goto error
 
-:: 4. Run DNU Bundle
-echo Publishing the App
-call %DNX_RUNTIME%\bin\dnu publish "D:\home\site\repository\src\WilderBlog\project.json" --runtime %DNX_RUNTIME% --out "%DEPLOYMENT_TEMP%" %SCM_DNU_PUBLISH_OPTIONS%
+call :ExecuteCmd npm install "%DEPLOYMENT_SOURCE%\src\WilderBlog.Data\"
 IF !ERRORLEVEL! NEQ 0 goto error
 
-:: 5. KuduSync
-echo Setting Kudu Sync
-call %KUDU_SYNC_CMD% -v 50 -f "%DEPLOYMENT_TEMP%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
+:: 2. Build
+call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\src\WilderBlog.sln" /nologo /verbosity:m /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release;UseSharedCompilation=false %SCM_BUILD_ARGS%
 IF !ERRORLEVEL! NEQ 0 goto error
-)
+
+:: 3. Publish
+call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\src\WilderBlog\WilderBlog.xproj" /nologo /verbosity:m /t:GatherAllFilesToPublish /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release;UseSharedCompilation=false;PublishOutputPathNoTrailingSlash="%DEPLOYMENT_TEMP%" %SCM_BUILD_ARGS%
+IF !ERRORLEVEL! NEQ 0 goto error
+
+:: 4. KuduSync
+call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_TEMP%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
+IF !ERRORLEVEL! NEQ 0 goto error
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 goto end

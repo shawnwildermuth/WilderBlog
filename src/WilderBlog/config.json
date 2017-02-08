@@ -1,7 +1,7 @@
 ﻿{
   "WilderDb": {
     "OldConnectionString": "Server=.;Database=OldWilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=30;",
-    "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=WilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=30;",
+    "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=WilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=5;",
     "TestData": "True"
   },
   "Disqus": {

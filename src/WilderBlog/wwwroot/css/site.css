@@ -1,6 +1,5 @@
 ﻿body {
   font-size: 20px;
-  margin-top: 60px;
 }
 p {
   font-size: 1.1rem;
@@ -17,6 +16,9 @@ pre {
 }
 .navbar-nav .nav-item + .nav-item {
   margin-left: .3rem;
+}
+.navbar-nav .nav-item .nav-link a:hover {
+  text-decoration: none;
 }
 #info-table {
   font-size: .9rem;
@@ -77,6 +79,9 @@ pre {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
+.navbar-nav a.nav-link:hover {
+  text-decoration: none;
+}
 a:not(.btn),
 p a:not(.btn) {
   color: #003772;
@@ -116,6 +121,9 @@ p a:not(.btn):hover {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.post-card {
+  margin-bottom: 5px;
 }
 .headshot img {
   max-width: 100%;
@@ -159,7 +167,6 @@ a img:focus {
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  height: 60px;
 }
 .navbar .navbar-toggler {
   color: #fff;
@@ -186,6 +193,10 @@ ul.course-list li {
   list-style-type: square;
   list-style-position: outside;
   margin-left: -20px;
+}
+.story-title {
+  color: #003772;
+  font-weight: 600;
 }
 h3 {
   color: #003772;

@@ -1,6 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -76,7 +78,7 @@ namespace WilderBlog
       svcs.AddMetaWeblog<WilderWeblogProvider>();
 
       // Add Caching Support
-      svcs.AddMemoryCache();
+      svcs.AddMemoryCache(opt => opt.ExpirationScanFrequency = TimeSpan.FromMinutes(5));
 
       // Add MVC to the container
       var mvcBuilder = svcs.AddMvc();
@@ -92,7 +94,6 @@ namespace WilderBlog
                           IMailService mailService,
                           IServiceScopeFactory scopeFactory)
     {
-
       // Add the following to the request pipeline only in development environment.
       if (_env.IsDevelopment())
       {
@@ -118,6 +119,9 @@ namespace WilderBlog
 
       // Support MetaWeblog API
       app.UseMetaWeblog("/livewriter");
+
+      // Keep track of Active # of users for Vanity Project
+      app.UseMiddleware<ActiveUsersMiddleware>();
 
       app.UseIdentity();
 

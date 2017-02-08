@@ -3,7 +3,6 @@
 
 body {
   font-size: 20px;
-  margin-top: 60px;
 }
 
 p {
@@ -24,6 +23,10 @@ pre {
 
 .navbar-nav .nav-item + .nav-item {
   margin-left: .3rem;
+}
+
+.navbar-nav .nav-item .nav-link a:hover {
+  text-decoration: none;
 }
 
 #info-table {
@@ -73,25 +76,28 @@ pre {
 
   &.shown {
     left: 0;
-  -moz-transition-property: left;
-  -o-transition-property: left;
-  -webkit-transition-property: left;
-  transition-property: left;
-  -moz-transition-delay: .2s;
-  -o-transition-delay: .2s;
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
-  -moz-transition-duration: .35s;
-  -o-transition-duration: .35s;
-  -webkit-transition-duration: .35s;
-  transition-duration: .35s;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+    -moz-transition-property: left;
+    -o-transition-property: left;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -moz-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+    -moz-transition-duration: .35s;
+    -o-transition-duration: .35s;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
   }
 }
 
+.navbar-nav a.nav-link:hover {
+  text-decoration: none;
+}
 
 a:not(.btn), p a:not(.btn) {
   color: @linkColor;
@@ -139,6 +145,10 @@ a:not(.btn):hover, p a:not(.btn):hover {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.post-card {
+  margin-bottom: 5px;
 }
 
 .headshot {
@@ -193,7 +203,7 @@ a img:hover, a img:focus {
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  height: 60px;
+
   .navbar-toggler {
     color: #fff;
   }
@@ -220,6 +230,11 @@ ul.course-list {
     list-style-position: outside;
     margin-left: -20px;
   }
+}
+
+.story-title {
+  color: @linkColor;
+  font-weight: 600;
 }
 
 h3 {

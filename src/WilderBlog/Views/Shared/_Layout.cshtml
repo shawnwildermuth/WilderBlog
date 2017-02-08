@@ -48,8 +48,8 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/tether/dist/css/tether.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/css/clean-blog.min.css" rel="stylesheet" />
-    <link href="~/css/site.min.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
   </environment>
 
 
@@ -65,42 +65,46 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-fixed-top navbar-dark" style="background-color: rgba(0,0,0,0.8)">
-    <div>
-      <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
-      <button class="navbar-toggler hidden-md-up pull-right" type="button" id="toggle-menu">
-        &#9776;
-      </button>
-      <div class="nav navbar-nav navbar-toggleable-xs nav-pills collapse hidden-sm-down pull-lg-right">
+  <nav class="navbar navbar-toggleable-sm navbar-fixed-top navbar-inverse" style="background-color: rgba(0,0,0,0.8)">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#theMenu">
+      &#9776;
+    </button>
+    <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
+    <div class="collapse navbar-collapse" id="theMenu">
+      <ul class="navbar-nav nav-pills ml-auto">
         @Html.Partial("_Menu")
-      </div>
+      </ul>
     </div>
   </nav>
-  <div id="menu" class="nav hidden-md-up nav-pills nav-stacked" style="color: #fff">
-    @Html.Partial("_Menu")
-  </div>
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-xl-12">
-          <div class="site-heading">
-            <h2>@ViewBag.PageName</h2>
-            <hr class="small">
-            @if (ViewBag.PageBlurb != null)
-            {
-              <span class="subheading">@ViewBag.PageBlurb</span>
-            }
-            @if (ViewBag.PageAttribution != null)
-            {
-              <span class="meta">@ViewBag.PageAttribution</span>
-            }
+  @if (ViewBag.PageImage != null && !string.IsNullOrWhiteSpace(ViewBag.PageImage))
+  {
+    <header class="intro-header" style="background-image: url('@ViewBag.PageImage')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xl-12">
+            <div class="site-heading">
+              <h2>@ViewBag.PageName</h2>
+              <hr class="small">
+              @if (ViewBag.PageBlurb != null)
+              {
+                <span class="subheading">@ViewBag.PageBlurb</span>
+              }
+              @if (ViewBag.PageAttribution != null)
+              {
+                <span class="meta">@ViewBag.PageAttribution</span>
+              }
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  }
+  else
+  {
+    <div class="row">&nbsp;</div>
+  }
   <!-- Main Content -->
   <div class="container">
     <div class="row">
@@ -209,7 +213,7 @@
     <script src="~/js/video.js"></script>
   </environment>
   <environment names="Production,Staging">
-    <script src="~/lib/site/wilderblog.min.js"></script>
+    <script src="~/lib/site/wilderblog.min.js" asp-append-version="true"></script>
 
     <!-- Google -->
     <script type="text/javascript">
