@@ -6,30 +6,58 @@
 }
 @section Scripts {
   <environment names="Development">
-    <script src="~/lib/core-js/shim.js"></script>
-    <script src="~/lib/zone.js/zone.js"></script>
-    <script src="~/lib/reflect-metadata/Reflect.js"></script>
-    <script src="~/lib/systemjs/system.src.js"></script>
-
-    <script src="~/app/systemjs.config.js"></script>
+    <script src="~/lib/vue/dist/vue.js"></script>
+    <script src="~/lib/vue-resource/dist/vue-resource.js"></script>
+    <script src="~/lib/vee-validate/dist/vee-validate.js"></script>
   </environment>
   <environment names="Production,Staging">
-    <!-- IE required polyfills, in this exact order -->
-    <script src="~/lib/core-js/shim.min.js"></script>
-    <script src="~/lib/zone.js/zone.min.js"></script>
-    <script src="~/lib/reflect-metadata/Reflect.js"></script>
-    <script src="~/lib/systemjs/system.js"></script>
-
-    <script src="~/lib/site/app.bundle.min.js"></script>
+    <script src="~/lib/vue/dist/vue.min.js"></script>
+    <script src="~/lib/vue-resource/dist/vue-resource.min.js"></script>
+    <script src="~/lib/vee-validate/dist/vee-validate.min.js"></script>
   </environment>
-  <script>
-    System.import('./app/main')
-          .then(null, console.error.bind(console));
-  </script>
 }
-<div class="row">
-  <div class="offset-lg-3 col-lg-6">
-    <contact-form><div style="text-align: center;"><i class="fa fa-rebel fa-spin fa-lg"></i></div></contact-form>
+<div class="row" id="contact-form" v-cloak="true">
+  <div class="offset-lg-2 col-lg-8">
+    <form novalidate v-on:submit.prevent="onSubmit" >
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" class="form-control col-lg-11 inline" v-model="mail.name" placeholder="e.g. John Smith" autofocus name="name" v-validate="'required|min:5'" />
+        <span class="text-danger small align-top" v-show="errors.has('name')"><i class="fa fa-warning"></i></span>
+        <div class="text-danger font-italic small" v-show="errors.has('name')">{{ errors.first('name') }}</div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control col-lg-11 inline" v-model="mail.email" placeholder="e.g. john@aol.com" name="email" v-validate="'required|email'" />
+        <span class="text-danger small align-top" v-show="errors.has('email')"><i class="fa fa-warning"></i></span>
+        <div class="text-danger font-italic small" v-show="errors.has('email')">{{ errors.first('email') }}</div>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select v-model="mail.subject" class="form-control c-select  col-lg-11 inline" name="subject" v-validate="'required|not_in:Pick One...'">
+          <option v-for="s in subjects" v-bind:value="s">
+            {{ s }}
+          </option>
+        </select>
+        <span class="text-danger small align-top" v-show="errors.has('subject')"><i class="fa fa-warning"></i></span>
+        <div class="text-danger font-italic small" v-show="errors.has('subject')">{{ errors.first('subject') }}</div>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control  col-lg-11 inline" rows="6" cols="40" name="msg" v-validate="'required|min:15'" v-model="mail.msg" placeholder="e.g. Hey Shawn, you magnificent beast."></textarea>
+        <span class="text-danger small align-top" v-show="errors.has('msg')"><i class="fa fa-warning"></i></span>
+        <div class="text-danger font-italic small" v-show="errors.has('msg')">{{ errors.first('msg') }}</div>
+      </div>
+      <div class="form-group col-lg-11">
+        <div class="pull-right">
+          <a href="/" class="btn">Cancel</a>
+          <button class="btn btn-success" v-bind:disabled="errors.any() || isPristine">Send Email</button>
+        </div>
+        <div>
+          <div v-show="statusMessage.length > 0" class="text-primary">{{ statusMessage }}</div>
+          <div v-show="errorMessage.length > 0" class="text-warning">{{ errorMessage }}</div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
-<hr/>
+<hr />

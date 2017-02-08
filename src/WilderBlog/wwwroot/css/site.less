@@ -37,6 +37,10 @@ pre {
   margin: 0 auto;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 // Flyout Menu
 #menu {
   background: #373737 none repeat scroll 0 0;
@@ -122,6 +126,12 @@ a:not(.btn):hover, p a:not(.btn):hover {
 @media (min-width: 1600px) {
   .container {
     max-width: 1540px;
+  }
+}
+
+.form-control {
+  &.inline {
+    display: inline;
   }
 }
 
