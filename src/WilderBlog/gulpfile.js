@@ -10,9 +10,13 @@ var concat = require('gulp-concat');
 var bower = require('gulp-bower-files');
 
 gulp.task("minify", function () {
-  gulp.src(["wwwroot/js/*.js", '!wwwroot/js/tour*.js'])
+  gulp.src(["wwwroot/js/*.js", '!wwwroot/js/tour*.js', '!wwwroot/js/contact.js'])
     .pipe(uglify())
     .pipe(concat("wilderblog.min.js"))
+    .pipe(gulp.dest("wwwroot/lib/site"));
+  gulp.src(["wwwroot/js/contact.js"])
+    .pipe(uglify())
+    .pipe(concat("contact.min.js"))
     .pipe(gulp.dest("wwwroot/lib/site"));
 });
 
