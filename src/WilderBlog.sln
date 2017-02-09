@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\_.deployment = ..\_.deployment
 		..\_deploy.cmd = ..\_deploy.cmd
 		..\appveyor.yml = ..\appveyor.yml
-		global.json = global.json
+		..\global.json = ..\global.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog", "WilderBlog\WilderBlog.csproj", "{4FB63E39-5177-4332-ACD6-4F0FDBA65D73}"
