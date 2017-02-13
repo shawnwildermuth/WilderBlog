@@ -1,8 +1,7 @@
 ﻿@model  WilderBlog.Services.DataProviders.PodcastEpisode
 @{
   ViewBag.Title = $"Hello World Podcast: Episode {Model.EpisodeNumber} - {Model.GuestName}";
-  ViewBag.PageName = $"Episode {Model.EpisodeNumber} - {Model.GuestName}";
-  ViewBag.PageBlurb = $"Released: {Model.PublishedDate.ToString("d")}";
+  ViewBag.PageName = $"Hello World Podcast";
   ViewBag.PageImage = "/img/headers/podcast.jpg";
 
 
@@ -14,6 +13,8 @@
   <script src="~/3rdparty/js/audioplayer.min.js"></script>
 
 }
+<h3>Episode #@Model.EpisodeNumber: @Model.GuestName</h3>
+<p><i class="fa fa-calendar"></i> @Model.PublishedDate.ToString("D")</p>
 @Html.Partial("_Episode", Model)
 <hr />
 <a asp-controller="Podcast" asp-action="Index" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> All Episodes</a>

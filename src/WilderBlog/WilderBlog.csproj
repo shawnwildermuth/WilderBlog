@@ -16,10 +16,13 @@
     <None Remove="Properties\PublishProfiles\WildermuthBlog - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="wwwroot\js\contact.js" />
+    <Content Include="wwwroot\img\hwpod\brian-friesen.jpg" />
+    <Content Include="wwwroot\img\hwpod\merrick-christensen.jpg" />
+    <Content Include="wwwroot\img\hwpod\stacey-mulcahy.jpg" />
+    <Content Include="wwwroot\img\hwpod\tim-huckaby.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Update="wwwroot\**\*;Views\**\*;config.json;web.config;data\**\*;EmailTemplates\**\*">
+    <Content Update="wwwroot\**\*;Views\**\*;config.json;web.config;data\**\*;EmailTemplates\**\*;Dockerfile.*;">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
@@ -57,5 +60,10 @@
   </Target>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.1.0-preview4-final" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

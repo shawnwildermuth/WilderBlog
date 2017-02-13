@@ -3,6 +3,36 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 82,
+    "guestName": "Jon Galloway",
+    "guestBio": [
+      "Jon works at Microsoft as a Technical Evangelist focused on ASP.NET and Windows Azure. He’s co-author of Wrox Professional ASP.NET MVC, writes samples and tutorials like the MVC Music Store and is a frequent speaker at conferences and international Web Camps events. Jon’s been doing professional web development for 17 years, including high scale applications in financial, entertainment and healthcare analytics. He’s part of the Herding Code podcast, Twitters as @jongalloway and blogs at http://weblogs.asp.net/jongalloway. He likes to travel, but spends most of his time in San Diego with his amazingly patient wife Rachel, three wonderful daughters, a dozen avocado trees and the occasional rattlesnake."
+    ],
+    "guestHeadshot": "/img/hwpod/jon-galloway.jpg",
+    "guestFirstMachineImage": "/img/hwpod/apple2.jpg",
+    "guestFirstMachineName": "Apple ][",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_II",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/jongalloway"
+      },
+      {
+        "name": "Blog",
+        "link": "http://weblogs.asp.net/jongalloway"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode82.mp3",
+    "publishedDate": "02/13/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 81,
     "guestName": "Cory House",
     "guestBio": [
@@ -132,7 +162,7 @@
     "guestBio": [
       "Over the past 15 years, Kevin Grossnicklaus has established himself as a go-to expert and a local and regional community leader for the software development industry. Prior to founding ArchitectNow in 2009, Kevin spent over a decade as the Chief Architect and Practice Leader for a large St. Louis IT firm. He also spent many years as an instructor at Washington University’s Center for the Application of Information Technology (CAIT) where he taught continuing education courses on a wide array of development technologies. Since 2009, Kevin has been recognized annually as a Microsoft Most Valuable Professional (MVP). This prestigious award puts Kevin in the company of just over 4,000 technology professionals worldwide and recognizes his commitment to technology and working to further the understanding of software development within the region.Kevin has been heavily involved in the Midwest development community and has traveled the world as a consultant and a trainer."
     ],
-    "guestHeadshot": "/img/hwpod/Kevin-Grossnicklaus.jpg",
+    "guestHeadshot": "/img/hwpod/kevin-grossnicklaus.jpg",
     "guestFirstMachineImage": "/img/hwpod/apple2e.jpg",
     "guestFirstMachineName": "Apple ][e",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Apple_IIe",
@@ -429,7 +459,7 @@
     "guestBio": [
       "Rui is a software craftsman mostly working on Microsoft and web areas since 20 years, from the early Asp 2.0 to the latest DNX stuff. After a long time acting as a consultant for big companies, he focuses today on developing, teaching and mentoring teams on smaller projects like startups to build the right products with simplicity. He use to speak at different conferences about .net web, agility and developer’s practices, he also advocates for open source and open minds in the .net community and that’s why he leads today the alt.net group in France. Since 2014, he organize a professional developer’s conference in Paris, NCrafts with strong focus on new technologies, great practices and design and more globally about crafting software with love."
     ],
-    "guestHeadshot": "/img/hwpod/Rui-Carvalho.jpg",
+    "guestHeadshot": "/img/hwpod/rui-carvalho.jpg",
     "guestFirstMachineImage": "/img/hwpod/thompson-to7.jpg",
     "guestFirstMachineName": "Thompson TO7",
     "guestFirstMachineLink": "http://www.old-computers.com/museum/computer.asp?c=11",
@@ -490,7 +520,7 @@
     "guestBio": [
       "Merrick Christensen has been programming for ten years and nearly all of that time has been focused in the web space. He’s built many high-traffic projects for prolific companies such as National Geographic, ABC Disney, Fox and others. He co-organized ng-conf, the official Angular conference. Was a panelist on the JavaScript Jabber podcast. Spoken at many conferences and maintained even more open source projects. The last five years he has been working at Domo trying to change the way people do business."
     ],
-    "guestHeadshot": "/img/hwpod/Merrick-Christensen.jpg",
+    "guestHeadshot": "/img/hwpod/merrick-christensen.jpg",
     "guestFirstMachineImage": "/img/hwpod/gateway.jpg",
     "guestFirstMachineName": "Gateway PCs",
     "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Gateway,_Inc.",
@@ -520,7 +550,7 @@
     "guestBio": [
       "Richard is the president of Accentient, a company that helps software teams develop better products by leveraging ALM tools and Scrum. He is a Professional Scrum Trainer, author of Professional Scrum Development with Microsoft Visual Studio, and co-creator of the Scaled Professional Scrum framework. As a software developer and consultant with over 30 years of experience, he understands that software is built and delivered by people and not by processes or tools."
     ],
-    "guestHeadshot": "/img/hwpod/Richard-Hundhausen.jpg",
+    "guestHeadshot": "/img/hwpod/richard-hundhausen.jpg",
     "guestFirstMachineImage": "/img/hwpod/trs80-m1.jpg",
     "guestFirstMachineName": "TRS-80 Model 1",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
@@ -1027,7 +1057,7 @@
     "guestBio": [
       "Dave Ward is an independent consultant and author, specializing in projects ranging from ASP.NET, to Node.js, to JavaScript single page applications, to hybrid mobile apps. With twenty years of experience developing for the web, he has been recognized as a Microsoft Regional Director, ASP.NET MVP, and member of the ASPInsiders. To learn more or to get in touch with Dave, you can visit his blog at http://Encosia.com or find him on Twitter as @Encosia."
     ],
-    "guestHeadshot": "/img/hwpod/Dave-Ward.jpg",
+    "guestHeadshot": "/img/hwpod/dave-ward.jpg",
     "guestFirstMachineImage": "/img/hwpod/trs80coco.jpg",
     "guestFirstMachineName": "TRS-80 Color Computer",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80_Color_Computer",
@@ -1173,7 +1203,7 @@
       "Steve Evans has been doing DevOps since before the term DevOps was invented. He is a Pluralsight Author, five time Microsoft Most Valuable Professional (MVP), and technical Speaker at various industry events. In his spare time he manages a DevOps team at a Silicon Valley Biotech focused on improving the lives of cancer patients. For over 15 years Steve has focused on making technology better for businesses by bridging the gap between IT and Development teams.",
       "You can follow his technical blog at http://www.LoudSteve.com or find him on twitter at@TheLoudSteve."
     ],
-    "guestHeadshot": "/img/hwpod/Steve-Evans.jpg",
+    "guestHeadshot": "/img/hwpod/steve-evans.jpg",
     "guestFirstMachineImage": "/img/hwpod/kaypro.jpg",
     "guestFirstMachineName": "Kaypro",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Kaypro",
@@ -1298,7 +1328,7 @@
     "guestBio": [
       "Carl Franklin is Executive Vice President of App vNext, a software development firm helping to bring about the Internet of Things revolution. Carl is a 20+ year veteran of the software industry, co-host and founder of .NET Rocks!, the first and most widely listened to podcast for .NET developers, a Microsoft MVP for Kinect for Windows, a Microsoft Regional Director, and Senior Executive of Pwop Studios, a full-service audio and video production/post production studio located in Southeastern Connecticut. Carl has been a leader in the .NET community since 2002, and in the Visual Basic (VB) community before that. In the very early days he wrote for Visual Basic Programmer’s Journal, authoring the Q&A column of that magazine as well as many feature articles for VBPJ and other magazines. He has authored two books for John Wiley & Sons on sockets programming in VB, and in 1994 he helped create the very first web site for VB developers, Carl & Gary's VB Home Page."
     ],
-    "guestHeadshot": "/img/hwpod/Carl-Franklin.jpg",
+    "guestHeadshot": "/img/hwpod/carl-franklin.jpg",
     "guestFirstMachineImage": "/img/hwpod/trs80.jpg",
     "guestFirstMachineName": "TRS-80",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/TRS-80",
@@ -1439,7 +1469,7 @@
     "guestBio": [
       "Clemens Vasters is a Software Architect and currently works for Microsoft where he drives the technical strategy for Microsoft Azure Service Bus and other messaging-centric technologies. Before joining Microsoft, Clemens has worked on financial software solutions and in consulting, has spoken at hundreds of events in over 40 countries, and has contributed to a number of open source efforts including starting the dasBlog blog engine. Clemens has a long history educating developers, having taught some of the first available .NET training courses for developers in Europe in early 2002."
     ],
-    "guestHeadshot": "/img/hwpod/Clemens-Vasters.jpg",
+    "guestHeadshot": "/img/hwpod/clemens-vasters.jpg",
     "guestFirstMachineImage": "/img/hwpod/zx81.jpg",
     "guestFirstMachineName": "Sinclair ZX-81",
     "guestFirstMachineLink": "http://en.wikipedia.org/wiki/ZX81",

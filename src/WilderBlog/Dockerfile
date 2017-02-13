@@ -1,10 +1,10 @@
-FROM microsoft/aspnet:1.0.0-rc1-update1
+FROM microsoft/aspnetcore
 
-COPY . /app
-WORKDIR /app
+WORKDIR /theapp
 
-RUN ["dnu", "restore"]
-RUN ["dnu", "build"]
+ENV ASPNETCORE_ENVIRONMENT Staging
 
-EXPOSE 5000/tcp
-ENTRYPOINT ["dnx", "web"]
+# copy project.json and restore as distinct layers
+COPY . .
+EXPOSE 80/tcp
+ENTRYPOINT ["dotnet", "WilderBlog.dll"]

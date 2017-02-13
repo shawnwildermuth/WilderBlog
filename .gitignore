@@ -226,6 +226,9 @@ node_modules/
 **/wwwroot/lib/
 **/wwwroot/img/media/
 .settings
+builddocker.cmd
+rundocker.cmd
 **/PublishProfiles/
 **/PublishScripts/
 typings
+/out/**

@@ -85,7 +85,7 @@ namespace WilderBlog
       mvcBuilder.AddJsonOptions(opts => opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
 
       // Add Https - renable once Azure Certs work
-      //if (_env.IsProduction()) mvcBuilder.AddMvcOptions(options => options.Filters.Add(new RequireHttpsAttribute()));
+      if (_env.IsProduction()) mvcBuilder.AddMvcOptions(options => options.Filters.Add(new RequireHttpsAttribute()));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
