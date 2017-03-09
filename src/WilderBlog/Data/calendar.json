@@ -1,5 +1,41 @@
 [
   {
+    "eventName": "CodeStock",
+    "eventDate": "5/5/17",
+    "logo": "https://assets.locomotive.works/sites/581e289274c48322462eba1d/theme/images/CodeStock_Web_Logo.png?1487108768",
+    "link": "http://www.codestock.org/",
+    "location": "Knoxville, TN",
+    "note": "",
+    "length": 2
+  },
+  {
+    "eventName": "IndyCode",
+    "eventDate": "3/29/17",
+    "logo": "https://indycode.amegala.com/img/main-logos/indycode.png",
+    "link": "https://indycode.amegala.com",
+    "location": "Indianapolis, IN",
+    "note": "",
+    "length": 3
+  },
+  {
+    "eventName": "TechBash",
+    "eventDate": "10/4/17",
+    "logo": "https://www.techbash.com/img/logo-small.png",
+    "link": "https://www.techbash.com",
+    "location": "Poconos, PA",
+    "note": "",
+    "length": 3
+  },
+  {
+    "eventName": "Orlando Code Camp",
+    "eventDate": "4/8/17",
+    "logo": "",
+    "link": "https://www.orlandocodecamp.com",
+    "location": "Orlando, FL",
+    "note": "",
+    "length": 1
+  },
+  {
     "eventName": "DNNSummit 2017",
     "eventDate": "01/18/17",
     "logo": "http://www.dnnsummit.org/Portals/0/Images/Summit2017/dnn-summit-denver-logo.png",

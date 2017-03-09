@@ -222,7 +222,7 @@ Exception: ${exception.Error}";
           Title = entry.Title,
           Body = string.Concat(entry.Body, license, ad),
           Link = new Uri(new Uri(Request.GetEncodedUrl()), entry.Slug),
-          Permalink = entry.Slug,
+          Permalink = new Uri(new Uri(Request.GetEncodedUrl()), entry.Slug).ToString(),
           PublishDate = entry.DatePublished,
           Author = new Author() { Name = "Shawn Wildermuth", Email = "shawn@wildermuth.com" }
         };
