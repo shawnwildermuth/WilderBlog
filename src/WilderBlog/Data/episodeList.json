@@ -3,6 +3,100 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 85,
+    "guestName": "Sara Ford",
+    "guestBio": [
+      "Sara Ford is a Senior Product Manager at GitHub on the Editor Tools team. Previously she worked at Microsoft for over a decade on their developer tools, including Visual Studio and CodePlex. In 2015, Sara received her Masters degree in Human Factors (HCI / UX) at San Jose State University because she wants to make developer tools usable. Sara's life-long dream is to be a 97-year old weightlifter, so she can be featured on the local news."
+    ],
+    "guestHeadshot": "/img/hwpod/sara-ford.jpg",
+    "guestFirstMachineImage": "/img/hwpod/ti99.jpg",
+    "guestFirstMachineName": "TI-99",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Ti-99",
+    "guestLinks": [
+      {
+        "name": "Blog",
+        "link": "https://saraford.net/"
+      },
+      {
+        "name": "HoloLens Getting Started",
+        "link": "https://saraford.net/2017/03/10/developing-my-first-hololens-app/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode85.mp3",
+    "publishedDate": "03/27/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 84,
+    "guestName": "Joseph Guadagno",
+    "guestBio": [
+      "Joseph Guadagno has been in software development for about 15 years or so. He started out with a small book on QuickBASIC, then moved the Visual Basic for DOS, then Visual Basic for Windows, then Visual Basic .NET and eventually Visual C#. When I am not working at my full-time job, as a Team Leader at Quicken Loans, he donates his time to several community efforts."
+    ],
+    "guestHeadshot": "/img/hwpod/joseph-guadagno.jpg",
+    "guestFirstMachineImage": "/img/hwpod/c64.jpg",
+    "guestFirstMachineName": "Commodore 64",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/commodore_64",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/jguadagno"
+      },
+      {
+        "name": "Blog",
+        "link": "http://www.josephguadagno.net/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode84.mp3",
+    "publishedDate": "03/20/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 83,
+    "guestName": "Jeff Atwood",
+    "guestBio": [
+      "Jeff Atwood considers himself a reasonably experienced Windows software developer with a particular interest in the human side of software development, as represented in his recommended developer reading list on his blog, Coding Horror. Computers are fascinating machines, but they're mostly a reflection of the people using them. In the art of software development, studying code isn't enough: you have to study the people behind the software, too."
+    ],
+    "guestHeadshot": "/img/hwpod/jeff-atwood.jpg",
+    "guestFirstMachineImage": "/img/hwpod/coleco-adam.jpg",
+    "guestFirstMachineName": "Coleco Adam",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Coleco_Adam",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/codinghorror"
+      },
+      {
+        "name": "Blog",
+        "link": "https://blog.codinghorror.com/"
+      },
+      {
+        "name": "Discourse",
+        "link": "https://www.discourse.org/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode83.mp3",
+    "publishedDate": "03/13/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 82,
     "guestName": "Jon Galloway",
     "guestBio": [

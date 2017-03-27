@@ -1,5 +1,13 @@
 ﻿[
   {
+    "id": 25,
+    "title": "NDC Sydney 2016 – Ask Me Anything! with Shawn Wildermuth (Anglular 2.0)",
+    "description": "I was interviewed down in Sydney about my thoughts on Angular 2",
+    "videoType": "YouTube",
+    "videoCode": "fO8cpO4pozc",
+    "datePublished": "2017-03-17"
+  },
+  {
     "id": 24,
     "title": "Tech and Friends - Episode 437: Shawn Wildermuth on the \"Hello World\" Road Trip",
     "description": "I'm interviewed by David Giard about the Road Trip!",
