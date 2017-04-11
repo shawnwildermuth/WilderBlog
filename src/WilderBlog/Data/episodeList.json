@@ -3,6 +3,37 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 86,
+    "guestName": "Rowan Miller",
+    "guestBio": [
+      "Rowan works as a Program Manager on the .NET team at Microsoft. The bulk of his time at Microsoft has been spent on the open source Entity Framework project. He speaks at technical conferences and blogs at romiller.com. Prior to Microsoft, Rowan worked for a tourism company in Tasmania, Australia doing enterprise application development and integration.",
+      "Rowan lives in Seattle, Washington with his wife Athalie and their children. The bulk of their time is taken up as a foster family, but in his spare moments Rowan enjoys snowboarding, construction, rocket engines, and pretty much anything that involves being active or tinkering in his workshop."
+    ],
+    "guestHeadshot": "/img/hwpod/rowan-miller.jpg",
+    "guestFirstMachineImage": "/img/hwpod/win95.jpg",
+    "guestFirstMachineName": "Laptop with Windows 95",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/Windows_95",
+    "guestLinks": [
+      {
+        "name": "Blog",
+        "link": "https://romiller.com/"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/rowanmiller10"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode86.mp3",
+    "publishedDate": "04/10/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 85,
     "guestName": "Sara Ford",
     "guestBio": [
