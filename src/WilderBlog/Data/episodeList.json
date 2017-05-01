@@ -3,6 +3,36 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 87,
+    "guestName": "Scott Hunter",
+    "guestBio": [
+      "Scott Hunter works for Microsoft as the Director of Program Management for the .NET team. This team builds the .NET Framework, .NET Core, Managed Languages (C#, F#, VB), .NET Tooling, Web Tooling and the Web and Data frameworks. Before this Scott was the CTO of several startups including Mustang Software and Starbase focusing on a variety of technologies, but programming the Web has always been his real passion. In his spare time he is an avid Hiker and enjoying Formula One racing."
+    ],
+    "guestHeadshot": "/img/hwpod/scott-hunter.jpg",
+    "guestFirstMachineImage": "/img/hwpod/commodore-pet.jpg",
+    "guestFirstMachineName": "Commodore PET",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_PET",
+    "guestLinks": [
+      {
+        "name": ".NET",
+        "link": "https://dot.net"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/coolcsh"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode87.mp3",
+    "publishedDate": "05/01/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 86,
     "guestName": "Rowan Miller",
     "guestBio": [
