@@ -10,7 +10,7 @@
 @section Sidebar {
   <hr />
   <h3>My Appearances</h3>
-  @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
+  @foreach (var ap in appearances.Get().Where(e => e.EventDate.AddDays(e.Length -1) >= DateTime.Today))
   {
     <div class="appearance-block">
       <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>

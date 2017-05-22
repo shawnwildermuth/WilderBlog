@@ -6,7 +6,7 @@
 }
 <div class="row">
   <div class="col-lg-8 offset-lg-2">
-    @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
+    @foreach (var ap in appearances.Get().Where(e => e.EventDate.AddDays(e.Length - 1) >= DateTime.Today))
     {
       <div style="min-height: 100px;">
         @if (!string.IsNullOrWhiteSpace(ap.Logo))
