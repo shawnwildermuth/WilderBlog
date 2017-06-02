@@ -99,7 +99,7 @@ namespace WilderBlog
       {
         loggerFactory.AddDebug(LogLevel.Information);
         app.UseDeveloperExceptionPage();
-        app.UseDatabaseErrorPage();
+        //app.UseDatabaseErrorPage();
       }
       else
       {

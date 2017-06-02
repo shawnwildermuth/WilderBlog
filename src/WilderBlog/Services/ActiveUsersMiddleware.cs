@@ -32,7 +32,7 @@ namespace WilderBlog.Services
     {
       try
       {
-        if (!context.Request.Path.StartsWithSegments("/api"))
+        if (!context.Request.Path.StartsWithSegments("/api") && !context.Request.Path.StartsWithSegments("/livewriter"))
         {
           string cookie;
           if (context.Request.Cookies.ContainsKey(COOKIENAME))

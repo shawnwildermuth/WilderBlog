@@ -2,8 +2,7 @@
   "version": "1.0.0",
   "name": "wilderblog",
   "private": true,
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
@@ -12,5 +11,4 @@
     "gulp-concat": "~2.6.0",
     "gulp-bower-files": "~0.2.7"
   }
-
 }
