@@ -1,5 +1,59 @@
 [
   {
+    "eventName": "Pluralsight Live!",
+    "eventDate": "9/19/17",
+    "logo": "http://www.pluralsight.com/dam/pluralsight2/events/2017/live/heroPSLIVE.png",
+    "link": "https://www.pluralsight.com/event-details/2017/live-2017",
+    "location": "Birmingham, AL",
+    "note": "I'm just attending, not speaking...but happy to say hi.",
+    "length": 3
+  },
+  //{
+  //  "eventName": "Progressive .NET",
+  //  "eventDate": "9/13/17",
+  //  "logo": "https://res.cloudinary.com/skillsmatter/image/upload/c_crop,g_custom/c_fit,w_127,h_127/v1497347093/gbxewm1euuilgdgkao4a.png",
+  //  "link": "http://progressive-dotnet.com/",
+  //  "location": "London, UK",
+  //  "note": "What’s New in ASP.NET Core 2.0",
+  //  "length": 3
+  //},
+  {
+    "eventName": "PubConf - Kansas City",
+    "eventDate": "8/5/17",
+    "logo": "https://pubconf.io/assets/images/2017-kc.jpg",
+    "link": "https://pubconf.io/events/2017/kansascity.html",
+    "location": "Kansas City, MO",
+    "note": "JavaScript: It Used to Be Bad, Now It's Awful",
+    "length": 1
+  },
+  {
+    "eventName": "Kansas City Developers Conference",
+    "eventDate": "8/2/17",
+    "logo": "",
+    "link": "http://www.kcdc.info/",
+    "location": "Kansas City, MO",
+    "note": "Developing ASP.NET Core in VS Code",
+    "length": 3
+  },
+  {
+    "eventName": "Scenic City Summit",
+    "eventDate": "7/28/17",
+    "logo": "https://ucarecdn.com/ff627532-5f03-45b4-8699-1536b05d7154/-/resize/220x220/",
+    "link": "https://www.sceniccitysummit.com/",
+    "location": "Chatanooga, TN",
+    "note": "Introducing ASP.NET Core",
+    "length": 1
+  },
+  {
+    "eventName": "Birmingham .NET Users Group",
+    "eventDate": "7/18/17",
+    "logo": "https://secure.meetupstatic.com/photos/event/5/7/f/6/global_452602518.jpeg",
+    "link": "https://www.meetup.com/Birmingham-NET-Meetup/",
+    "location": "Birmingham, AL",
+    "note": "What’s New in ASP.NET Core 2.0",
+    "length": 1
+  },
+  {
     "eventName": "CodeStock",
     "eventDate": "5/5/17",
     "logo": "https://assets.locomotive.works/sites/581e289274c48322462eba1d/theme/images/CodeStock_Web_Logo.png?1487108768",
