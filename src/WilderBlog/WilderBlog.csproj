@@ -40,7 +40,11 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
   </ItemGroup>
-  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+  <Target Name="MyScripts" BeforeTargets="AfterBuild">
+    <Exec Command="echo Hello World" />
+    <Exec Command="PATH" />
+  </Target>
+  <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     <Exec Command="npm install" />
     <Exec Command="bower install" />
     <Exec Command="node node_modules\\gulp\\bin\\gulp.js" />

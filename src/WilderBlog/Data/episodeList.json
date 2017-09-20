@@ -3,6 +3,40 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 88,
+    "guestName": "Mads Torgersen",
+    "guestBio": [
+      "Mads is the Program Manager for the C# Language. He maintains the language specification and runs the language design process for C#. Many years ago Mads was a professor, and also contributed to a language starting with J."
+    ],
+    "guestHeadshot": "/img/hwpod/mads-torgersen.jpg",
+    "guestFirstMachineImage": "/img/hwpod/vic20.jpg",
+    "guestFirstMachineName": "Commodore Vic-20",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
+    "guestLinks": [
+      {
+        "name": "Channel 9 Page",
+        "link": "https://channel9.msdn.com/Events/Speakers/Mads-Torgersen"
+      },
+      {
+        "name": "Blog",
+        "link": "https://blogs.msdn.microsoft.com/dotnet/2016/01/19/on-net-172016-mads-torgersen/"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/coolcsh"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode88.mp3",
+    "publishedDate": "07/24/17",
+    "status": 1,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 87,
     "guestName": "Scott Hunter",
     "guestBio": [

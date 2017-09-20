@@ -8,15 +8,15 @@
     "note": "I'm just attending, not speaking...but happy to say hi.",
     "length": 3
   },
-  //{
-  //  "eventName": "Progressive .NET",
-  //  "eventDate": "9/13/17",
-  //  "logo": "https://res.cloudinary.com/skillsmatter/image/upload/c_crop,g_custom/c_fit,w_127,h_127/v1497347093/gbxewm1euuilgdgkao4a.png",
-  //  "link": "http://progressive-dotnet.com/",
-  //  "location": "London, UK",
-  //  "note": "What’s New in ASP.NET Core 2.0",
-  //  "length": 3
-  //},
+  {
+    "eventName": "Progressive .NET",
+    "eventDate": "9/13/17",
+    "logo": "https://res.cloudinary.com/skillsmatter/image/upload/c_crop,g_custom/c_fit,w_127,h_127/v1497347093/gbxewm1euuilgdgkao4a.png",
+    "link": "http://progressive-dotnet.com/",
+    "location": "London, UK",
+    "note": "What’s New in ASP.NET Core 2.0",
+    "length": 3
+  },
   {
     "eventName": "PubConf - Kansas City",
     "eventDate": "8/5/17",
@@ -50,7 +50,7 @@
     "logo": "https://secure.meetupstatic.com/photos/event/5/7/f/6/global_452602518.jpeg",
     "link": "https://www.meetup.com/Birmingham-NET-Meetup/",
     "location": "Birmingham, AL",
-    "note": "What’s New in ASP.NET Core 2.0",
+    "note": "What's New in ASP.NET Core 2.0",
     "length": 1
   },
   {

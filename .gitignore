@@ -232,3 +232,4 @@ rundocker.cmd
 **/PublishScripts/
 typings
 /out/**
+/src/.idea/.idea.WilderBlog

@@ -9,15 +9,15 @@
 }
 @section Sidebar {
   <hr />
-  <h3>My Appearances</h3>
+  <h3><a asp-controller="Root" asp-action="Calendar">My Appearances</a></h3>
   @foreach (var ap in appearances.Get().Where(e => e.EventDate.AddDays(e.Length -1) >= DateTime.Today))
   {
     <div class="appearance-block">
-      <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>
+      <h5><a href="@ap.Link" target="_blank">@ap.EventName</a></h5>
       <div>@ap.Location - @ap.FormattedDate</div>
       @if (!string.IsNullOrWhiteSpace(ap.Note))
       {
-        <div class="muted">@ap.Note</div>
+        <div class="text-muted small">@ap.Note</div>
       }
     </div>
     <hr class="tiny-hr" />
