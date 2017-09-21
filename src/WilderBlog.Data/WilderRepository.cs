@@ -127,7 +127,7 @@ namespace WilderBlog.Data
     public IEnumerable<string> GetCategories()
     {
       var cats = _ctx.Stories
-                .Select(c => c.Categories.Split(','))
+                .Select(c => c.Categories.Split(new[] { ',' }, StringSplitOptions.None))
                 .ToList();
 
       var result = new List<string>();

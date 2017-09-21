@@ -32,7 +32,7 @@ namespace WilderBlog.Data
 
     public void Configure(IApplicationBuilder app)
     {
-      app.UseIdentity();
+      app.UseAuthentication();
     }
   }
 }
