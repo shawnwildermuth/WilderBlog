@@ -65,11 +65,11 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-toggleable-sm navbar-fixed-top navbar-inverse" style="background-color: rgba(0,0,0,0.8)">
+  <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-inverse" style="background-color: rgba(0,0,0,0.8)">
+    <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#theMenu">
       &#9776;
     </button>
-    <a class="navbar-brand" asp-controller="Root" asp-action="Index">Shawn Wildermuth's Blog</a>
     <div class="collapse navbar-collapse" id="theMenu">
       <ul class="navbar-nav nav-pills ml-auto">
         @Html.Partial("_Menu")

@@ -14,6 +14,19 @@ pre {
   padding-right: .3rem;
   padding-left: .3rem;
 }
+.navbar .navbar-brand {
+  color: #eee;
+}
+.show > .nav-pills .nav-link:not(.active) {
+  background-color: transparent;
+}
+.navbar .navbar-brand:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-pills .nav-link {
+  color: #eee;
+}
 .navbar-nav .nav-item + .nav-item {
   margin-left: .3rem;
 }
