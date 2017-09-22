@@ -15,7 +15,9 @@ cache:
   
 install:
  - cmd: nuget sources add -Name api.nuget.org -Source https://api.nuget.org/v3/index.json
- 
+
+before_build: 
+ - cmd: npm install gulp bower -g
 
 build_script:
  - cmd: cd src/WilderBlog.Data
@@ -23,7 +25,7 @@ build_script:
  - cmd: dotnet build 
  - cmd: cd ../WilderBlog
  - cmd: npm install
- - cmd: gulp bower -g
+ - cmd: bower install
  - cmd: dotnet restore 
  - cmd: dotnet build 
 
