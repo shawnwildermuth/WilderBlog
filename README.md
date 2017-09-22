@@ -2,10 +2,10 @@
 
 I re-wrote my blog using a new stack of web technologies including:
 
- - ASP.NET Core 1.1 RTM
- - Entity Framework Core 1.1 RTM
- - Angular 2 RC3
- - Bootstrap 4 Alpha
+ - ASP.NET Core 2.0 RTM
+ - Entity Framework Core 2.0 RTM
+ - Vue 2.x
+ - Bootstrap 4 Beta
  - Azure Websites and Azure Blob Storage
  
 The project wasn't build to be a blog engine or a easy to re-use for your own blog. It doesn't mean you can't use it for that. Feel free to fork the project, but that wasn't a design goal. 
