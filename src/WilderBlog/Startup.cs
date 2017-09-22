@@ -33,8 +33,6 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      svcs.AddSingleton(_config);
-
       if (_env.IsDevelopment())
       {
         svcs.AddTransient<IMailService, LoggingMailService>();

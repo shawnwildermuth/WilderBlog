@@ -10,9 +10,9 @@ namespace WilderBlog.Services
 {
   public class AdService
   {
-    private IConfigurationRoot _config;
+    private IConfiguration _config;
 
-    public AdService(IConfigurationRoot config)
+    public AdService(IConfiguration config)
     {
       _config = config;
     }

@@ -11,11 +11,11 @@ namespace WilderBlog.Services
 {
   public class MailService : IMailService
   {
-    private IConfigurationRoot _config;
+    private IConfiguration _config;
     private IHostingEnvironment _env;
     private ILogger<MailService> _logger;
 
-    public MailService(IHostingEnvironment env, IConfigurationRoot config, ILogger<MailService> logger)
+    public MailService(IHostingEnvironment env, IConfiguration config, ILogger<MailService> logger)
     {
       _env = env;
       _config = config;

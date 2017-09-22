@@ -11,7 +11,7 @@ namespace WilderBlog.Data
   {
     private WilderContext _ctx;
 
-    public WilderRepository(IConfigurationRoot config, WilderContext ctx)
+    public WilderRepository(WilderContext ctx)
     {
       _ctx = ctx;
     }

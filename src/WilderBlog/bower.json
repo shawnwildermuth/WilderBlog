@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.4",
-    "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
+    "bootstrap": "v4.0.0-beta",
     "font-awesome": "~4.5.0",
     "respond": "~1.4.2",
     "lodash": "4.17.4",

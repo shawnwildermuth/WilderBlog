@@ -17,10 +17,10 @@ namespace WilderBlog.MetaWeblog
   {
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
-    private IConfigurationRoot _config;
+    private IConfiguration _config;
     private IHostingEnvironment _appEnv;
 
-    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfigurationRoot config, IHostingEnvironment appEnv)
+    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfiguration config, IHostingEnvironment appEnv)
     {
       _repo = repo;
       _userMgr = userMgr;
