@@ -8,7 +8,7 @@
         "<div class='card-header'>" +
         "  <a href='<%= html_url %>' target='blank'><h4 class='card-subtitle'><%= name %></h4></a>" +
         "</div>" +
-        "<div class='card-block'>" +
+        "<div class='card-body'>" +
         "  <div class='card-text'>" +
         "    <small><%= description %></small>" +
         " </div>" +

@@ -36,7 +36,7 @@
 
       @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
       {
-        <div class="card-block">
+        <div class="card-body">
           <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>
           <div class="card-text"><small>@ap.Location - @ap.FormattedDate</small></div>
           @if (!string.IsNullOrWhiteSpace(ap.Note))
