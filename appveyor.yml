@@ -1,12 +1,8 @@
 version: 1.0.0.{build}.{branch}
-os: Visual Studio 2015
+os: Visual Studio 2017
 
 init:
 - git config --global core.autocrlf true
-- cmd: >-
-    choco install dotnetcore
-
-    set PATH=C:\Program Files\dotnet\bin;%PATH%
 
 nuget:
   account_feed: true

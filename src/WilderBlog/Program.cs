@@ -1,5 +1,8 @@
+using System;
 using System.IO;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog
 {
@@ -7,14 +10,21 @@ namespace WilderBlog
   {
     public static void Main(string[] args)
     {
-      var host = new WebHostBuilder()
-        .UseKestrel()
-        .UseContentRoot(Directory.GetCurrentDirectory())
-        .UseIISIntegration()
+      WebHost.CreateDefaultBuilder(args)
+        .ConfigureAppConfiguration(ConfigureConfiguration)
         .UseStartup<Startup>()
-        .Build();
+        .Build()
+        .Run();
+    }
 
-      host.Run();
+    private static void ConfigureConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
+    {
+      // Reset to remove the old configuration sources to give us complete control
+      builder.Sources.Clear();
+
+      builder.SetBasePath(ctx.HostingEnvironment.ContentRootPath)
+        .AddJsonFile("config.json", false, true)
+        .AddEnvironmentVariables();
     }
   }
 }

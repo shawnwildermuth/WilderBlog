@@ -22,19 +22,13 @@ namespace WilderBlog
 {
   public class Startup
   {
-    private IConfigurationRoot _config;
-    private IHostingEnvironment _env;
+    private readonly IConfiguration _config;
+    private readonly IHostingEnvironment _env;
 
-    public Startup(IHostingEnvironment env)
+    public Startup(IConfiguration config, IHostingEnvironment env)
     {
+      _config = config;
       _env = env;
-
-      var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("config.json", false, true)
-        .AddEnvironmentVariables();
-
-      _config = builder.Build();
     }
 
     public void ConfigureServices(IServiceCollection svcs)
@@ -98,15 +92,12 @@ namespace WilderBlog
       // Add the following to the request pipeline only in development environment.
       if (_env.IsDevelopment())
       {
-        loggerFactory.AddDebug(LogLevel.Information);
         app.UseDeveloperExceptionPage();
-        //app.UseDatabaseErrorPage();
       }
       else
       {
         // Support logging to email
         loggerFactory.AddEmail(mailService, LogLevel.Critical);
-        loggerFactory.AddConsole(LogLevel.Error);
 
         // Early so we can catch the StatusCode error
         app.UseStatusCodePagesWithReExecute("/Error/{0}");
