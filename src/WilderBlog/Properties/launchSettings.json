@@ -3,12 +3,19 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:8088/",
+      "applicationUrl": "http://localhost:9090/",
       "sslPort": 0
     }
   },
   "profiles": {
-    "IIS Express": {
+    "WilderBlog": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {

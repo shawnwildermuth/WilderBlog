@@ -25,7 +25,7 @@ namespace WilderBlog.Controllers
   [Route("")]
   public class RootController : Controller
   {
-    readonly int _pageSize = 25;
+    readonly int _pageSize = 10;
 
     private IMailService _mailService;
     private IWilderRepository _repo;
@@ -50,9 +50,9 @@ namespace WilderBlog.Controllers
     }
 
     [HttpGet("blog/{page:int?}")]
-    public IActionResult Pager(int page)
+    public IActionResult Pager(int page = 1)
     {
-      return View("Index", _repo.GetStories(_pageSize, page));
+      return View("~/Views/Root/Index.cshtml", _repo.GetStories(_pageSize, page));
     }
 
     [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]
