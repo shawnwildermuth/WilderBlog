@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MetaWeblog\src\WilderMinds.MetaWeblog\WilderMinds.MetaWeblog.csproj" />
     <ProjectReference Include="..\WilderBlog.Data\WilderBlog.Data.csproj" />
   </ItemGroup>
 
