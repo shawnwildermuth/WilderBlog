@@ -66,6 +66,7 @@ namespace WilderBlog
       svcs.AddScoped<PodcastEpisodesProvider>();
       svcs.AddScoped<VideosProvider>();
       svcs.AddTransient<ApplicationEnvironment>();
+      svcs.AddTransient<IImageStorageService, ImageStorageService>();
 
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();

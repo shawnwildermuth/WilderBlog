@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C285657-5BD7-4E8D-8E9F-49C24601AB82}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,6 +13,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog", "WilderBlog\WilderBlog.csproj", "{4FB63E39-5177-4332-ACD6-4F0FDBA65D73}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog.Data", "WilderBlog.Data\WilderBlog.Data.csproj", "{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderMinds.MetaWeblog", "..\..\MetaWeblog\src\WilderMinds.MetaWeblog\WilderMinds.MetaWeblog.csproj", "{50048AFA-0D4F-4027-A33B-2B71E2658D21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50048AFA-0D4F-4027-A33B-2B71E2658D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50048AFA-0D4F-4027-A33B-2B71E2658D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50048AFA-0D4F-4027-A33B-2B71E2658D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50048AFA-0D4F-4027-A33B-2B71E2658D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

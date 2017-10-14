@@ -42,19 +42,21 @@
     <link href="~/lib/tether/dist/css/tether.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/css/clean-blog.css" rel="stylesheet" />
-    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true"  />
   </environment>
   <environment names="Production,Staging">
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/lib/tether/dist/css/tether.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/css/clean-blog.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
     <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
   </environment>
 
-  <link href="~/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet" />
 
-  @RenderSection("Styles", required: false)
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->

@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
+using WilderBlog.Services;
 using WilderMinds.MetaWeblog;
 
 namespace WilderBlog.MetaWeblog
@@ -19,18 +20,22 @@ namespace WilderBlog.MetaWeblog
     private UserManager<WilderUser> _userMgr;
     private IConfiguration _config;
     private IHostingEnvironment _appEnv;
+    private readonly IImageStorageService _imageService;
 
-    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfiguration config, IHostingEnvironment appEnv)
+    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfiguration config, IHostingEnvironment appEnv, IImageStorageService imageService)
     {
       _repo = repo;
       _userMgr = userMgr;
       _config = config;
       _appEnv = appEnv;
+      _imageService = imageService;
     }
 
     public string AddPost(string blogid, string username, string password, Post post, bool publish)
     {
       EnsureUser(username, password).Wait();
+
+      if (post.categories == null) throw new MetaWeblogException("Failed to specify categories");
 
       var newStory = new BlogStory();
       try
@@ -38,7 +43,7 @@ namespace WilderBlog.MetaWeblog
         newStory.Title = post.title;
         newStory.Body = post.description;
         newStory.DatePublished = post.dateCreated == DateTime.MinValue ? DateTime.UtcNow : post.dateCreated;
-        newStory.Categories = string.Join(",", post.categories);
+        if (post.categories != null) newStory.Categories = string.Join(",", post.categories) ;
         newStory.IsPublished = publish;
         newStory.Slug = newStory.GetStoryUrl();
         newStory.UniqueId = newStory.Slug;
@@ -58,6 +63,8 @@ namespace WilderBlog.MetaWeblog
     {
       EnsureUser(username, password).Wait();
 
+      if (post.categories == null) throw new MetaWeblogException("Failed to specify categories");
+
       try
       {
         var story = _repo.GetStory(int.Parse(postid));
@@ -75,7 +82,7 @@ namespace WilderBlog.MetaWeblog
       }
       catch (Exception)
       {
-        throw new MetaWeblogException("Failed to save the post.");
+        throw new MetaWeblogException("Failed to edit the post.");
       }
     }
 
@@ -109,13 +116,12 @@ namespace WilderBlog.MetaWeblog
     {
       EnsureUser(username, password).Wait();
 
-      var filenameonly = mediaObject.name.Substring(mediaObject.name.LastIndexOf('/') + 1);
-
-      var url = $"https://wilderminds.blob.core.windows.net/img/{filenameonly}";
-      var creds = new StorageCredentials(_config["BlobStorage:Account"], _config["BlobStorage:Key"]);
-      var blob = new CloudBlockBlob(new Uri(url), creds);
       var bits = Convert.FromBase64String(mediaObject.bits);
-      blob.UploadFromByteArrayAsync(bits, 0, bits.Length).Wait();
+      var op = _imageService.StoreImage(mediaObject.name, bits);
+
+      op.Wait();
+      if (!op.IsCompletedSuccessfully) throw op.Exception;
+      var url = op.Result;
 
       // Create the response
       MediaObjectInfo objectInfo = new MediaObjectInfo();
