@@ -48,6 +48,7 @@
               me.mail.email = "";
               me.mail.subject = me.subjects[0];
               me.mail.msg = "";
+              this.$validator.reset();
               me.statusMessage = "Message Sent...";
             }, function (response) {
               me.statusMessage = "";

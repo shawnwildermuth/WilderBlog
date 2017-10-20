@@ -150,7 +150,7 @@ namespace WilderBlog.MetaWeblog
     {
       EnsureUser(username, password).Wait();
 
-      return _repo.GetStories(numberOfPosts).Stories.Select(s => new Post()
+      var result = _repo.GetStories(numberOfPosts).Stories.Select(s => new Post()
       {
         title = s.Title,
         description = s.Body,
@@ -158,8 +158,11 @@ namespace WilderBlog.MetaWeblog
         dateCreated = s.DatePublished,
         postid = s.Id,
         permalink = s.GetStoryUrl(),
-        wp_slug = s.Slug
+        wp_slug = s.Slug,
+        userid = "shawnwildermuth"
       }).ToArray();
+
+      return result;
     }
 
     public bool DeletePost(string key, string postid, string username, string password, bool publish)

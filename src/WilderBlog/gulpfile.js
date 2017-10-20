@@ -7,7 +7,6 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var bower = require('gulp-bower-files');
 
 gulp.task("minify", function () {
   gulp.src(["wwwroot/js/*.js", '!wwwroot/js/tour*.js', '!wwwroot/js/contact.js'])
@@ -20,4 +19,11 @@ gulp.task("minify", function () {
     .pipe(gulp.dest("wwwroot/lib/site"));
 });
 
-gulp.task('default', ["minify"]);
+gulp.task("scripts", function () {
+  gulp.src("node_modules/bootstrap/dist/js/*")
+    .pipe(gulp.dest("wwwroot/lib/bootstrap/js"));
+  gulp.src("node_modules/bootstrap/dist/css/*")
+    .pipe(gulp.dest("wwwroot/lib/bootstrap/css"));
+});
+
+gulp.task('default', ["minify", "scripts"]);

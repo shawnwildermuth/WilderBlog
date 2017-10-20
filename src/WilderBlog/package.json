@@ -2,7 +2,9 @@
   "version": "1.0.0",
   "name": "wilderblog",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2"
+  },
   "devDependencies": {
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",

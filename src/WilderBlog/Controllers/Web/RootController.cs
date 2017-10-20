@@ -253,7 +253,7 @@ Exception: ${exception.Error}";
       if (!_memoryCache.TryGetValue(CACHEKEY, out cached))
       { 
         var client = new HttpClient();
-        cached = await client.GetStringAsync(new Uri("http://www.pluralsight.com/data/Courses/Popular"));
+        cached = await client.GetStringAsync(new Uri("https://app.pluralsight.com/data/courses/popular"));
         _memoryCache.Set(CACHEKEY, cached,new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(2) });
       }
 

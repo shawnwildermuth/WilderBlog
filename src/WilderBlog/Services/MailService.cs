@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace WilderBlog.Services
 {
@@ -31,24 +33,22 @@ namespace WilderBlog.Services
 
         var key = _config["MailService:ApiKey"];
 
-        var uri = $"https://api.sendgrid.com/api/mail.send.json";
-        var post = new KeyValuePair<string, string>[]
-              {
-                new KeyValuePair<string, string>("api_user", _config["MailService:ApiUser"]),
-                new KeyValuePair<string, string>("api_key", _config["MailService:ApiKey"]),
-                new KeyValuePair<string, string>("to", _config["MailService:Receiver"]),
-                new KeyValuePair<string, string>("toname", name),
-                new KeyValuePair<string, string>("subject", $"Wildermuth.com Site Mail"),
-                new KeyValuePair<string, string>("text", string.Format(body, email, name, subject, msg)),
-                new KeyValuePair<string, string>("from", _config["MailService:Receiver"])
-              };
+        var client = new SendGridClient(key);
+        var formattedMessage = string.Format(body, email, name, subject, msg);
 
-        var client = new HttpClient();
-        var response = await client.PostAsync(uri, new FormUrlEncodedContent(post));
-        if (!response.IsSuccessStatusCode)
+        var mailMsg = MailHelper.CreateSingleEmail(
+          new EmailAddress(_config["MailService:Receiver"]),
+          new EmailAddress(_config["MailService:Receiver"]),
+          $"Wildermuth.com Site Mail",
+          formattedMessage,
+          formattedMessage);
+
+        var response = await client.SendEmailAsync(mailMsg);
+
+        if (response.StatusCode >= System.Net.HttpStatusCode.PartialContent) // Not 200 or 202
         {
-          var result = await response.Content.ReadAsStringAsync();
-          _logger.LogError($"Failed to send message via SendGrid: {Environment.NewLine}Body: {post}{Environment.NewLine}Result: {result}");
+          var result = await response.Body.ReadAsStringAsync();
+          _logger.LogError($"Failed to send message via SendGrid: {Environment.NewLine}Body: {formattedMessage}{Environment.NewLine}Result: {result}");
         }
       }
       catch (Exception ex)
