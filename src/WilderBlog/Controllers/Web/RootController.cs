@@ -245,11 +245,16 @@ Exception: ${exception.Error}";
     }
 
     [HttpGet("psstats")]
-    public async Task<IActionResult> PsStats()
+    public async Task<IActionResult> PsStats(bool c = false)
     {
       var CACHEKEY = "PSSTATS";
       string cached;
       
+      if (c)
+      {
+        _memoryCache.Remove(CACHEKEY);
+      }
+
       if (!_memoryCache.TryGetValue(CACHEKEY, out cached))
       { 
         var client = new HttpClient();

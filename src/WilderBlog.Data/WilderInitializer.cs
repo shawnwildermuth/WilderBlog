@@ -33,6 +33,15 @@ namespace WilderBlog.Data
         var result = await _userMgr.CreateAsync(user, "P@ssw0rd!"); // Temp Password
         if (!result.Succeeded) throw new InvalidProgramException("Failed to create seed user");
       }
+
+      // Seed Stories
+      if (!_ctx.Stories.Any())
+      {
+        var stories = MemoryRepository._stories;
+        stories.ForEach(s => s.Id = 0);
+        _ctx.Stories.AddRange(stories);
+        await _ctx.SaveChangesAsync();
+      }
     }
   }
 }

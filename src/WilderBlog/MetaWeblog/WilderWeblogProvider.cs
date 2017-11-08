@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -43,7 +44,7 @@ namespace WilderBlog.MetaWeblog
         newStory.Title = post.title;
         newStory.Body = post.description;
         newStory.DatePublished = post.dateCreated == DateTime.MinValue ? DateTime.UtcNow : post.dateCreated;
-        if (post.categories != null) newStory.Categories = string.Join(",", post.categories) ;
+        if (post.categories != null) newStory.Categories = string.Join(",", post.categories);
         newStory.IsPublished = publish;
         newStory.Slug = newStory.GetStoryUrl();
         newStory.UniqueId = newStory.Slug;
@@ -150,16 +151,25 @@ namespace WilderBlog.MetaWeblog
     {
       EnsureUser(username, password).Wait();
 
-      var result = _repo.GetStories(numberOfPosts).Stories.Select(s => new Post()
+
+      var result = _repo.GetStories(numberOfPosts).Stories.Select(s =>
+      {
+        var summary = new HtmlDocument();
+        summary.LoadHtml(s.GetSummary());
+
+      return new Post()
       {
         title = s.Title,
-        description = s.Body,
+        mt_excerpt = summary.DocumentNode.InnerText,
+        description = s.Title,
         categories = s.Categories.Split(','),
         dateCreated = s.DatePublished,
         postid = s.Id,
-        permalink = s.GetStoryUrl(),
+        permalink = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
+        link = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
         wp_slug = s.Slug,
         userid = "shawnwildermuth"
+      };
       }).ToArray();
 
       return result;

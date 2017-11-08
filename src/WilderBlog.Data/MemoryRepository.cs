@@ -103,7 +103,7 @@ namespace WilderBlog.Data
       };
     }
 
-    static List<BlogStory> _stories = new List<BlogStory>()
+    public static List<BlogStory> _stories = new List<BlogStory>()
     {
       new BlogStory()
       {
