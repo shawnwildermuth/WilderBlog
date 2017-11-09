@@ -1,5 +1,10 @@
 ﻿[
   {
+    "id": "aspnetcore-mvc-efcore-bootstrap-angular-web",
+    "name": "Building a Web App with ASP.NET Core, MVC6, EF Core, Bootstrap and Angular",
+    "hint": "(updated for 2.0)"
+  },
+  {
     "id": "visual-studio-code-aspdotnet-projects",
     "name": "Using Visual Studio Code for ASP.NET Core Projects",
     "hint": "(new)"
@@ -7,7 +12,7 @@
   {
     "id": "aspdotnetcore-implementing-securing-api",
     "name": "Implementing and Securing an API with ASP.NET Core",
-    "hint": "(new)"
+    "hint": ""
   },
   {
     "id": "aspdotnetcore-efcore-bootstrap-angular-web-app",
