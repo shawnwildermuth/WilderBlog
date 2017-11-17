@@ -39,8 +39,9 @@
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     <Exec Command="npm install" />
-    <Exec Command="bower install" />
-    <Exec Command="node node_modules\\gulp\\bin\\gulp.js" />
+    <Exec Command="node node_modules\\gulp\\bin\\gulp.js clean" />
+    <Exec Command="node node_modules\\gulp\\bin\\gulp.js minify" />
+    <Exec Command="node node_modules\\gulp\\bin\\gulp.js scripts" />
   </Target>
 
   <ItemGroup>
