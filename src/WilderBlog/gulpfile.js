@@ -7,7 +7,7 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var del = require("del");
+var rimraf = require("rimraf");
 var merge = require('merge-stream'); 
 
 gulp.task("minify", function () {
@@ -26,7 +26,7 @@ gulp.task("minify", function () {
   return merge(streams);
 });
 
-// Copy Dependencies
+// Dependency Dirs
 var deps = {
   "jquery": {
     "dist/*": ""
@@ -69,8 +69,8 @@ var deps = {
 
 };
 
-gulp.task("clean", function () {
-  return del("wwwroot/lib/**/*");
+gulp.task("clean", function (cb) {
+  return rimraf("wwwroot/lib/", cb);
 });
 
 gulp.task("scripts", function () {
@@ -89,3 +89,4 @@ gulp.task("scripts", function () {
 
 });
 
+gulp.task("default", ['clean', 'minify', 'scripts']);

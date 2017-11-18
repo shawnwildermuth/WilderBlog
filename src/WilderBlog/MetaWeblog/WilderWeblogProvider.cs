@@ -72,10 +72,10 @@ namespace WilderBlog.MetaWeblog
 
         story.Title = post.title;
         story.Body = post.description;
-        story.DatePublished = post.dateCreated == DateTime.MinValue ? DateTime.UtcNow : post.dateCreated;
+        if (post.dateCreated == DateTime.MinValue) story.DatePublished = DateTime.UtcNow; // Only overwrite date if is empty
         story.Categories = string.Join(",", post.categories);
         story.IsPublished = publish;
-        story.Slug = story.GetStoryUrl();
+        if (string.IsNullOrWhiteSpace(story.Slug)) story.Slug = story.GetStoryUrl(); // Only recalcuate Slug if absolutely necessary
 
         _repo.SaveAll();
 

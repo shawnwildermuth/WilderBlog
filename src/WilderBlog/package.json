@@ -20,7 +20,7 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "gulp": "^3.9.0",
-    "del": "3.0.0",
+    "rimraf": "2.6.2",
     "merge-stream": "1.0.1",
     "gulp-uglify": "~1.5.3",
     "gulp-concat": "~2.6.0",
