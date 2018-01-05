@@ -3,6 +3,40 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 89,
+    "guestName": "Dylan Beattie",
+    "guestBio": [
+      "Dylan wrote his first web page in 1992 and never looked back. He's been building data-driven web applications since the late 1990s, and has worked on everything from tiny standalone websites to complex distributed systems. Dylan is a Microsoft MVP and a regular speaker at conferences and user groups, where he's spoken about topics including continuous delivery, Conway's Law, the history of the web, federated authentication and hypermedia APIs. When he's not wrangling code, he plays guitar and writes songs about code."
+    ],
+    "guestHeadshot": "/img/hwpod/dylan-beattie.jpg",
+    "guestFirstMachineImage": "/img/hwpod/vic20.jpg",
+    "guestFirstMachineName": "Commodore Vic-20",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
+    "guestLinks": [
+      {
+        "name": "Blog",
+        "link": "http://www.dylanbeattie.net/"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/dylanbeattie"
+      },
+      {
+        "name": "Stack Overflow Profile",
+        "link": "https://stackoverflow.com/users/5017/dylan-beattie"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode89.mp3",
+    "publishedDate": "01/15/18",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 88,
     "guestName": "Mads Torgersen",
     "guestBio": [

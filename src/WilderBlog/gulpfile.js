@@ -70,7 +70,7 @@ var deps = {
 };
 
 gulp.task("clean", function (cb) {
-  return rimraf("wwwroot/lib/", cb);
+  return rimraf("wwwroot/vendor/", cb);
 });
 
 gulp.task("scripts", function () {
@@ -81,7 +81,7 @@ gulp.task("scripts", function () {
     console.log("Prepping Scripts for: " + prop);
     for (var itemProp in deps[prop]) {
       streams.push(gulp.src("node_modules/" + prop + "/" + itemProp)
-        .pipe(gulp.dest("wwwroot/lib/" + prop + "/" + deps[prop][itemProp])));
+        .pipe(gulp.dest("wwwroot/vendor/" + prop + "/" + deps[prop][itemProp])));
     }
   }
 

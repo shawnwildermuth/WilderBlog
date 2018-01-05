@@ -225,6 +225,7 @@ bower_components/
 node_modules/
 **/wwwroot/lib/
 **/wwwroot/img/media/
+**/wwwroot/vendor/
 .settings
 builddocker.cmd
 rundocker.cmd
