@@ -3,6 +3,74 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 100,
+    "guestName": "Shawn Wildermuth",
+    "guestBio": [
+      "Shawn Wildermuth has been tinkering with computers and software since he got a Vic-20 back in the early ‘80s. As a Microsoft MVP since 2003, he’s also involved with Microsoft as an ASP.NET Insider and ClientDev Insider. He’s the author of over twenty Pluralsight courses, written eight books, an international conference speaker, and one of the Wilder Minds. You can reach him at his blog at http://wildermuth.com. He’s also making his first, feature-length, documentary about software developers today called “Hello World: The Film”. You can see more about it at http://helloworldfilm.com."
+    ],
+    "guestHeadshot": "/img/hwpod/shawn-wildermuth.jpg",
+    "guestFirstMachineImage": "/img/hwpod/vic20.jpg",
+    "guestFirstMachineName": "Commodore Vic-20",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
+    "guestLinks": [
+      {
+        "name": "Blog",
+        "link": "http://www.dylanbeattie.net/"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/dylanbeattie"
+      },
+      {
+        "name": "Stack Overflow Profile",
+        "link": "https://stackoverflow.com/users/5017/dylan-beattie"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode100.mp3",
+    "publishedDate": "04/02/18",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
+    "episodeNumber": 90,
+    "guestName": "Stuart Celarier",
+    "guestBio": [
+      "Visual Stuart is Stuart Celarier, principal consultant for Neudesic. He teaches juggling at Reed College in Portland, Oregon, and is the founder of the Portland Juggling Festival. He plays mandocello (the big sister of the mandolin family) in the Oregon Mandolin Orchestra. He’s an avid gardner of rhododendrons and woodland plants."
+    ],
+    "guestHeadshot": "/img/hwpod/stuart-celarier.jpg",
+    "guestFirstMachineImage": "/img/hwpod/vic20.jpg",
+    "guestFirstMachineName": "Commodore Vic-20",
+    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
+    "guestLinks": [
+      {
+        "name": "Blog",
+        "link": "http://www.dylanbeattie.net/"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/dylanbeattie"
+      },
+      {
+        "name": "Stack Overflow Profile",
+        "link": "https://stackoverflow.com/users/5017/dylan-beattie"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode89.mp3",
+    "publishedDate": "01/22/18",
+    "status": 0,
+    "length": "00:00:00",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 89,
     "guestName": "Dylan Beattie",
     "guestBio": [
