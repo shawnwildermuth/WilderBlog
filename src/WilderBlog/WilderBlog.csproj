@@ -11,8 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\PublishProfiles\wilderblogsite - FTP.pubxml" />
     <None Remove="Properties\PublishProfiles\wilderblogsite - Web Deploy.pubxml" />
     <None Remove="Properties\PublishProfiles\wilderblogsite-staging - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\wilderblogsite-WilderStaging - FTP.pubxml" />
     <None Remove="Properties\PublishProfiles\wilderblogsite-WilderStaging - Web Deploy.pubxml" />
     <None Remove="Properties\PublishProfiles\WildermuthBlog - Web Deploy.pubxml" />
   </ItemGroup>

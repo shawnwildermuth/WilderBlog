@@ -40,30 +40,26 @@
     "episodeNumber": 90,
     "guestName": "Stuart Celarier",
     "guestBio": [
-      "Visual Stuart is Stuart Celarier, principal consultant for Neudesic. He teaches juggling at Reed College in Portland, Oregon, and is the founder of the Portland Juggling Festival. He plays mandocello (the big sister of the mandolin family) in the Oregon Mandolin Orchestra. He’s an avid gardner of rhododendrons and woodland plants."
+      "Stuart Celarier is a principal software architect and developer, primarily on Microsoft technologies. He has worked in a wide variety of industries and problem domains as a consultant and employee, as well as teaching and mentoring. He is an eight-time recipient of the Microsoft MVP award for work in services and integration, and was a Microsoft Regional Director for five years. Stuart is also a speaker at regional user groups, he co-directed the Portland Code Camp, and co-chaired the Birds-of-a-Feather track at eight Microsoft conferences. Outside of software, Stuart is a member of the Oregon Mandolin Orchestra and teaches juggling at Reed College."
     ],
     "guestHeadshot": "/img/hwpod/stuart-celarier.jpg",
-    "guestFirstMachineImage": "/img/hwpod/vic20.jpg",
-    "guestFirstMachineName": "Commodore Vic-20",
-    "guestFirstMachineLink": "http://en.wikipedia.org/wiki/Commodore_VIC20",
+    "guestFirstMachineImage": "/img/hwpod/pdp-8e.jpg",
+    "guestFirstMachineName": "Digital PDP 8/e",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/PDP-8",
     "guestLinks": [
       {
         "name": "Blog",
-        "link": "http://www.dylanbeattie.net/"
+        "link": "http://www.visualstuart.net/blog2/"
       },
       {
         "name": "Twitter",
-        "link": "https://twitter.com/dylanbeattie"
-      },
-      {
-        "name": "Stack Overflow Profile",
-        "link": "https://stackoverflow.com/users/5017/dylan-beattie"
+        "link": "https://twitter.com/vstuart"
       }
     ],
     "podcastName": "hwpod",
-    "audioLink": "http://traffic.libsyn.com/hwpod/Episode89.mp3",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode_90.mp3",
     "publishedDate": "01/22/18",
-    "status": 0,
+    "status": 1,
     "length": "00:00:00",
     "youTubeLink": ""
   },
