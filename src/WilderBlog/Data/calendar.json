@@ -1,12 +1,50 @@
 [
   {
-    "eventName": "Pluralsight Live!",
-    "eventDate": "9/19/17",
-    "logo": "http://www.pluralsight.com/dam/pluralsight2/events/2017/live/heroPSLIVE.png",
-    "link": "https://www.pluralsight.com/event-details/2017/live-2017",
-    "location": "Birmingham, AL",
-    "note": "I'm just attending, not speaking...but happy to say hi.",
+    "eventName": "MVP Summit 2018",
+    "eventDate": "3/4/18",
+    "logo": "/img/MVP_Horizontal_BlueOnly.png",
+    "link": "https://mvp.microsoft.com/summit",
+    "location": "Seattle, WA",
+    "note": "I'm just attending...but happy to say hi.",
+    "length": 4
+  },
+  {
+    "eventName": "Orlando Code Camp",
+    "eventDate": "3/17/18",
+    "logo": "http://orlandocodecamp.com/images/CodeCampHeaderLogo.png",
+    "link": "http://orlandocodecamp.com/",
+    "location": "Orlando, FL",
+    "note": "Speaking on Vue.js",
+    "length": 1,
+    "reverseLogo": true
+  },
+  {
+    "eventName": "DotNext - St. Petersburg",
+    "eventDate": "4/22/2018",
+    "logo": "https://dotnext-piter.ru/assets/images/logo.png",
+    "link": "https://dotnext-piter.ru/en",
+    "location": "St. Petersburg, Russia",
+    "note": "",
+    "length": 2
+  },
+  {
+    "eventName": "Developer Days - Warsaw",
+    "eventDate": "9/17/2018",
+    "logo": "http://net.developerdays.pl/wp-content/uploads/2017/11/developer_logo3.png",
+    "link": "http://net.developerdays.pl/",
+    "location": "Warsaw, Poland",
+    "note": "",
     "length": 3
+  },
+  {
+    "eventName": "Techorama - NL",
+    "eventDate": "10/1/2018",
+    "logo": "https://techorama.nl/wp-content/uploads/sites/2/2018/01/TECHORAMA-NL-webheaderlogo.svg",
+    "link": "https://techorama.nl/",
+    "location": "Warsaw, Poland",
+    "note": "",
+    "length": 3,
+    "reverseLogo": true
   },
   {
     "eventName": "Progressive .NET",

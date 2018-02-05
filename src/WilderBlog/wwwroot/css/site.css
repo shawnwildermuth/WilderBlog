@@ -251,6 +251,14 @@ blockquote:hover {
     padding: 50px 0;
   }
 }
+.calendar-logo {
+  max-height: 100px;
+  max-width: 200px;
+}
+.calendar-logo.reverse {
+  padding: 5px;
+  background-color: #444;
+}
 .pluralsight-logo {
   width: 29px;
   position: absolute;

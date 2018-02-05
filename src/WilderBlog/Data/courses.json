@@ -1,5 +1,23 @@
 ﻿[
   {
+    "id": "font-awesome-5",
+    "name": "Intro to Font Awesome 5",
+    "hint": "(Free Course)",
+    "courseType": "WilderMinds"
+  },
+  {
+    "id": "bootstrap-4-by-example",
+    "name": "Bootstrap 4 by Example",
+    "hint": "(Coming Mar 1, 2018)",
+    "courseType": "WilderMinds"
+  },
+  {
+    "id": "vuejs-by-example",
+    "name": "Vue.js by Example",
+    "hint": "(Coming May 1, 2018)",
+    "courseType": "WilderMinds"
+  },
+  {
     "id": "aspnetcore-mvc-efcore-bootstrap-angular-web",
     "name": "Building a Web App with ASP.NET Core, MVC6, EF Core, Bootstrap and Angular",
     "hint": "(updated for 2.0)"

@@ -1,143 +1,152 @@
-﻿@inject WilderBlog.Services.DataProviders.CoursesProvider courses
+﻿@inject CoursesProvider courses
 
 <div class="col-lg-12">
-  <a asp-controller="Root" asp-action="About" class="text-xs-center"><img src="~/img/turning-2016.gif" alt="Shawn" class="img-fluid img-rounded center-block" /></a>
+    <a asp-controller="Root" asp-action="About" class="text-xs-center"><img src="~/img/turning-2016.gif" alt="Shawn" class="img-fluid img-rounded center-block" /></a>
 </div>
 <div class="col-lg-12">
-  <div class="text-xs-center"><strong>Shawn Wildermuth</strong></div>
-  <div class="text-xs-center"><small>Author, Teacher, and Coach</small></div>
-  <ul class="list-inline  sidebar-icon-list text-xs-center">
-    <li class="list-inline-item">
-      <a href="http://feeds.feedburner.com/ShawnWildermuth" title="RSS Feed">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://twitter.com/shawnwildermuth" title="Twitter">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://instagram.com/shawnwildermuth" title="Instagram">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://www.linkedin.com/in/shawnwildermuth/" title="LinkedIn">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://youtube.com/c/swildermuth" title="YouTube">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://github.com/shawnwildermuth" title="GitHub">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="http://stackoverflow.com/users/40125/shawn-wildermuth" title="Stack Overflow">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="http://shawnw.me/psauthor" title="Pluralsight Courses">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <img src="/img/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo pluralsight-logo-small" />
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="http://www.amazon.com/-/e/B001H6ME46" title="Amazon Author Page">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-amazon fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="http://steamcommunity.com/id/shawnwildermuth/" title="Steam">
-        <span class="fa fa-stack">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-steam fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-    </li>
-  </ul>
+    <div class="text-xs-center"><strong>Shawn Wildermuth</strong></div>
+    <div class="text-xs-center"><small>Author, Teacher, and Coach</small></div>
+    <ul class="list-inline  sidebar-icon-list text-xs-center">
+        <li class="list-inline-item">
+            <a href="http://feeds.feedburner.com/ShawnWildermuth" title="RSS Feed">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://twitter.com/shawnwildermuth" title="Twitter">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://instagram.com/shawnwildermuth" title="Instagram">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/shawnwildermuth/" title="LinkedIn">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://youtube.com/c/swildermuth" title="YouTube">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://github.com/shawnwildermuth" title="GitHub">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="http://stackoverflow.com/users/40125/shawn-wildermuth" title="Stack Overflow">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="http://shawnw.me/psauthor" title="Pluralsight Courses">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <img src="/img/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo pluralsight-logo-small" />
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="http://www.amazon.com/-/e/B001H6ME46" title="Amazon Author Page">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-amazon fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="http://steamcommunity.com/id/shawnwildermuth/" title="Steam">
+                <span class="fa fa-stack">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-steam fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+    </ul>
 </div>
 <hr />
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-  #mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica,Arial,sans-serif;
-    width: 100%;
-  }
-  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+    #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica,Arial,sans-serif;
+        width: 100%;
+    }
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-  <form action="https://wilderminds.us2.list-manage.com/subscribe/post?u=f781ff917cdb39583826d6888&amp;id=e34966084d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-      <label for="mce-EMAIL" style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;">Join my Weekly Developer Newsletter</label>
-      <div class="input-group">
-        <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Your Email" required style="font-family:  'Lora', 'Times New Roman', serif;">
-        <span class="input-group-btn">
-          <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success">
-        </span>
-      </div>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f781ff917cdb39583826d6888_e34966084d" tabindex="-1" value=""></div>
-    </div>
-  </form>
+    <form action="https://wilderminds.us2.list-manage.com/subscribe/post?u=f781ff917cdb39583826d6888&amp;id=e34966084d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL" style="font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;">Join my Weekly Developer Newsletter</label>
+            <div class="input-group">
+                <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Your Email" required style="font-family:  'Lora', 'Times New Roman', serif;">
+                <span class="input-group-btn">
+                    <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success">
+                </span>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f781ff917cdb39583826d6888_e34966084d" tabindex="-1" value=""></div>
+        </div>
+    </form>
 </div>
 
 <!--End mc_embed_signup-->
 @if (((string)ViewContext.RouteData.Values["controller"]) != "Search")
 {
-  <hr />
-  <form id="searchForm" novalidate>
-    <div class="input-group">
-      <input type="text" class="form-control" id="search" value="@ViewBag.Term" required placeholder="Search..." />
-      <span class="input-group-btn">
-        <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
-      </span>
-    </div>
-  </form>
+    <hr />
+    <form id="searchForm" novalidate>
+        <div class="input-group">
+            <input type="text" class="form-control" id="search" value="@ViewBag.Term" required placeholder="Search..." />
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </form>
 }
 <hr />
 <h3>My Courses</h3>
-<div><a href="http://shareasale.com/r.cfm?b=620905&u=1286446&m=53701&urllink=&afftrack=" target="_blank"><img src="~/img/ps_logo.png" class="img-fluid" alt="pluralsight" /></a></div>
-<div class="text-md-center"><small><a href="http://shareasale.com/r.cfm?b=620905&u=1286446&m=53701&urllink=&afftrack=">Start Your Free Trial Now!</a></small></div>
+<div><a href="http://courses.wilderminds.com"><img src="~/img/logo_300x94_bk_trans.png" alt="Wilder Minds Training" /></a></div>
+
 <table class="table table-condensed table-striped table-sm">
-  @foreach (var c in courses.Get().Take(10))
-  {
-    <tr><td><small><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
-  }
+    @foreach (var c in courses.Get().Where(c => c.CourseType == CourseType.WilderMinds).Take(10))
+    {
+        <tr><td><small><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
+    }
+</table>
+
+<div><a href="//pluralsight.pxf.io/c/1191850/424552/7490" target="_blank"><img src="~/img/ps_logo.png" class="img-fluid" alt="pluralsight" /></a></div>
+<div class="text-md-center"><small><a href="//pluralsight.pxf.io/c/1191850/424552/7490">Start Your Free Trial Now!</a></small></div>
+<table class="table table-condensed table-striped table-sm">
+    @foreach (var c in courses.Get().Where(c => c.CourseType == CourseType.Pluralsight).Take(10))
+    {
+        <tr><td><small><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
+    }
 </table>

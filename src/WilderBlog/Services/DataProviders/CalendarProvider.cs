@@ -27,6 +27,7 @@ namespace WilderBlog.Services.DataProviders
     public string Location { get; set; }
     public string Note { get; set; }
     public string Logo { get; set; }
+    public bool ReverseLogo { get; set; } = false;
 
     public string FormattedDate
     {

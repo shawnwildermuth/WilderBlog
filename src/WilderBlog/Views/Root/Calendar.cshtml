@@ -11,7 +11,7 @@
       <div style="min-height: 100px;">
         @if (!string.IsNullOrWhiteSpace(ap.Logo))
         {
-          <a href="@ap.Link"><img src="@ap.Logo" alt="@ap.EventName" class="pull-right img-fluid" style="max-height: 100px;max-width: 200px;" /></a>
+          <a href="@ap.Link"><img src="@ap.Logo" alt="@ap.EventName" class="pull-right img-fluid calendar-logo @(ap.ReverseLogo ? "reverse" : "")"/></a>
         }
         <h3><a href="@ap.Link" target="_blank">@ap.EventName</a></h3>
         <div>@ap.Location - @ap.FormattedDate</div>
