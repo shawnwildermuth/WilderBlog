@@ -1,0 +1,39 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment env
+@inject Microsoft.Extensions.PlatformAbstractions.ApplicationEnvironment app
+@using System.Runtime.InteropServices
+
+<div class="container">
+  <div class="row">
+    <button class="btn btn-sm btn-info-outline" data-toggle="collapse" data-target="#info-table">Show Info</button>
+    <div class="collapse" id="info-table">
+      <div class="col-md-12">
+        <table class="table table-sm table-striped">
+          <tr>
+            <td>Application Name</td>
+            <td><strong>@env.ApplicationName</strong></td>
+            <td>Environment Name</td>
+            <td><strong>@env.EnvironmentName</strong></td>
+          </tr>
+          <tr>
+            <td>Application Ver</td>
+            <td><strong>@app.ApplicationVersion</strong></td>
+            <td>Runtime Framework</td>
+            <td><strong>@app.RuntimeFramework</strong></td>
+          </tr>
+          <tr>
+            <td>App Path</td>
+            <td><strong>@app.ApplicationBasePath</strong></td>
+            <td>Runtime Version</td>
+            <td><strong>@RuntimeInformation.FrameworkDescription</strong></td>
+          </tr>
+          <tr>
+            <td>Operating System</td>
+            <td><strong>@RuntimeInformation.OSDescription</strong></td>
+            <td>Runtime Arch</td>
+            <td><strong>@RuntimeInformation.ProcessArchitecture</strong></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
