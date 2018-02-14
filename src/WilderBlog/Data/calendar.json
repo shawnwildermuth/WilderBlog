@@ -1,12 +1,10 @@
 [
   {
-    "eventName": "MVP Summit 2018",
-    "eventDate": "3/4/18",
-    "logo": "/img/MVP_Horizontal_BlueOnly.png",
-    "link": "https://mvp.microsoft.com/summit",
-    "location": "Seattle, WA",
-    "note": "I'm just attending...but happy to say hi.",
-    "length": 4
+    "eventName": "Charlotte Enterprise Developer's Guild",
+    "eventDate": "02/27/2018",
+    "link": "https://www.meetup.com/Enterprise-Developers-Guild/events/247100957/",
+    "location": "Charlotte, NC",
+    "length": 1
   },
   {
     "eventName": "Orlando Code Camp",
@@ -17,15 +15,6 @@
     "note": "Speaking on Vue.js",
     "length": 1,
     "reverseLogo": true
-  },
-  {
-    "eventName": "DotNext - St. Petersburg",
-    "eventDate": "4/22/2018",
-    "logo": "https://dotnext-piter.ru/assets/images/logo.png",
-    "link": "https://dotnext-piter.ru/en",
-    "location": "St. Petersburg, Russia",
-    "note": "",
-    "length": 2
   },
   {
     "eventName": "Developer Days - Warsaw",
@@ -41,7 +30,7 @@
     "eventDate": "10/1/2018",
     "logo": "https://techorama.nl/wp-content/uploads/sites/2/2018/01/TECHORAMA-NL-webheaderlogo.svg",
     "link": "https://techorama.nl/",
-    "location": "Warsaw, Poland",
+    "location": "Ede, NL",
     "note": "",
     "length": 3,
     "reverseLogo": true
