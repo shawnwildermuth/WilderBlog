@@ -138,7 +138,7 @@
 <table class="table table-condensed table-striped table-sm">
     @foreach (var c in courses.Get().Where(c => c.CourseType == CourseType.WilderMinds).Take(10))
     {
-        <tr><td><small><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
+        <tr><td><small><a href="https://courses.wilderminds.com/p/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
     }
 </table>
 
