@@ -38,20 +38,20 @@
   <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <environment names="Development">
-    <link href="~/lib/tether/css/tether.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/vendor/tether/css/tether.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/vendor/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/css/clean-blog.css" rel="stylesheet" />
-    <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
+    <link href="~/vendor/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
     @RenderSection("Styles", required: false)
     <link href="~/css/site.css" rel="stylesheet" asp-append-version="true"  />
   </environment>
   <environment names="Production,Staging">
-    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/lib/tether/css/tether.min.css" rel="stylesheet" />
-    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/vendor/tether/css/tether.min.css" rel="stylesheet" />
+    <link href="~/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/css/clean-blog.min.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
+    <link href="~/vendor/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
     @RenderSection("Styles", required: false)
     <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
   </environment>
@@ -217,18 +217,18 @@
   @Html.Partial("_Info")
 
   <environment names="Development">
-    <script src="~/lib/jquery/jquery.js"></script>
-    <script src="~/lib/tether/js/tether.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/vendor/jquery/jquery.js"></script>
+    <script src="~/vendor/tether/js/tether.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.js"></script>
   </environment>
   <environment names="Production,Staging">
     <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
             asp-fallback-src="~/lib/jquery/jquery.min.js"
             asp-fallback-test="window.jQuery"></script>
-    <script src="~/lib/tether/js/tether.min.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/vendor/tether/js/tether.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
   </environment>
-  <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
+  <script src="~/vendor/cookieconsent/cookieconsent.min.js"></script>
   @RenderSection("Scripts", required: false)
 
   <environment names="Development">
