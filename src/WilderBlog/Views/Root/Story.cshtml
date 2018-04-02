@@ -11,16 +11,16 @@
   <!-- @Model.Id -->
   <hr/>
   <p class="post-meta">
-    <i class="fa fa-pencil"></i>
+    <i class="fas fa-pencil"></i>
     Shawn Wildermuth<br />
-    <i class="fa fa-calendar"></i>
+    <i class="fas fa-calendar"></i>
     @pubDate<br />
-    <i class="fa fa-tags"></i>
+    <i class="fas fa-tags"></i>
     @foreach (var tag in Model.Categories.Split(','))
     {
       <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
     }
-    <br /><i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+    <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
   </p>
 </div>
 @Html.Raw(Model.Body)

@@ -3,11 +3,11 @@
   <div class="post-preview">
     <h3 class="post-title"><a href="/@Model.Slug">@Model.Title</a></h3>
     <p class="post-meta">
-      <i class="fa fa-calendar"></i> @Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")
-      <i class="fa fa-edit"></i> Shawn Wildermuth
-      <i class="fa fa-comments-o"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+      <i class="fas fa-calendar"></i> @Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")
+      <i class="fas fa-edit"></i> Shawn Wildermuth
+      <i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
       <br />
-      <i class="fa fa-tags"></i>
+      <i class="fas fa-tags"></i>
       @foreach (var tag in Model.Categories.Split(','))
       {
         <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag" asp-route-page="">@tag</a>
