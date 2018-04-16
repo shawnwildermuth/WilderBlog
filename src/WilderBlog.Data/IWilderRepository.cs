@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace WilderBlog.Data
 {
@@ -14,9 +15,11 @@ namespace WilderBlog.Data
     BlogStory GetStory(string slug);
     void AddStory(BlogStory story);
 
+    IEnumerable<string> GetCategories();
+
     void SaveAll();
+    Task<bool> SaveAllAsync();
     bool DeleteStory(string postid);
 
-    IEnumerable<string> GetCategories();
   }
 }

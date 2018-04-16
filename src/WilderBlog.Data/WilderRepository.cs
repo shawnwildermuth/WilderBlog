@@ -159,5 +159,10 @@ namespace WilderBlog.Data
 
       return FixResults(result);
     }
+
+    public async Task<bool> SaveAllAsync()
+    {
+      return await _ctx.SaveChangesAsync() > 0;
+    }
   }
 }

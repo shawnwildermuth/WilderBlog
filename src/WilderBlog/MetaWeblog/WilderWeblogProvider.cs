@@ -6,6 +6,7 @@ using HtmlAgilityPack;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
 using WilderBlog.Data;
@@ -22,19 +23,26 @@ namespace WilderBlog.MetaWeblog
     private IConfiguration _config;
     private IHostingEnvironment _appEnv;
     private readonly IImageStorageService _imageService;
+    private readonly ILogger<WilderWeblogProvider> _logger;
 
-    public WilderWeblogProvider(UserManager<WilderUser> userMgr, IWilderRepository repo, IConfiguration config, IHostingEnvironment appEnv, IImageStorageService imageService)
+    public WilderWeblogProvider(UserManager<WilderUser> userMgr, 
+      IWilderRepository repo, 
+      IConfiguration config, 
+      IHostingEnvironment appEnv, 
+      IImageStorageService imageService, 
+      ILogger<WilderWeblogProvider> logger)
     {
       _repo = repo;
       _userMgr = userMgr;
       _config = config;
       _appEnv = appEnv;
       _imageService = imageService;
+      _logger = logger;
     }
 
-    public string AddPost(string blogid, string username, string password, Post post, bool publish)
+    public async Task<string> AddPostAsync(string blogid, string username, string password, Post post, bool publish)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       if (post.categories == null) throw new MetaWeblogException("Failed to specify categories");
 
@@ -50,19 +58,23 @@ namespace WilderBlog.MetaWeblog
         newStory.UniqueId = newStory.Slug;
 
         _repo.AddStory(newStory);
-        _repo.SaveAll();
+        if (await _repo.SaveAllAsync())
+        {
+          return newStory.Id.ToString();
+
+        }
       }
       catch (Exception)
       {
-        throw new MetaWeblogException("Failed to save the post.");
+        _logger.LogError("Failed to add new Post");
       }
-      return newStory.Id.ToString();
 
+      throw new MetaWeblogException("Failed to save the post.");
     }
 
-    public bool EditPost(string postid, string username, string password, Post post, bool publish)
+    public async Task<bool> EditPostAsync(string postid, string username, string password, Post post, bool publish)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       if (post.categories == null) throw new MetaWeblogException("Failed to specify categories");
 
@@ -77,19 +89,22 @@ namespace WilderBlog.MetaWeblog
         story.IsPublished = publish;
         if (string.IsNullOrWhiteSpace(story.Slug)) story.Slug = story.GetStoryUrl(); // Only recalcuate Slug if absolutely necessary
 
-        _repo.SaveAll();
-
-        return true;
+        if (await _repo.SaveAllAsync())
+        {
+          return true;
+        }
       }
       catch (Exception)
       {
-        throw new MetaWeblogException("Failed to edit the post.");
+        _logger.LogError("Failed to edit the post.");
       }
+
+      throw new MetaWeblogException("Failed to edit the post.");
     }
 
-    public Post GetPost(string postid, string username, string password)
+    public async Task<Post> GetPostAsync(string postid, string username, string password)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       try
       {
@@ -113,9 +128,9 @@ namespace WilderBlog.MetaWeblog
       }
     }
 
-    public MediaObjectInfo NewMediaObject(string blogid, string username, string password, MediaObject mediaObject)
+    public async Task<MediaObjectInfo> NewMediaObjectAsync(string blogid, string username, string password, MediaObject mediaObject)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       var bits = Convert.FromBase64String(mediaObject.bits);
       var op = _imageService.StoreImage(mediaObject.name, bits);
@@ -131,9 +146,9 @@ namespace WilderBlog.MetaWeblog
       return objectInfo;
     }
 
-    public CategoryInfo[] GetCategories(string blogid, string username, string password)
+    public async Task<CategoryInfo[]> GetCategoriesAsync(string blogid, string username, string password)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       return _repo.GetCategories()
         .Select(c => new CategoryInfo()
@@ -147,37 +162,36 @@ namespace WilderBlog.MetaWeblog
 
     }
 
-    public Post[] GetRecentPosts(string blogid, string username, string password, int numberOfPosts)
+    public async Task<Post[]> GetRecentPostsAsync(string blogid, string username, string password, int numberOfPosts)
     {
-      EnsureUser(username, password).Wait();
-
+      await EnsureUser(username, password);
 
       var result = _repo.GetStories(numberOfPosts).Stories.Select(s =>
       {
         var summary = new HtmlDocument();
         summary.LoadHtml(s.GetSummary());
 
-      return new Post()
-      {
-        title = s.Title,
-        mt_excerpt = summary.DocumentNode.InnerText,
-        description = s.Title,
-        categories = s.Categories.Split(','),
-        dateCreated = s.DatePublished,
-        postid = s.Id,
-        permalink = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
-        link = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
-        wp_slug = s.Slug,
-        userid = "shawnwildermuth"
-      };
+        return new Post()
+        {
+          title = s.Title,
+          mt_excerpt = summary.DocumentNode.InnerText,
+          description = s.Title,
+          categories = s.Categories.Split(','),
+          dateCreated = s.DatePublished,
+          postid = s.Id,
+          permalink = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
+          link = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
+          wp_slug = s.Slug,
+          userid = "shawnwildermuth"
+        };
       }).ToArray();
 
       return result;
     }
 
-    public bool DeletePost(string key, string postid, string username, string password, bool publish)
+    public async Task<bool> DeletePostAsync(string key, string postid, string username, string password, bool publish)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       try
       {
@@ -191,9 +205,9 @@ namespace WilderBlog.MetaWeblog
       }
     }
 
-    public BlogInfo[] GetUsersBlogs(string key, string username, string password)
+    public async Task<BlogInfo[]> GetUsersBlogsAsync(string key, string username, string password)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       var blog = new BlogInfo()
       {
@@ -205,9 +219,9 @@ namespace WilderBlog.MetaWeblog
       return new BlogInfo[] { blog };
     }
 
-    public UserInfo GetUserInfo(string key, string username, string password)
+    public async Task<UserInfo> GetUserInfoAsync(string key, string username, string password)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       return new UserInfo()
       {
@@ -246,12 +260,43 @@ namespace WilderBlog.MetaWeblog
       }
     }
 
-    public int AddCategory(string key, string username, string password, NewCategory category)
+    public async Task<int> AddCategoryAsync(string key, string username, string password, NewCategory category)
     {
-      EnsureUser(username, password).Wait();
+      await EnsureUser(username, password);
 
       // We don't store these, just query them from the list of stories so don't do anything
       return 1;
+    }
+
+    // WordPress support, don't care so just implementing the interface
+    public Task<Page> GetPageAsync(string blogid, string pageid, string username, string password)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Task<Page[]> GetPagesAsync(string blogid, string username, string password, int numPages)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Task<Author[]> GetAuthorsAsync(string blogid, string username, string password)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Task<string> AddPageAsync(string blogid, string username, string password, Page page, bool publish)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Task<bool> EditPageAsync(string blogid, string pageid, string username, string password, Page page, bool publish)
+    {
+      throw new NotImplementedException();
+    }
+
+    public Task<bool> DeletePageAsync(string blogid, string username, string password, string pageid)
+    {
+      throw new NotImplementedException();
     }
   }
 }

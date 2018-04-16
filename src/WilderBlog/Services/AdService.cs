@@ -5,27 +5,56 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace WilderBlog.Services
 {
   public class AdService
   {
     private IConfiguration _config;
+    private readonly ILogger<AdService> _logger;
 
-    public AdService(IConfiguration config)
+    public AdService(IConfiguration config, ILogger<AdService> logger)
     {
       _config = config;
+      _logger = logger;
     }
 
     public HtmlString InlineAdd()
     {
-      return new HtmlString($@"<div>
-  <!-- Inline Links -->
-  <ins class=""adsbygoogle""
-       style=""display:inline-block;width:468px;height:15px""
-       data-ad-client=""{_config["AdService:Client"]}""
-       data-ad-slot=""{_config["AdService:Slot"]}""></ins>
-</div>");
+
+      var ads = new Ad[]
+      {
+        new Ad()
+        {
+          Title = "Ready to Learn Vue with ASP.NET Core?",
+          Message = "My new Wilder Minds' course is available as an Early Access for only $79. It will be released on a weekly basis. The first module is now available:",
+          Link = "//courses.wilderminds.com/p/vue-js-by-example"
+        },
+        new Ad()
+        {
+          Title = "Bootstrap 4 is Here!",
+          Message = "After a long development cycle, Bootstrap has been completely re-written to improve performance and be more consistent.  Learn Bootstrap 4 now with my Wilder Minds course:",
+          Link = "//courses.wilderminds.com/p/bootstrap-4-by-example"
+        }
+      };
+
+      var item = new Random().Next(0, ads.Length);
+
+      var text = $@"<div class='card ad-card col-md-6'>
+    <h3 class='card-title'>{ads[item].Title}</h3>
+    <p class='card-text'>{ads[item].Message}</p>
+    <p><a href='{ads[item].Link}' class='btn btn-success'>Enroll Today</a></p>
+</div>";
+
+      return new HtmlString(text);
+    }
+
+    private class Ad
+    {
+      public string Title { get; internal set; }
+      public string Message { get; internal set; }
+      public string Link { get; internal set; }
     }
   }
 }

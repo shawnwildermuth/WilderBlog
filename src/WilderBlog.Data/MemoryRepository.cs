@@ -103,6 +103,12 @@ namespace WilderBlog.Data
       };
     }
 
+    public Task<bool> SaveAllAsync()
+    {
+      // NOOP
+      return Task.FromResult(true);
+    }
+
     public static List<BlogStory> _stories = new List<BlogStory>()
     {
       new BlogStory()

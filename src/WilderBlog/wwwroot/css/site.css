@@ -108,6 +108,17 @@ p a:not(.btn):hover {
   text-decoration: underline;
   color: #3f9cff;
 }
+a.btn {
+  text-decoration: none;
+}
+a.btn:hover {
+  text-decoration: none;
+}
+.ad-card {
+  background-color: #ffa947;
+  padding: 8px 8px 0 8px;
+  color: #2b2b2b;
+}
 .fa-hover-spin:hover {
   -webkit-animation: fa-spin 2s infinite linear;
   -moz-animation: fa-spin 2s infinite linear;
