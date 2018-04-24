@@ -1,8 +1,8 @@
-﻿  [
+﻿[
   {
-    "id": "font-awesome-5",
-    "name": "Intro to Font Awesome 5",
-    "hint": "(Free Course)",
+    "id": "vue-js-by-example",
+    "name": "Vue.js by Example",
+    "hint": "(Early Access Now Available)",
     "courseType": "WilderMinds"
   },
   {
@@ -12,9 +12,9 @@
     "courseType": "WilderMinds"
   },
   {
-    "id": "vue-js-by-example",
-    "name": "Vue.js by Example",
-    "hint": "(Coming May 1, 2018)",
+    "id": "font-awesome-5",
+    "name": "Intro to Font Awesome 5",
+    "hint": "(Free Course)",
     "courseType": "WilderMinds"
   },
   {
