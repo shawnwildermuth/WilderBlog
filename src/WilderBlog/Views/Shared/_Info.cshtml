@@ -1,6 +1,6 @@
 ﻿@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment env
-@inject Microsoft.Extensions.PlatformAbstractions.ApplicationEnvironment app
 @using System.Runtime.InteropServices
+@using Microsoft.DotNet.PlatformAbstractions
 
 <div class="container">
   <div class="row">
@@ -16,13 +16,13 @@
           </tr>
           <tr>
             <td>Application Ver</td>
-            <td><strong>@app.ApplicationVersion</strong></td>
+            <td><strong>@System.Reflection.Assembly.GetEntryAssembly().ImageRuntimeVersion</strong></td>
             <td>Runtime Framework</td>
-            <td><strong>@app.RuntimeFramework</strong></td>
+            <td><strong>@(Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.RuntimeArchitecture)</strong></td>
           </tr>
           <tr>
             <td>App Path</td>
-            <td><strong>@app.ApplicationBasePath</strong></td>
+            <td><strong>@ApplicationEnvironment.ApplicationBasePath</strong></td>
             <td>Runtime Version</td>
             <td><strong>@RuntimeInformation.FrameworkDescription</strong></td>
           </tr>

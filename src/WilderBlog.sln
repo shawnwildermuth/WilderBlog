@@ -10,13 +10,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\_.deployment = ..\_.deployment
 		..\_deploy.cmd = ..\_deploy.cmd
 		..\appveyor.yml = ..\appveyor.yml
+		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog", "WilderBlog\WilderBlog.csproj", "{4FB63E39-5177-4332-ACD6-4F0FDBA65D73}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog.Data", "WilderBlog.Data\WilderBlog.Data.csproj", "{C2D0E523-A7EF-4A0B-BD39-3D2A340A59F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilderBlog.Tests", "WilderBlog.Tests\WilderBlog.Tests.csproj", "{23F9F1AC-5DC2-4B2A-8F71-43AF8DAE6EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog.Tests", "WilderBlog.Tests\WilderBlog.Tests.csproj", "{23F9F1AC-5DC2-4B2A-8F71-43AF8DAE6EC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

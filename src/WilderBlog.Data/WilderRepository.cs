@@ -154,6 +154,7 @@ namespace WilderBlog.Data
           .Where(s => s.IsPublished && s.Categories.ToLower().Contains(lowerTag))
           .ToArray()
           .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag))
+          .OrderByDescending(s => s.DatePublished)
           .Skip((page - 1) * pageSize).Take(pageSize)
       };
 

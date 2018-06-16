@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
 using WilderBlog.Logger;
@@ -65,7 +65,6 @@ namespace WilderBlog
       svcs.AddScoped<PublicationsProvider>();
       svcs.AddScoped<PodcastEpisodesProvider>();
       svcs.AddScoped<VideosProvider>();
-      svcs.AddTransient<ApplicationEnvironment>();
       svcs.AddTransient<IImageStorageService, ImageStorageService>();
 
       // Supporting Live Writer (MetaWeblogAPI)
@@ -77,9 +76,13 @@ namespace WilderBlog
       // Add MVC to the container
       var mvcBuilder = svcs.AddMvc();
       mvcBuilder.AddJsonOptions(opts => opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
+      mvcBuilder.SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
       // Add Https - renable once Azure Certs work
-      if (_env.IsProduction()) mvcBuilder.AddMvcOptions(options => options.Filters.Add(new RequireHttpsAttribute()));
+      if (_env.IsProduction())
+      {
+        mvcBuilder.AddMvcOptions(options => options.Filters.Add(new RequireHttpsAttribute()));
+      }
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,7 +95,6 @@ namespace WilderBlog
       if (_env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
-        app.UseBrowserLink();
       }
       else
       {

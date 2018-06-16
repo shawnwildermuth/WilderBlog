@@ -84,4 +84,4 @@ gulp.task("scripts", function () {
 
 });
 
-gulp.task("default", ['clean', 'scripts', 'minify']);
+gulp.task("default", gulp.series('clean', 'scripts', 'minify'));
