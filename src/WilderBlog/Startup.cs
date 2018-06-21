@@ -121,14 +121,7 @@ namespace WilderBlog
 
       app.UseMvc();
 
-      if (_config["WilderDb:TestData"] != "True")
-      {
-        using (var scope = scopeFactory.CreateScope())
-        {
-          var initializer = scope.ServiceProvider.GetService<WilderInitializer>();
-          initializer.SeedAsync().Wait();
-        }
-      }
+      
     }
   }
 }

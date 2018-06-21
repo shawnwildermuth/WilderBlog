@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog.Data
@@ -18,10 +19,16 @@ namespace WilderBlog.Data
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      // Create Defaults
       base.OnModelCreating(builder);
 
+      MapEntity(builder.Entity<BlogStory>());
+    }
+
+    private void MapEntity(EntityTypeBuilder<BlogStory> bldr)
+    {
       // Override the name of the table because of a RC2 change
-      builder.Entity<BlogStory>().ToTable("BlogStory");
+      bldr.ToTable("BlogStory");
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

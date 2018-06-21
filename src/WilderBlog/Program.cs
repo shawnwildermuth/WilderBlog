@@ -1,9 +1,12 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WilderBlog.Data;
 
 namespace WilderBlog
 {
@@ -11,12 +14,29 @@ namespace WilderBlog
   {
     public static void Main(string[] args)
     {
-      WebHost.CreateDefaultBuilder(args)
-        .ConfigureAppConfiguration(ConfigureConfiguration)
-        .ConfigureLogging(ConfigureLogging)
-        .UseStartup<Startup>()
-        .Build()
-        .Run();
+      var host = WebHost.CreateDefaultBuilder(args)
+            .ConfigureAppConfiguration(ConfigureConfiguration)
+            .ConfigureLogging(ConfigureLogging)
+            .UseStartup<Startup>()
+            .Build();
+
+      Seed(host).Wait();
+
+      host.Run();
+    }
+
+    private static async Task Seed(IWebHost host)
+    {
+      IConfiguration config = (IConfiguration)host.Services.GetService(typeof(IConfiguration));
+      if (config["WilderDb:TestData"] != "True")
+      {
+        IServiceScopeFactory scopeFactory = (IServiceScopeFactory)host.Services.GetService(typeof(IServiceScopeFactory));
+        using (var scope = scopeFactory.CreateScope())
+        {
+          var initializer = scope.ServiceProvider.GetService<WilderInitializer>();
+          await initializer.SeedAsync();
+        }
+      }
     }
 
     private static void ConfigureLogging(ILoggingBuilder bldr)

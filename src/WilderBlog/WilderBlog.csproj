@@ -30,13 +30,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.7.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.4" />
     <PackageReference Include="Sendgrid" Version="9.9.0" />
     <PackageReference Include="WilderMinds.MetaWeblog" Version="2.0.0" />
     <PackageReference Include="WilderMinds.RssSyndication" Version="1.2.0" />
-    <PackageReference Include="WindowsAzure.Storage" Version="9.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" PrivateAssets="All" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">

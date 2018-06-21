@@ -50,14 +50,14 @@ namespace WilderBlog.Controllers.Api
     }
 
     [HttpGet("{number:int}")]
-    public IActionResult Get(int number)
+    public ActionResult<PodcastEpisode> Get(int number)
     {
       try
       {
         var data = LiveEpisodes
                   .FirstOrDefault(e => e.EpisodeNumber == number);
 
-        return Ok(data);
+        return data;
       }
       catch (Exception ex)
       {

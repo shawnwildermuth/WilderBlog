@@ -16,7 +16,6 @@ namespace WilderBlog.Data
     public WilderContext CreateDbContext(string[] args)
     {
       // Create a configuration 
-      var builder = new WebHostBuilder();
       var config = new ConfigurationBuilder()
         .SetBasePath(Directory.GetCurrentDirectory())
         .AddJsonFile("config.json")
