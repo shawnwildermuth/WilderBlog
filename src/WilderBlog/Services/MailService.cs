@@ -24,7 +24,7 @@ namespace WilderBlog.Services
       _logger = logger;
     }
 
-    public async Task SendMail(string template, string name, string email, string subject, string msg)
+    public async Task SendMailAsync(string template, string name, string email, string subject, string msg)
     {
       try
       {

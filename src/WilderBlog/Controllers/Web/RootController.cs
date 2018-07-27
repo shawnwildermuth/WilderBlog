@@ -104,7 +104,7 @@ namespace WilderBlog.Controllers
             return BadRequest(new { Reason = spamState.Reason });
           }
             
-          await _mailService.SendMail("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg);
+          await _mailService.SendMailAsync("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg);
 
           return Ok(new { Success = true, Message = "Message Sent" });
         }
@@ -133,7 +133,8 @@ namespace WilderBlog.Controllers
         "your team",
         "PHP Developers",
         "working remotely",
-        "google search results"
+        "google search results",
+        "link building software"
       };
 
       if (tests.Any(t => {
@@ -176,7 +177,7 @@ namespace WilderBlog.Controllers
 
 Exception: ${exception.Error}";
 
-        _mailService.SendMail("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", message);
+        _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", message);
       }
 
       return View();

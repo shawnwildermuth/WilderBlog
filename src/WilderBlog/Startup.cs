@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -98,12 +99,12 @@ namespace WilderBlog
       }
       else
       {
-        // Support logging to email
-        loggerFactory.AddEmail(mailService, LogLevel.Critical);
-
         // Early so we can catch the StatusCode error
         app.UseStatusCodePagesWithReExecute("/Error/{0}");
         app.UseExceptionHandler("/Exception");
+
+        // Support logging to email
+        loggerFactory.AddEmail(mailService, LogLevel.Critical);
       }
 
       // Rewrite old URLs to new URLs
@@ -117,11 +118,18 @@ namespace WilderBlog
       // Keep track of Active # of users for Vanity Project
       app.UseMiddleware<ActiveUsersMiddleware>();
 
+      // Email Uncaught Exceptions
+      if (_config["Exceptions:TestEmailExceptions"].ToLower() == "true" || !_env.IsDevelopment())
+      {
+        app.UseMiddleware<EmailExceptionMiddleware>();
+      }
+
       app.UseAuthentication();
 
       app.UseMvc();
 
       
     }
+
   }
 }

@@ -58,7 +58,7 @@ namespace WilderBlog.Logger
         message += Environment.NewLine + Environment.NewLine + exception.ToString();
       }
 
-      _mailService.SendMail("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Log Message]", message);
+      _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Log Message]", message);
 
     }
   }
