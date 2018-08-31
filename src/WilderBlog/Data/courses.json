@@ -2,13 +2,13 @@
   {
     "id": "vue-js-by-example",
     "name": "Vue.js by Example",
-    "hint": "(Early Access Now Available)",
+    "hint": "(Now Available)",
     "courseType": "WilderMinds"
   },
   {
     "id": "bootstrap-4-by-example",
     "name": "Bootstrap 4 by Example",
-    "hint": "(Just Released)",
+    "hint": "",
     "courseType": "WilderMinds"
   },
   {
@@ -20,12 +20,32 @@
   {
     "id": "aspnetcore-mvc-efcore-bootstrap-angular-web",
     "name": "Building a Web App with ASP.NET Core, MVC6, EF Core, Bootstrap and Angular",
-    "hint": "(updated for 2.0)"
+    "hint": "(updated for 2.1)"
   },
   {
     "id": "visual-studio-code-aspdotnet-projects",
     "name": "Using Visual Studio Code for ASP.NET Core Projects",
-    "hint": "(new)"
+    "hint": ""
+  },
+  {
+    "id": "implementing-restful-aspdotnet-web-api",
+    "name": "Implementing ASP.NET Web API",
+    "hint": ""
+  },
+  {
+    "id": "web-api-design",
+    "name": "Web API Design",
+    "hint": ""
+  },
+  {
+    "id": "js4cs",
+    "name": "JavaScript for C# Developers",
+    "hint": ""
+  },
+  {
+    "id": "webstorm-fundamentals",
+    "name": "Webstorm Fundamentals",
+    "hint": ""
   },
   {
     "id": "aspdotnetcore-implementing-securing-api",
@@ -33,23 +53,8 @@
     "hint": ""
   },
   {
-    "id": "aspdotnetcore-efcore-bootstrap-angular-web-app",
-    "name": "Building a Web App with ASP.NET Core, MVC6, EF Core and AngularJS",
-    "hint": ""
-  },
-  {
-    "id": "aspdotnet-5-ef7-bootstrap-angular-web-app",
-    "name": "Building a Web App with ASP.NET5, MVC6, EF7, and AngularJS",
-    "hint": "(Retired)"
-  },
-  {
     "id": "aspdotnet-bestpractices-models",
     "name": "Best Practices in ASP.NET: Entities, Validation, and View Models",
-    "hint": ""
-  },
-  {
-    "id": "webstorm-fundamentals",
-    "name": "Webstorm Fundamentals",
     "hint": ""
   },
   {
@@ -78,28 +83,13 @@
     "hint": ""
   },
   {
-    "id": "implementing-restful-aspdotnet-web-api",
-    "name": "Implementing ASP.NET Web API",
-    "hint": ""
-  },
-  {
     "id": "site-building-bootstrap-angularjs-ef-azure",
     "name": "Building a Site with Bootstrap, AngularJS, ASP.NET, et al.",
     "hint": ""
   },
   {
-    "id": "web-api-design",
-    "name": "Web API Design",
-    "hint": ""
-  },
-  {
     "id": "practical-phoneGap",
     "name": "Practical PhoneGap",
-    "hint": ""
-  },
-  {
-    "id": "js4cs",
-    "name": "JavaScript for C# Developers",
     "hint": ""
   },
   {

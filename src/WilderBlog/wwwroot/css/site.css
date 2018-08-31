@@ -1,5 +1,5 @@
 ﻿body {
-  font-size: 20px;
+  font-size: 22px;
 }
 p {
   font-size: 1.1rem;
@@ -8,6 +8,9 @@ p {
 .syntaxhighlighter {
   overflow-y: hidden !important;
   overflow-x: auto !important;
+}
+img.pull-right {
+  float: right;
 }
 .navbar-nav .nav-link {
   font-size: 1rem;
