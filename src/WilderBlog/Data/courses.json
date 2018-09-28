@@ -1,5 +1,10 @@
 ﻿[
   {
+    "id": "less-getting-started",
+    "name": "Less: Getting Started",
+    "hint": "(New)"
+  },
+  {
     "id": "vue-js-by-example",
     "name": "Vue.js by Example",
     "hint": "(Now Available)",

@@ -137,12 +137,14 @@
 <hr />
 <h3>My Courses</h3>
 <div><a href="http://courses.wilderminds.com"><img src="~/img/logo_300x94_bk_trans.png" alt="Wilder Minds Training" /></a></div>
-
 <table class="table table-condensed table-striped table-sm">
   @foreach (var c in courses.Get().Where(c => c.CourseType == CourseType.WilderMinds).Take(5))
   {
     <tr><td><small><a href="https://courses.wilderminds.com/p/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
   }
+</table>
+<div><a href="//pluralsight.pxf.io/c/1191850/431340/7490"><img src="~/img/ps_logo.png" alt="Pluralsight" class="img-fluid" /></a></div>
+<table class="table table-condensed table-striped table-sm">
   @foreach (var c in courses.Get().Where(c => c.CourseType == CourseType.Pluralsight).Take(5))
   {
     <tr><td><small><a href="http://pluralsight.com/courses/@c.Id" target="_blank">@c.Name @c.Hint</a></small></td></tr>
