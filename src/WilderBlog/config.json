@@ -23,7 +23,9 @@
     "Slot": "Add Ad Slot Number"
   },
   "Google": {
-    "Analytics": "Get Your GA Number"
+    "Analytics": "Get Your GA Number",
+    "CaptchaSecret": "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
+    "CaptchaSiteId": "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
   },
   "BlobService": {
     "Account": "FOO",

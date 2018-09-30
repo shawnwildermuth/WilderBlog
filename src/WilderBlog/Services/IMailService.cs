@@ -4,6 +4,6 @@ namespace WilderBlog.Services
 {
   public interface IMailService
   {
-    Task SendMailAsync(string template, string name, string email, string subject, string msg);
+    Task<bool> SendMailAsync(string template, string name, string email, string subject, string msg);
   }
 }

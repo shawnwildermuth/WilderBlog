@@ -4,6 +4,10 @@
   ViewBag.PageBlurb = "Send a Message to Shawn Wildermuth";
   ViewBag.PageImage = "/img/headers/about.jpg";
 }
+@inject IConfiguration config
+@section styles {
+<script src='https://www.google.com/recaptcha/api.js'></script>
+}
 @section Scripts {
   <environment names="Development">
     <script src="~/lib/vue/vue.js"></script>
@@ -44,6 +48,9 @@
         <label for="msg">Message</label>
         <textarea class="form-control" rows="6" cols="40" name="msg" v-validate="'required|min:15'" v-model="mail.msg" placeholder="e.g. Hey Shawn, you magnificent beast."></textarea>
         <div class="text-danger font-italic small" v-show="errors.has('msg')">{{ errors.first('msg') }}</div>
+      </div>
+      <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="@config["Google:CaptchaSiteId"]"></div>
       </div>
       <div class="form-group">
         <div class="pull-right">

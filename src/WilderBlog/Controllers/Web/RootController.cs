@@ -31,16 +31,19 @@ namespace WilderBlog.Controllers
     private IWilderRepository _repo;
     private IMemoryCache _memoryCache;
     private ILogger<RootController> _logger;
+    private readonly GoogleCaptchaService _captcha;
 
     public RootController(IMailService mailService, 
                           IWilderRepository repo, 
                           IMemoryCache memoryCache, 
-                          ILogger<RootController> logger)
+                          ILogger<RootController> logger,
+                          GoogleCaptchaService captcha)
     {
       _mailService = mailService;
       _repo = repo;
       _memoryCache = memoryCache;
       _logger = logger;
+      _captcha = captcha;
     }
 
     [HttpGet("")]
@@ -103,14 +106,15 @@ namespace WilderBlog.Controllers
           {
             return BadRequest(new { Reason = spamState.Reason });
           }
-            
-          await _mailService.SendMailAsync("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg);
 
-          return Ok(new { Success = true, Message = "Message Sent" });
-        }
-        else
-        {
-          return BadRequest(new { Reason = "Failed to send email..." });
+          // Captcha
+          if (await _captcha.Verify(model.Recaptcha))
+          {
+            if (await _mailService.SendMailAsync("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg))
+            {
+              return Ok(new { Success = true, Message = "Message Sent" });
+            }
+          }
         }
       }
       catch (Exception ex)
@@ -119,6 +123,7 @@ namespace WilderBlog.Controllers
         return BadRequest(new { Reason = "Error Occurred" });
       }
 
+      return BadRequest(new { Reason = "Failed to send email..." });
     }
 
     // Brute Force getting rid of my worst emails
@@ -166,7 +171,7 @@ namespace WilderBlog.Controllers
     }
 
     [HttpGet("Exception")]
-    public IActionResult Exception()
+    public async Task<IActionResult> Exception()
     {
       var exception = HttpContext.Features.Get<IExceptionHandlerFeature>();
       var request = HttpContext.Features.Get<IHttpRequestFeature>();
@@ -177,7 +182,7 @@ namespace WilderBlog.Controllers
 
 Exception: ${exception.Error}";
 
-        _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", message);
+        await _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", message);
       }
 
       return View();

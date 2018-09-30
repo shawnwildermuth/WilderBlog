@@ -6,5 +6,6 @@
     public string Msg { get; set; }
     public string Name { get; set; }
     public string Subject { get; set; }
+    public string Recaptcha { get; set; }
   }
 }

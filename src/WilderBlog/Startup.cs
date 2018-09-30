@@ -34,14 +34,15 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      if (_env.IsDevelopment())
-      {
-        svcs.AddTransient<IMailService, LoggingMailService>();
-      }
-      else
-      {
+      //if (_env.IsDevelopment())
+      //{
+      //  svcs.AddTransient<IMailService, LoggingMailService>();
+      //}
+      //else
+      //{
         svcs.AddTransient<IMailService, MailService>();
-      }
+      //}
+      svcs.AddTransient<GoogleCaptchaService>();
 
       svcs.AddDbContext<WilderContext>(ServiceLifetime.Scoped);
 

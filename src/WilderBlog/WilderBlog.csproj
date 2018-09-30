@@ -20,13 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="wwwroot\**\*;Views\**\*;config.json;web.config;data\**\*;EmailTemplates\**\*;Dockerfile.*;">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <None Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="config.json" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="web.config" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="data\**\*" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="emailtemplates\**\*" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,7 +34,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="HtmlAgilityPack" Version="1.8.4" />
-    <PackageReference Include="Sendgrid" Version="9.9.0" />
+    <PackageReference Include="Sendgrid" Version="9.10.0" />
     <PackageReference Include="WilderMinds.MetaWeblog" Version="2.0.0" />
     <PackageReference Include="WilderMinds.RssSyndication" Version="1.2.0" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.2.0" />

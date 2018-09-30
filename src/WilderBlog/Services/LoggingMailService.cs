@@ -16,10 +16,10 @@ namespace WilderBlog.Services
       _logger = logger;
     }
 
-    public Task SendMailAsync(string template, string name, string email, string subject, string msg)
+    public Task<bool> SendMailAsync(string template, string name, string email, string subject, string msg)
     {
       _logger.LogDebug($"Email Requested from {name} subject of {subject}");
-      return Task.Delay(0);
+      return Task.FromResult(true);
     }
   }
 }

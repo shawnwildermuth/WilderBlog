@@ -1,6 +1,20 @@
-﻿   From: {0}
-   Name: {1}
-Subject: {2}
-
-Message:
-{3}
+﻿<html>
+<head></head>
+<body>
+  <div>
+    <strong>From</strong>: {0}
+  </div>
+  <div>
+    <strong>Name</strong>: {1}
+  </div>
+  <div>
+    <strong>Subject</strong>: {2}
+  </div>
+  <div>
+    <strong>Message</strong>:
+  </div>
+  <div>
+    {3}
+  </div>
+</body>
+</html>
