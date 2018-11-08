@@ -9,7 +9,7 @@
 <div>
   <h2 class="story-title">@Model.Title</h2>
   <!-- @Model.Id -->
-  <hr/>
+  <hr />
   <p class="post-meta">
     <i class="fas fa-pencil"></i>
     Shawn Wildermuth<br />
@@ -23,7 +23,9 @@
     <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
   </p>
 </div>
-@Html.Raw(Model.Body)
+<div class="post-card">
+  @Html.Raw(Model.Body)
+</div>
 <div class="card">
   <div class="pull-left" style="padding-right: 5px;">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">

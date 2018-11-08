@@ -8,14 +8,15 @@ p {
 .syntaxhighlighter {
   overflow-y: hidden !important;
   overflow-x: auto !important;
+  font-size: 0.8em !important;
 }
 img.pull-right {
   float: right;
 }
 .navbar-nav .nav-link {
   font-size: 1rem;
-  padding-right: .3rem;
-  padding-left: .3rem;
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
 }
 .navbar .navbar-brand {
   color: #eee;
@@ -31,13 +32,13 @@ img.pull-right {
   color: #eee;
 }
 .navbar-nav .nav-item + .nav-item {
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
 .navbar-nav .nav-item .nav-link a:hover {
   text-decoration: none;
 }
 #info-table {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 .center-block {
   margin: 0 auto;
@@ -59,14 +60,14 @@ img.pull-right {
   -o-transition-property: left;
   -webkit-transition-property: left;
   transition-property: left;
-  -moz-transition-delay: .2s;
-  -o-transition-delay: .2s;
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
-  -moz-transition-duration: .35s;
-  -o-transition-duration: .35s;
-  -webkit-transition-duration: .35s;
-  transition-duration: .35s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -moz-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
@@ -85,14 +86,14 @@ img.pull-right {
   -o-transition-property: left;
   -webkit-transition-property: left;
   transition-property: left;
-  -moz-transition-delay: .2s;
-  -o-transition-delay: .2s;
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
-  -moz-transition-duration: .35s;
-  -o-transition-duration: .35s;
-  -webkit-transition-duration: .35s;
-  transition-duration: .35s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -moz-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
@@ -106,6 +107,15 @@ p a:not(.btn) {
   color: #003772;
   text-decoration: none;
 }
+.post-card blockquote p a {
+  font-weight: 300;
+}
+.post-card p a {
+  font-weight: 500;
+}
+.post-meta {
+  font-weight: 500;
+}
 a:not(.btn):hover,
 p a:not(.btn):hover {
   text-decoration: underline;
@@ -118,9 +128,12 @@ a.btn:hover {
   text-decoration: none;
 }
 .ad-card {
-  background-color: #ffa947;
   padding: 8px 8px 0 8px;
   color: #2b2b2b;
+  border-radius: 0;
+  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.25);
 }
 .fa-hover-spin:hover {
   -webkit-animation: fa-spin 2s infinite linear;

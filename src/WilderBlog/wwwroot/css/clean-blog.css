@@ -1,6 +1,7 @@
 ﻿body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Raleway', 'Times New Roman', serif;
   font-size: 20px;
+  font-weight: 300;
   color: #404040;
 }
 p {
@@ -33,6 +34,10 @@ a img:focus {
 blockquote {
   color: #808080;
   font-style: italic;
+}
+b,
+strong {
+  font-weight: 700;
 }
 hr.small {
   max-width: 100px;
@@ -188,7 +193,7 @@ hr.small {
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Raleway', 'Times New Roman', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
@@ -296,14 +301,14 @@ footer .copyright {
   top: 2em;
   margin: 0;
   font-size: 0.85em;
-  line-height: 1.764705882em;
+  line-height: 1.76470588em;
   vertical-align: middle;
   vertical-align: baseline;
   opacity: 0;
-  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
-  -moz-transition: top 0.3s ease,opacity 0.3s ease;
-  -ms-transition: top 0.3s ease,opacity 0.3s ease;
-  transition: top 0.3s ease,opacity 0.3s ease;
+  -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+  -moz-transition: top 0.3s ease, opacity 0.3s ease;
+  -ms-transition: top 0.3s ease, opacity 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
 }
 .floating-label-form-group::not(:first-child) {
   padding-left: 14px;

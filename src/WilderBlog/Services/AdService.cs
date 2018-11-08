@@ -28,7 +28,7 @@ namespace WilderBlog.Services
         new Ad()
         {
           Title = "Ready to Learn Vue with ASP.NET Core?",
-          Message = "My new Wilder Minds' course is available as an Early Access for only $79. It will be released on a weekly basis. The first module is now available:",
+          Message = "Shawn's 4-hour course will get you up to speed in no time. Vue.js is a great middle-ground between React and Angular for people who don't like the complexity of Angular, and the overly componentized React. Learn today at Wilder Minds Training!",
           Link = "//courses.wilderminds.com/p/vue-js-by-example"
         },
         new Ad()
