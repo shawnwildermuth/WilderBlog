@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WilderBlog.Services
 {
-  public class ActiveUsersMiddleware
+  public class ActiveUsersMiddleware : IMiddleware
   {
     public const string COOKIENAME = ".Vanity.WilderBlog";
     const string PREFIX = "ActiveUser_";
@@ -21,14 +21,13 @@ namespace WilderBlog.Services
     private RequestDelegate _next;
     private ILogger<ActiveUsersMiddleware> _logger;
 
-    public ActiveUsersMiddleware(RequestDelegate next, IMemoryCache cache, ILogger<ActiveUsersMiddleware> logger)
+    public ActiveUsersMiddleware(IMemoryCache cache, ILogger<ActiveUsersMiddleware> logger)
     {
-      _next = next;
       _cache = cache;
       _logger = logger;
     }
 
-    public async Task Invoke(HttpContext context)
+    public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
       try
       {
@@ -56,7 +55,7 @@ namespace WilderBlog.Services
         _logger.LogError("Failed to store active user");
       }
 
-      await _next.Invoke(context);
+      await next.Invoke(context);
     }
 
     public static long GetActiveUserCount(IMemoryCache cache)

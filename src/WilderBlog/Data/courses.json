@@ -1,19 +1,29 @@
 ﻿[
   {
+    "id": "building-api-aspdotnet-core",
+    "name": "Building an API with ASP.NET Core",
+    "hint": "(New Course)"
+  },
+  {
+    "id": "aspnetcore-mvc-efcore-bootstrap-angular-web",
+    "name": "Building a Web App with ASP.NET Core, MVC6, EF Core, Bootstrap and Angular",
+    "hint": "(updated for 2.2)"
+  },
+  {
     "id": "less-getting-started",
     "name": "Less: Getting Started",
-    "hint": "(Coupon Available)"
+    "hint": "(New)"
   },
   {
     "id": "vue-js-by-example",
     "name": "Vue.js by Example",
-    "hint": "(Now Available)",
+    "hint": "(New Lower Price)",
     "courseType": "WilderMinds"
   },
   {
     "id": "bootstrap-4-by-example",
     "name": "Bootstrap 4 by Example",
-    "hint": "",
+    "hint": "(New Lower Price)",
     "courseType": "WilderMinds"
   },
   {
@@ -21,11 +31,6 @@
     "name": "Intro to Font Awesome 5",
     "hint": "(Free Course)",
     "courseType": "WilderMinds"
-  },
-  {
-    "id": "aspnetcore-mvc-efcore-bootstrap-angular-web",
-    "name": "Building a Web App with ASP.NET Core, MVC6, EF Core, Bootstrap and Angular",
-    "hint": "(updated for 2.1)"
   },
   {
     "id": "visual-studio-code-aspdotnet-projects",

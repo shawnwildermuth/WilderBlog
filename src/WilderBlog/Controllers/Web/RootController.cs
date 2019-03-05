@@ -217,7 +217,7 @@ Exception: ${exception.Error}";
           Based on a work at <a xmlns:dct=""http://purl.org/dc/terms/"" href=""http://wildermuth.com""
             rel=""dct:source"">wildermuth.com</a>.</div>
         </div>";
-      var ad = @"<hr/><div>If you liked this article, see Shawn's courses on <a href=""http://shawnw.me/psauthor"">Pluralsight</a>.</div>";
+      var ad = @"<hr/><div>If you liked this article, see Shawn's courses on <a href=""http://shawnw.me/pscourses"">Pluralsight</a>.</div>";
 
       var entries = _repo.GetStories(25);
 

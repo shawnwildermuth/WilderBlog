@@ -10,7 +10,11 @@
 @section Sidebar {
   <hr />
   <h3><a asp-controller="Root" asp-action="Calendar">My Appearances</a></h3>
-  @foreach (var ap in appearances.Get().Where(e => e.EventDate.AddDays(e.Length -1) >= DateTime.Today))
+  <div class="appearance-block">
+    <h5>No Appearances in 2019</h5>
+    <div class="text-muted small">I'm taking a year off of conferences to finish my film, see you in 2020!</div>
+  </div>
+  @*@foreach (var ap in appearances.Get().Where(e => e.EventDate.AddDays(e.Length -1) >= DateTime.Today))
   {
     <div class="appearance-block">
       <h5><a href="@ap.Link" target="_blank">@ap.EventName</a></h5>
@@ -21,7 +25,7 @@
       }
     </div>
     <hr class="tiny-hr" />
-  }
+  }*@
 }
 <div class="row">
   <div class="col-lg-12">
