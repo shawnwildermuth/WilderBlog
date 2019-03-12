@@ -23,38 +23,21 @@ namespace WilderBlog.Services
     public HtmlString InlineAdd()
     {
 
-      var ads = new Ad[]
-      {
-        new Ad()
-        {
-          Title = "Ready to Learn Vue with ASP.NET Core?",
-          Message = "Shawn's 4-hour course will get you up to speed in no time. Vue.js is a great middle-ground between React and Angular for people who don't like the complexity of Angular, and the overly componentized React. Learn today at Wilder Minds Training!",
-          Link = "//courses.wilderminds.com/p/vue-js-by-example"
-        },
-        new Ad()
-        {
-          Title = "Bootstrap 4 is Here!",
-          Message = "After a long development cycle, Bootstrap has been completely re-written to improve performance and be more consistent.  Learn Bootstrap 4 now with my Wilder Minds course:",
-          Link = "//courses.wilderminds.com/p/bootstrap-4-by-example"
-        }
+      var ads = new string[] {
+        @"<a href=""//pluralsight.pxf.io/c/1191850/480967/7490""><img src=""//a.impactradius-go.com/display-ad/7490-480967"" border=""0"" alt="""" width=""728"" height=""90""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/480967/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
+        @"<a href=""//pluralsight.pxf.io/c/1191850/512011/7490""><img src=""//a.impactradius-go.com/display-ad/7490-512011"" border=""0"" alt="""" width=""728"" height=""90""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/512011/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
+        @"<a href=""//pluralsight.pxf.io/c/1191850/431407/7490""><img src=""//a.impactradius-go.com/display-ad/7490-431407"" border=""0"" alt="""" width=""728"" height=""90""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/431407/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
+        @"<a href=""//courses.wilderminds.com/p/vue-js-by-example""><img src=""/img/vue-ad.jpg"" border=""0"" alt="""" width=""728"" height=""90""/></a>",
+        @"<a href=""//courses.wilderminds.com/p/bootstrap-4-by-example""><img src=""/img/bs-ad.jpg"" border=""0"" alt="""" width=""728"" height=""90""/></a>",
       };
+
+
 
       var item = new Random().Next(0, ads.Length);
 
-      var text = $@"<div class='card ad-card col-md-6'>
-    <h3 class='card-title'>{ads[item].Title}</h3>
-    <p class='card-text'>{ads[item].Message}</p>
-    <p><a href='{ads[item].Link}' class='btn btn-success'>Enroll Today</a></p>
-</div>";
-
-      return new HtmlString(text);
+  
+      return new HtmlString(ads[item]);
     }
 
-    private class Ad
-    {
-      public string Title { get; internal set; }
-      public string Message { get; internal set; }
-      public string Link { get; internal set; }
-    }
   }
 }

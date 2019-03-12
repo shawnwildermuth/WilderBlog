@@ -10,6 +10,11 @@ p {
   overflow-x: auto !important;
   font-size: 0.8em !important;
 }
+.ad-top {
+  text-align: right;
+  background: black;
+  width: 100%;
+}
 img.pull-right {
   float: right;
 }

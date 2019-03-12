@@ -117,7 +117,7 @@ namespace WilderBlog
       app.UseMetaWeblog("/livewriter");
 
       // Keep track of Active # of users for Vanity Project
-      app.UseMiddleware<ActiveUsersMiddleware>();
+      //app.UseMiddleware<ActiveUsersMiddleware>();
 
       // Email Uncaught Exceptions
       if (_config["Exceptions:TestEmailExceptions"].ToLower() == "true" || !_env.IsDevelopment())
