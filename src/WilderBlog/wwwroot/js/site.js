@@ -12,6 +12,8 @@
   //  $menu.toggleClass("shown");
   //});
 
+  $('[data-toggle="tooltip"]').tooltip()
+
   window.cookieconsent.initialise({
     "palette": {
       "popup": {

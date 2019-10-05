@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>WilderBlog.Data Class Library</Description>
     <Authors>Shawn Wildermuth</Authors>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>WilderBlog.Data</AssemblyName>
     <PackageId>WilderBlog.Data</PackageId>

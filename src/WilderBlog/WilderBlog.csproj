@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <VersionPrefix>2.1.0</VersionPrefix>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <AssemblyName>WilderBlog</AssemblyName>
     <PackageId>WilderBlog</PackageId>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
@@ -42,8 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="emailtemplates/**/*.txt"
-             CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="emailtemplates/**/*.txt" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
   
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
