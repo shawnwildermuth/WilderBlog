@@ -1,5 +1,5 @@
 version: 1.0.0.{build}.{branch}
-os: Visual Studio 2017
+os: Visual Studio 2019
 
 init:
 - git config --global core.autocrlf true
@@ -13,19 +13,10 @@ services:
 cache:
   - '%APPDATA%\npm-cache'             # npm cache
   
-install:
- - cmd: nuget sources add -Name api.nuget.org -Source https://api.nuget.org/v3/index.json
-
 before_build: 
  - cmd: npm install gulp bower -g
 
 build_script:
- - cmd: cd src/WilderBlog.Data
- - cmd: dotnet restore 
- - cmd: dotnet build 
- - cmd: cd ../WilderBlog
- - cmd: npm install
- - cmd: bower install
  - cmd: dotnet restore 
  - cmd: dotnet build 
 
