@@ -18,7 +18,7 @@ function minify() {
     .pipe(dest("wwwroot/lib/site"));
 
   return merge(site, contact);
-};
+}
 
 // Dependency Dirs
 var deps = {
@@ -56,7 +56,7 @@ var deps = {
   "@fortawesome/fontawesome-free-webfonts": {
     "**/*": ""
   }
-}
+};
 
 function clean(cb) {
   return rimraf("wwwroot/lib/", cb);
