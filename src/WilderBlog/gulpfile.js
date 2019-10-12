@@ -1,30 +1,24 @@
 /// <binding Clean='clean, minify, scripts' />
-/*
-This file in the main entry point for defining Gulp tasks and using Gulp plugins.
-Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
-*/
 
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var rimraf = require("rimraf");
-var merge = require('merge-stream'); 
+const { src, dest, parallel, series } = require('gulp');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const rimraf = require("rimraf");
+const merge = require('merge2');
 
-gulp.task("minify", function () {
+function minify() {
+  var contact = src(["wwwroot/js/contact.js"])
+    .pipe(uglify())
+    .pipe(concat("contact.min.js"))
+    .pipe(dest("wwwroot/lib/site"));
 
-  var streams = [
-    gulp.src(["wwwroot/js/*.js", '!wwwroot/js/tour*.js', '!wwwroot/js/contact.js'])
-      .pipe(uglify())
-      .pipe(concat("wilderblog.min.js"))
-      .pipe(gulp.dest("wwwroot/lib/site")),
-    gulp.src(["wwwroot/js/contact.js"])
-      .pipe(uglify())
-      .pipe(concat("contact.min.js"))
-      .pipe(gulp.dest("wwwroot/lib/site"))
-  ];
+  var site = src(["wwwroot/js/*.js", '!wwwroot/js/tour*.js', '!wwwroot/js/contact.js'])
+    .pipe(uglify())
+    .pipe(concat("wilderblog.min.js"))
+    .pipe(dest("wwwroot/lib/site"));
 
-  return merge(streams);
-});
+  return merge(site, contact);
+};
 
 // Dependency Dirs
 var deps = {
@@ -62,26 +56,29 @@ var deps = {
   "@fortawesome/fontawesome-free-webfonts": {
     "**/*": ""
   }
-};
+}
 
-gulp.task("clean", function (cb) {
+function clean(cb) {
   return rimraf("wwwroot/lib/", cb);
-});
+}
 
-gulp.task("scripts", function () {
+function scripts() {
 
-  var streams = [];
+  let streams = [];
 
   for (var prop in deps) {
     console.log("Prepping Scripts for: " + prop);
     for (var itemProp in deps[prop]) {
-      streams.push(gulp.src("node_modules/" + prop + "/" + itemProp)
-        .pipe(gulp.dest("wwwroot/lib/" + prop + "/" + deps[prop][itemProp])));
+      streams.push(src("node_modules/" + prop + "/" + itemProp)
+        .pipe(dest("wwwroot/lib/" + prop + "/" + deps[prop][itemProp])));
     }
   }
 
   return merge(streams);
 
-});
+}
 
-gulp.task("default", gulp.series('clean', 'scripts', 'minify'));
+exports.minify = minify;
+exports.clean = clean;
+exports.scripts = scripts;
+exports.default = series(clean, minify, scripts);

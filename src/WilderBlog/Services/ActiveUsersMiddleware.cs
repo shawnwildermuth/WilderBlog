@@ -18,7 +18,6 @@ namespace WilderBlog.Services
     const string PREFIX = "ActiveUser_";
     private const int TIMEOUTMINUTES = 5;
     private IMemoryCache _cache;
-    private RequestDelegate _next;
     private ILogger<ActiveUsersMiddleware> _logger;
 
     public ActiveUsersMiddleware(IMemoryCache cache, ILogger<ActiveUsersMiddleware> logger)

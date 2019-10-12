@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class PodcastEpisodesProvider : DataProvider<PodcastEpisode>
   {
-    public PodcastEpisodesProvider(IHostingEnvironment env)
+    public PodcastEpisodesProvider(IHostEnvironment env)
       : base(env, "episodeList.json")
     {
     }

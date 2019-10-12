@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class CoursesProvider : DataProvider<Course>
   {
   
-    public CoursesProvider(IHostingEnvironment env)
+    public CoursesProvider(IHostEnvironment env)
       : base(env, "courses.json")
     {
     }

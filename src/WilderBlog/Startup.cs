@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
@@ -24,9 +24,9 @@ namespace WilderBlog
   public class Startup
   {
     private readonly IConfiguration _config;
-    private readonly IHostingEnvironment _env;
+    private readonly IHostEnvironment _env;
 
-    public Startup(IConfiguration config, IHostingEnvironment env)
+    public Startup(IConfiguration config, IHostEnvironment env)
     {
       _config = config;
       _env = env;
@@ -34,14 +34,14 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      //if (_env.IsDevelopment())
-      //{
-      //  svcs.AddTransient<IMailService, LoggingMailService>();
-      //}
-      //else
-      //{
+      if (_env.IsDevelopment())
+      {
+        svcs.AddTransient<IMailService, LoggingMailService>();
+      }
+      else
+      {
         svcs.AddTransient<IMailService, MailService>();
-      //}
+      }
       svcs.AddTransient<GoogleCaptchaService>();
 
       svcs.AddDbContext<WilderContext>(ServiceLifetime.Scoped);
@@ -76,15 +76,8 @@ namespace WilderBlog
       svcs.AddMemoryCache(opt => opt.ExpirationScanFrequency = TimeSpan.FromMinutes(5));
 
       // Add MVC to the container
-      var mvcBuilder = svcs.AddMvc();
-      mvcBuilder.AddJsonOptions(opts => opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
-      mvcBuilder.SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+      svcs.AddControllersWithViews();
 
-      // Add Https - renable once Azure Certs work
-      if (_env.IsProduction())
-      {
-        mvcBuilder.AddMvcOptions(options => options.Filters.Add(new RequireHttpsAttribute()));
-      }
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -106,6 +99,8 @@ namespace WilderBlog
 
         // Support logging to email
         loggerFactory.AddEmail(mailService, LogLevel.Critical);
+
+        app.UseHttpsRedirection();
       }
 
       // Rewrite old URLs to new URLs
@@ -116,9 +111,6 @@ namespace WilderBlog
       // Support MetaWeblog API
       app.UseMetaWeblog("/livewriter");
 
-      // Keep track of Active # of users for Vanity Project
-      //app.UseMiddleware<ActiveUsersMiddleware>();
-
       // Email Uncaught Exceptions
       if (_config["Exceptions:TestEmailExceptions"].ToLower() == "true" || !_env.IsDevelopment())
       {
@@ -126,10 +118,14 @@ namespace WilderBlog
       }
 
       app.UseAuthentication();
+      app.UseAuthorization();
 
-      app.UseMvc();
+      app.UseRouting();
 
-      
+      app.UseEndpoints(cfg =>
+      {
+        cfg.MapControllers();
+      });
     }
 
   }

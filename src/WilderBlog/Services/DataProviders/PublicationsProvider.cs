@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class PublicationsProvider : DataProvider<Publication>
   {
-    public PublicationsProvider(IHostingEnvironment env) 
+    public PublicationsProvider(IHostEnvironment env) 
       : base(env, "publications.json")
     {
     }
