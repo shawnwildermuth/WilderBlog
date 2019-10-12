@@ -1,20 +1,11 @@
-version: 1.0.0.{build}.{branch}
+version: 3.0.0.{build}.{branch}
 os: Visual Studio 2019
 
 init:
 - git config --global core.autocrlf true
 
-nuget:
-  account_feed: true
-  
-services:
-  - mssql2014
-
-cache:
-  - '%APPDATA%\npm-cache'             # npm cache
-  
 before_build: 
- - cmd: npm install gulp bower -g
+ - cmd: npm install gulp -g
 
 build_script:
  - cmd: dotnet restore 
