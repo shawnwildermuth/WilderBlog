@@ -8,11 +8,9 @@ before_build:
  - cmd: npm install gulp -g
 
 build_script:
- - cmd: cd .\WilderBlog.Data
+ - cmd: cd src/WilderBlog.Data
  - cmd: dotnet restore 
  - cmd: dotnet build 
- - cmd: cd ..\WilderBlog
+ - cmd: cd ../WilderBlog
  - cmd: dotnet restore 
  - cmd: dotnet build 
-
-
