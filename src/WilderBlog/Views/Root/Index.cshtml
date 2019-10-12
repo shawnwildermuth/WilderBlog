@@ -35,15 +35,15 @@
 }
 <div class="row">
   <div class="col-lg-12">
-    @Html.Partial("_Pager")
+    <partial name="_Pager" />
   </div>
 </div>@foreach (var story in Model.Stories)
 {
-  @Html.Partial("_StoryBrief", story)
+  <partial name="_StoryBrief" model="story" />
 }
 
 <div class="row">
   <div class="col-lg-12">
-    @Html.Partial("_Pager")
+    <partial name="_Pager" />
   </div>
 </div>

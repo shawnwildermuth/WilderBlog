@@ -6,6 +6,7 @@ using HtmlAgilityPack;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
@@ -21,14 +22,14 @@ namespace WilderBlog.MetaWeblog
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
     private IConfiguration _config;
-    private IHostingEnvironment _appEnv;
+    private IHostEnvironment _appEnv;
     private readonly IImageStorageService _imageService;
     private readonly ILogger<WilderWeblogProvider> _logger;
 
     public WilderWeblogProvider(UserManager<WilderUser> userMgr, 
       IWilderRepository repo, 
-      IConfiguration config, 
-      IHostingEnvironment appEnv, 
+      IConfiguration config,
+      IHostEnvironment appEnv, 
       IImageStorageService imageService, 
       ILogger<WilderWeblogProvider> logger)
     {

@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -14,10 +15,10 @@ namespace WilderBlog.Services
   public class MailService : IMailService
   {
     private IConfiguration _config;
-    private IHostingEnvironment _env;
+    private IHostEnvironment _env;
     private ILogger<MailService> _logger;
 
-    public MailService(IHostingEnvironment env, IConfiguration config, ILogger<MailService> logger)
+    public MailService(IHostEnvironment env, IConfiguration config, ILogger<MailService> logger)
     {
       _env = env;
       _config = config;

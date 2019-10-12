@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace WilderBlog.Services.DataProviders
 {
   public class VideosProvider : DataProvider<Video>
   {
-    public VideosProvider(IHostingEnvironment env) 
+    public VideosProvider(IHostEnvironment env) 
       : base(env, "videos.json")
     {
     }

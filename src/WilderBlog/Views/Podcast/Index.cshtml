@@ -1,6 +1,6 @@
 ﻿@using WilderBlog.Services.DataProviders
 @using System
-@model  Tuple<WilderBlog.Services.DataProviders.PodcastEpisode, IEnumerable<WilderBlog.Services.DataProviders.PodcastEpisode>>
+@model Tuple<WilderBlog.Services.DataProviders.PodcastEpisode, IEnumerable<WilderBlog.Services.DataProviders.PodcastEpisode>>
 @{
   ViewBag.Title = "Hello World Podcast - Shawn Wildermuth's Rants and Raves";
   ViewBag.PageName = "Hello World Podcast";
@@ -33,7 +33,7 @@
 
   </div>
 </div>
-<hr/>
+<hr />
 <div class="row">
   <div class="col-lg-12">
     <a href="http://hwpod.com"><img class="pull-right img-responsive" src="//wildermuth.com/img/hwpod/logo_125.jpg" alt="Hello World Podcast" /></a>Not just another technical podcast. Shawn Wildermuth brings you his
@@ -50,19 +50,19 @@
     </div>
   </div>
 </div>
-@Html.Partial("_Episode", latest)
+<partial name="_Episode" model="latest" />
 <hr />
 <h3>Upcoming Guests</h3>
 <div class="row">
   @foreach (var upcoming in episodes.Where(e => e.Status == PodcastEpisodeStatus.Planned || (e.Status == PodcastEpisodeStatus.Live && e.PublishedDate.AddHours(14) > DateTime.UtcNow)).OrderBy(e => e.PublishedDate))
   {
-    @Html.Partial("_Headshot", upcoming)
+    <partial name="_Headshot" model="upcoming" />
   }
 </div>
 <h3>Archive</h3>
 <div class="row">
   @foreach (var archived in episodes.Where(e => e.Status == PodcastEpisodeStatus.Live && e != latest && e.PublishedDate.AddHours(14) <= DateTime.UtcNow).OrderByDescending(e => e.PublishedDate))
   {
-    @Html.Partial("_Headshot", archived)
+    <partial name="_Headshot" model="archived" />
   }
 </div>
