@@ -8,36 +8,36 @@
 <!--<![endif]-->
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" @("content")="IE=edge">
+  <meta name="viewport" @("content")="width=device-width, initial-scale=1.0">
 
-  <meta name="WebsiteSpark" content="GWDim6Y1dk" />
-  <meta content=".NET, C#, Wildermuth, Shawn, Weblog, XAML, Silverlight, WP7, Microsoft, Training, Consulting, Database, JavaScript, CSS, Web Development, HTML"
+  <meta name="WebsiteSpark" @("content")="GWDim6Y1dk" />
+  <meta @("content")=".NET, C#, Wildermuth, Shawn, Weblog, XAML, Silverlight, WP7, Microsoft, Training, Consulting, Database, JavaScript, CSS, Web Development, HTML"
         name="KEYWORDS" />
-  <meta id="DescriptionMetaTag" content="@ViewBag.Title"
+  <meta id="DescriptionMetaTag" @("content")="@ViewBag.Title"
         name="DESCRIPTION" />
 
   <!-- for Facebook -->
-  <meta property="og:title" content="@ViewBag.Title" />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="//wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
-  <meta property="og:description" content="@ViewBag.Title" />
+  <meta property="og:title" @("content")="@ViewBag.Title" />
+  <meta property="og:type" @("content")="article" />
+  <meta property="og:image" @("content")="//wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+  <meta property="og:description" @("content")="@ViewBag.Title" />
 
   <!-- for Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="@ViewBag.Title" />
-  <meta name="twitter:description" content="@ViewBag.Title" />
-  <meta name="twitter:image" content="//wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+  <meta name="twitter:card" @("content")="summary" />
+  <meta name="twitter:title" @("content")="@ViewBag.Title" />
+  <meta name="twitter:description" @("content")="@ViewBag.Title" />
+  <meta name="twitter:image" @("content")="//wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ShawnWildermuth" />
 
   <title>@ViewBag.Title</title>
-  <link href='//fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,700' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,700' rel='stylesheet' type='text/css' />
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
 
-  <environment names="Development">
+  <environment include="Development">
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="~/lib/tether/css/tether.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
@@ -49,7 +49,7 @@
     @RenderSection("Styles", required: false)
     <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
   </environment>
-  <environment names="Production,Staging">
+  <environment exclude="Development">
     <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/lib/tether/css/tether.min.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />

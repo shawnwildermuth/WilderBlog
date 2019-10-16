@@ -52,12 +52,12 @@ namespace WilderBlog.Data
 
     public BlogResult GetStoriesByTerm(string term, int pageSize, int page)
     {
-      var lowerTerm = term.ToLowerInvariant();
+      var lowerTerm = term.ToLower();
       var totalCount = _ctx.Stories.Where(s =>
           s.IsPublished &&
-          (s.Body.ToLowerInvariant().Contains(lowerTerm) ||
-          s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
-          s.Title.ToLowerInvariant().Contains(lowerTerm))
+          (s.Body.ToLower().Contains(lowerTerm) ||
+          s.Categories.ToLower().Contains(lowerTerm) ||
+          s.Title.ToLower().Contains(lowerTerm))
           ).Count();
 
       var result = new BlogResult()
@@ -66,9 +66,9 @@ namespace WilderBlog.Data
         TotalResults = totalCount,
         TotalPages = CalculatePages(totalCount, pageSize),
         Stories = _ctx.Stories
-        .Where(s => s.IsPublished && (s.Body.ToLowerInvariant().Contains(lowerTerm) ||
-                 s.Categories.ToLowerInvariant().Contains(lowerTerm) ||
-                 s.Title.ToLowerInvariant().Contains(lowerTerm)))
+        .Where(s => s.IsPublished && (s.Body.ToLower().Contains(lowerTerm) ||
+                 s.Categories.ToLower().Contains(lowerTerm) ||
+                 s.Title.ToLower().Contains(lowerTerm)))
         .OrderByDescending(o => o.DatePublished)
         .Skip((page - 1) * pageSize).Take(pageSize)
       };

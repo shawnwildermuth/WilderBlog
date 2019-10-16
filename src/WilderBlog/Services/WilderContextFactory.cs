@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using WilderBlog.Data;
 
-namespace WilderBlog.Data
+namespace WilderBlog.Services
 {
   public class WilderContextFactory : IDesignTimeDbContextFactory<WilderContext>
   {

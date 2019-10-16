@@ -9,13 +9,13 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 }
 @section Scripts {
-  <environment names="Development">
+  <environment include="Development">
     <script src="~/lib/vue/vue.js"></script>
     <script src="~/lib/vue-resource/vue-resource.js"></script>
     <script src="~/lib/vee-validate/vee-validate.js"></script>
     <script src="~/js/contact.js"></script>
   </environment>
-  <environment names="Production,Staging">
+  <environment exclude="Development">
     <script src="~/lib/vue/vue.min.js"></script>
     <script src="~/lib/vue-resource/vue-resource.min.js"></script>
     <script src="~/lib/vee-validate/vee-validate.min.js"></script>
