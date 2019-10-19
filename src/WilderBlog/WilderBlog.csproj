@@ -37,7 +37,7 @@
     <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Sendgrid" Version="9.12.0" />
-    <PackageReference Include="WilderMinds.MetaWeblog" Version="2.0.0" />
+    <PackageReference Include="WilderMinds.MetaWeblog" Version="2.0.1" />
     <PackageReference Include="WilderMinds.RssSyndication" Version="1.5.0" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" PrivateAssets="All" />

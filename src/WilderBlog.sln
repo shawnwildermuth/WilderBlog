@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog.Data", "WilderBl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderBlog.Tests", "WilderBlog.Tests\WilderBlog.Tests.csproj", "{23F9F1AC-5DC2-4B2A-8F71-43AF8DAE6EC8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilderMinds.MetaWeblog", "..\..\MetaWeblog\src\WilderMinds.MetaWeblog\WilderMinds.MetaWeblog.csproj", "{8F80C648-9A7E-40A2-90E2-B3291AFCDFCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,12 +36,16 @@ Global
 		{23F9F1AC-5DC2-4B2A-8F71-43AF8DAE6EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23F9F1AC-5DC2-4B2A-8F71-43AF8DAE6EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23F9F1AC-5DC2-4B2A-8F71-43AF8DAE6EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F80C648-9A7E-40A2-90E2-B3291AFCDFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F80C648-9A7E-40A2-90E2-B3291AFCDFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F80C648-9A7E-40A2-90E2-B3291AFCDFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F80C648-9A7E-40A2-90E2-B3291AFCDFCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0B4B2DB9-DAA9-4DB9-BA7E-C5A7EA92C28B}
 		LessCompiler = 4fb63e39-5177-4332-acd6-4f0fdba65d73
+		SolutionGuid = {0B4B2DB9-DAA9-4DB9-BA7E-C5A7EA92C28B}
 	EndGlobalSection
 EndGlobal

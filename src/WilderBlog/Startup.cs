@@ -103,13 +103,13 @@ namespace WilderBlog
         app.UseHttpsRedirection();
       }
 
+      // Support MetaWeblog API
+      app.UseMetaWeblog("/livewriter");
+
       // Rewrite old URLs to new URLs
       app.UseUrlRewriter();
 
       app.UseStaticFiles();
-
-      // Support MetaWeblog API
-      app.UseMetaWeblog("/livewriter");
 
       // Email Uncaught Exceptions
       if (_config["Exceptions:TestEmailExceptions"].ToLower() == "true" || !_env.IsDevelopment())
