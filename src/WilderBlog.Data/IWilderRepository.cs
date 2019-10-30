@@ -7,19 +7,18 @@ namespace WilderBlog.Data
   public interface IWilderRepository
   {
     // Story
-    BlogResult GetStories(int pageSize = 10, int page = 1);
-    BlogResult GetStoriesByTerm(string term, int pageSize, int page);
-    BlogResult GetStoriesByTag(string tag, int pageSize, int page);
+    Task<BlogResult> GetStories(int pageSize = 10, int page = 1);
+    Task<BlogResult> GetStoriesByTerm(string term, int pageSize, int page);
+    Task<BlogResult> GetStoriesByTag(string tag, int pageSize, int page);
 
-    BlogStory GetStory(int id);
-    BlogStory GetStory(string slug);
+    Task<BlogStory> GetStory(int id);
+    Task<BlogStory> GetStory(string slug);
+
+    Task<IEnumerable<string>> GetCategories();
+
     void AddStory(BlogStory story);
-
-    IEnumerable<string> GetCategories();
-
-    void SaveAll();
+    Task<bool> DeleteStory(string postid);
     Task<bool> SaveAllAsync();
-    bool DeleteStory(string postid);
 
   }
 }

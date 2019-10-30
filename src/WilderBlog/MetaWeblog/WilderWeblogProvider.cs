@@ -81,7 +81,7 @@ namespace WilderBlog.MetaWeblog
 
       try
       {
-        var story = _repo.GetStory(int.Parse(postid));
+        var story = await _repo.GetStory(int.Parse(postid));
 
         story.Title = post.title;
         story.Body = post.description;
@@ -109,7 +109,7 @@ namespace WilderBlog.MetaWeblog
 
       try
       {
-        var story = _repo.GetStory(int.Parse(postid));
+        var story = await _repo.GetStory(int.Parse(postid));
         var newPost = new Post()
         {
           title = story.Title,
@@ -151,7 +151,7 @@ namespace WilderBlog.MetaWeblog
     {
       await EnsureUser(username, password);
 
-      return _repo.GetCategories()
+      return (await _repo.GetCategories())
         .Select(c => new CategoryInfo()
         {
           categoryid = c,
@@ -167,7 +167,7 @@ namespace WilderBlog.MetaWeblog
     {
       await EnsureUser(username, password);
 
-      var result = _repo.GetStories(numberOfPosts).Stories.Select(s =>
+      var result = (await _repo.GetStories(numberOfPosts)).Stories.Select(s =>
       {
         var summary = new HtmlDocument();
         summary.LoadHtml(s.GetSummary());
@@ -197,8 +197,7 @@ namespace WilderBlog.MetaWeblog
       try
       {
         var result = _repo.DeleteStory(postid);
-        _repo.SaveAll();
-        return true;
+        return await _repo.SaveAllAsync();
       }
       catch (Exception)
       {

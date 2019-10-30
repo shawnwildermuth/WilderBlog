@@ -13,9 +13,9 @@ namespace WilderBlog.Data
       _stories.Add(story);
     }
 
-    public bool DeleteStory(string postid)
+    public async Task<bool> DeleteStory(string postid)
     {
-      var story = GetStory(int.Parse(postid));
+      var story = await GetStory(int.Parse(postid));
       if (story != null)
       {
         _stories.Remove(story);
@@ -24,7 +24,7 @@ namespace WilderBlog.Data
       return story != null;
     }
 
-    public IEnumerable<string> GetCategories()
+    public Task<IEnumerable<string>> GetCategories()
     {
       var cats = _stories
                 .Select(c => c.Categories.Split(','))
@@ -33,21 +33,21 @@ namespace WilderBlog.Data
       var result = new List<string>();
       foreach (var s in cats) result.AddRange(s);
 
-      return result.Where(s => !string.IsNullOrWhiteSpace(s)).OrderBy(s => s).Distinct();
+      return Task.FromResult(result.Where(s => !string.IsNullOrWhiteSpace(s)).OrderBy(s => s).Distinct());
     }
 
-    public BlogResult GetStories(int pageSize = 10, int page = 1)
+    public Task<BlogResult> GetStories(int pageSize = 10, int page = 1)
     {
-      return new BlogResult()
+      return Task.FromResult(new BlogResult()
       {
         CurrentPage = page,
         TotalResults = _stories.Count(),
         TotalPages = CalculatePages(_stories.Count(), pageSize),
         Stories = _stories.Skip((page - 1) * pageSize).Take(pageSize),
-      };
+      });
     }
 
-    public BlogResult GetStoriesByTerm(string term, int pageSize, int page)
+    public Task<BlogResult> GetStoriesByTerm(string term, int pageSize, int page)
     {
       var lowerTerm = term.ToLowerInvariant();
       var totalCount = _stories.Where(s =>
@@ -56,7 +56,7 @@ namespace WilderBlog.Data
           s.Title.ToLowerInvariant().Contains(lowerTerm)
           ).Count();
 
-      return new BlogResult()
+      return Task.FromResult(new BlogResult()
       {
         CurrentPage = page,
         TotalResults = totalCount,
@@ -69,30 +69,25 @@ namespace WilderBlog.Data
                  s.Title.ToLowerInvariant().Contains(lowerTerm);
         })
         .Skip((page - 1) * pageSize).Take(pageSize)
-      };
+      });
     }
 
-    public BlogStory GetStory(string slug)
+    public Task<BlogStory> GetStory(string slug)
     {
-      return _stories.Where(s => s.Slug == slug).FirstOrDefault();
+      return Task.FromResult(_stories.Where(s => s.Slug == slug).FirstOrDefault());
     }
 
-    public BlogStory GetStory(int id)
+    public Task<BlogStory> GetStory(int id)
     {
-      return _stories.Where(s => s.Id == id).FirstOrDefault();
+      return Task.FromResult(_stories.Where(s => s.Id == id).FirstOrDefault());
     }
 
-    public void SaveAll()
-    {
-      // NOOP
-    }
-
-    public BlogResult GetStoriesByTag(string tag, int pageSize, int page)
+    public Task<BlogResult> GetStoriesByTag(string tag, int pageSize, int page)
     {
       var lowerTag = tag.ToLowerInvariant();
       var totalCount = _stories.Where(s => s.Categories.ToLowerInvariant().Split(',').Contains(lowerTag)).Count();
 
-      return new BlogResult()
+      return Task.FromResult(new BlogResult()
       {
         CurrentPage = page,
         TotalResults = totalCount,
@@ -100,7 +95,7 @@ namespace WilderBlog.Data
         Stories = _stories
         .Where(s => s.Categories.ToLowerInvariant().Split(',').Contains(lowerTag))
         .Skip((page - 1) * pageSize).Take(pageSize)
-      };
+      });
     }
 
     public Task<bool> SaveAllAsync()

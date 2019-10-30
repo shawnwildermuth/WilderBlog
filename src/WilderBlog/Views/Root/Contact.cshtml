@@ -37,7 +37,7 @@
       </div>
       <div class="form-group">
         <label for="subject">Subject</label>
-        <select v-model="mail.subject" class="form-control c-select" name="subject" v-validate="'required|not_in:Pick One...'">
+        <select v-model="mail.subject" class="form-control c-select" name="subject" v-validate="'required|excluded:Pick One...'">
           <option v-for="s in subjects" v-bind:value="s">
             {{ s }}
           </option>

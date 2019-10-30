@@ -7,9 +7,6 @@
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>WilderBlog.Data</AssemblyName>
     <PackageId>WilderBlog.Data</PackageId>
-    <ApplicationIcon />
-    <OutputType>Exe</OutputType>
-    <StartupObject>WilderBlog.Data.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

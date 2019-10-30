@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace WilderBlog.Data
@@ -21,12 +22,7 @@ namespace WilderBlog.Data
       _ctx.Stories.Add(story);
     }
 
-    public void SaveAll()
-    {
-      _ctx.SaveChanges();
-    }
-
-    public BlogResult GetStories(int pageSize = 25, int page = 1)
+    public async Task<BlogResult> GetStories(int pageSize = 25, int page = 1)
     {
       var count = _ctx.Stories.Count();
 
@@ -39,38 +35,38 @@ namespace WilderBlog.Data
         CurrentPage = page,
         TotalResults = count,
         TotalPages = CalculatePages(count, pageSize),
-        Stories = _ctx.Stories
+        Stories = await _ctx.Stories
           .Where( s => s.IsPublished)
           .OrderByDescending(s => s.DatePublished)
           .Skip(pageSize * (page - 1))
           .Take(pageSize)
-          .ToList(),
+          .ToListAsync(),
       };
 
       return FixResults(result);
     }
 
-    public BlogResult GetStoriesByTerm(string term, int pageSize, int page)
+    public async Task<BlogResult> GetStoriesByTerm(string term, int pageSize, int page)
     {
       var lowerTerm = term.ToLower();
-      var totalCount = _ctx.Stories.Where(s =>
+      var totalCount = await _ctx.Stories.Where(s =>
           s.IsPublished &&
           (s.Body.ToLower().Contains(lowerTerm) ||
           s.Categories.ToLower().Contains(lowerTerm) ||
           s.Title.ToLower().Contains(lowerTerm))
-          ).Count();
+          ).CountAsync();
 
       var result = new BlogResult()
       {
         CurrentPage = page,
         TotalResults = totalCount,
         TotalPages = CalculatePages(totalCount, pageSize),
-        Stories = _ctx.Stories
-        .Where(s => s.IsPublished && (s.Body.ToLower().Contains(lowerTerm) ||
-                 s.Categories.ToLower().Contains(lowerTerm) ||
-                 s.Title.ToLower().Contains(lowerTerm)))
-        .OrderByDescending(o => o.DatePublished)
-        .Skip((page - 1) * pageSize).Take(pageSize)
+        Stories = await _ctx.Stories
+          .Where(s => s.IsPublished && (s.Body.ToLower().Contains(lowerTerm) ||
+                   s.Categories.ToLower().Contains(lowerTerm) ||
+                   s.Title.ToLower().Contains(lowerTerm)))
+          .OrderByDescending(o => o.DatePublished)
+          .Skip((page - 1) * pageSize).Take(pageSize).ToArrayAsync()
       };
 
       return FixResults(result);
@@ -95,27 +91,27 @@ namespace WilderBlog.Data
       }
     }
 
-    public BlogStory GetStory(int id)
+    public async Task<BlogStory> GetStory(int id)
     {
-      var result = _ctx.Stories.Where(b => b.Id == id).FirstOrDefault();
+      var result = await _ctx.Stories.Where(b => b.Id == id).FirstOrDefaultAsync();
       FixStory(result);
       return result;
     }
 
-    public BlogStory GetStory(string slug)
+    public async Task<BlogStory> GetStory(string slug)
     {
-      var result = _ctx.Stories
+      var result = await _ctx.Stories
         .Where(s => s.Slug == slug || s.Slug == slug.Replace('_', '-'))
-        .FirstOrDefault();
+        .FirstOrDefaultAsync();
 
       FixStory(result);
       return result;
     }
 
-    public bool DeleteStory(string postid)
+    public async Task<bool> DeleteStory(string postid)
     {
       var id = int.Parse(postid);
-      var story = _ctx.Stories.Where(w => w.Id == id).FirstOrDefault();
+      var story = await _ctx.Stories.Where(w => w.Id == id).FirstOrDefaultAsync();
       if (story != null)
       {
         _ctx.Stories.Remove(story);
@@ -124,11 +120,11 @@ namespace WilderBlog.Data
       return false;
     }
 
-    public IEnumerable<string> GetCategories()
+    public async Task<IEnumerable<string>> GetCategories()
     {
-      var cats = _ctx.Stories
+      var cats = await _ctx.Stories
                 .Select(c => c.Categories.Split(new[] { ',' }, StringSplitOptions.None))
-                .ToList();
+                .ToListAsync();
 
       var result = new List<string>();
       foreach (var s in cats) result.AddRange(s);
@@ -137,23 +133,24 @@ namespace WilderBlog.Data
 
     }
 
-    public BlogResult GetStoriesByTag(string tag, int pageSize, int page)
+    public async Task<BlogResult> GetStoriesByTag(string tag, int pageSize, int page)
     {
       var lowerTag = tag.ToLowerInvariant();
-      var totalCount = _ctx.Stories
+      var subResult = await _ctx.Stories
         .Where(s => s.IsPublished && s.Categories.ToLower().Contains(lowerTag)) // Limiting the search for perf
-        .ToArray()
-        .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag)).Count(); 
+        .ToArrayAsync();
+      var totalCount =  subResult.Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag)).Count();
+
+      var stories = await _ctx.Stories
+          .Where(s => s.IsPublished && s.Categories.ToLower().Contains(lowerTag))
+          .ToArrayAsync();
 
       var result = new BlogResult()
       {
         CurrentPage = page,
         TotalResults = totalCount,
         TotalPages = CalculatePages(totalCount, pageSize),
-        Stories = _ctx.Stories
-          .Where(s => s.IsPublished && s.Categories.ToLower().Contains(lowerTag))
-          .ToArray()
-          .Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag))
+        Stories = stories.Where(s => s.Categories.ToLower().Split(',').Contains(lowerTag))
           .OrderByDescending(s => s.DatePublished)
           .Skip((page - 1) * pageSize).Take(pageSize)
       };

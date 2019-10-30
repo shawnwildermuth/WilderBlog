@@ -195,7 +195,7 @@ Exception: ${exception.Error}";
     }
 
     [HttpGet("feed")]
-    public IActionResult Feed()
+    public async Task<IActionResult> Feed()
     {
       var feed = new Feed()
       {
@@ -219,7 +219,7 @@ Exception: ${exception.Error}";
         </div>";
       var ad = @"<hr/><div>If you liked this article, see Shawn's courses on <a href=""http://shawnw.me/pscourses"">Pluralsight</a>.</div>";
 
-      var entries = _repo.GetStories(25);
+      var entries = await _repo.GetStories(25);
 
       foreach (var entry in entries.Stories)
       {

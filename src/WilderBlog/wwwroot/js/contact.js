@@ -27,7 +27,7 @@
     },
     computed: {
       isPristine: function () {
-        var val = (this.mail.name == "" || this.mail.email == "" || this.mail.msg == "" || this.mail.subject == this.subjects[0]);
+        var val = (this.mail.name === "" || this.mail.email === "" || this.mail.msg === "" || this.mail.subject === this.subjects[0]);
         return val;
       }
     },
@@ -76,7 +76,7 @@
       }
     },
     created: function () {
-      this.$set(this, 'errors', this.$validator.errorBag)
+      this.$set(this, 'errors', this.$validator.errorBag);
     }
   });
 

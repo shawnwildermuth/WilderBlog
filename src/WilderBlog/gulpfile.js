@@ -1,6 +1,6 @@
 /// <binding Clean='clean, minify, scripts' />
 
-const { src, dest, parallel, series } = require('gulp');
+const { src, dest, series } = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rimraf = require("rimraf");
