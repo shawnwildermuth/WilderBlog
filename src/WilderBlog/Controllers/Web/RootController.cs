@@ -47,28 +47,28 @@ namespace WilderBlog.Controllers
     }
 
     [HttpGet("")]
-    public IActionResult Index()
+    public Task<IActionResult> Index()
     {
       return Pager(1);
     }
 
     [HttpGet("blog/{page:int?}")]
-    public IActionResult Pager(int page = 1)
+    public async Task<IActionResult> Pager(int page = 1)
     {
-      return View("~/Views/Root/Index.cshtml", _repo.GetStories(_pageSize, page));
+      return View("~/Views/Root/Index.cshtml", await _repo.GetStories(_pageSize, page));
     }
 
     [HttpGet("{year:int}/{month:int}/{day:int}/{slug}")]
-    public IActionResult Story(int year, int month, int day, string slug)
+    public async Task<IActionResult> Story(int year, int month, int day, string slug)
     {
       var fullSlug = $"{year}/{month}/{day}/{slug}";
 
       try
       {
-        var story = _repo.GetStory(fullSlug);
+        var story = await _repo.GetStory(fullSlug);
 
         // Try with other slug if it doesn't work
-        if (story == null) story = _repo.GetStory($"{year:0000}/{month:00}/{day:00}/{slug}");
+        if (story == null) story = await _repo.GetStory($"{year:0000}/{month:00}/{day:00}/{slug}");
 
         if (story != null) return View(story);
       }

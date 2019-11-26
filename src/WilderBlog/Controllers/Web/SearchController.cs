@@ -25,11 +25,11 @@ namespace WilderBlog.Controllers
     }
 
     [HttpGet("{term}/{page:int?}")]
-    public IActionResult Pager(string term, int page = 1)
+    public async Task<IActionResult> Pager(string term, int page = 1)
     {
       ViewBag.Term = term;
 
-      var results = _repo.GetStoriesByTerm(term, 10, page);
+      var results = await _repo.GetStoriesByTerm(term, 10, page);
       return View("Index", results);
     }
   }

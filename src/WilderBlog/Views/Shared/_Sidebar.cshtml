@@ -1,5 +1,5 @@
 ﻿@inject CoursesProvider courses
-
+@inject WilderBlog.Services.AdService ads
 <div class="col-lg-12">
   <a asp-controller="Root" asp-action="About" class="text-xs-center"><img src="~/img/shawn-head.gif" alt="Shawn" class="img-fluid img-thumbnail center-block" style="max-height: 200px;" /></a>
 </div>
@@ -91,8 +91,7 @@
 </div>
 <hr />
 @* PS Ad *@
-<a href="//pluralsight.pxf.io/c/1191850/431402/7490" id="431402"><img src="//a.impactradius-go.com/display-ad/7490-431402" border="0" alt="" width="250" height="250" /></a>
-<img height="0" width="0" src="//pluralsight.pxf.io/i/1191850/431402/7490" style="position:absolute;visibility:hidden;" border="0" />
+@ads.SidebarAdd()
 @if (((string)ViewContext.RouteData.Values["controller"]) != "Search")
 {
   <hr />

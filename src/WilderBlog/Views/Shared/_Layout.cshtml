@@ -1,4 +1,5 @@
 ﻿@inject Microsoft.Extensions.Configuration.IConfiguration config
+@inject WilderBlog.Services.AdService ads
 <!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -72,7 +73,9 @@
 </head>
 <body>
 
-  @RenderSection("TopAd", false)
+  <div class="ad-top">
+    @ads.InlineAdd()
+  </div>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-inverse" style="background-color: rgba(0,0,0,0.8)">
@@ -123,7 +126,7 @@
       </div>
       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <partial name="_Sidebar" />
-                 @RenderSection("Sidebar", false)
+        @RenderSection("Sidebar", false)
       </div>
     </div>
   </div>

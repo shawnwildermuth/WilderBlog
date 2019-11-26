@@ -1,5 +1,4 @@
 ﻿@inject WilderBlog.Services.DataProviders.CalendarProvider appearances
-@inject WilderBlog.Services.AdService ads
 @model BlogResult
 @{
   ViewBag.Title = "Shawn Wildermuth's Rants and Raves";
@@ -27,11 +26,6 @@
       </div>
       <hr class="tiny-hr" />
     }*@
-}
-@section TopAd {
-  <div class="ad-top">
-    @ads.InlineAdd()
-  </div>
 }
 <div class="row">
   <div class="col-lg-12">

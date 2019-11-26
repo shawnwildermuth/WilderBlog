@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using WilderBlog.Data;
 
 namespace WilderBlog.Controllers
@@ -15,15 +16,15 @@ namespace WilderBlog.Controllers
     }
 
     [HttpGet("{tag}")]
-    public IActionResult Index(string tag)
+    public Task<IActionResult> Index(string tag)
     {
       return Pager(tag, 1);
     }
 
     [HttpGet("{tag}/{page}")]
-    public IActionResult Pager(string tag, int page)
+    public async Task<IActionResult> Pager(string tag, int page)
     {
-      return View("Index", _repo.GetStoriesByTag(tag, _pageSize, page));
+      return View("Index", await _repo.GetStoriesByTag(tag, _pageSize, page));
     }
   }
 }
