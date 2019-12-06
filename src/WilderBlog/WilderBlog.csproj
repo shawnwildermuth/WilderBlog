@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-   <VersionPrefix>3.0.0</VersionPrefix>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <VersionPrefix>4.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>WilderBlog</AssemblyName>
     <PackageId>WilderBlog</PackageId>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
@@ -33,27 +33,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.11.16" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
-    <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.0.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
+    <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Sendgrid" Version="9.12.0" />
     <PackageReference Include="WilderMinds.MetaWeblog" Version="2.0.1" />
-    <PackageReference Include="WilderMinds.RssSyndication" Version="1.5.0" />
+    <PackageReference Include="WilderMinds.RssSyndication" Version="1.6.0" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="emailtemplates/**/*.txt" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
-  
+
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     <Exec Command="npm install" />
-    <Exec Command="node node_modules\\gulp\\bin\\gulp.js clean" />
-    <Exec Command="node node_modules\\gulp\\bin\\gulp.js minify" />
-    <Exec Command="node node_modules\\gulp\\bin\\gulp.js scripts" />
+    <Exec Command="node node_modules/gulp/bin/gulp.js clean" />
+    <Exec Command="node node_modules/gulp/bin/gulp.js minify" />
+    <Exec Command="node node_modules/gulp/bin/gulp.js scripts" />
   </Target>
 
 

@@ -117,10 +117,9 @@ namespace WilderBlog
         app.UseMiddleware<EmailExceptionMiddleware>();
       }
 
+      app.UseRouting();
       app.UseAuthentication();
       app.UseAuthorization();
-
-      app.UseRouting();
 
       app.UseEndpoints(cfg =>
       {
