@@ -1,5 +1,12 @@
 [
   {
+    "eventName": "AntarctiConf",
+    "eventDate": "01/05/2020",
+    "link": "https://antarcticonf.com/",
+    "location": "Antarctic Peninsula",
+    "length": 17
+  },
+  {
     "eventName": "Charlotte Enterprise Developer's Guild",
     "eventDate": "02/27/2018",
     "link": "https://www.meetup.com/Enterprise-Developers-Guild/events/247100957/",

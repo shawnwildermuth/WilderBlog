@@ -5,48 +5,49 @@
   ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
   var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy on H:mmtt");
 }
-
-<div>
-  <h2 class="story-title">@Model.Title</h2>
-  <!-- @Model.Id -->
+<div class="p-2">
+  <div>
+    <h2 class="story-title">@Model.Title</h2>
+    <!-- @Model.Id -->
+    <hr />
+    <p class="post-meta">
+      <i class="fas fa-pencil"></i>
+      Shawn Wildermuth<br />
+      <i class="fas fa-calendar"></i>
+      @pubDate<br />
+      <i class="fas fa-tags"></i>
+      @foreach (var tag in Model.Categories.Split(','))
+      {
+        <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
+      }
+      <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+    </p>
+  </div>
+  <div class="post-card">
+    @Html.Raw(Model.Body)
+  </div>
+  <div class="card">
+    <div class="pull-left" style="padding-right: 5px;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+        <img alt="Creative Commons License" class="img-fluid img-thumbnail" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
+      </a>
+    </div>
+    <div class="card-text">
+      <small>
+        This work by <a xmlns:cc="http://creativecommons.org/ns#" href="//wildermuth.com"
+                        property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
+        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+          Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+        </a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="//wildermuth.com"
+                                    rel="dct:source">wildermuth.com</a>.
+      </small>
+    </div>
+  </div>
   <hr />
-  <p class="post-meta">
-    <i class="fas fa-pencil"></i>
-    Shawn Wildermuth<br />
-    <i class="fas fa-calendar"></i>
-    @pubDate<br />
-    <i class="fas fa-tags"></i>
-    @foreach (var tag in Model.Categories.Split(','))
-    {
-      <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
-    }
-    <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
-  </p>
+  @ads.InlineAdd()
+  <hr />
+  <div id="disqus_thread"></div>
 </div>
-<div class="post-card">
-  @Html.Raw(Model.Body)
-</div>
-<div class="card">
-  <div class="pull-left" style="padding-right: 5px;">
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-      <img alt="Creative Commons License" class="img-fluid img-thumbnail" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
-    </a>
-  </div>
-  <div class="card-text">
-    <small>
-      This work by <a xmlns:cc="http://creativecommons.org/ns#" href="//wildermuth.com"
-                      property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
-      licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-        Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
-      </a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="//wildermuth.com"
-                                  rel="dct:source">wildermuth.com</a>.
-    </small>
-  </div>
-</div>
-<hr />
-@ads.InlineAdd()
-<hr />
-<div id="disqus_thread"></div>
 @section Styles {
   <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shCore.css" />
   <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shThemeDefault.css" />

@@ -25,14 +25,6 @@ namespace WilderBlog.Services
     {
       var ranges = new List<AdDateRange>()
       {
-        new AdDateRange(
-          "2019/11/29", 
-          "2019/12/01",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/714573/7490"" id=""714573""><img src=""//a.impactradius-go.com/display-ad/7490-714573"" border=""0"" alt="""" width=""468"" height=""60""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/714573/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"),
-        new AdDateRange(
-          "2019/12/01",
-          "2019/12/06",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/714551/7490"" id=""714551""><img src=""//a.impactradius-go.com/display-ad/7490-714551"" border=""0"" alt="""" width=""468"" height=""60""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/714551/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"),
         new AdDateRange( // Fallback
           DateTime.MinValue.ToString(),
           DateTime.MaxValue.ToString(),
@@ -56,21 +48,12 @@ namespace WilderBlog.Services
     {
       var ranges = new List<AdDateRange>()
       {
-        new AdDateRange(
-          "2019/11/29",
-          "2019/12/01",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/714568/7490"" id=""714568""><img src=""//a.impactradius-go.com/display-ad/7490-714568"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/714568/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"),
-        new AdDateRange(
-          "2019/12/01",
-          "2019/12/06",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/714546/7490"" id=""714546""><img src=""//a.impactradius-go.com/display-ad/7490-714546"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/714546/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"),
         new AdDateRange( // Fallback
           DateTime.MinValue.ToString(),
           DateTime.MaxValue.ToString(),
-          @"<a href=""//pluralsight.pxf.io/c/1191850/480964/7490"" id=""480964""><img src=""//a.impactradius-go.com/display-ad/7490-480964"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/480964/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/431403/7490"" id=""431403""><img src=""//a.impactradius-go.com/display-ad/7490-431403"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/431403/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/595232/7490"" id=""595232""><img src=""//a.impactradius-go.com/display-ad/7490-595232"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/595232/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
-          @"<a href=""//pluralsight.pxf.io/c/1191850/595247/7490"" id=""595247""><img src=""//a.impactradius-go.com/display-ad/7490-595247"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/595247/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"
+          @"<a href=""//pluralsight.pxf.io/c/1191850/431402/7490"" id=""431402""><img src=""//a.impactradius-go.com/display-ad/7490-431402"" border=""0"" alt="""" width=""250"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/431402/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
+          @"<a href=""//pluralsight.pxf.io/c/1191850/595231/7490"" id=""595231""><img src=""//a.impactradius-go.com/display-ad/7490-595231"" border=""0"" alt="""" width=""250"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/595231/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />",
+          @"<a href=""//pluralsight.pxf.io/c/1191850/595246/7490"" id=""595246""><img src=""//a.impactradius-go.com/display-ad/7490-595246"" border=""0"" alt="""" width=""250"" height=""250""/></a><img height=""0"" width=""0"" src=""//pluralsight.pxf.io/i/1191850/595246/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"
         )
 
       };

@@ -1,0 +1,299 @@
+﻿@inject Microsoft.Extensions.Configuration.IConfiguration config
+@inject WilderBlog.Services.AdService ads
+@inject CoursesProvider courses
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" @("content")="IE=edge">
+  <meta name="viewport" @("content")="width=device-width, initial-scale=1.0">
+
+  <meta name="WebsiteSpark" @("content")="GWDim6Y1dk" />
+  <meta @("content")="REST, GRPC, API, ASP.NET, ASP.NET Core, .NET, C#, Wildermuth, Shawn, Weblog, Microsoft, Training, Consulting, Database, JavaScript, CSS, Web Development, HTML"
+        name="KEYWORDS" />
+  <meta id="DescriptionMetaTag" @("content")="@ViewBag.Title"
+        name="DESCRIPTION" />
+
+  <!-- for Facebook -->
+  <meta property="og:title" @("content")="@ViewBag.Title" />
+  <meta property="og:type" @("content")="article" />
+  <meta property="og:image" @("content")="//wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+  <meta property="og:description" @("content")="@ViewBag.Title" />
+
+  <!-- for Twitter -->
+  <meta name="twitter:card" @("content")="summary" />
+  <meta name="twitter:title" @("content")="@ViewBag.Title" />
+  <meta name="twitter:description" @("content")="@ViewBag.Title" />
+  <meta name="twitter:image" @("content")="//wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ShawnWildermuth" />
+
+  <title>@ViewBag.Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Pro:400,400i,700,700i|Roboto:400,700&display=swap" rel="stylesheet">
+
+  <environment include="Development">
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/tether/css/tether.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.css" rel="stylesheet" />
+    <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+  </environment>
+  <environment exclude="Development">
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/tether/css/tether.min.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet" />
+    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+    <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+  </environment>
+
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="~/lib/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <header>
+        <div class="float-left float-lg-none">
+          <div class="header-container">
+            <div class="headshot">
+              <a asp-controller="Root" asp-action="Index"><img src="~/img/shawn-head.gif" alt="Shawn" /></a>
+            </div>
+          </div>
+        </div>
+        <h1>Shawn Wildermuth</h1>
+        <ul class="list-unstyled menu">
+          <li><a href="https://www.wilderminds.com/classroom" target="_blank">Training</a></li>
+          <li><a href="http://helloworldfilm.com" target="_blank">Hello World Film</a></li>
+          <li><a asp-controller="Root" asp-action="Calendar">Events</a></li>
+          <li><a asp-controller="Videos" asp-action="Index">Videos</a></li>
+          <li><a asp-controller="Podcast" asp-action="Index">Podcast</a></li>
+          <li><a asp-controller="Root" asp-action="About">About</a></li>
+          <li><a asp-controller="Root" asp-action="Contact">Contact</a></li>
+          <li><a asp-controller="Search" asp-action="Index">Search</a></li>
+        </ul>
+
+        <div class="text-lg-center text-right">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="http://feeds.feedburner.com/ShawnWildermuth" title="RSS Feed">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/shawnwildermuth" title="Twitter">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item d-lg-none">
+              <a href="https://www.linkedin.com/in/shawnwildermuth/" title="LinkedIn">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item d-lg-none">
+              <a href="https://youtube.com/c/swildermuth" title="YouTube">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item d-lg-none">
+              <a href="https://github.com/shawnwildermuth" title="GitHub">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item d-lg-none">
+              <a href="http://stackoverflow.com/users/40125/shawn-wildermuth" title="Stack Overflow">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="http://shawnw.me/pscourses" title="Pluralsight Courses">
+                <span class="fas fa-stack  fa-hover-spin">
+                  <img src="/img/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo" />
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item d-lg-none">
+              <a href="http://www.amazon.com/-/e/B001H6ME46" title="Amazon Author Page">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-amazon fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item d-lg-none">
+              <a href="http://steamcommunity.com/id/shawnwildermuth/" title="Steam">
+                <span class="fa-stack  fa-hover-spin">
+                  <i class="fab fa-steam fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        @RenderSection("Sidebar", false)
+      </header>
+      <section id="main">
+        <div class="">
+          @RenderBody()
+        </div>
+        <footer>
+          <div class="text-lg-center text-right">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="http://feeds.feedburner.com/ShawnWildermuth" title="RSS Feed">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/shawnwildermuth" title="Twitter">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/shawnwildermuth/" title="LinkedIn">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://youtube.com/c/swildermuth" title="YouTube">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/shawnwildermuth" title="GitHub">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://stackoverflow.com/users/40125/shawn-wildermuth" title="Stack Overflow">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://shawnw.me/pscourses" title="Pluralsight Courses">
+                  <span class="fas fa-stack  fa-hover-spin">
+                    <img src="/img/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo" />
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://www.amazon.com/-/e/B001H6ME46" title="Amazon Author Page">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-amazon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://steamcommunity.com/id/shawnwildermuth/" title="Steam">
+                  <span class="fa-stack  fa-hover-spin">
+                    <i class="fab fa-steam fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="copyright">Copyright &copy; Wilder Minds LLC 2007-@DateTime.UtcNow.Year</p>
+          <p class="copyright">Built with <a href="http://get.asp.net" target="_blank">ASP.NET Core 3.0</a>, MVC 6, <a href="http://vuejs.org" target="_blank">Vue</a>, <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap" target="_blank">Entity Framework Core 3.0</a>, <a href="http://typescript.org" target="_blank">TypeScript</a>, <a href="http://getbootstrap.com/" target="_blank">Bootstrap 4</a>, and Hosted on <a href="http://azure.com" target="_blank">Azure</a>. <a href="http://shawnw.me/learnaspnetcore" target="_blank">See my ASP.NET Core course to see how you can do it too!</a></p>
+          <partial name="_Info" />
+        </footer>
+      </section>
+      <aside>
+        <div class="bottom-ad">
+          @ads.SidebarAdd()
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <environment names="Development">
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/tether/js/tether.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+  </environment>
+  <environment names="Production,Staging">
+    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+            asp-fallback-src="~/lib/jquery/jquery.min.js"
+            asp-fallback-test="window.jQuery"></script>
+    <script src="~/lib/tether/js/tether.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+  </environment>
+  <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
+  @RenderSection("Scripts", required: false)
+
+  <environment names="Development">
+    <script src="~/js/clean-blog.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/about.js"></script>
+    <script src="~/js/audio.js"></script>
+    <script src="~/js/video.js"></script>
+  </environment>
+  <environment names="Production,Staging">
+    <script src="~/lib/site/wilderblog.min.js" asp-append-version="true"></script>
+
+    <!-- Google -->
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      var pageTracker = _gat._getTracker("@(config["Google:Analytics"])");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+    </script>
+    <!-- Ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </environment>
+  <script id="dsq-count-scr" src="//@(config["Disqus:BlogName"]).disqus.com/count.js" async></script>
+  <!-- Mailchimp Signup -->
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script type="text/javascript">require(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us2.list-manage.com", "uuid": "f781ff917cdb39583826d6888", "lid": "e34966084d" }) })</script>
+</body>
+</html>

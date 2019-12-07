@@ -1,12 +1,10 @@
 ﻿@model BlogStory
-<div class="card card-body post-card">
+<div class="post-card">
   <div class="post-preview">
     <h3 class="post-title"><a href="/@Model.Slug">@Model.Title</a></h3>
     <p class="post-meta">
-      <i class="fas fa-calendar"></i> @Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")
-      <i class="fas fa-edit"></i> Shawn Wildermuth
-      <i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
-      <br />
+      <i class="fas fa-calendar"></i>&nbsp;&nbsp;@Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")&nbsp;&nbsp;
+      <i class="fas fa-comments"></i>&nbsp;&nbsp;<span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.&nbsp;&nbsp;
       <i class="fas fa-tags"></i>
       @foreach (var tag in Model.Categories.Split(','))
       {
@@ -14,6 +12,8 @@
       }
     </p>
     @Html.Raw(Model.GetSummary())
+    <p><a href="/@Model.Slug" class="btn btn-custom"><i class="fas fa-glasses"></i> Read...</a></p>
+    <hr/>
   </div>
 </div>
 
