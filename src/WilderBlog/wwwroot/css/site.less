@@ -99,6 +99,44 @@ section#main {
   @media (min-width: 992px) {
     margin-left: @sidebarSize;
     margin-right: @asideSize;
+    width: 100%;
+  }
+
+  .content-container {
+    min-height: 90vh;
+    padding: 4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: @linkColor;
+  }
+
+  footer {
+    .menu {
+      text-align: center;
+
+      li {
+        font-size: 16px;
+        display: inline;
+        .sans-serif;
+        padding: 8px;
+
+        a {
+          color: #eee;
+          text-decoration: none;
+
+          &:hover {
+            color: #ccc;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -194,7 +232,6 @@ a:not(.btn), p a:not(.btn) {
 }
 
 .post-card {
-  padding: 15px;
 
   blockquote p a {
     font-weight: 400;
@@ -287,32 +324,6 @@ a.btn:hover {
 .post-card {
   margin-bottom: 5px;
 }
-
-/*.headshot {
-  img {
-    max-width: 100%;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-  }
-
-  img:hover {
-    -moz-transform: scale(1.25) rotate(-5deg);
-    -ms-transform: scale(1.25) rotate(-5deg);
-    -o-transform: scale(1.25) rotate(-5deg);
-    -webkit-transform: scale(1.25) rotate(-5deg);
-    transform: scale(1.25) rotate(-5deg);
-  }
-
-  .card {
-    min-height: 280px;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-}*/
 
 .sidebar-icon-list li.list-inline-item {
   margin-left: -3px;

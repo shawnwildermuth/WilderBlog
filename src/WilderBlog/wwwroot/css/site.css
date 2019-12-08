@@ -82,7 +82,37 @@ header .menu li a:hover {
   section#main {
     margin-left: 250px;
     margin-right: 250px;
+    width: 100%;
   }
+}
+section#main .content-container {
+  min-height: 90vh;
+  padding: 4px;
+}
+section#main h1,
+section#main h2,
+section#main h3,
+section#main h4,
+section#main h5,
+section#main h6 {
+  color: #a24032;
+}
+section#main footer .menu {
+  text-align: center;
+}
+section#main footer .menu li {
+  font-size: 16px;
+  display: inline;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 8px;
+}
+section#main footer .menu li a {
+  color: #eee;
+  text-decoration: none;
+}
+section#main footer .menu li a:hover {
+  color: #ccc;
+  text-decoration: none;
 }
 aside {
   display: none;
@@ -159,9 +189,6 @@ p a:not(.btn) {
   color: #a24032;
   text-decoration: none;
 }
-.post-card {
-  padding: 15px;
-}
 .post-card blockquote p a {
   font-weight: 400;
 }
@@ -233,31 +260,6 @@ a.btn:hover {
 .post-card {
   margin-bottom: 5px;
 }
-/*.headshot {
-  img {
-    max-width: 100%;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-  }
-
-  img:hover {
-    -moz-transform: scale(1.25) rotate(-5deg);
-    -ms-transform: scale(1.25) rotate(-5deg);
-    -o-transform: scale(1.25) rotate(-5deg);
-    -webkit-transform: scale(1.25) rotate(-5deg);
-    transform: scale(1.25) rotate(-5deg);
-  }
-
-  .card {
-    min-height: 280px;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-}*/
 .sidebar-icon-list li.list-inline-item {
   margin-left: -3px;
   margin-right: -6px;

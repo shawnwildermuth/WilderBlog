@@ -1,10 +1,22 @@
 [
   {
+    "eventName": "Techorama",
+    "eventDate": "6/2/2020",
+    "logo": "https://techorama.be/assets/images/logo/default.svg",
+    "link": "https://techorama.be/",
+    "location": "Antwerp, BE",
+    "note": "",
+    "length": 3,
+    "reverseLogo": true
+  },
+  {
     "eventName": "AntarctiConf",
     "eventDate": "01/05/2020",
+    "logo": "https://antarcticonf.com/wp-content/uploads/2018/07/icon-left-font-monochrome-white-cropped.png",
     "link": "https://antarcticonf.com/",
     "location": "Antarctic Peninsula",
-    "length": 17
+    "length": 17,
+    "reverseLogo": true
   },
   {
     "eventName": "Charlotte Enterprise Developer's Guild",
