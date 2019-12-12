@@ -2,11 +2,11 @@
 
 I re-wrote my blog using a new stack of web technologies including:
 
- - ASP.NET Core 2.1
- - Entity Framework Core 2.1
+ - ASP.NET Core 3.1
+ - Entity Framework Core 3.1
  - Vue 2.x
  - Bootstrap 4 
- - Azure Websites and Azure Blob Storage
+ - Azure Websites (Docker) and Azure Blob Storage
  
 The project wasn't build to be a blog engine or a easy to re-use for your own blog. It doesn't mean you can't use it for that. Feel free to fork the project, but that wasn't a design goal. 
 
