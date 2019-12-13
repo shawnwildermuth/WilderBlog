@@ -17,6 +17,8 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
-      - run: |
-          docker build . -t wmcontainers.azurecr.io/wilderblog:latest
-          docker wmcontainers.azurecr.io/wilderblog:latest
+      - name: Building Docker Images
+        working-directory: ./src/WilderBlog
+        run: |
+          docker build . -t wmcontainers.azurecr.io/wilderblog:test
+          docker wmcontainers.azurecr.io/wilderblog:test
