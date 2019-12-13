@@ -17,10 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
+    - name: Add NPM
+      run: npm install
+    - name: Gulp 
+      working-directory: ./src/WilderBlog      
+      run: node node_modules/gulp/bin/gulp.js
     - name: Build with dotnet
       working-directory: ./src/WilderBlog      
-      run: npm install
-      run: node node_modules/gulp/bin/gulp.js clean
-      run: node node_modules/gulp/bin/gulp.js minify
-      run: node node_modules/gulp/bin/gulp.js scripts
       run: dotnet build --configuration Release
