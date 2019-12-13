@@ -24,8 +24,8 @@ jobs:
 
       - name: Building Docker Image
         working-directory: ./src/WilderBlog
-        run: docker build .. -f ./Dockerfile -t wmcontainers.azurecr.io/wilderblog:test
+        run: docker build .. -f ./Dockerfile -t wmcontainers.azurecr.io/wilderblog:latest
 
       - name: Push the Image
         working-directory: ./src/WilderBlog 
-        run: docker push wmcontainers.azurecr.io/wilderblog:test
+        run: docker push wmcontainers.azurecr.io/wilderblog:latest
