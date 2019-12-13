@@ -18,6 +18,7 @@ jobs:
       with:
         node-version: '10.x'
     - name: Add NPM
+      working-directory: ./src/WilderBlog      
       run: npm install
     - name: Gulp 
       working-directory: ./src/WilderBlog      
