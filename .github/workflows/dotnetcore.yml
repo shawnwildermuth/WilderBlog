@@ -20,12 +20,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - name: Install Packages
+    - name: NPM Tasks
       working-directory: ./src/WilderBlog      
       run: |
         npm install
         node node_modules/gulp/bin/gulp.js
-        dotnet build --configuration Release
+    - name: Build Project
+      working-directory: ./src/WilderBlog      
+      run: dotnet build --configuration Release
     - name: Run Tests
       working-directory: ./src/WilderBlog.Tests      
       run: dotnet test
