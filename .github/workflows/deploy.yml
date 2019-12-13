@@ -24,5 +24,5 @@ jobs:
 
       - name: Building Docker Images
         run: |
-          docker build . -t wmcontainers.azurecr.io/wilderblog:test
-          docker wmcontainers.azurecr.io/wilderblog:test
+          docker build .. -f .\Dockerfile --force-rm -t wmcontainers.azurecr.io/wilderblog:test
+          docker push wmcontainers.azurecr.io/wilderblog:test
