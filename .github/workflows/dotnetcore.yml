@@ -17,13 +17,13 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: Add NPM
-      run: npm install
-    - name: Gulp Clean
-      run: node node_modules/gulp/bin/gulp.js clean
-    - name: Gulp Minify
-      run: node node_modules/gulp/bin/gulp.js minify
-    - name: Gulp Scripts
-      run: node node_modules/gulp/bin/gulp.js scripts
+    #- name: Add NPM
+    #  run: npm install
+    #- name: Gulp Clean
+    #  run: node node_modules/gulp/bin/gulp.js clean
+    #- name: Gulp Minify
+    #  run: node node_modules/gulp/bin/gulp.js minify
+    #- name: Gulp Scripts
+    #  run: node node_modules/gulp/bin/gulp.js scripts
     - name: Build with dotnet
       run: dotnet build --configuration Release
