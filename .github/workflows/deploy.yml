@@ -3,7 +3,7 @@ name: WilderBlog-Deploy
 on: 
   push:
     branches: 
-      - live
+      - Live
 
 jobs:
   build:
