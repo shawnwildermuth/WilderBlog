@@ -1,6 +1,9 @@
 name: WilderBlog-Build
 
-on: [push]
+on: 
+  push:
+    branches:
+      master
 
 jobs:
   build:
@@ -19,13 +22,10 @@ jobs:
         node-version: '10.x'
     - name: Install Packages
       working-directory: ./src/WilderBlog      
-      run: npm install
-    - name: Gulp 
-      working-directory: ./src/WilderBlog      
-      run: node node_modules/gulp/bin/gulp.js
-    - name: Build with dotnet
-      working-directory: ./src/WilderBlog      
-      run: dotnet build --configuration Release
+      run: |
+        npm install
+        node node_modules/gulp/bin/gulp.js
+        dotnet build --configuration Release
     - name: Run Tests
       working-directory: ./src/WilderBlog.Tests      
       run: dotnet test
