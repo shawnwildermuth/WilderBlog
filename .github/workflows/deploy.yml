@@ -22,7 +22,10 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
-      - name: Building Docker Images
-        run: |
-          docker build .. -f .\Dockerfile --force-rm -t wmcontainers.azurecr.io/wilderblog:test
-          docker push wmcontainers.azurecr.io/wilderblog:test
+      - name: Building Docker Image
+        working-directory: ./src/WilderBlog
+        run: docker build .. -f ./Dockerfile -t wmcontainers.azurecr.io/wilderblog:test
+
+      - name: Push the Image
+        working-directory: ./src/WilderBlog 
+        run: docker push wmcontainers.azurecr.io/wilderblog:test
