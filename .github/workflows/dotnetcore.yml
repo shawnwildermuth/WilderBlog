@@ -26,4 +26,8 @@ jobs:
     - name: Gulp Scripts
       run: node node_modules/gulp/bin/gulp.js scripts
     - name: Build with dotnet
+      run: npm install
+      run: node node_modules/gulp/bin/gulp.js clean
+      run: node node_modules/gulp/bin/gulp.js minify
+      run: node node_modules/gulp/bin/gulp.js scripts
       run: dotnet build --configuration Release
