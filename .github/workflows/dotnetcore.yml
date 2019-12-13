@@ -9,14 +9,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    #- name: Setup Node
-    #  uses: actions/setup-node@v1
-    #  with:
-    #    node-version: '10.x'
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
+    #- name: Setup Node
+    #  uses: actions/setup-node@v1
+    #  with:
+    #    node-version: '10.x'
     #- name: Add NPM
     #  run: npm install
     #- name: Gulp Clean
@@ -26,4 +26,5 @@ jobs:
     #- name: Gulp Scripts
     #  run: node node_modules/gulp/bin/gulp.js scripts
     - name: Build with dotnet
+      working-directory: ./src      
       run: dotnet build --configuration Release
