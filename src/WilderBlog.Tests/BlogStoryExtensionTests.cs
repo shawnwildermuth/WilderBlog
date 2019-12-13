@@ -15,7 +15,7 @@ namespace WilderBlog.Tests
     {
       DatePublished = new DateTime(2018, 5, 5),
       Title = "This is a test post",
-      Body = @"<p>One</p><p>Two</p><p>Three</p>"
+      Body = @"<p>One</p><p>Two</p><p>Three</p><p>Four</p><p>Five</p>"
     };
 
     BlogStory unsafeStory = new BlogStory()
@@ -42,8 +42,8 @@ namespace WilderBlog.Tests
     [Fact]
     public void TestSummary()
     {
-      Assert.DoesNotContain("Three", story.GetSummary());
-      Assert.DoesNotContain("API Design", unsafeStory.GetSummary());
+      Assert.DoesNotContain("Five", story.GetSummary());
+      Assert.DoesNotContain("Let me know", unsafeStory.GetSummary());
     }
 
   }
