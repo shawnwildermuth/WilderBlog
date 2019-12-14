@@ -2,8 +2,9 @@ name: WilderBlog-Deploy
 
 on:
   push: 
-    branches: 
-      - refs/tags/v*
+    tags: 
+      - 'v*'
+
 jobs:
   build:
 
