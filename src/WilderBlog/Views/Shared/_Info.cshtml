@@ -1,7 +1,7 @@
 ﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment env
 @using System.Runtime.InteropServices
 @using Microsoft.DotNet.PlatformAbstractions
-
+@using System.Reflection
 <div class="container">
   <div class="row">
     <button class="btn btn-sm btn-secondary" data-toggle="collapse" data-target="#info-table">Show Info</button>
@@ -16,7 +16,7 @@
           </tr>
           <tr>
             <td>Application Ver</td>
-            <td><strong>@System.Reflection.Assembly.GetEntryAssembly().ImageRuntimeVersion</strong></td>
+            <td><strong>@Assembly.GetAssembly(typeof(WilderBlog.Startup)).GetName().Version</strong></td>
             <td>Runtime Framework</td>
             <td><strong>@(Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.RuntimeArchitecture)</strong></td>
           </tr>
