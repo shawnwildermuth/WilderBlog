@@ -29,7 +29,7 @@ namespace WilderBlog.Services
     {
       try
       {
-        var path = $"{_env.ContentRootPath}\\EmailTemplates\\{template}";
+        var path = $"{_env.ContentRootPath}/EmailTemplates/{template}";
         if (!File.Exists(path))
         {
           _logger.LogError("Cannot find email templates");
