@@ -9,8 +9,9 @@
     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>4.1.7</Version>
-    <AssemblyVersion>4.1.7.0</AssemblyVersion>
+    <Version>4.1.8</Version>
+    <AssemblyVersion>4.1.8.3</AssemblyVersion>
+    <FileVersion>4.1.8.3</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -16,7 +16,6 @@ namespace WilderBlog
     {
       var host = WebHost.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration(ConfigureConfiguration)
-            .ConfigureLogging(ConfigureLogging)
             .UseStartup<Startup>()
             .Build();
 
@@ -39,13 +38,6 @@ namespace WilderBlog
       }
     }
 
-    private static void ConfigureLogging(ILoggingBuilder bldr)
-    {
-      bldr.ClearProviders()
-        .AddDebug()
-        .AddConsole()
-        .SetMinimumLevel(LogLevel.Information);
-    }
 
     private static void ConfigureConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
     {

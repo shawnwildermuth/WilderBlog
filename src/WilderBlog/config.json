@@ -32,5 +32,12 @@
     "Account": "FOO",
     "Key": "BAR",
     "StorageUrl": "https://wilderminds.blob.core.windows.net/img/"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "System": "Error",
+      "Microsoft": "Error"
+    }
   }
 }
