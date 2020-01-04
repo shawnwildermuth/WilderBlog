@@ -13,7 +13,8 @@
   "MailService": {
     "ApiKey": "FOOBAR",
     "ApiUser": "FOOBAR",
-    "Receiver": "shawn@wildermuth.com"
+    "Receiver": "shawn@wildermuth.com",
+    "TestInDev": false
   },
   "MetaWeblog": {
     "StoragePath": "/img/media/"

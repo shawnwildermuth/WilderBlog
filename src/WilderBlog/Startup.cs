@@ -34,7 +34,7 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
-      if (_env.IsDevelopment())
+      if (_env.IsDevelopment() && _config.GetValue<bool>("MailService:TestInDev") == false)
       {
         svcs.AddTransient<IMailService, LoggingMailService>();
       }
