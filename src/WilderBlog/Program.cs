@@ -44,7 +44,7 @@ namespace WilderBlog
       bldr.ClearProviders()
         .AddDebug()
         .AddConsole()
-        .SetMinimumLevel(LogLevel.Warning);
+        .SetMinimumLevel(LogLevel.Information);
     }
 
     private static void ConfigureConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)

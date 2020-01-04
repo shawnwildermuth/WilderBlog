@@ -32,10 +32,12 @@ namespace WilderBlog.Services
         var path = Path.Combine(_env.ContentRootPath, "EmailTemplates", template);
         if (!File.Exists(path))
         {
-          _logger.LogError("Cannot find email templates");
+          _logger.LogError($"Cannot find email templates: {path}");
+          return false;
         }
 
         var body = File.ReadAllText(path);
+        _logger.LogInformation($"Read Email Body");
 
         var key = _config["MailService:ApiKey"];
 
