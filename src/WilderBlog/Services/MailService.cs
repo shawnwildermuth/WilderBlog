@@ -33,6 +33,11 @@ namespace WilderBlog.Services
         if (!File.Exists(path))
         {
           _logger.LogError($"Cannot find email templates: {path}");
+          if (Directory.Exists(Path.Combine(_env.ContentRootPath, "EmailTemplates")))
+          {
+            _logger.LogError($"File doesn't exist but directory for templates does");
+          }
+
           return false;
         }
 
