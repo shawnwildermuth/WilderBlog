@@ -1,5 +1,15 @@
 [
   {
+    "eventName": "Orlando CodeCamp",
+    "eventDate": "3/28/2020",
+    "logo": "http://www.almguide.com/wp-content/uploads/2015/01/CodeCamp_thumb.gif",
+    "link": "https://orlandocodecamp.com/",
+    "location": "Orlando, FL",
+    "note": "Talk is 'Architecting Microservices with .NET Core'",
+    "length": 1,
+    "reverseLogo": false
+  },
+  {
     "eventName": "NDC Porto",
     "eventDate": "4/21/2020",
     "logo": "https://f.ch9.ms/thumbnail/a542457a-b77a-43e5-96fb-9dff49ce1b73.png",
