@@ -20,13 +20,13 @@
     "reverseLogo": false
   },
   {
-    "eventName": "TechDays Helsinki",
-    "eventDate": "3/5/2020",
-    "logo": "https://techdaysfi.com/wp-content/uploads/sites/12/2019/11/Logotyp_TD_FI.png",
-    "link": "http://www.techdaysfi.com/",
-    "location": "Helsinki, Finland",
+    "eventName": "Riga DevDays",
+    "eventDate": "5/26/2020",
+    "logo": "https://2020.rigadevdays.lv/wp-content/uploads/sites/6/2019/10/RDDlogo.png",
+    "link": "https://2020.rigadevdays.lv/",
+    "location": "Riga, Latvia",
     "note": "Talk is 'Architecting Microservices with .NET Core'",
-    "length": 2,
+    "length": 3,
     "reverseLogo": true
   },
   {
