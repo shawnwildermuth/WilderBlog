@@ -47,6 +47,7 @@ namespace WilderBlog
       builder.SetBasePath(ctx.HostingEnvironment.ContentRootPath)
         .AddJsonFile("config.json", false, true)
         .AddEnvironmentVariables();
+
     }
   }
 }
