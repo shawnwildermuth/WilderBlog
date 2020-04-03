@@ -131,7 +131,7 @@ namespace WilderBlog.Data
 </code></pre>
 <p>It hosts the source code and uses browser-link so you can just change the code and it will update in the browser. This is where I do 80% of the code. Since most of the work is building the HTML. This works great for most cases.</p>
 <p>In the case of the Covid-19 tracker, there is client-side code I wanted to write. In that case, I initialized NPM and brought in a few packages that I'd need (mostly <strong>chartjs</strong>). To avoid having to copy the entire node_modules folder, I opted into using <strong>webpack</strong> to just build the code I needed. This included the libraries I used for the site design(e.g. Bootstrap and jQuery).  Finally I added babel to compile the code in the site. My webpack file was still pretty simple:</p>
-<pre><code>module.exports = {
+<pre><code class=""lang-none"">module.exports = {
   mode: &quot;development&quot;,
   entry: {
     &quot;main&quot;: &quot;./js&quot;,
