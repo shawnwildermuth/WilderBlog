@@ -44,13 +44,17 @@
     </div>
   </div>
   <hr />
-  @ads.InlineAdd()
+  <div class="ad-container">
+    @ads.InlineAdd()
+  </div>
   <hr />
   <div id="disqus_thread"></div>
 </div>
 @section Styles {
-  <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shCore.css" />
-  <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shThemeDefault.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-coy.min.css" />
+  @*<link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shCore.css" />
+    <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shThemeDefault.css" />*@
 }
 @section Scripts {
   <script>
@@ -69,12 +73,14 @@
     })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-  <script type="text/javascript" src="~/3rdparty/js/sh/shCore.js"></script>
-  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushCSharp.js"></script>
-  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushJScript.js"></script>
-  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushXml.js"></script>
-  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushCss.js"></script>
-  <script type="text/javascript" src="~/3rdparty/js/sh/shBrushSass.js"></script>
-  <script type="text/javascript" src="~/3rdparty/js/syntaxhighlight.js" asp-append-version="true"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  @*<script type="text/javascript" src="~/3rdparty/js/sh/shCore.js"></script>
+    <script type="text/javascript" src="~/3rdparty/js/sh/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="~/3rdparty/js/sh/shBrushJScript.js"></script>
+    <script type="text/javascript" src="~/3rdparty/js/sh/shBrushXml.js"></script>
+    <script type="text/javascript" src="~/3rdparty/js/sh/shBrushCss.js"></script>
+    <script type="text/javascript" src="~/3rdparty/js/sh/shBrushSass.js"></script>
+    <script type="text/javascript" src="~/3rdparty/js/syntaxhighlight.js" asp-append-version="true"></script>*@
 }

@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Http.Features;
@@ -70,7 +71,11 @@ namespace WilderBlog.Controllers
         // Try with other slug if it doesn't work
         if (story == null) story = await _repo.GetStory($"{year:0000}/{month:00}/{day:00}/{slug}");
 
-        if (story != null) return View(story);
+        if (story != null)
+        {
+          FixSyntaxes(story);
+          return View(story);
+        }
       }
       catch
       {
@@ -79,6 +84,23 @@ namespace WilderBlog.Controllers
 
       return Redirect("/");
 
+    }
+
+    private void FixSyntaxes(BlogStory story)
+    {
+      var html = story.Body;
+      if (Regex.IsMatch(html, "<pre(.*)>(.*)<code>(.*)", RegexOptions.IgnoreCase))
+      {
+        var doc = new HtmlDocument();
+        doc.LoadHtml(html);
+        var pres = doc.DocumentNode.SelectNodes("//pre");
+        foreach (var pre in pres)
+        {
+          var code = pre.FirstChild;
+          if (code != null && !code.Attributes.Contains("class")) code.Attributes.Add("class", "lang-none");
+        }
+        story.Body = doc.DocumentNode.OuterHtml;
+      };
     }
 
     [HttpGet("about")]

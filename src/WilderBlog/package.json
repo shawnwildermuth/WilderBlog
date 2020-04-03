@@ -17,7 +17,8 @@
     "tether": "1.4.7",
     "vee-validate": "2.2.15",
     "vue": "2.6.10",
-    "vue-resource": "1.5.1"
+    "vue-resource": "1.5.1",
+    "prismjs": "1.19.0"
   },
   "devDependencies": {
     "gulp": "4.0.2",
