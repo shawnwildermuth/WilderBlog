@@ -14,7 +14,6 @@ p {
 pre[class*="language-"], code[class*="language-"] {
   overflow-x: scroll !important;
   font-size: 85%;
-  overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -446,6 +445,13 @@ blockquote:hover {
       padding: 50px 0;
     }
   }
+
+  pre[class*="language-"], code[class*="language-"] {
+    overflow-x: hidden !important;
+    white-space: normal;
+    word-wrap: normal;
+  }
+
 }
 
 .calendar-logo {
