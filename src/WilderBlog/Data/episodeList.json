@@ -37,6 +37,36 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 91,
+    "guestName": "Martine Dowden",
+    "guestBio": [
+      "Focusing on web interfaces that are beautiful, functional, accessible, and usable. She approaches User Experience from both Art and Science, drawing from her degrees in Psychology and Visual Communications. Martine has worked as an artist, educator, and consultant since 2005. She stays active in the industry, teaching developers at a coding academy, attending and speaking at conferences and meetups. In 2015 Martine published a children's book 'Programming Languages ABC++', and in 2016 the Workbook Edition sold over 20,000 copies. She then went on to write 'Approachable Accessibility: Planning for Success' which was released in June 2019 and 'Architecting CSS: The Programmer’s Guide to Effective Stylesheets' to be released in 2020."
+    ],
+    "guestHeadshot": "/img/hwpod/martine-dowden.jpg",
+    "guestFirstMachineImage": "/img/hwpod/powerbookduo-dock.jpg",
+    "guestFirstMachineName": "PowerBook Duo w/Docking Station",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/PowerBook_Duo",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "http://twitter.com/Martine_Dowden"
+      },
+      {
+        "name": "Portfolio",
+        "link": "https://martine-dowden.github.io/portfolio/"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode_91.mp3",
+    "publishedDate": "4/6/2020",
+    "status": 1,
+    "length": "00:27:13",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 90,
     "guestName": "Stuart Celarier",
     "guestBio": [

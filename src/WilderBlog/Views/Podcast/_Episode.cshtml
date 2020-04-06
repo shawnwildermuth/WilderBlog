@@ -1,16 +1,14 @@
-﻿@model  WilderBlog.Services.DataProviders.PodcastEpisode
+﻿@model WilderBlog.Services.DataProviders.PodcastEpisode
 <div class="row">
   <div class="col-lg-9">
     @foreach (var bio in Model.GuestBio)
     {
       <p>@Html.Raw(bio)</p>
     }
-    <ul class="list-unstyled">
-      @foreach (var l in Model.GuestLinks)
-      {
-        <li><a href="@l.Link">@l.Name</a></li>
-      }
-    </ul>
+    @foreach (var l in Model.GuestLinks)
+    {
+      <blockquote><p><a href="@l.Link">@l.Name</a></p></blockquote>
+    }
 
   </div>
   <div class="col-lg-3">
