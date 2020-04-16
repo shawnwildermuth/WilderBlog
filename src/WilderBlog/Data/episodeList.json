@@ -37,6 +37,36 @@
     "blurb": [
       ""
     ],
+    "episodeNumber": 92,
+    "guestName": "Mikayla Hutchinson",
+    "guestBio": [
+      "Mikayla works on .NET at Microsoft. She's been working on .NET developer tools for more than a decade, including Xamarin and Visual Studio for Mac, and is passionate about user experience and inclusivity. In her free time, she enjoys game development, gardening and silversmithing."
+    ],
+    "guestHeadshot": "/img/hwpod/mikayla-hutchinson.jpg",
+    "guestFirstMachineImage": "/img/hwpod/bbcmicro-b.jpg",
+    "guestFirstMachineName": "BBC Micro Model B",
+    "guestFirstMachineLink": "https://en.wikipedia.org/wiki/BBC_Micro",
+    "guestLinks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/mjhutchinson"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/mhutch"
+      }
+    ],
+    "podcastName": "hwpod",
+    "audioLink": "http://traffic.libsyn.com/hwpod/Episode_92.mp3",
+    "publishedDate": "4/16/2020",
+    "status": 1,
+    "length": "00:23:06",
+    "youTubeLink": ""
+  },
+  {
+    "blurb": [
+      ""
+    ],
     "episodeNumber": 91,
     "guestName": "Martine Dowden",
     "guestBio": [
