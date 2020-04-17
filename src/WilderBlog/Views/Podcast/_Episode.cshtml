@@ -1,6 +1,6 @@
 ﻿@model WilderBlog.Services.DataProviders.PodcastEpisode
 <div class="row">
-  <div class="col-lg-9">
+  <div class="col-12 col-lg-8">
     @foreach (var bio in Model.GuestBio)
     {
       <p>@Html.Raw(bio)</p>
@@ -10,22 +10,29 @@
       <blockquote><p><a href="@l.Link">@l.Name</a></p></blockquote>
     }
 
+    <div class="row">
+      <div class="col-12">
+        <p>Listen now:</p>
+        <audio src="@Model.AudioLink" preload="auto" controls></audio>
+        <a href="@Model.AudioLink">Download MP3</a><br />
+        <a asp-controller="Podcast" asp-action="Episode" asp-route-id="@Model.EpisodeNumber" asp-route-tag="@Model.GuestName.Replace(" ", "-")" target="_blank">Open this episode in a separate window/tab</a>
+        @if (!string.IsNullOrWhiteSpace(Model.YouTubeLink))
+        {
+          <br /><a href="@Model.YouTubeLink">Open this episode in YouTube</a>
+        }
+      </div>
+    </div>
   </div>
-  <div class="col-lg-3">
-    <div><img src="@Model.GuestHeadshot" alt="@Model.GuestName" class="img-fluid img-thumbnail" /></div>
-    <div class="text-muted"><small>First Computer: <br /><a href="@Model.GuestFirstMachineLink" target="_blank">@Model.GuestFirstMachineName</a></small></div>
-    <div><a href="@Model.GuestFirstMachineLink" target="_blank"><img src="@Model.GuestFirstMachineImage" alt="@Model.GuestFirstMachineName" class="img-fluid img-thumbnail" /></a></div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-12">
-    <p>Listen now:</p>
-    <audio src="@Model.AudioLink" preload="auto" controls></audio>
-    <a href="@Model.AudioLink">Download MP3</a><br />
-    <a asp-controller="Podcast" asp-action="Episode" asp-route-id="@Model.EpisodeNumber" asp-route-tag="@Model.GuestName.Replace(" ", "-")" target="_blank">Open this episode in a separate window/tab</a>
-    @if (!string.IsNullOrWhiteSpace(Model.YouTubeLink))
-    {
-      <br /><a href="@Model.YouTubeLink">Open this episode in YouTube</a>
-    }
+  <div class="col-12 col-lg-4">
+    <div class="row">
+      <div class="col-12 col-xl-6">
+        <div class="text-center"><img src="@Model.GuestHeadshot" alt="@Model.GuestName" class="img-fluid img-thumbnail" /></div>
+        <div class="text-muted text-center"><small>@Model.GuestName</small></div>
+      </div>
+      <div class="col-12 col-xl-6">
+        <div class="text-center"><a href="@Model.GuestFirstMachineLink" target="_blank"><img src="@Model.GuestFirstMachineImage" alt="@Model.GuestFirstMachineName" class="img-fluid img-thumbnail" /></a></div>
+        <div class="text-muted text-center"><small>First Computer: <br /><a href="@Model.GuestFirstMachineLink" target="_blank">@Model.GuestFirstMachineName</a></small></div>
+      </div>
+    </div>
   </div>
 </div>
