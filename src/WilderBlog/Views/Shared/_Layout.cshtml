@@ -30,7 +30,7 @@
   <meta name="twitter:title" @("content")="Shawn Wildermuth's Blog" />
   <meta name="twitter:description" @("content")="@ViewBag.Title" />
   <meta name="twitter:image" @("content")="http://wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
-  <meta name="twitter:creator" @("content")="@("@shawnwildermuth") />
+  <meta name="twitter:creator" @("content")="@("@shawnwildermuth")  />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico">
@@ -80,7 +80,10 @@
         <div class="float-left float-lg-none">
           <div class="header-container">
             <div class="headshot">
-              <a asp-controller="Root" asp-action="Index"><img src="~/img/shawn-head.gif" alt="Shawn" /></a>
+              <a asp-controller="Root" asp-action="Index">
+                <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="lazy" style="max-height: 200px;" />
+
+              </a>
             </div>
           </div>
         </div>
@@ -237,6 +240,7 @@
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/tether/js/tether.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.2.0/dist/lazyload.js"></script>
   </environment>
   <environment names="Production,Staging">
     <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
@@ -244,6 +248,7 @@
             asp-fallback-test="window.jQuery"></script>
     <script src="~/lib/tether/js/tether.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.2.0/dist/lazyload.min.js"></script>
   </environment>
   <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
   @RenderSection("Scripts", required: false)

@@ -12,6 +12,12 @@
   //  $menu.toggleClass("shown");
   //});
 
+  // Support Lazy Loading of Images
+  var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+  });
+
   $('[data-toggle="tooltip"]').tooltip()
 
   window.cookieconsent.initialise({

@@ -1,7 +1,9 @@
 ﻿@inject CoursesProvider courses
 @inject WilderBlog.Services.AdService ads
 <div class="col-lg-12">
-  <a asp-controller="Root" asp-action="About" class="text-xs-center"><img src="~/img/shawn-head.gif" alt="Shawn" class="img-fluid img-thumbnail center-block" style="max-height: 200px;" /></a>
+  <a asp-controller="Root" asp-action="About" class="text-xs-center">
+    <img class="lazy" src="~/img/shawn-head-sm.jpg" data-x-src="~/img/shawn-head.gif" alt="Shawn" class="img-fluid img-thumbnail center-block" style="max-height: 200px;" />
+  </a>
 </div>
 <div class="col-lg-12">
   <div class="text-xs-center"><strong>Shawn Wildermuth</strong></div>
