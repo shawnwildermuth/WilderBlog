@@ -1,5 +1,49 @@
 ﻿[
   {
+    "id": 35,
+    "title": "How Should We Version our APIs?",
+    "description": "From 'The Hello World Show'",
+    "videoType": "YouTube",
+    "videoCode": "gFb1X_cB9vI",
+    "datePublished": "2017-11-21"
+  },
+  {
+    "id": 34,
+    "title": "Developing ASP.NET Core in VS Code",
+    "description": "From WROC# 2019",
+    "videoType": "YouTube",
+    "videoCode": "C9I-_6Owe1U",
+    "datePublished": "2020-01-09"
+  },
+
+  {
+    "id": 33,
+    "title": "Versioning APIs with ASP NET Core",
+    "description": "From .NET Conf 2019",
+    "videoType": "YouTube",
+    "videoCode": "ryPo5hYHSzM",
+    "datePublished": "2019-10-04"
+  },
+
+  {
+    "id": 32,
+    "title": "Turning Passion into Experience",
+    "description": "From ProgNET London 2018",
+    "videoType": "YouTube",
+    "videoCode": "hDkUN4EMYmQ",
+    "datePublished": "2018-09-20"
+  },
+
+  {
+    "id": 31,
+    "title": "Hire People Not Skills",
+    "description": "From Antacticonf",
+    "videoType": "YouTube",
+    "videoCode": "0LZcFmB2ako",
+    "datePublished": "2020-03-12"
+  },
+
+  {
     "id": 30,
     "title": "Coding in the Time of Covid-19",
     "description": "In this short video, I talk with different people about how they are handling the lock-down orders.",
