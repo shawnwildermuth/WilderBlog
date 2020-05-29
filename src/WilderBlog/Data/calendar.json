@@ -1,45 +1,5 @@
 [
   {
-    "eventName": "Orlando CodeCamp",
-    "eventDate": "3/28/2020",
-    "logo": "http://www.almguide.com/wp-content/uploads/2015/01/CodeCamp_thumb.gif",
-    "link": "https://orlandocodecamp.com/",
-    "location": "Orlando, FL",
-    "note": "Talk is 'Architecting Microservices with .NET Core'",
-    "length": 1,
-    "reverseLogo": false
-  },
-  {
-    "eventName": "NDC Porto",
-    "eventDate": "4/21/2020",
-    "logo": "https://f.ch9.ms/thumbnail/a542457a-b77a-43e5-96fb-9dff49ce1b73.png",
-    "link": "https://ndcporto.com/",
-    "location": "Porto, Portugal",
-    "note": "Talk is 'gRPC in ASP.NET Core: Another Solution or APIs'",
-    "length": 4,
-    "reverseLogo": false
-  },
-  {
-    "eventName": "Riga DevDays",
-    "eventDate": "5/26/2020",
-    "logo": "https://2020.rigadevdays.lv/wp-content/uploads/sites/6/2019/10/RDDlogo.png",
-    "link": "https://2020.rigadevdays.lv/",
-    "location": "Riga, Latvia",
-    "note": "Talk is 'Architecting Microservices with .NET Core'",
-    "length": 3,
-    "reverseLogo": true
-  },
-  {
-    "eventName": "Techorama",
-    "eventDate": "6/2/2020",
-    "logo": "https://techorama.be/assets/images/logo/default.svg",
-    "link": "https://techorama.be/",
-    "location": "Antwerp, BE",
-    "note": "",
-    "length": 3,
-    "reverseLogo": true
-  },
-  {
     "eventName": "AntarctiConf",
     "eventDate": "01/05/2020",
     "logo": "https://antarcticonf.com/wp-content/uploads/2018/07/icon-left-font-monochrome-white-cropped.png",

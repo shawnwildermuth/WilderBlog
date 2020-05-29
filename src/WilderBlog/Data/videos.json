@@ -1,5 +1,51 @@
 ﻿[
   {
+    "id": 30,
+    "title": "Coding in the Time of Covid-19",
+    "description": "In this short video, I talk with different people about how they are handling the lock-down orders.",
+    "videoType": "YouTube",
+    "videoCode": "9jN0WdJJkqE",
+    "datePublished": "2020-04-19"
+  },
+
+  {
+    "id": 29,
+    "title": "Shawn Wildermuth's Rants: Episode 2 - Best Practices",
+    "description": "In this episode, I discuss my hypocrisy about the idea of best practices, dogma, and pragmatism.",
+    "videoType": "YouTube",
+    "videoCode": "B7M5QsoNiW0",
+    "datePublished": "2020-04-22"
+  },
+
+  {
+    "id": 28,
+    "title": "Shawn Wildermuth's Rants: Episode 1 - Fear",
+    "description": "In this new series, I'll be talking about topics that I care about in software development. In this first episode, I talk about fear.",
+    "videoType": "YouTube",
+    "videoCode": "0CzGpYGVZHk",
+    "datePublished": "2020-04-11"
+  },
+
+  {
+    "id": 27,
+    "title": "Creating Your Own Build/Test with GitHub Actions",
+    "description": "I created this video because I didn't see an easy walkthrough for Github Actions.",
+    "videoType": "YouTube",
+    "videoCode": "nNw5H31nuU0",
+    "datePublished": "2019-12-16"
+  },
+
+
+  {
+    "id": 26,
+    "title": "Getting Started with Vue.js",
+    "description": "A talk for the Mississauga .NET Users Group",
+    "videoType": "YouTube",
+    "videoCode": "qagslNUiuao",
+    "datePublished": "2020-05-28"
+  },
+
+  {
     "id": 25,
     "title": "NDC Sydney 2016 – Ask Me Anything! with Shawn Wildermuth (Anglular 2.0)",
     "description": "I was interviewed down in Sydney about my thoughts on Angular 2",
