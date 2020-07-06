@@ -13,13 +13,13 @@
         "    <small><%= description %></small>" +
         " </div>" +
         "</div>");
-      $.get("https://api.github.com/users/shawnwildermuth/repos?type=owner&sort-updated")
+      $.get("https://api.github.com/users/shawnwildermuth/repos?type=owner&sort=pushed")
         .then(function (result) {
           var results = _.filter(result, function (item) {
-            return !item.fork;
+            return !item.fork && item.watchers_count > 0 && item.description;
           });
           results = _.orderBy(results, ["stargazers_count"], ["desc"]);
-          _.forEach(results, function (item) {
+          _.forEach(_.take(results,10), function (item) {
             $openSourceList.append($(template(item)))
           });
         });
