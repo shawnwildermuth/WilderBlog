@@ -53,6 +53,16 @@ header {
   color: #eee;
   width: 100%;
 }
+header .subtitle {
+  font-size: 1rem;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+header .subtitle a,
+header .subtitle a:hover {
+  color: #ccc;
+}
 @media (min-width: 992px) {
   header {
     height: 100%;
@@ -65,6 +75,10 @@ header {
     z-index: 1;
   }
   header h1 {
+    text-align: center;
+  }
+  header .subtitle {
+    font-size: 0.9rem;
     text-align: center;
   }
 }

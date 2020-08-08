@@ -64,6 +64,17 @@ header {
   color: #eee;
   width: 100%;
 
+  .subtitle {
+    font-size: 1rem;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: -15px;
+    margin-bottom: 10px;
+
+    a, a:hover {
+      color: #ccc;
+    }
+  }
+
   @media (min-width: 992px) {
     height: 100%;
     left: 0;
@@ -77,10 +88,14 @@ header {
     h1 {
       text-align: center;
     }
+
+    .subtitle {
+      font-size: .9rem;
+      text-align: center;
+    }
   }
 
   .menu {
-
     li {
       font-size: 18px;
       display: inline-block;
