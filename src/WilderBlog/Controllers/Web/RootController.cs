@@ -176,7 +176,7 @@ namespace WilderBlog.Controllers
     [HttpGet("rss")]
     public IActionResult Rss()
     {
-      return RedirectPermanent("http://feeds.feedburner.com/ShawnWildermuth");
+      return Redirect("http://feeds.feedburner.com/ShawnWildermuth");
     }
 
     [HttpGet("Error/{code:int}")]

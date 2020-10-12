@@ -235,3 +235,4 @@ typings
 /out/**
 /src/.idea/.idea.WilderBlog
 src/WilderBlog/package-lock.json
+/src/test.json
