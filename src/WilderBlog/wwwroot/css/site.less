@@ -2,6 +2,42 @@
 @import "mixins.less";
 @linkColor: #a24032;
 
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'), 
+       url('../fonts/WOFF/Atkinson-Hyperlegible-Regular-102.woff') format('woff'), 
+       url('../fonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2'), 
+    url('../fonts/WOFF/Atkinson-Hyperlegible-Bold-102.woff') format('woff'), 
+    url('../fonts/TTF/Atkinson-Hyperlegible-Bold-102.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2'), 
+    url('../fonts/WOFF/Atkinson-Hyperlegible-Italic-102.woff') format('woff'), 
+    url('../fonts/TTF/Atkinson-Hyperlegible-Italic-102.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2'), 
+    url('../fonts/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff') format('woff'), 
+    url('../fonts/TTF/Atkinson-Hyperlegible-BoldItalic-102.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 body {
   font-size: 22px;
 }
@@ -66,8 +102,7 @@ header {
 
   .subtitle {
     font-size: 1rem;
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin-top: -15px;
+    font-family: 'Atkinson-Hyperlegible', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-top: -15px;
     margin-bottom: 10px;
 
     a, a:hover {
@@ -382,8 +417,7 @@ a img:hover, a img:focus {
 }
 
 .navbar {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-family: 'Atkinson-Hyperlegible', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 100;
 
   .navbar-toggler {
     color: #fff;

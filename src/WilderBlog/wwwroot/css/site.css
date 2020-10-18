@@ -1,4 +1,28 @@
-﻿body {
+﻿@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Regular-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Bold-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Bold-102.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Italic-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Italic-102.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-BoldItalic-102.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+body {
   font-size: 22px;
 }
 p {
@@ -55,7 +79,7 @@ header {
 }
 header .subtitle {
   font-size: 1rem;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Atkinson-Hyperlegible', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-top: -15px;
   margin-bottom: 10px;
 }
@@ -85,7 +109,7 @@ header .subtitle a:hover {
 header .menu li {
   font-size: 18px;
   display: inline-block;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Atkinson-Hyperlegible', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 4px;
 }
 @media (min-width: 992px) {
@@ -131,7 +155,7 @@ section#main footer .menu {
 section#main footer .menu li {
   font-size: 16px;
   display: inline;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Atkinson-Hyperlegible', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 8px;
 }
 section#main footer .menu li a {
@@ -232,7 +256,7 @@ p a:not(.btn):hover {
   color: #c55342;
 }
 .btn {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Atkinson-Hyperlegible', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .btn.btn-custom {
   background-color: #a24032;
@@ -311,7 +335,7 @@ a img:focus {
   border-color: #a24032;
 }
 .navbar {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Atkinson-Hyperlegible', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
 .navbar .navbar-toggler {

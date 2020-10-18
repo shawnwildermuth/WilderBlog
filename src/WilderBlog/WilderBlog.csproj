@@ -52,6 +52,10 @@
     <Content Include="EmailTemplates/**/*.txt" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\fonts\" />
+  </ItemGroup>
+
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     
     <Exec Command="npm install" />
