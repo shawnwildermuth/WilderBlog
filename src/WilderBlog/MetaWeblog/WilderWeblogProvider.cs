@@ -298,5 +298,11 @@ namespace WilderBlog.MetaWeblog
     {
       throw new NotImplementedException();
     }
+
+    public Task<Tag[]> GetTagsAsync(string blogid, string username, string password)
+    {
+      throw new NotImplementedException();
+    }
+
   }
 }
