@@ -13,7 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
+using WilderBlog.Config;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
 using WilderBlog.Logger;
@@ -37,6 +39,8 @@ namespace WilderBlog
 
     public void ConfigureServices(IServiceCollection svcs)
     {
+      svcs.Configure<AppSettings>(_config);
+
       if (_env.IsDevelopment() && _config.GetValue<bool>("MailService:TestInDev") == false)
       {
         svcs.AddTransient<IMailService, LoggingMailService>();
@@ -83,13 +87,15 @@ namespace WilderBlog
       // Add MVC to the container
       svcs.AddControllersWithViews();
 
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app,
                           ILoggerFactory loggerFactory,
                           IMailService mailService,
-                          IServiceScopeFactory scopeFactory)
+                          IServiceScopeFactory scopeFactory,
+                          IOptions<AppSettings> settings)
     {
       // Add the following to the request pipeline only in development environment.
       if (_env.IsDevelopment())
@@ -117,7 +123,7 @@ namespace WilderBlog
       app.UseStaticFiles();
 
       // Email Uncaught Exceptions
-      if (_config["Exceptions:TestEmailExceptions"].ToLower() == "true" || !_env.IsDevelopment())
+      if (settings.Value.Exceptions.TestEmailExceptions || !_env.IsDevelopment())
       {
         app.UseMiddleware<EmailExceptionMiddleware>();
       }
