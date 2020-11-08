@@ -6,18 +6,18 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using WilderBlog.Config;
 using WilderBlog.Models;
 
 namespace WilderBlog.Services
 {
   public class AdService
   {
-    private IConfiguration _config;
     private readonly ILogger<AdService> _logger;
 
-    public AdService(IConfiguration config, ILogger<AdService> logger)
+    public AdService(ILogger<AdService> logger)
     {
-      _config = config;
       _logger = logger;
     }
 

@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using WilderBlog.Config;
 using WilderBlog.Models;
 
 namespace WilderBlog.Services
@@ -16,13 +18,15 @@ namespace WilderBlog.Services
   public class GoogleCaptchaService
   {
     private readonly ILogger<GoogleCaptchaService> _logger;
-    private readonly IConfiguration _config;
+    private readonly IOptions<AppSettings> _settings;
     private readonly IHttpContextAccessor _ctxAccessor;
 
-    public GoogleCaptchaService(ILogger<GoogleCaptchaService> logger, IConfiguration config, IHttpContextAccessor ctxAccessor)
+    public GoogleCaptchaService(ILogger<GoogleCaptchaService> logger, 
+      IOptions<AppSettings> settings, 
+      IHttpContextAccessor ctxAccessor)
     {
       _logger = logger;
-      _config = config;
+      _settings = settings;
       _ctxAccessor = ctxAccessor;
     }
 
@@ -36,7 +40,7 @@ namespace WilderBlog.Services
       {
         var content = new FormUrlEncodedContent(new[]
         {
-            new KeyValuePair<string, string>("secret", _config["Google:CaptchaSecret"]),
+            new KeyValuePair<string, string>("secret", _settings.Value.Google.CaptchaSecret),
             new KeyValuePair<string, string>("response", recaptcha),
             new KeyValuePair<string, string>("remoteip", request.Headers.ContainsKey("HTTP_X_FORWARDED_FOR") ?
                                                           request.Headers["HTTP_X_FORWARDED_FOR"].FirstOrDefault() :

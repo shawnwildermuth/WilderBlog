@@ -5,27 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
+using WilderBlog.Config;
 
 namespace WilderBlog.Services
 {
   public class ImageStorageService : IImageStorageService
   {
-    private readonly IConfiguration _config;
+    private readonly IOptions<AppSettings> _settings;
 
-    public ImageStorageService(IConfiguration config)
+    public ImageStorageService(IOptions<AppSettings> settings)
     {
-      _config = config;
+      _settings = settings;
     }
 
     public async Task<string> StoreImage(string filename, byte[] image)
     {
       var filenameonly = Path.GetFileName(filename);
 
-      var url = string.Concat(_config["BlobService:StorageUrl"], filenameonly);
+      var url = string.Concat(_settings.Value.BlobService.StorageUrl, filenameonly);
 
-      var creds = new StorageCredentials(_config["BlobStorage:Account"], _config["BlobStorage:Key"]);
+      var creds = new StorageCredentials(_settings.Value.BlobService.Account, _settings.Value.BlobService.Key);
       var blob = new CloudBlockBlob(new Uri(url), creds);
 
       bool shouldUpload = true;

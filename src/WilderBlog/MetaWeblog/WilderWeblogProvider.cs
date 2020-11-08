@@ -8,8 +8,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
+using WilderBlog.Config;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
 using WilderBlog.Services;
@@ -21,21 +23,18 @@ namespace WilderBlog.MetaWeblog
   {
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
-    private IConfiguration _config;
     private IHostEnvironment _appEnv;
     private readonly IImageStorageService _imageService;
     private readonly ILogger<WilderWeblogProvider> _logger;
 
     public WilderWeblogProvider(UserManager<WilderUser> userMgr, 
       IWilderRepository repo, 
-      IConfiguration config,
       IHostEnvironment appEnv, 
       IImageStorageService imageService, 
       ILogger<WilderWeblogProvider> logger)
     {
       _repo = repo;
       _userMgr = userMgr;
-      _config = config;
       _appEnv = appEnv;
       _imageService = imageService;
       _logger = logger;

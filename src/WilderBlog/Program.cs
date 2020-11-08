@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using WilderBlog.Config;
 using WilderBlog.Data;
 
 namespace WilderBlog
@@ -26,10 +28,10 @@ namespace WilderBlog
 
     private static async Task Seed(IWebHost host)
     {
-      IConfiguration config = (IConfiguration)host.Services.GetService(typeof(IConfiguration));
-      if (config["WilderDb:TestData"] != "True")
+      var settings = host.Services.GetService<IOptions<AppSettings>>();
+      if (settings.Value.WilderDb.TestData)
       {
-        IServiceScopeFactory scopeFactory = (IServiceScopeFactory)host.Services.GetService(typeof(IServiceScopeFactory));
+        var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
         using (var scope = scopeFactory.CreateScope())
         {
           var initializer = scope.ServiceProvider.GetService<WilderInitializer>();

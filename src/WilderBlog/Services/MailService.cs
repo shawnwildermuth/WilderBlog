@@ -7,21 +7,25 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using WilderBlog.Config;
 
 namespace WilderBlog.Services
 {
   public class MailService : IMailService
   {
-    private IConfiguration _config;
     private IHostEnvironment _env;
+    private readonly IOptions<AppSettings> _settings;
     private ILogger<MailService> _logger;
 
-    public MailService(IHostEnvironment env, IConfiguration config, ILogger<MailService> logger)
+    public MailService(IHostEnvironment env,
+      IOptions<AppSettings> settings,
+      ILogger<MailService> logger)
     {
       _env = env;
-      _config = config;
+      _settings = settings;
       _logger = logger;
     }
 
@@ -44,14 +48,14 @@ namespace WilderBlog.Services
         var body = File.ReadAllText(path);
         _logger.LogInformation($"Read Email Body");
 
-        var key = _config["MailService:ApiKey"];
+        var key = _settings.Value.MailService.ApiKey;
 
         var client = new SendGridClient(key);
         var formattedMessage = string.Format(body, email, name, subject, msg);
 
         var mailMsg = MailHelper.CreateSingleEmail(
-          new EmailAddress(_config["MailService:Receiver"]),
-          new EmailAddress(_config["MailService:Receiver"]),
+          new EmailAddress(_settings.Value.MailService.Receiver),
+          new EmailAddress(_settings.Value.MailService.Receiver),
           $"Wildermuth.com Site Mail",
           formattedMessage,
           formattedMessage);
