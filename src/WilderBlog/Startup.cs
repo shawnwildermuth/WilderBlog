@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -13,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using WilderBlog.Data;
+using WilderBlog.Helpers;
 using WilderBlog.Logger;
 using WilderBlog.MetaWeblog;
 using WilderBlog.Services;
@@ -57,6 +60,8 @@ namespace WilderBlog
       {
         svcs.AddScoped<IWilderRepository, WilderRepository>();
       }
+
+      svcs.ConfigureHealthChecks(_config);
 
       svcs.AddTransient<WilderInitializer>();
       svcs.AddScoped<AdService>();
@@ -124,6 +129,11 @@ namespace WilderBlog
       app.UseEndpoints(cfg =>
       {
         cfg.MapControllers();
+        cfg.MapHealthChecks("/hc", new HealthCheckOptions()
+        {
+          Predicate = _ => true,
+          ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
       });
     }
 

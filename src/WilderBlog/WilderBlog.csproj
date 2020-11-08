@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <None Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\.editorconfig" Link=".editorconfig" />
     <None Include="config.json" CopyToPublishDirectory="PreserveNewest" />
     <None Include="web.config" CopyToPublishDirectory="PreserveNewest" />
     <None Include="Data\**\*" CopyToPublishDirectory="PreserveNewest" />
@@ -36,9 +37,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetcore.HealthChecks.Publisher.ApplicationInsights" Version="3.1.1" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.1.1" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="3.1.2" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.25" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
     <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.9" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Sendgrid" Version="9.21.0" />

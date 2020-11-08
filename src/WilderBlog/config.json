@@ -4,6 +4,9 @@
     "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=WilderBlogDb;Trusted_Connection=True;MultipleActiveResultsets=true;ConnectRetryCount=5;ConnectRetryInterval=10;Connect Timeout=5;",
     "TestData": "True"
   },
+  "ApplicationInsights": {
+    "InstrumentationKey":  "12345"
+  },
   "Exceptions": {
     "TestEmailExceptions": false
   },
