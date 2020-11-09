@@ -135,7 +135,8 @@ namespace WilderBlog
       app.UseEndpoints(cfg =>
       {
         cfg.MapControllers();
-        cfg.MapHealthChecks("/hc", new HealthCheckOptions()
+        cfg.MapHealthChecks("/_hc");
+        cfg.MapHealthChecks("/_hc.json", new HealthCheckOptions()
         {
           Predicate = _ => true,
           ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
