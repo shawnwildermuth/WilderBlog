@@ -56,7 +56,7 @@ namespace WilderBlog
       svcs.AddIdentity<WilderUser, IdentityRole>()
         .AddEntityFrameworkStores<WilderContext>();
 
-      if (_config["WilderDb:TestData"] == "True")
+      if (_config.GetValue<bool>("WilderDb:TestData"))
       {
         svcs.AddScoped<IWilderRepository, MemoryRepository>();
       }

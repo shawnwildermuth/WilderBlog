@@ -13,5 +13,7 @@ namespace WilderBlog.Data
     public string Slug { get; set; }
     public string Title { get; set; }
     public string UniqueId { get; set; }
+    public string FeatureImageUrl { get; set; }
+    public string Abstract { get; set; }
   }
 }

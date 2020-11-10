@@ -19,6 +19,7 @@ namespace WilderBlog.Services
       var config = new ConfigurationBuilder()
         .SetBasePath(Directory.GetCurrentDirectory())
         .AddJsonFile("config.json")
+        .AddEnvironmentVariables()
         .Build();
 
       return new WilderContext(new DbContextOptionsBuilder<WilderContext>().Options, config);
