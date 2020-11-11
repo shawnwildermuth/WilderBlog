@@ -15,7 +15,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.100
+          dotnet-version: 5.0.100
       - uses: azure/docker-login@v1
         with:
           login-server: wmcontainers.azurecr.io

@@ -29,7 +29,7 @@ namespace WilderBlog.Services
         await _mailService.SendMailAsync("exceptionmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", ex.ToString());
 
         // Don't swallow the exception
-        throw ex;
+        throw;
       }
 
     }

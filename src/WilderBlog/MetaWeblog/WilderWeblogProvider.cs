@@ -9,8 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
 using WilderBlog.Config;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
@@ -56,6 +54,8 @@ namespace WilderBlog.MetaWeblog
         newStory.IsPublished = publish;
         newStory.Slug = newStory.GetStoryUrl();
         newStory.UniqueId = newStory.Slug;
+        newStory.FeatureImageUrl = post?.wp_post_thumbnail;
+        newStory.Abstract = newStory.GetSummary();
 
         _repo.AddStory(newStory);
         if (await _repo.SaveAllAsync())
@@ -88,6 +88,8 @@ namespace WilderBlog.MetaWeblog
         story.Categories = string.Join(",", post.categories);
         story.IsPublished = publish;
         if (string.IsNullOrWhiteSpace(story.Slug)) story.Slug = story.GetStoryUrl(); // Only recalcuate Slug if absolutely necessary
+        story.FeatureImageUrl = post?.wp_post_thumbnail;
+        story.Abstract = story.GetSummary();
 
         if (await _repo.SaveAllAsync())
         {
@@ -117,7 +119,8 @@ namespace WilderBlog.MetaWeblog
           categories = story.Categories.Split(','),
           postid = story.Id,
           userid = "shawnwildermuth",
-          wp_slug = story.GetStoryUrl()
+          wp_slug = story.GetStoryUrl(),
+          wp_post_thumbnail = story.FeatureImageUrl
         };
 
         return newPost;
@@ -182,7 +185,8 @@ namespace WilderBlog.MetaWeblog
           permalink = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
           link = string.Concat("http://wildermuth.com/", s.GetStoryUrl()),
           wp_slug = s.Slug,
-          userid = "shawnwildermuth"
+          userid = "shawnwildermuth",
+          wp_post_thumbnail = s.FeatureImageUrl
         };
       }).ToArray();
 

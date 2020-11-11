@@ -6,9 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
 using WilderBlog.Config;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Specialized;
+using Azure.Storage;
 
 namespace WilderBlog.Services
 {
@@ -27,20 +28,21 @@ namespace WilderBlog.Services
 
       var url = string.Concat(_settings.Value.BlobService.StorageUrl, filenameonly);
 
-      var creds = new StorageCredentials(_settings.Value.BlobService.Account, _settings.Value.BlobService.Key);
-      var blob = new CloudBlockBlob(new Uri(url), creds);
+      var creds = new StorageSharedKeyCredential(_settings.Value.BlobService.Account, _settings.Value.BlobService.Key);
+      var blob = new BlockBlobClient(new Uri(url), creds);
 
       bool shouldUpload = true;
       if (await blob.ExistsAsync())
       {
-        await blob.FetchAttributesAsync();
-        if (blob.Properties.Length == image.Length)
+        var props = await blob.GetPropertiesAsync();
+        if (props.Value.ContentLength == image.Length)
         {
           shouldUpload = false;
         }
       }
 
-      if (shouldUpload) await blob.UploadFromByteArrayAsync(image, 0, image.Length);
+      var stream = new MemoryStream(image);
+      if (shouldUpload) await blob.UploadAsync(stream);
 
 
       return url;
