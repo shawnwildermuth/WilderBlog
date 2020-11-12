@@ -2,7 +2,7 @@
 
 Project Status:
 
-![Build status](https://github.com/shawnwildermuth/WilderBlog/workflows/dotnetcore/badge.svg)
+![WilderBlog-Build](https://github.com/shawnwildermuth/WilderBlog/workflows/WilderBlog-Build/badge.svg)
 
 I re-wrote my blog using a new stack of web technologies including:
 
