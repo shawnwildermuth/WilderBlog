@@ -1,12 +1,18 @@
 # WilderBlog
 
+Project Status:
+
+![WilderBlog-Build](https://github.com/shawnwildermuth/WilderBlog/workflows/WilderBlog-Build/badge.svg)
+
 I re-wrote my blog using a new stack of web technologies including:
 
- - ASP.NET Core 3.1
- - Entity Framework Core 3.1
- - Vue 2.x
+ - .NET 5
+ - ASP.NET Core 5
+ - Entity Framework Core 5
+ - Vue
  - Bootstrap 4 
- - Azure Websites (Docker) and Azure Blob Storage
+ - Azure Websites (Docker)
+ - Azure Blob Storage
  
 The project wasn't build to be a blog engine or a easy to re-use for your own blog. It doesn't mean you can't use it for that. Feel free to fork the project, but that wasn't a design goal. 
 
