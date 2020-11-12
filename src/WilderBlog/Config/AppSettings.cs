@@ -19,7 +19,7 @@ namespace WilderBlog.Config
     public MetaWeblogSettings MetaWeblog { get; set; }
     public AdServiceSettings AdService { get; set; }
     public GoogleSettings Google { get; set; }
-    public BlobServiceSettings BlobService { get; set; }
+    public BlobStorageSettings BlobStorage { get; set; }
 
 
     public class WilderDbSettings
@@ -70,7 +70,7 @@ namespace WilderBlog.Config
       public string CaptchaSiteId { get; set; }
     }
 
-    public class BlobServiceSettings
+    public class BlobStorageSettings
     {
       public string Account { get; set; }
       public string Key { get; set; }

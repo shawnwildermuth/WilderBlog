@@ -11,8 +11,14 @@
         <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag" asp-route-page="">@tag</a>
       }
     </p>
-    <img src="@(Model.FeatureImageUrl)" alt="@Model.Title" class="float-right img-fluid img-thumbnail w-25 d-none d-md-block" />
-    @Html.Raw(Model.Abstract)
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        @Html.Raw(Model.Abstract)
+      </div>
+      <div class="d-none d-md-flex" style="max-width: 250px;">
+        <a href="/@Model.Slug"><img src="@(Model.FeatureImageUrl)" alt="@Model.Title" class="img-fluid img-thumbnail" /></a>
+      </div>
+    </div>
     <p><a href="/@Model.Slug" class="btn btn-custom"><i class="fas fa-glasses"></i> Read...</a></p>
     <hr/>
   </div>

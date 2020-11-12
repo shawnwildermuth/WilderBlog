@@ -31,10 +31,10 @@
     "CaptchaSecret": "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
     "CaptchaSiteId": "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
   },
-  "BlobService": {
+  "BlobStorage": {
     "Account": "FOO",
     "Key": "BAR",
-    "StorageUrl": "https://wilderminds.blob.core.windows.net/img/"
+    "StorageUrl": "https://wilderminds.blob.core.windows.net/"
   },
   "Logging": {
     "LogLevel": {
