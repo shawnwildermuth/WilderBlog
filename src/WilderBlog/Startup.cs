@@ -85,7 +85,8 @@ namespace WilderBlog
       svcs.AddMemoryCache(opt => opt.ExpirationScanFrequency = TimeSpan.FromMinutes(5));
 
       // Add MVC to the container
-      svcs.AddControllersWithViews();
+      svcs.AddControllersWithViews()
+         .AddRazorRuntimeCompilation();
 
 
     }

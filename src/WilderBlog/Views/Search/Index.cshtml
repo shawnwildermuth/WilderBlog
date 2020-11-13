@@ -25,10 +25,13 @@
       <partial name="_Pager" />
     </div>
   </div>
-  @foreach (var story in Model.Stories)
-  {
-<partial name="_StoryBrief" model="story" />
-         }
+  
+  <div class="row">
+    @foreach (var story in Model.Stories)
+    {
+      <partial name="_StoryBrief" model="story" />
+    }
+  </div>
 
   <div class="row">
     <div class="col-lg-12">

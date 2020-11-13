@@ -26,7 +26,7 @@ namespace WilderBlog.Controllers
   [Route("")]
   public class RootController : Controller
   {
-    readonly int _pageSize = 10;
+    readonly int _pageSize = 12;
 
     private IMailService _mailService;
     private IWilderRepository _repo;
