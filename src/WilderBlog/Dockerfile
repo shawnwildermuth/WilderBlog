@@ -2,9 +2,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
-RUN apt-get install -y nodejs
+FROM wilderminds/net5-npm:15.0 AS build
 WORKDIR /src
 COPY ["WilderBlog/WilderBlog.csproj", "WilderBlog/"]
 COPY ["WilderBlog.Data/WilderBlog.Data.csproj", "WilderBlog.Data/"]

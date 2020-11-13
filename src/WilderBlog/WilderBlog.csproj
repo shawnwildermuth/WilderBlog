@@ -66,6 +66,8 @@
     <Exec Command="node node_modules/gulp/bin/gulp.js clean" />
     <Exec Command="node node_modules/gulp/bin/gulp.js minify" />
     <Exec Command="node node_modules/gulp/bin/gulp.js scripts" />
+    <Exec Command="npm install"
+          WorkingDirectory="client/" />
     <Exec Command="npm run build" WorkingDirectory="client/" />
   </Target>
 
