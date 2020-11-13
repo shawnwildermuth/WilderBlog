@@ -29,6 +29,7 @@ jobs:
       working-directory: ./src/WilderBlog/client
       run: |
         npm install
+        npm install @vue/cli
         npm run build
     - name: Build Project
       working-directory: ./src/WilderBlog      
