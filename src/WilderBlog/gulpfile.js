@@ -44,15 +44,6 @@ var deps = {
   "tether": {
     "dist/**/*": ""
   },
-  "vue": {
-    "dist/*": ""
-  },
-  "vee-validate": {
-    "dist/*": ""
-  },
-  "vue-resource": {
-    "dist/*": ""
-  },
   "@fortawesome/fontawesome-free-webfonts": {
     "**/*": ""
   }
