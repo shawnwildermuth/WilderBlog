@@ -1,9 +1,9 @@
 name: WilderBlog-Deploy
 
-on:
-  push: 
-    tags: 
-      - 'v*'
+on: 
+  push:
+    branches:
+      master
 
 jobs:
   build:

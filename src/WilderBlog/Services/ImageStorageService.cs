@@ -26,11 +26,11 @@ namespace WilderBlog.Services
       _logger = logger;
     }
 
-    public async Task<string> StoreImage(string filename, byte[] image)
+    public async Task<string> StoreImage(string path, byte[] image)
     {
       try
       {
-        var filenameonly = Path.GetFileName(filename);
+        var filename = Path.GetFileName(path);
 
         var creds = new StorageSharedKeyCredential(_settings.Value.BlobStorage.Account, _settings.Value.BlobStorage.Key);
         var client = new BlobServiceClient(new Uri(_settings.Value.BlobStorage.StorageUrl), creds);
