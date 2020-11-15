@@ -130,13 +130,12 @@ namespace WilderBlog.Controllers
           }
 
           // Captcha
-          if (await _captcha.Verify(model.Recaptcha))
+          if (!(await _captcha.Verify(model.Recaptcha))) return BadRequest("Failed to send email: You might be a bot...try again later.");
+          if (await _mailService.SendMailAsync("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg))
           {
-            if (await _mailService.SendMailAsync("ContactTemplate.txt", model.Name, model.Email, model.Subject, model.Msg))
-            {
-              return Ok(new { Success = true, Message = "Message Sent" });
-            }
+            return Ok(new { Success = true, Message = "Message Sent" });
           }
+
         }
       }
       catch (Exception ex)
