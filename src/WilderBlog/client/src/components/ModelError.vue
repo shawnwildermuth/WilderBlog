@@ -1,12 +1,14 @@
 ﻿<template>
   <span v-if="model.$invalid" class="text-danger">
-    <slot>
-      <ul class="list-unstyled">
-        <li v-for="e in model.$errors" :key="e.$message">
-          {{ e.$message }}
-        </li>
-      </ul>
-    </slot>
+    <ul class="list-unstyled">
+      <li v-for="e in model.$errors" :key="e.$message">
+        <small>
+          <em>
+            <slot>{{ e.$message }}</slot>
+          </em>
+        </small>
+      </li>
+    </ul>
   </span>
 </template>
 <script>

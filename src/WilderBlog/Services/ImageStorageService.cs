@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
+using Azure.Storage;
+using Azure.Storage.Blobs;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WilderBlog.Config;
-using Azure.Storage.Blobs;
-using Azure.Storage.Blobs.Specialized;
-using Azure.Storage;
-using Microsoft.Extensions.Logging;
-using Microsoft.VisualStudio.Web.CodeGeneration;
 
 namespace WilderBlog.Services
 {
