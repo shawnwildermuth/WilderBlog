@@ -2,6 +2,8 @@ name: WilderBlog-Build
 
 on: 
   push:
+    branches:
+      next
 
 jobs:
   build:
