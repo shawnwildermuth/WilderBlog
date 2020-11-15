@@ -6,9 +6,9 @@
 }
 @inject IConfiguration config
 @section styles {
-  <script src='https://www.google.com/recaptcha/api.js'></script>
 }
 @section Scripts {
+  <script src="https://www.google.com/recaptcha/api.js?render=@config["Google:CaptchaSiteId"]"></script>
   <script>
     window.captchaId = '@config["Google:CaptchaSiteId"]';
   </script>
@@ -19,7 +19,7 @@
   </environment>
   <environment exclude="Development">
     <script src="~/app/js/chunk-vendors.js" asp-append-version="true"></script>
-    <script src="~/app/js/contact.js"  asp-append-version="true"></script>
+    <script src="~/app/js/contact.js" asp-append-version="true"></script>
   </environment>
 }
 <div id="contact"></div>

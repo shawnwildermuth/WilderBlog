@@ -2,10 +2,10 @@
 import { notEqual } from "../validators";
 import { subjects } from "../lookups";
 import { useVuelidate, Validation } from "@vuelidate/core";
-import { Ref } from 'vue';
+import isProduction from "@/helpers/isProduction";
 
-export default class ContactMail  {
-  
+export default class ContactMail {
+
   constructor() {
     this.reset();
   }
@@ -14,7 +14,7 @@ export default class ContactMail  {
   email = "";
   subject = "";
   msg = "";
-  recaptcha= "";
+  recaptcha = "";
 
   rules = {
     name: { required, minLength: minLength(5) },
@@ -33,10 +33,18 @@ export default class ContactMail  {
   }
 
   reset() {
-    this.name = "";
-    this.email = "";
-    this.subject = "Pick One...";
-    this.msg = "";
-    this.recaptcha= "";
+    if (isProduction) {
+      this.name = "";
+      this.email = "";
+      this.subject = "Pick One...";
+      this.msg = "";
+      this.recaptcha = "";
+    } else {
+      this.name = "Shawn Wildermuth";
+      this.email = "shawn@wildermuth.com";
+      this.subject = "Training";
+      this.msg = "I want excellent training. I really, really do...";
+      this.recaptcha = "";
+    }
   }
 }

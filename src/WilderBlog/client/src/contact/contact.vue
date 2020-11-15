@@ -58,21 +58,11 @@
           <ModelError :model="model.msg" />
         </div>
         <div class="form-group">
-          <div
-            class="g-recaptcha"
-            :data-sitekey="captchaId"
-            data-size="compact"
-            data-callback="__onCaptchaSuccess__"
-          ></div>
-          <ModelError :model="model.recaptcha">
-            Must confirm you're not a robot. Seriously, HAL is no joke.
-          </ModelError>
-        </div>
-        <div class="form-group">
           <div class="pull-right">
             <button
               class="btn btn-success"
-              :disabled="model.$invalid || isBusy">
+              :disabled="model.$invalid || isBusy"
+            >
               Send Email
             </button>
             <a href="/" class="btn">Cancel</a>
@@ -91,20 +81,10 @@
 import { defineComponent, Ref, ref } from "vue";
 import ModelError from "@/components/ModelError.vue";
 import ContactMail from "./ContactMail";
-import { subjects } from "../lookups";
+import { subjects } from "@/lookups";
 import http from "./http";
-
-// Override for sharing with data
-declare global {
-  interface Window {
-    captchaId: string,
-    __captcha__callback: Function;
-  }
-}
-
-// Just ignore type safety for Google Recaptcha
-// Need this to support our resetting of the object
-declare var grecaptcha: any;
+import recaptcha from "@/helpers/recaptcha";
+import logger from "@/logger";
 
 export default defineComponent({
   components: {
@@ -115,14 +95,7 @@ export default defineComponent({
     const isBusy = ref(false);
     const status = ref("");
     const mail: Ref<ContactMail> = ref(new ContactMail());
-    const captchaId = ref(window.captchaId);
     const model = mail.value.getModel();
-
-    // Used to get value from Captcha
-    // HACK
-    window.__captcha__callback = function (value: string) {
-      mail.value.recaptcha = value;
-    };
 
     async function onSubmit() {
       // reset
@@ -130,12 +103,16 @@ export default defineComponent({
       isBusy.value = false;
       error.value = "";
 
+      // Get Recaptcha first
+      mail.value.recaptcha = await recaptcha.checkCaptcha();
+
+      // Validate
       if (model.value.$validate && (await model.value.$validate())) {
         // Save
         isBusy.value = true;
+        logger.log(`Sending Mail...`, mail.value);
         if (await http.sendMail(mail)) {
           model.value.$reset();
-          grecaptcha.reset();
           mail.value.reset();
           status.value = "Message Sent...";
         } else {
@@ -151,7 +128,6 @@ export default defineComponent({
       isBusy,
       subjects,
       status,
-      captchaId,
       onSubmit,
     };
   },
