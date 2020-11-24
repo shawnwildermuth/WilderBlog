@@ -36,8 +36,9 @@ namespace WilderBlog.Services
           @"<a href=""//courses.wilderminds.com/p/signalr""><img src=""/img/ads/signal-r-468x60.jpg"" border=""0"" alt="""" width=""468"" height=""60""/></a>",
           @"<a href=""//pluralsight.com/courses/aspnet-core-grpc""><img src=""/img/ads/grpc-468x60.jpg"" border=""0"" alt="""" width=""468"" height=""60""/></a>",
           @"<a href=""//pluralsight.com/courses/designing-restful-web-apis""><img src=""/img/ads/design-apis-468x60.jpg"" border=""0"" alt="""" width=""468"" height=""60""/></a>",
-          @"<a href=""//pluralsight.com/courses/designing-restful-web-apis""><img src=""/img/ads/design-apis-468x60.jpg"" border=""0"" alt="""" width=""468"" height=""60""/></a>"
-        )
+          @"<a href=""//pluralsight.com/courses/designing-restful-web-apis""><img src=""/img/ads/design-apis-468x60.jpg"" border=""0"" alt="""" width=""468"" height=""60""/></a>",
+          @"<a href=""//pluralsight.pxf.io/c/1191850/934717/7490"" target=""_top"" id=""934717""><img src=""//a.impactradius-go.com/display-ad/7490-934717"" border=""0"" alt="""" width=""160"" height=""600""/></a><img height=""0"" width=""0"" src=""https://pluralsight.pxf.io/i/1191850/934717/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"
+          )
 
       };
       var now = DateTime.Now;
@@ -64,7 +65,8 @@ namespace WilderBlog.Services
           @"<a href=""//courses.wilderminds.com/p/bootstrap-4-by-example""><img src=""/img/ads/bootstrap4-250x250.jpg"" border=""0"" alt="""" width=""250"" height=""250""/></a>",
           @"<a href=""//courses.wilderminds.com/p/vue-js-by-example""><img src=""/img/ads/vue-core-250x250.jpg"" border=""0"" alt="""" width=""250"" height=""250""/></a>",
           @"<a href=""//courses.wilderminds.com/p/signalr""><img src=""/img/ads/signal-r-250x250.jpg"" border=""0"" alt="""" width=""250"" height=""250""/></a>",
-          @"<a href=""//pluralsight.com/courses/aspnetcore-mvc-efcore-bootstrap-angular-web""><img src=""/img/ads/from-scratch-250x250.jpg"" border=""0"" alt="""" width=""250"" height=""250""/></a>"
+          @"<a href=""//pluralsight.com/courses/aspnetcore-mvc-efcore-bootstrap-angular-web""><img src=""/img/ads/from-scratch-250x250.jpg"" border=""0"" alt="""" width=""250"" height=""250""/></a>",
+          @"<a href=""//pluralsight.pxf.io/c/1191850/934723/7490"" target=""_top"" id=""934723""><img src=""//a.impactradius-go.com/display-ad/7490-934723"" border=""0"" alt="""" width=""300"" height=""250""/></a><img height=""0"" width=""0"" src=""https://pluralsight.pxf.io/i/1191850/934723/7490"" style=""position:absolute;visibility:hidden;"" border=""0"" />"
         )
 
       };
