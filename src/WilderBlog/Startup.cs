@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json.Serialization;
 using WilderBlog.Config;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
@@ -22,6 +16,7 @@ using WilderBlog.Logger;
 using WilderBlog.MetaWeblog;
 using WilderBlog.Services;
 using WilderBlog.Services.DataProviders;
+using WilderMinds.AzureImageStorageService;
 using WilderMinds.MetaWeblog;
 
 namespace WilderBlog
@@ -76,7 +71,16 @@ namespace WilderBlog
       svcs.AddScoped<PublicationsProvider>();
       svcs.AddScoped<PodcastEpisodesProvider>();
       svcs.AddScoped<VideosProvider>();
-      svcs.AddTransient<IImageStorageService, ImageStorageService>();
+      if (_env.IsDevelopment())
+      {
+        svcs.AddTransient<IAzureImageStorageService, FakeAzureImageService>(); 
+      }
+      else
+      {
+        svcs.AddAzureImageStorageService(_config["BlobStorage:Account"], 
+          _config["BlobStorage:Key"], 
+          _config["BlobStorage:ServiceUrl"]);
+      }
 
       // Supporting Live Writer (MetaWeblogAPI)
       svcs.AddMetaWeblog<WilderWeblogProvider>();

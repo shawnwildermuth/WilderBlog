@@ -13,6 +13,7 @@ using WilderBlog.Config;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
 using WilderBlog.Services;
+using WilderMinds.AzureImageStorageService;
 using WilderMinds.MetaWeblog;
 
 namespace WilderBlog.MetaWeblog
@@ -22,13 +23,13 @@ namespace WilderBlog.MetaWeblog
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
     private IHostEnvironment _appEnv;
-    private readonly IImageStorageService _imageService;
+    private readonly IAzureImageStorageService _imageService;
     private readonly ILogger<WilderWeblogProvider> _logger;
 
     public WilderWeblogProvider(UserManager<WilderUser> userMgr, 
       IWilderRepository repo, 
       IHostEnvironment appEnv, 
-      IImageStorageService imageService, 
+      IAzureImageStorageService imageService, 
       ILogger<WilderWeblogProvider> logger)
     {
       _repo = repo;
@@ -136,17 +137,20 @@ namespace WilderBlog.MetaWeblog
       await EnsureUser(username, password);
 
       var bits = Convert.FromBase64String(mediaObject.bits);
-      var op = _imageService.StoreImage(mediaObject.name, bits);
+      var result = await _imageService.StoreImage(mediaObject.name, bits);
 
-      op.Wait();
-      if (!op.IsCompletedSuccessfully) throw op.Exception;
-      var url = op.Result;
+      if (result.Success)
+      {
+        var url = result.ImageUrl;
 
-      // Create the response
-      MediaObjectInfo objectInfo = new MediaObjectInfo();
-      objectInfo.url = url;
+        // Create the response
+        MediaObjectInfo objectInfo = new MediaObjectInfo();
+        objectInfo.url = url;
 
-      return objectInfo;
+        return objectInfo;
+      }
+
+      return null;
     }
 
     public async Task<CategoryInfo[]> GetCategoriesAsync(string blogid, string username, string password)
