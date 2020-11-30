@@ -1,0 +1,30 @@
+name: WilderBlog-Next-Deploy
+
+on: 
+  push:
+    branches:
+      next
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.100
+      - uses: azure/docker-login@v1
+        with:
+          login-server: wmcontainers.azurecr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Building Docker Image
+        working-directory: ./src/WilderBlog
+        run: docker build .. -f ./Dockerfile -t wmcontainers.azurecr.io/wilderblog:next
+
+      - name: Push the Image
+        working-directory: ./src/WilderBlog 
+        run: docker push wmcontainers.azurecr.io/wilderblog:next
