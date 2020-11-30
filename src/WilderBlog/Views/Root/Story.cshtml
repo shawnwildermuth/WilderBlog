@@ -2,7 +2,7 @@
 @inject WilderBlog.Services.AdService ads
 @inject Microsoft.Extensions.Configuration.IConfiguration config
 @{
-  ViewBag.Title = $"{Model.Title} - Shawn Wildermuth";
+  ViewBag.Title = $"{Model.Title}";
   var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy");
 }
 <div class="p-2">
