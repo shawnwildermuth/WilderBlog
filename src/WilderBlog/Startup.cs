@@ -79,7 +79,7 @@ namespace WilderBlog
       {
         svcs.AddAzureImageStorageService(_config["BlobStorage:Account"], 
           _config["BlobStorage:Key"], 
-          _config["BlobStorage:ServiceUrl"]);
+          _config["BlobStorage:StorageUrl"]);
       }
 
       // Supporting Live Writer (MetaWeblogAPI)
