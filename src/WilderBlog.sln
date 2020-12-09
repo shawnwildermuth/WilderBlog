@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		..\.gitattributes = ..\.gitattributes
 		..\.gitignore = ..\.gitignore
-		..\.github\workflows\deploy.yml = ..\.github\workflows\deploy.yml
+		..\.github\workflows\deploy-next.yml = ..\.github\workflows\deploy-next.yml
 		..\.github\workflows\dotnetcore.yml = ..\.github\workflows\dotnetcore.yml
 		..\README.md = ..\README.md
 		test.json = test.json
@@ -43,7 +43,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0B4B2DB9-DAA9-4DB9-BA7E-C5A7EA92C28B}
 		LessCompiler = 4fb63e39-5177-4332-acd6-4f0fdba65d73
+		SolutionGuid = {0B4B2DB9-DAA9-4DB9-BA7E-C5A7EA92C28B}
 	EndGlobalSection
 EndGlobal
