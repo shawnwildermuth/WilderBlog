@@ -7,19 +7,10 @@
     <div class="card-body">
       <div class="card-title"><a href="/@Model.Slug">@Model.Title</a></div>
       <div class="card-subtitle">
-        <small><i class="fas fa-calendar"></i>&nbsp;@Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")</small>
+        <small><i class="fas fa-calendar"></i>&nbsp;@Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")</small><br/>
+        <i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>
       </div>
     </div>
-    @*<div class="d-flex justify-content-between align-items-start">
-      <div>
-        @Html.Raw(Model.Abstract)
-      </div>
-      <div class="d-none d-md-flex" style="max-width: 250px;">
-        <a href="/@Model.Slug"><img src="@(Model.FeatureImageUrl)" alt="@Model.Title" class="img-fluid img-thumbnail" /></a>
-      </div>
-    </div>
-    <p><a href="/@Model.Slug" class="btn btn-custom"><i class="fas fa-glasses"></i> Read...</a></p>
-    <hr/>*@
   </div>
 </div>
 
