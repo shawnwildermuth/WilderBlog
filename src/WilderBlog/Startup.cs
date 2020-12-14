@@ -73,7 +73,7 @@ namespace WilderBlog
       svcs.AddScoped<VideosProvider>();
       if (_env.IsDevelopment())
       {
-        svcs.AddTransient<IAzureImageStorageService, FakeAzureImageService>(); 
+        svcs.AddTransient<IAzureImageStorageService, FakeAzureImageService>();
       }
       else
       {

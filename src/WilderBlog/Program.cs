@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -48,6 +49,7 @@ namespace WilderBlog
 
       builder.SetBasePath(ctx.HostingEnvironment.ContentRootPath)
         .AddJsonFile("config.json", false, true)
+        .AddUserSecrets(Assembly.GetEntryAssembly())
         .AddEnvironmentVariables();
 
     }
