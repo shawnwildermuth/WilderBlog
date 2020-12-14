@@ -71,7 +71,7 @@ namespace WilderBlog
       svcs.AddScoped<PublicationsProvider>();
       svcs.AddScoped<PodcastEpisodesProvider>();
       svcs.AddScoped<VideosProvider>();
-      if (_env.IsDevelopment())
+      if (_env.IsDevelopment() && _config.GetValue<bool>("BlobStorage:TestInDev") == false)
       {
         svcs.AddTransient<IAzureImageStorageService, FakeAzureImageService>();
       }
