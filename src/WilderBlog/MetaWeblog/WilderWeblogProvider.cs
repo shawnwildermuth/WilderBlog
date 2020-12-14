@@ -150,7 +150,7 @@ namespace WilderBlog.MetaWeblog
         return objectInfo;
       }
 
-      return null;
+      throw new MetaWeblogException("Failed to upload Media Object");
     }
 
     public async Task<CategoryInfo[]> GetCategoriesAsync(string blogid, string username, string password)
