@@ -1,8 +1,12 @@
 ﻿@model BlogStory
-<div class="col-12 col-md-6 col-xl-4 my-1">
+<div class="col-12 col-md-12 col-lg-6 col-xl-4 my-1">
   <div class="card bg-light story-brief">
     <div class="card-img-top">
-      <a href="/@Model.Slug"><img src="@(Model.FeatureImageUrl)" alt="@Model.Title" class="img-fluid img-thumbnail" /></a>
+      <a href="/@Model.Slug">
+        <div class="d-md-flex align-content-md-center p-md-1 img-top-container">
+          <img src="@(Model.FeatureImageUrl)" alt="@Model.Title" class="img-fluid align-self-md-baseline" />
+        </div>
+      </a>
     </div>
     <div class="card-body">
       <div class="card-title"><a href="/@Model.Slug">@Model.Title</a></div>

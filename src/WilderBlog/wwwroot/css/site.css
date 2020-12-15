@@ -40,9 +40,9 @@ code[class*="language-"] {
   overflow-x: hidden;
   max-width: 100vw;
 }
-@media (min-width: 992px) {
-  .story-brief {
-    min-height: 300px;
+@media (min-width: 1200px) {
+  .story-brief .card-body {
+    min-height: 175px;
   }
 }
 .header-container {
