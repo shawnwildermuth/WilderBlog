@@ -20,6 +20,7 @@ namespace WilderBlog.MetaWeblog
 {
   public class WilderWeblogProvider : IMetaWeblogProvider
   {
+    private const string CONTAINER_NAME = "img";
     private IWilderRepository _repo;
     private UserManager<WilderUser> _userMgr;
     private IHostEnvironment _appEnv;
@@ -137,7 +138,7 @@ namespace WilderBlog.MetaWeblog
       await EnsureUser(username, password);
 
       var bits = Convert.FromBase64String(mediaObject.bits);
-      var result = await _imageService.StoreImage(mediaObject.name, bits);
+      var result = await _imageService.StoreImage(CONTAINER_NAME, mediaObject.name, bits);
 
       if (result.Success)
       {

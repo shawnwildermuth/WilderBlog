@@ -34,7 +34,8 @@
   "BlobStorage": {
     "Account": "FOO",
     "Key": "BAR",
-    "StorageUrl": "https://wilderminds.blob.core.windows.net/"
+    "StorageUrl": "https://wilderminds.blob.core.windows.net/",
+    "TestInDev": false
   },
   "Logging": {
     "LogLevel": {

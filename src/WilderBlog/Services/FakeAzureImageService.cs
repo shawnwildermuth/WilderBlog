@@ -6,12 +6,12 @@ namespace WilderBlog.Services
 {
   public class FakeAzureImageService : IAzureImageStorageService
   {
-    public Task<ImageResponse> StoreImage(string storageImagePath, Stream imageStream)
+    public Task<ImageResponse> StoreImage(string containerName, string storageImagePath, Stream imageStream)
     {
       return Task.FromResult(new ImageResponse() { Success = true });
     }
 
-    public Task<ImageResponse> StoreImage(string storeImagePath, byte[] imageData)
+    public Task<ImageResponse> StoreImage(string containerName, string storeImagePath, byte[] imageData)
     {
       return Task.FromResult(new ImageResponse() { Success = true });
     }
