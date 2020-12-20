@@ -4,7 +4,8 @@
     <div class="card-img-top">
       <a href="/@Model.Slug">
         <div class="d-md-flex align-content-md-center p-md-1 img-top-container">
-          <img src="@(Model.FeatureImageUrl)" alt="@Model.Title" class="img-fluid align-self-md-baseline" />
+          <div class="featured-image" style="background-image: url('@(Model.FeatureImageUrl)')"></div>
+          @*<img src="" alt="@Model.Title" class="img-fluid align-self-md-baseline" />*@
         </div>
       </a>
     </div>
