@@ -218,7 +218,6 @@ nuget.exe
 *.*sdf
 *.ipch
 .vs/
-project.lock.json
 
 
 bower_components/
@@ -234,5 +233,4 @@ rundocker.cmd
 typings
 /out/**
 /src/.idea/.idea.WilderBlog
-src/WilderBlog/package-lock.json
 /src/test.json
