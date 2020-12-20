@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
   font-family: 'Atkinson-Hyperlegible';
   src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Regular-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf') format('truetype');
   font-weight: normal;
@@ -45,6 +45,20 @@ code[class*="language-"] {
     min-height: 175px;
   }
 }
+.featured-image {
+  height: 200px;
+  background-position: top;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #eee;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .featured-image {
+    height: 150px;
+  }
+}
 .header-container {
   padding: 4px;
 }
@@ -62,8 +76,6 @@ code[class*="language-"] {
 }
 .header-container .headshot img {
   width: 110px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
   margin-left: -8px;
 }
@@ -107,7 +119,7 @@ header .subtitle a:hover {
     text-align: center;
   }
   header .subtitle {
-    font-size: 0.9rem;
+    font-size: .9rem;
     text-align: center;
   }
 }
@@ -195,7 +207,7 @@ aside .bottom-ad {
 .syntaxhighlighter {
   overflow-y: hidden !important;
   overflow-x: auto !important;
-  font-size: 0.8em !important;
+  font-size: .8em !important;
 }
 .ad-top {
   text-align: right;
@@ -207,8 +219,8 @@ img.pull-right {
 }
 .navbar-nav .nav-link {
   font-size: 1rem;
-  padding-right: 0.3rem;
-  padding-left: 0.3rem;
+  padding-right: .3rem;
+  padding-left: .3rem;
 }
 .navbar .navbar-brand {
   color: #eee;
@@ -224,13 +236,13 @@ img.pull-right {
   color: #eee;
 }
 .navbar-nav .nav-item + .nav-item {
-  margin-left: 0.3rem;
+  margin-left: .3rem;
 }
 .navbar-nav .nav-item .nav-link a:hover {
   text-decoration: none;
 }
 #info-table {
-  font-size: 0.9rem;
+  font-size: .9rem;
 }
 .center-block {
   margin: 0 auto;
@@ -277,14 +289,9 @@ a.btn:hover {
   padding: 8px 8px 0 8px;
   color: #2b2b2b;
   border-radius: 0;
-  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.25);
   box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.25);
 }
 .fa-hover-spin:hover {
-  -webkit-animation: fa-spin 2s infinite linear;
-  -moz-animation: fa-spin 2s infinite linear;
-  -o-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 @media (min-width: 1600px) {
