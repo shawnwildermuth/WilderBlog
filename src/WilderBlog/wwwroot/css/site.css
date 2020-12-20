@@ -54,11 +54,6 @@ code[class*="language-"] {
   border: 1px solid #eee;
   width: 100%;
 }
-@media (min-width: 992px) {
-  .featured-image {
-    height: 150px;
-  }
-}
 .header-container {
   padding: 4px;
 }
