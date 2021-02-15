@@ -234,3 +234,4 @@ typings
 /out/**
 /src/.idea/.idea.WilderBlog
 /src/test.json
+*.booboo
