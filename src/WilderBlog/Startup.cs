@@ -3,6 +3,7 @@ using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -100,7 +101,8 @@ namespace WilderBlog
                           ILoggerFactory loggerFactory,
                           IMailService mailService,
                           IServiceScopeFactory scopeFactory,
-                          IOptions<AppSettings> settings)
+                          IOptions<AppSettings> settings,
+                          IHttpContextAccessor contextAccessor)
     {
       // Add the following to the request pipeline only in development environment.
       if (_env.IsDevelopment())
@@ -114,7 +116,7 @@ namespace WilderBlog
         app.UseExceptionHandler("/Exception");
 
         // Support logging to email
-        loggerFactory.AddEmail(mailService, LogLevel.Critical);
+        loggerFactory.AddEmail(mailService, contextAccessor, LogLevel.Critical);
 
         app.UseHttpsRedirection();
       }

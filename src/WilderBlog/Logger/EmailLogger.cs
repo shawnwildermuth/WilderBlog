@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WilderBlog.Services;
@@ -11,12 +12,14 @@ namespace WilderBlog.Logger
     private string _categoryName;
     private Func<string, LogLevel, bool> _filter;
     private IMailService _mailService;
+    private readonly IHttpContextAccessor _contextAccessor;
 
-    public EmailLogger(string categoryName, Func<string, LogLevel, bool> filter, IMailService mailService)
+    public EmailLogger(string categoryName, Func<string, LogLevel, bool> filter, IMailService mailService, IHttpContextAccessor contextAccessor)
     {
       _categoryName = categoryName;
       _filter = filter;
       _mailService = mailService;
+      _contextAccessor = contextAccessor;
     }
 
     public IDisposable BeginScope<TState>(TState state)
@@ -57,6 +60,10 @@ namespace WilderBlog.Logger
       {
         message += Environment.NewLine + Environment.NewLine + exception.ToString();
       }
+
+      var url = UriHelper.GetEncodedPathAndQuery(_contextAccessor.HttpContext.Request);
+      message += Environment.NewLine + Environment.NewLine + $"Request: {url}";
+      
 
       _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Log Message]", message).Wait();
 
