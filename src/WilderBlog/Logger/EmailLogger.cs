@@ -52,17 +52,18 @@ namespace WilderBlog.Logger
         return;
       }
 
-      message = $@"Level: {logLevel}
-
-{message}";
+      message = $@"<div>
+  <h1>Error on WilderBlog</h1>
+<p>Level: {logLevel}</p>
+<p>{message}</p>";
 
       if (exception != null)
       {
-        message += Environment.NewLine + Environment.NewLine + exception.ToString();
+        message += $"<p>{exception}</p>";
       }
 
       var url = UriHelper.GetEncodedPathAndQuery(_contextAccessor.HttpContext.Request);
-      message += Environment.NewLine + Environment.NewLine + $"Request: {url}";
+      message += $"<p>Request: {url}</p></div>";
       
 
       _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Log Message]", message).Wait();

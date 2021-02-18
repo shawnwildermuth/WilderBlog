@@ -199,9 +199,8 @@ namespace WilderBlog.Controllers
 
       if (exception != null && request != null)
       {
-        var message = $@"RequestUrl: ${request.Path}
-
-Exception: ${exception.Error}";
+        var message = $@"<p>RequestUrl: {request.RawTarget}</p>
+<p>Exception: ${exception.Error}</p>";
 
         await _mailService.SendMailAsync("logmessage.txt", "Shawn Wildermuth", "shawn@wildermuth.com", "[WilderBlog Exception]", message);
       }
