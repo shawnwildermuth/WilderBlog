@@ -2,38 +2,36 @@
 @using System.Runtime.InteropServices
 @using Microsoft.DotNet.PlatformAbstractions
 @using System.Reflection
-<div class="container">
-  <div class="row">
-    <button class="btn btn-sm btn-secondary" data-toggle="collapse" data-target="#info-table">Show Info</button>
-    <div class="collapse" id="info-table">
-      <div class="col-md-12">
-        <table class="table table-sm table-light">
-          <tr>
-            <td>Application Name</td>
-            <td><strong>@env.ApplicationName</strong></td>
-            <td>Environment Name</td>
-            <td><strong>@env.EnvironmentName</strong></td>
-          </tr>
-          <tr>
-            <td>Application Ver</td>
-            <td><strong>@Assembly.GetAssembly(typeof(WilderBlog.Startup)).GetName().Version</strong></td>
-            <td>Runtime Framework</td>
-            <td><strong>@(Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.RuntimeArchitecture)</strong></td>
-          </tr>
-          <tr>
-            <td>App Path</td>
-            <td><strong>@ApplicationEnvironment.ApplicationBasePath</strong></td>
-            <td>Runtime Version</td>
-            <td><strong>@RuntimeInformation.FrameworkDescription</strong></td>
-          </tr>
-          <tr>
-            <td>Operating System</td>
-            <td><strong>@RuntimeInformation.OSDescription</strong></td>
-            <td>Runtime Arch</td>
-            <td><strong>@RuntimeInformation.ProcessArchitecture</strong></td>
-          </tr>
-        </table>
-      </div>
+<div>
+  <div>
+    <button class="btn" id="info-table-btn">Show Info</button>
+    <div class="hidden" id="info-panel">
+      <table class="text-xs border w-full">
+        <tr>
+          <td>Application Name</td>
+          <td><strong>@env.ApplicationName</strong></td>
+          <td>Environment Name</td>
+          <td><strong>@env.EnvironmentName</strong></td>
+        </tr>
+        <tr>
+          <td>Application Ver</td>
+          <td><strong>@Assembly.GetAssembly(typeof(WilderBlog.Startup)).GetName().Version</strong></td>
+          <td>Runtime Framework</td>
+          <td><strong>@(Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.RuntimeArchitecture)</strong></td>
+        </tr>
+        <tr>
+          <td>App Path</td>
+          <td><strong>@ApplicationEnvironment.ApplicationBasePath</strong></td>
+          <td>Runtime Version</td>
+          <td><strong>@RuntimeInformation.FrameworkDescription</strong></td>
+        </tr>
+        <tr>
+          <td>Operating System</td>
+          <td><strong>@RuntimeInformation.OSDescription</strong></td>
+          <td>Runtime Arch</td>
+          <td><strong>@RuntimeInformation.ProcessArchitecture</strong></td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

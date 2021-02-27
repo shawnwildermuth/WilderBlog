@@ -25,6 +25,7 @@
   <ItemGroup>
     <None Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="bundleconfig.json" />
     <None Include="config.json" CopyToPublishDirectory="PreserveNewest" />
     <None Include="web.config" CopyToPublishDirectory="PreserveNewest" />
     <None Include="Data\**\*" CopyToPublishDirectory="PreserveNewest" />
@@ -59,6 +60,16 @@
 
   <ItemGroup>
     <Content Include="EmailTemplates/**/*.txt" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="wwwroot\css\fonts.css" />
+    <Content Remove="wwwroot\css\wilderblog.src.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Styles\" />
   </ItemGroup>
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">

@@ -1,16 +1,23 @@
 ﻿// Site-wide JavaScript
 
 // Search Form
-(function ($) {
-  $("#searchForm").submit(function (e) {
-    window.location = "/search/" + encodeURI($("#search").val());
-    e.preventDefault();
-    return false;
-  });
-  //var $menu = $("#menu");
-  //$("#toggle-menu").on("click", function (e) {
-  //  $menu.toggleClass("shown");
+document.addEventListener("DOMContentLoaded", function (event) {
+
+  //$("#searchForm").submit(function (e) {
+  //  window.location = "/search/" + encodeURI($("#search").val());
+  //  e.preventDefault();
+  //  return false;
   //});
+
+  const infoPanel = document.getElementById("info-panel");
+  const button = document.getElementById("info-table-btn");
+  button.addEventListener("click", function () {
+    if (infoPanel.classList.contains("hidden")) {
+      infoPanel.classList.remove("hidden");
+    } else {
+      infoPanel.classList.add("hidden");
+    }
+  });
 
   // Support Lazy Loading of Images
   var lazyLoadInstance = new LazyLoad({
@@ -18,7 +25,7 @@
     // ... more custom settings?
   });
 
-  $('[data-toggle="tooltip"]').tooltip()
+  //$('[data-toggle="tooltip"]').tooltip()
 
   window.cookieconsent.initialise({
     "palette": {
@@ -38,5 +45,4 @@
     }
   })
 
-
-})(jQuery);
+});

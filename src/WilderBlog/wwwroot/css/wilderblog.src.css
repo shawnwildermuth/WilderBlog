@@ -1,0 +1,68 @@
+﻿@tailwind base;
+
+@layer base {
+  html {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply font-sans text-4xl font-bold mb-2;
+  }
+
+  h2 {
+    @apply font-sans text-2xl font-bold mb-1;
+  }
+
+  h3 {
+    @apply font-sans text-xl font-bold mb-1;
+  }
+
+  a:link {
+    @apply text-red-900;
+  }
+
+  a:visited {
+    @apply text-red-800;
+  }
+
+  a:hover {
+    @apply text-red-500;
+  }
+
+  a:active {
+    @apply text-gray-500;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+
+  header a:hover {
+    @apply text-white;
+  }
+
+  .fa-hover-spin:hover {
+    -webkit-animation: fa-spin 2s infinite linear;
+    -moz-animation: fa-spin 2s infinite linear;
+    -o-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+  }
+
+  .btn {
+    @apply p-1 bg-gray-200 rounded border border-gray-600 hover:border-gray-400 hover:bg-gray-300;
+  }
+}
+
+
+@tailwind utilities;
+
+@layer utilities {
+  .thin-scroll {
+    scrollbar-width: thin;
+  }
+
+    .thin-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+}
