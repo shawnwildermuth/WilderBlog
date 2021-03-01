@@ -13,7 +13,7 @@
     "jquery": "3.5.1",
     "lodash": "4.17.19",
     "popper.js": "^1.14.7",
-    "prismjs": "1.21.0",
+    "prismjs": "1.23.0",
     "respond.js": "1.4.2",
     "tether": "1.4.7"
   },
