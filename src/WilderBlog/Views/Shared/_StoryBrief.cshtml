@@ -1,14 +1,14 @@
 ﻿@model BlogStory
-<div class="hover:bg-yellow-100 border p-1">
+<div class="hover:bg-yellow-100 border p-1 cursor-pointer">
   <a href="/@Model.Slug">
-    <div class="w-full h-48 bg-cover bg-center" style="background-image: url('@(Model.FeatureImageUrl)')"></div>
+    <div class="w-full h-48 bg-contain bg-no-repeat bg-top bg-center" style="background-image: url('@(Model.FeatureImageUrl)')"></div>
+    <div class="h-16 mt-1">
+      <h3>@Model.Title</h3>
+    </div>
+    <div class="ml-8 text-lg">
+      <div><i class="fas fa-calendar"></i>&nbsp;@Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")</div>
+      <div><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span></div>
+    </div>
   </a>
-  <div class="h-16">
-    <h3><a href="/@Model.Slug">@Model.Title</a></h3>
-  </div>
-  <div class="ml-8 text-lg">
-    <small><i class="fas fa-calendar"></i>&nbsp;@Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")</small><br />
-    <small><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span></small>
-  </div>
 </div>
 

@@ -561,6 +561,8 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   margin-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(127, 29, 29, var(--tw-text-opacity));
 }
 
 h2 {
@@ -569,6 +571,8 @@ h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   margin-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(127, 29, 29, var(--tw-text-opacity));
 }
 
 h3 {
@@ -577,6 +581,17 @@ h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(127, 29, 29, var(--tw-text-opacity));
+}
+
+h4 {
+  font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(127, 29, 29, var(--tw-text-opacity));
 }
 
 a:link {
@@ -597,6 +612,14 @@ a:hover {
 a:active {
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .container {
@@ -667,6 +690,38 @@ header a:hover {
   border-radius: 0.25rem;
   border-width: 1px;
   padding: 0.25rem;
+}
+
+.story-grid {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.tag-item:after {
+  content: " |";
+}
+
+.tag-item:last-child::after {
+  content: "";
+}
+
+.blog-story img:first-child {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(243, 244, 246, var(--tw-ring-opacity));
+  width: 25%;
+}
+
+.blog-story blockquote {
+  --tw-border-opacity: 1;
+  border-color: rgba(127, 29, 29, var(--tw-border-opacity));
+  border-left-width: 8px;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.blog-story blockquote p {
+  margin: 0px;
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {

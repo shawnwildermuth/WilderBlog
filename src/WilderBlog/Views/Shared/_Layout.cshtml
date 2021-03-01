@@ -77,7 +77,7 @@
         <div class="fixed  h-screen w-64  overflow-y-auto thin-scroll">
           <div class="my-6 w-40 mx-auto">
             <a asp-controller="Root" asp-action="Index">
-              <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="lazy border border-gray-200 shadow rounded-full hover:shadow-lg hover:border-white" />
+              <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="w-100 lazy border border-gray-200 shadow rounded-full hover:shadow-lg hover:border-white" />
             </a>
           </div>
           <h1 class="text-center"><a href="~/" class="hover:text-red-700">Shawn Wildermuth</a></h1>
@@ -126,7 +126,7 @@
             <h1>@ViewBag.PageName</h1>
             if (ViewBag.PageBlurb != null && !string.IsNullOrWhiteSpace(ViewBag.PageBlurb))
             {
-              <p>@ViewBag.PageBlurb</p>
+              <p class="text-red-900 text-lg">@ViewBag.PageBlurb</p>
               <hr />
             }
           }
@@ -135,7 +135,7 @@
         </div>
         <footer class="border-t mt-8 bg-gray-100">
           <div>
-            <ul class="flex flex-wrap space-x-2 justify-center">
+            <ul class="flex flex-wrap space-x-4 justify-center text-lg font-sans">
               <li><a href="https://www.wilderminds.com/classroom" target="_blank">Training</a></li>
               <li><a href="http://helloworldfilm.com" target="_blank">Hello World Film</a></li>
               <li><a asp-controller="Root" asp-action="Calendar">Events</a></li>

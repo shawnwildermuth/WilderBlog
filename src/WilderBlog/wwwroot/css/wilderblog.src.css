@@ -6,15 +6,19 @@
   }
 
   h1 {
-    @apply font-sans text-4xl font-bold mb-2;
+    @apply font-sans text-4xl font-bold mb-2 text-red-900;
   }
 
   h2 {
-    @apply font-sans text-2xl font-bold mb-1;
+    @apply font-sans text-2xl font-bold mb-1 text-red-900;
   }
 
   h3 {
-    @apply font-sans text-xl font-bold mb-1;
+    @apply font-sans text-xl font-bold mb-1 text-red-900;
+  }
+
+  h4 {
+    @apply font-sans text-xl mb-1 text-red-900;
   }
 
   a:link {
@@ -31,6 +35,10 @@
 
   a:active {
     @apply text-gray-500;
+  }
+
+  p {
+    @apply leading-normal mb-2 text-xl mt-1;
   }
 }
 
@@ -52,6 +60,31 @@
   .btn {
     @apply p-1 bg-gray-200 rounded border border-gray-600 hover:border-gray-400 hover:bg-gray-300;
   }
+
+  .story-grid {
+    @apply grid gap-1;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .tag-item:after {
+    content: " |";
+  }
+
+  .tag-item:last-child::after {
+    content: "";
+  }
+
+  .blog-story img:first-child {
+    @apply w-1/4 ring-gray-100;
+  }
+
+  .blog-story blockquote {
+    @apply border-l-8 border-red-900 pl-2 ml-2;
+  }
+
+    .blog-story blockquote p {  
+      @apply m-0;   
+    }
 }
 
 
