@@ -115,11 +115,12 @@
     grid-template-columns: auto minmax(0, 1fr);
   }
 
-  .tag-item:after {
-    content: " |";
+  .tags span:after { 
+    content: "|";
+    @apply mx-1;
   }
 
-  .tag-item:last-child::after {
+  .tags span:last-child::after {
     content: "";
   }
 
@@ -147,4 +148,8 @@
     .thin-scroll::-webkit-scrollbar {
       width: 6px;
     }
+
+  .headshot {
+    @apply w-48 mx-auto transform duration-100 hover:rotate-3 hover:scale-105 ring-2 ring-yellow-500 rounded;
+  }
 }

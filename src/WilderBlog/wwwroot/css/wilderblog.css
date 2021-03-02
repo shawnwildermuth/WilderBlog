@@ -778,11 +778,13 @@ select option {
   grid-template-columns: auto minmax(0, 1fr);
 }
 
-.tag-item:after {
-  content: " |";
+.tags span:after {
+  content: "|";
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
-.tag-item:last-child::after {
+.tags span:last-child::after {
   content: "";
 }
 
@@ -31401,6 +31403,36 @@ select option {
 
 .thin-scroll::-webkit-scrollbar {
   width: 6px;
+}
+
+.headshot {
+  border-radius: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(245, 158, 11, var(--tw-ring-opacity));
+  width: 12rem;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.headshot:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  --tw-rotate: 3deg;
+}
+
+.headshot {
+  transition-duration: 100ms;
 }
 
 @media (min-width: 640px) {

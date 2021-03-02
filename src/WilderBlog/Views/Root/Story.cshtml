@@ -17,10 +17,10 @@
       <div><i class="fas fa-calendar"></i></div>
       <div>@pubDate</div>
       <div><i class="fas fa-tags"></i></div>
-      <div>
+      <div class="tags">
         @foreach (var tag in Model.Categories.Split(','))
         {
-          <span class="tag-item">
+          <span>
             <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
           </span>
         }
