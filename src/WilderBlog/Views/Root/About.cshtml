@@ -39,27 +39,27 @@
   </div>
 </div>
 <hr />
-<div class="row">
-  <div class="col-lg-6">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+  <div>
     <h4>Upcoming Events</h4>
-    <div class="card">
+    <div>
 
       @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
       {
-        <div class="card-body">
-          <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>
-          <div class="card-text"><small>@ap.Location - @ap.FormattedDate</small></div>
+        <div class="p-1 border border-gray-100 m-1 rounded">
+          <h4><a href="@ap.Link" target="_blank">@ap.EventName</a></h4>
+          <div class="text-md">@ap.Location - @ap.FormattedDate</div>
           @if (!string.IsNullOrWhiteSpace(ap.Note))
           {
-            <div class="muted"><small>@ap.Note</small></div>
+            <div class="text-sm"><em>@ap.Note</em></div>
           }
         </div>
       }
     </div>
   </div>
-  <div class="col-lg-6">
+  <div>
     <h4>Open Source Projects</h4>
-    <div class="card" id="openSourceList">
+    <div id="openSourceList" class="pl-4">
 
     </div>
   </div>

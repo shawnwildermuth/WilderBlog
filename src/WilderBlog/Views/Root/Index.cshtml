@@ -6,6 +6,14 @@
   ViewBag.PageBlurb = "My Rants and Raves about technology, programming, everything else...";
   ViewBag.ControllerName = "Root";
 }
+@section SideBar {
+  <form id="searchForm" novalidate>
+    <div class="flex justify-start text-sm ">
+      <input type="text" id="searchInput" class="w-32" value="@ViewBag.Term" required placeholder="Search Stories..." />
+      <button type="submit" class="btn w-min"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+}
 <div class="grid grid-cols-3 gap-1">
   @foreach (var story in Model.Stories)
   {

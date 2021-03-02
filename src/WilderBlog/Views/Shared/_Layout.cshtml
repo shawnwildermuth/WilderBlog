@@ -73,7 +73,7 @@
   <div>
     <div class="flex flex-row  bg-white">
 
-      <header class="bg-yellow-500 flex-none w-64">
+      <header class="bg-yellow-500 flex-none w-64 ">
         <div class="fixed  h-screen w-64  overflow-y-auto thin-scroll">
           <div class="my-6 w-40 mx-auto">
             <a asp-controller="Root" asp-action="Index">
@@ -120,7 +120,7 @@
         </div>
       </header>
       <section id="main" class="p-2 flex-grow">
-        <div>
+        <div id="content-block" class="min-h-screen">
           @if (ViewBag.PageName != null && !string.IsNullOrWhiteSpace(ViewBag.PageName))
           {
             <h1>@ViewBag.PageName</h1>
@@ -246,9 +246,6 @@
 
   <environment names="Development">
     <script src="~/js/site.js"></script>
-    <script src="~/js/about.js"></script>
-    <script src="~/js/audio.js"></script>
-    <script src="~/js/video.js"></script>
   </environment>
   <environment names="Production,Staging">
     <script src="~/lib/site/wilderblog.min.js" asp-append-version="true"></script>

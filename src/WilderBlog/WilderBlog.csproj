@@ -67,6 +67,7 @@
     <Content Remove="bundleconfig.json" />
     <Content Remove="wwwroot\css\fonts.css" />
     <Content Remove="wwwroot\css\wilderblog.src.css" />
+    <Content Remove="wwwroot\js\site.es5.js" />
   </ItemGroup>
 
   <ItemGroup>
