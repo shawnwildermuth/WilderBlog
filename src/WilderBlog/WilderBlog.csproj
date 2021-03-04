@@ -74,17 +74,14 @@
     <Folder Include="Styles\" />
   </ItemGroup>
 
-  <Target Name="AfterBuildRelease"
-          AfterTargets="AfterBuild"
+  <Target Name="BeforeBuildRelease"
+          AfterTargets="BeforeBuild"
           Condition="'$(Configuration)' == 'Release' ">
     <Exec Command="npm ci" />
     <Exec Command="npm run purge" />
   </Target>
   
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
-
-    <Exec Command="echo CSS Processes" />
-    <Exec Command="npm ci" />
     <Exec Command="echo Vue Client" />
     <Exec Command="npm ci" WorkingDirectory="client/" />
     <Exec Command="npm run build" WorkingDirectory="client/" />
