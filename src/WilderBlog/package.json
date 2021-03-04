@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "copy": "copyfiles -u 1 ./node_modules/",
-    "purge": "cross-env NODE_ENV=production npm run build",
+    "purge": "cross-env NODE_ENV=production tailwind build ./wwwroot/css/wilderblog.src.css -o ./wwwroot/css/wilderblog.min.css",
     "build": "tailwind build ./wwwroot/css/wilderblog.src.css -o ./wwwroot/css/wilderblog.css",
     "watch": "nodemon -e css,json -x npm run build -w ./wwwroot/css/wilderblog.src.css -w ./tailwind.config.js"
   },

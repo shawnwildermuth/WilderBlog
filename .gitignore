@@ -234,3 +234,4 @@ typings
 /src/.idea/.idea.WilderBlog
 /src/test.json
 *.booboo
+**/wwwroot/css/wilderblog.min.css
