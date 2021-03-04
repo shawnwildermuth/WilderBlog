@@ -50,21 +50,13 @@
   <environment include="Development">
     <link href="~/css/fonts.css" rel="stylesheet" />
     <link href="~/css/wilderblog.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
-    <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
+    <link href="~/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet" />
     @RenderSection("Styles", required: false)
   </environment>
   <environment exclude="Development">
     <link href="~/css/fonts.min.css" rel="stylesheet" />
-    <link href="~/css/wilderblog.min.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet" />
-    <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
-    <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
+    <link href="~/css/wilderblog.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/cookieconsent/build/cookieconsent.min.css" rel="stylesheet" />
     @RenderSection("Styles", required: false)
   </environment>
 
@@ -73,7 +65,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <!--[if lt IE 9]>
-    <script src="~/lib/respond/respond.min.js"></script>
+    <script src="~/lib/respond.js/dest/respond.min.js"></script>
+
   <![endif]-->
 </head>
 <body class="bg-red-900">
@@ -122,8 +115,8 @@
               </span>
             </a>
             <a href="http://shawnw.me/pscourses" title="Pluralsight Courses">
-              <span class="fas fa-stack  fa-hover-spin">
-                <img src="/img/pslogo-new-inverse.png" alt="Pluralsight" class="pluralsight-logo" />
+              <span>
+                <img src="/img/pslogo-new-inverse.png" alt="Pluralsight" class="animate hover:animate-spin-slow" />
               </span>
             </a>
           </div>
@@ -217,8 +210,8 @@
                 </li>
                 <li>
                   <a href="http://shawnw.me/pscourses" title="Pluralsight Courses">
-                    <span class="fas fa-stack  fa-hover-spin">
-                      <img src="/img/pslogo-new.png" alt="Pluralsight" class="pluralsight-logo" style="filter: filter: invert(100%);" />
+                    <span>
+                      <img src="/img/pslogo-new.png" alt="Pluralsight" class="animate hover:animate-spin-slow" />
                     </span>
                   </a>
                 </li>
@@ -241,7 +234,7 @@
           </div>
           <div class="text-center text-gray-600">
             <p class="text-sm">Get the source code to this blog on <a href="https://github.com/shawnwildermuth/wilderblog">GitHub</a></p>
-            <p class="text-sm">Built with <a href="http://get.asp.net" target="_blank">NET 5</a>, <a href="https://v3.vuejs.org/" target="_blank">Vue 3</a>, <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap" target="_blank">Entity Framework Core 5</a>, <a href="http://typescript.org" target="_blank">TypeScript</a>, <a href="http://getbootstrap.com/" target="_blank">Bootstrap 4</a>, and Hosted on <a href="http://azure.com" target="_blank">Azure</a>. <a href="http://shawnw.me/learnaspnetcore3" target="_blank">See my ASP.NET Core course to see how you can do it too!</a></p>
+            <p class="text-sm">Built with <a href="http://get.asp.net" target="_blank">NET 5</a>, <a href="https://v3.vuejs.org/" target="_blank">Vue 3</a>, <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap" target="_blank">Entity Framework Core 5</a>, <a href="http://typescript.org" target="_blank">TypeScript</a>, <a href="https://tailwindcss.org/" target="_blank">Tailwind CSS</a>, and Hosted on <a href="http://azure.com" target="_blank">Azure</a>. <a href="http://shawnw.me/learnaspnetcore3" target="_blank">See my ASP.NET Core course to see how you can do it too!</a></p>
             <p class="mt-4">Copyright &copy; Wilder Minds LLC 2007-@DateTime.UtcNow.Year</p>
           </div>
           <partial name="_Info" />
@@ -259,11 +252,23 @@
 
   <environment names="Development">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.2.0/dist/lazyload.js"></script>
+    <script src="~/lib/lodash/lodash.min.js"></script>
+    <script src="~/lib/cookieconsent/build/cookieconsent.min.js"></script>
+    <script defer src="~/lib/fortawesome/fontawesome-free/js/solid.min.js"></script>
+    <script defer src="~/lib/fortawesome/fontawesome-free/js/brands.min.js"></script>
+    <script defer src="~/lib/fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
   </environment>
   <environment exclude="Development">
-    <script src="~/js/site.es5.min.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.2.0/dist/lazyload.min.js"></script>
+    <script src="~/lib/lodash/lodash.min.js"></script>
+    <script src="~/lib/cookieconsent/build/cookieconsent.min.js"></script>
+    <script defer src="~/lib/fortawesome/fontawesome-free/js/solid.min.js"></script>
+    <script defer src="~/lib/fortawesome/fontawesome-free/js/brands.min.js"></script>
+    <script defer src="~/lib/fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+    <script src="~/js/site.es5.min.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 
     <!-- Google -->
     <script type="text/javascript">
@@ -289,8 +294,6 @@
       })(window, document, "clarity", "script", "3wp8nx7dd9");
     </script>
   </environment>
-  <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
-  @RenderSection("Scripts", required: false)
 
   <script id="dsq-count-scr" src="//@(config["Disqus:BlogName"]).disqus.com/count.js" async></script>
   <!-- Mailchimp Signup -->

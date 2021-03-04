@@ -4,6 +4,8 @@
 // Search Form
 document.addEventListener("DOMContentLoaded", function (event) {
 
+  /***************** Search **************************************************** */
+
   var searchForm = document.getElementById("searchForm");
   if (searchForm) {
     var searchInput = document.getElementById("searchInput");
@@ -13,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       return false;
     });
   }
+
+  /***************** Info  **************************************************** */
 
   var infoPanel = document.getElementById("info-panel");
   var button = document.getElementById("info-table-btn");
@@ -24,11 +28,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  /***************** Lazy Images **************************************************** */
+
   // Support Lazy Loading of Images
   var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
     // ... more custom settings?
   });
+
+  /***************** cookie consent **************************************************** */
 
   window.cookieconsent.initialise({
     "palette": {
@@ -48,19 +56,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  /***************** Videos **************************************************** */
+
   var toggles = document.getElementsByClassName("video-toggle");
-  var videoContainer = document.getElementsByClassName("video-container");
+  var videoContainers = document.getElementsByClassName("video-container");
 
   function clickHandler(e) {
-    var video = document.getElementById("video-" + e.target.attributes['data-id']);
+    var videoItemId = "video-" + e.target.attributes['data-id'].value;
+    var video = document.getElementById(videoItemId);
     if (video) {
       if (e.target.innerText === "Show Video") {
         e.target.innerText = "Hide Video";
+        video.classList.remove("hidden");
         loadVideo(video);
-        video.classList.remove("hide");
       } else {
+        video.classList.add("hidden");
         e.target.innerText = "Show Video";
-        video.classList.add("hide");
       }
     }
   }
@@ -68,22 +79,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function loadVideo(video) {
     var iframes = video.getElementsByTagName("iframe");
     if (iframes) {
-      if (!iframes[0].attributes["src"]) {
-        iframes[0].attributes["src"] = iframes[0].attributes["data-src"];
+      if (!iframes[0].attributes["src"] && iframes[0].attributes["data-src"]) {
+        var dataSrc = iframes[0].attributes["data-src"].value;
+        iframes[0].setAttribute("src", dataSrc);
       }
     }
   }
 
   // Wire up clicks
   if (toggles) {
-    toggles.forEach(function (t) {
-      return t.addEventListener("click", clickHandler);
-    });
+    for (var x = 0; x < toggles.length; ++x) {
+      toggles[x].addEventListener("click", clickHandler);
+    }
   }
 
-  if (videoContainer) {
-    videoContainer.forEach(function (c) {
-      if (c.classList.hasClass("auto-load")) loadVideo(c);
+  if (videoContainers) {
+    for (var x = 0; x < videoContainers.length; ++x) {
+      if (videoContainers[x].classList.contains("auto-load")) loadVideo(videoContainers[x]);
+    };
+  }
+
+  /***************** About **************************************************** */
+  var openSourceList = document.getElementById("openSourceList");
+  if (openSourceList) {
+    var template = _.template("<div class=\"border border-gray-100 rounded m-1 p-1\">\n    <a href='<%= html_url %>' target='blank'><h4><%= name %></h4></a>\n    <p class=\"text-sm\"><%= description %></p>\n  </div>\n");
+
+    fetch("https://api.github.com/users/shawnwildermuth/repos?type=owner&sort=pushed").then(function (result) {
+      return result.json();
+    }).then(function (data) {
+      var results = _.filter(data, function (item) {
+        return !item.fork && item.watchers_count > 0 && item.description;
+      });
+      results = _.orderBy(results, ["stargazers_count"], ["desc"]);
+      _.forEach(_.take(results, 10), function (item) {
+        var block = document.createElement("div");
+        block.innerHTML = template(item);
+        openSourceList.append(block);
+      });
     });
   }
 });

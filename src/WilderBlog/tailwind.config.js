@@ -1,5 +1,10 @@
 module.exports = {
-  purge: [],
+  purge: {
+    content: [
+      './views//**/*.cshtml',
+      './client/**/*.vue'
+    ]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -7,10 +12,15 @@ module.exports = {
         sans: ['Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         serif: ['Atkinson-Hyperlegible', 'Georgia', 'Times New Roman', 'serif']
       },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover'],
+    }
   },
   plugins: [],
 }

@@ -7,9 +7,9 @@
     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>5.0.3</Version>
-    <AssemblyVersion>4.1.3.0</AssemblyVersion>
-    <FileVersion>4.1.3.0</FileVersion>
+    <Version>5.0.4</Version>
+    <AssemblyVersion>5.0.4.0</AssemblyVersion>
+    <FileVersion>5.0.4.0</FileVersion>
     <UserSecretsId>f0f97328-119d-4980-873f-f1a692135d6e</UserSecretsId>
   </PropertyGroup>
 
@@ -40,6 +40,7 @@
     <PackageReference Include="AspNetcore.HealthChecks.Publisher.ApplicationInsights" Version="5.0.1" />
     <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="5.0.2" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="5.0.1" />
+    <PackageReference Include="BuildWebCompiler" Version="1.12.394" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.30" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.3" />
@@ -76,11 +77,9 @@
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
 
-    <Exec Command="echo Gulp Processes" />
+    <Exec Command="echo CSS Processes" />
     <Exec Command="npm ci" />
-    <Exec Command="node node_modules/gulp/bin/gulp.js clean" />
-    <Exec Command="node node_modules/gulp/bin/gulp.js minify" />
-    <Exec Command="npm run build:css" />
+    <Exec Command="npm run purge" />
     <Exec Command="echo Vue Client" />
     <Exec Command="npm ci" WorkingDirectory="client/" />
     <Exec Command="npm run build" WorkingDirectory="client/" />

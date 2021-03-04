@@ -222,7 +222,6 @@ nuget.exe
 
 bower_components/
 node_modules/
-**/wwwroot/lib/
 **/wwwroot/img/media/
 **/wwwroot/vendor/
 .settings
