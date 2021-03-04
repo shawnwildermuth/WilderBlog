@@ -1,15 +1,6 @@
 ﻿@inject Microsoft.Extensions.Configuration.IConfiguration config
 @inject WilderBlog.Services.AdService ads
 @inject CoursesProvider courses
-@{
-  var ctrl = (string)ViewContext.RouteData.Values["controller"];
-  var action = (string)ViewContext.RouteData.Values["action"];
-  var isPage = new Func<string, string, bool>((c, a) =>
-  {
-    return ((string.IsNullOrWhiteSpace(a) && c == ctrl) || (c == ctrl && a == action));
-  });
-
-}
 <!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -31,15 +22,29 @@
   <!-- for Facebook -->
   <meta property="og:title" @("content")="@ViewBag.Title" />
   <meta property="og:type" @("content")="article" />
-  <meta property="og:image" @("content")="http://wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+  @if (ViewBag.HeaderImage != null)
+  {
+    <meta property="og:image" @("content")="@(ViewBag.HeaderImage)" />
+  }
+  else
+  {
+    <meta property="og:image" @("content")="http://wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+  }
   <meta property="og:description" @("content")="@ViewBag.Title" />
 
   <!-- for Twitter -->
   <meta name="twitter:card" @("content")="summary" />
   <meta name="twitter:title" @("content")="@ViewBag.Title" />
   <meta name="twitter:description" @("content")="@ViewBag.Title" />
-  <meta name="twitter:image" @("content")="http://wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
-  <meta name="twitter:creator" @("content")="@("@shawnwildermuth")         />
+  @if (ViewBag.HeaderImage != null)
+  {
+    <meta name="twitter:image" @("content")="@(ViewBag.HeaderImage)" />
+  }
+  else
+  {
+    <meta name="twitter:image" @("content")="http://wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
+  }
+  <meta name="twitter:creator" @("content")="@("@shawnwildermuth")" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico">
@@ -121,9 +126,9 @@
             </a>
           </div>
 
-          @if (!isPage("Search", "Index"))
+          @if (ViewContext.RouteData.Values["controller"].ToString().ToLower() != "search")
           {
-            <form class="searchForm hidden lg:block lg:mt-4" novalidate>
+            <form id="searchForm" class="hidden lg:block lg:mt-4" novalidate>
               <div class="flex justify-end lg:justify-start text-sm ">
                 <input type="text" id="searchInput" class="w-32" value="@ViewBag.Term" required placeholder="Search Stories..." />
                 <button type="submit" class="btn w-min"><i class="fas fa-search"></i></button>

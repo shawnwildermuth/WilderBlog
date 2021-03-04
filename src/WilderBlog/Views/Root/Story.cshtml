@@ -4,6 +4,10 @@
 @{
   ViewBag.Title = $"{Model.Title}";
   ViewBag.PageName = $"{Model.Title}";
+  if (!string.IsNullOrWhiteSpace(Model.FeatureImageUrl))
+  {
+    ViewBag.HeaderImage = $"{Model.FeatureImageUrl}";
+  }
   var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy");
 }
 <div class="flex flex-col">
