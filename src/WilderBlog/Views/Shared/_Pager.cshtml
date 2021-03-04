@@ -5,12 +5,12 @@
   var firstPage = Model.CurrentPage - windowSize < 1 ? 1 : Model.CurrentPage - windowSize;
   var lastPage = Model.CurrentPage + windowSize > Model.TotalPages ? Model.TotalPages : Model.CurrentPage + windowSize;
 }
-<nav class="float-right p-2">
-  <ul class="pagination">
+<nav>
+  <ul class="flex space-x-4 text-right">
     @if (Model.CurrentPage != 1)
     {
-      <li class="page-item">
-        <a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="1" aria-label="First">
+      <li>
+        <a asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="1" aria-label="First">
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">First</span>
         </a>
@@ -18,8 +18,8 @@
     }
     @if (firstPage - 10 > 1)
     {
-      <li class="page-item">
-        <a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@(firstPage - 10)" aria-label="Previous Pager">
+      <li>
+        <a asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@(firstPage - 10)" aria-label="Previous Pager">
           <span aria-hidden="true">&lsaquo;</span>
           <span class="sr-only">Previous Pager</span>
         </a>
@@ -27,17 +27,17 @@
     }
     @for (int x = firstPage; x < Model.CurrentPage; ++x)
     {
-      <li class="page-item"><a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@x">@x</a></li>
+      <li><a asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@x">@x</a></li>
     }
     <li class="page-item active"><a class="page-link">@Model.CurrentPage</a></li>
     @for (int x = Model.CurrentPage + 1; x <= lastPage; ++x)
     {
-      <li class="page-item"><a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@x">@x</a></li>
+      <li><a asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@x">@x</a></li>
     }
     @if (lastPage + 10 < Model.TotalPages)
     {
-      <li class="page-item">
-        <a class="page-link" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@(lastPage + 10)" aria-label="Next Pager">
+      <li>
+        <a asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@(lastPage + 10)" aria-label="Next Pager">
           <span aria-hidden="true">&rsaquo;</span>
           <span class="sr-only">Next Pager</span>
         </a>
@@ -45,8 +45,8 @@
     }
     @if (Model.CurrentPage != Model.TotalPages)
     {
-      <li class="page-item">
-        <a class="page-link" aria-label="Last" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@Model.TotalPages">
+      <li>
+        <a aria-label="Last" asp-controller="@ViewBag.ControllerName" asp-action="Pager" asp-route-page="@Model.TotalPages">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Last</span>
         </a>

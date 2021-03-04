@@ -9,8 +9,8 @@
   <script src="~/lib/lodash/lodash.min.js"></script>
 
 }
-<div class="row">
-  <div class="col-lg-10 col-sm-12 col-xs-12">
+<div class="flex">
+  <div class="w-full lg:w-2/3 p-2">
     <h3>Bio</h3>
     <p>
       Shawn Wildermuth has been tinkering with computers and software since he got a Vic-20 back in the early
@@ -24,8 +24,8 @@
       him at his blog at <a href="http://wildermuth.com">wildermuth.com</a>. He’s also making his first, feature-length, documentary about
       software developers today called “Hello World: The Film”. You can see more about it at <a href="http://helloworldfilm.com">helloworldfilm.com</a>.
     </p>
-    <h4>Connect with Me</h4>
-    <ul class="list-unstyled">
+    <h3>Connect with Me</h3>
+    <ul class="ml-4 text-lg">
       <li><a href="https://twitter.com/shawnwildermuth" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a></li>
       <li><a href="https://www.linkedin.com/in/shawnwildermuth/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
       <li><a href="https://youtube.com/c/swildermuth" target="_blank"><i class="fab fa-youtube-square"></i> YouTube</a></li>
@@ -33,34 +33,33 @@
       <li><a href="http://stackoverflow.com/users/40125/shawn-wildermuth" target="_blank"><i class="fab fa-stack-overflow"></i> Stack Overflow</a></li>
       <li><a href="http://www.amazon.com/-/e/B001H6ME46" target="_blank"><i class="fab fa-amazon"></i> Amazon Author Page</a></li>
     </ul>
-</div>
-<div class="col-lg-2 hidden-sm-down">
-  <img src="~/img/headshots/shawn-head-2016-800x600.jpg" class="img-fluid img-rounded w-100" alt="Shawn Wildermuth" />
-</div>
-
+  </div>
+  <div class="w-0 lg:w-1/3">
+    <img src="~/img/headshots/shawn-head-2016-800x600.jpg" class="hidden lg:block rounded ring-yellow-700 ring mt-2" alt="Shawn Wildermuth" />
+  </div>
 </div>
 <hr />
-<div class="row">
-  <div class="col-lg-6">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+  <div>
     <h4>Upcoming Events</h4>
-    <div class="card">
+    <div>
 
       @foreach (var ap in appearances.Get().Where(e => e.EventDate > DateTime.Today))
       {
-        <div class="card-body">
-          <h6><a href="@ap.Link" target="_blank">@ap.EventName</a></h6>
-          <div class="card-text"><small>@ap.Location - @ap.FormattedDate</small></div>
+        <div class="p-1 border border-gray-100 m-1 rounded">
+          <h4><a href="@ap.Link" target="_blank">@ap.EventName</a></h4>
+          <div class="text-md">@ap.Location - @ap.FormattedDate</div>
           @if (!string.IsNullOrWhiteSpace(ap.Note))
           {
-            <div class="muted"><small>@ap.Note</small></div>
+            <div class="text-sm"><em>@ap.Note</em></div>
           }
         </div>
       }
     </div>
   </div>
-  <div class="col-lg-6">
+  <div>
     <h4>Open Source Projects</h4>
-    <div class="card" id="openSourceList">
+    <div id="openSourceList" class="pl-4">
 
     </div>
   </div>

@@ -22,12 +22,6 @@ function minify() {
 
 // Dependency Dirs
 var deps = {
-  "jquery": {
-    "dist/*": ""
-  },
-  "bootstrap": {
-    "dist/**/*": ""
-  },
   "cookieconsent": {
     "build/*": ""
   },
@@ -40,9 +34,6 @@ var deps = {
   },
   "respond.js": {
     "dest/*": ""
-  },
-  "tether": {
-    "dist/**/*": ""
   },
   "@fortawesome/fontawesome-free-webfonts": {
     "**/*": ""
@@ -69,7 +60,6 @@ function scripts() {
 
 }
 
-exports.minify = minify;
 exports.clean = clean;
 exports.scripts = scripts;
-exports.default = series(clean, minify, scripts);
+exports.default = series(clean, scripts);

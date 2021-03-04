@@ -25,6 +25,7 @@
   <ItemGroup>
     <None Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="bundleconfig.json" />
     <None Include="config.json" CopyToPublishDirectory="PreserveNewest" />
     <None Include="web.config" CopyToPublishDirectory="PreserveNewest" />
     <None Include="Data\**\*" CopyToPublishDirectory="PreserveNewest" />
@@ -49,6 +50,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Sendgrid" Version="9.22.0" />
     <PackageReference Include="WilderMinds.AzureImageStorageService" Version="0.4.1" />
@@ -61,13 +63,24 @@
     <Content Include="EmailTemplates/**/*.txt" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="wwwroot\css\fonts.css" />
+    <Content Remove="wwwroot\css\wilderblog.src.css" />
+    <Content Remove="wwwroot\js\site.es5.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Styles\" />
+  </ItemGroup>
+
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
 
     <Exec Command="echo Gulp Processes" />
     <Exec Command="npm ci" />
     <Exec Command="node node_modules/gulp/bin/gulp.js clean" />
     <Exec Command="node node_modules/gulp/bin/gulp.js minify" />
-    <Exec Command="node node_modules/gulp/bin/gulp.js scripts" />
+    <Exec Command="npm run build:css" />
     <Exec Command="echo Vue Client" />
     <Exec Command="npm ci" WorkingDirectory="client/" />
     <Exec Command="npm run build" WorkingDirectory="client/" />

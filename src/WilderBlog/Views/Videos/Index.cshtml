@@ -5,20 +5,19 @@
   ViewBag.PageBlurb = "A collection of my instructional videos";
   ViewBag.PageImage = "/img/headers/video.jpg";
 }
-<div class="row">
+<div class="mt-2 grid grid-cols-1 lg:grid-cols-2 lg:gap-1">
   @foreach (var v in Model)
   {
-  <div class="col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="float-right"><small>Published: @v.DatePublished.ToString("D")</small></div>
+  <div class="p-1 border border-gray-200">
     <h4>@v.Title</h4>
-    <p class="card-text">@v.Description</p>
-    <button class="btn btn-outline-primary pull-right video-toggle" data-id="@v.Id">Show Video</button>
-    <a class="btn btn-outline-primary pull-right" asp-controller="Videos" asp-action="Video" asp-route-id="@v.Id" target="_blank" role="button">View in new Tab</a>
+    <p>@v.Description</p>
+    <div><small>Published: @v.DatePublished.ToString("D")</small></div>
+    <button class="btn video-toggle" data-id="@v.Id">Show Video</button>
+    <a class="btn" asp-controller="Videos" asp-action="Video" asp-route-id="@v.Id" target="_blank" role="button">View in new Tab</a>
 
-    <div class="video-container collapse" id="video-@v.Id">
+    <div class="video-container hidden" id="video-@v.Id">
       <partial name="_VideoFrame" model="v" />
     </div>
-    <hr />
   </div>
   }
 </div>

@@ -108,6 +108,7 @@ namespace WilderBlog
       if (_env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
+        app.UseBrowserLink();
       }
       else
       {

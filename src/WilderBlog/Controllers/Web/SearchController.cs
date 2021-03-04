@@ -29,7 +29,7 @@ namespace WilderBlog.Controllers
     {
       ViewBag.Term = term;
 
-      var results = await _repo.GetStoriesByTerm(term, 10, page);
+      var results = await _repo.GetStoriesByTerm(term, 15, page);
       return View("Index", results);
     }
   }

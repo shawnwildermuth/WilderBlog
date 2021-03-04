@@ -1,0 +1,29 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Regular-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Regular-102.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Bold-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Bold-102.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-Italic-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-Italic-102.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url('../fonts/WOFF2/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2'), url('../fonts/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff') format('woff'), url('../fonts/TTF/Atkinson-Hyperlegible-BoldItalic-102.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}*/

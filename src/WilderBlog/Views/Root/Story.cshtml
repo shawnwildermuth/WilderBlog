@@ -3,61 +3,71 @@
 @inject Microsoft.Extensions.Configuration.IConfiguration config
 @{
   ViewBag.Title = $"{Model.Title}";
+  ViewBag.PageName = $"{Model.Title}";
   var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy");
 }
-<div class="p-2">
-  <div>
-    <h2 class="story-title">@Model.Title</h2>
-    <!-- @Model.Id -->
-    <div class="text-center  d-none d-md-block">
-      <img src="@Model.FeatureImageUrl" alt="@Model.Title" class="img-fluid img-thumbnail" style="min-width: 25%" />
-    </div>
-    <hr />
-    <p class="post-meta">
-      <i class="fas fa-pencil"></i>
-      Shawn Wildermuth<br />
-      <i class="fas fa-calendar"></i>
-      @pubDate<br />
-      <i class="fas fa-tags"></i>
-      @foreach (var tag in Model.Categories.Split(','))
-      {
-        <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
-      }
-      <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
-    </p>
+<div class="flex flex-col">
+  <div class="w-full h-96 bg-contain bg-center bg-no-repeat" style="background-image: url(@Model.FeatureImageUrl)">
   </div>
-  <div class="post-card">
+  @*Header*@
+  <div class="p-2 bg-gray-100">
+    <div class="story-grid">
+      <div><i class="fas fa-pencil-alt"></i></div>
+      <div><a href="~/contact">Shawn Wildermuth</a></div>
+      <div><i class="fas fa-calendar"></i></div>
+      <div>@pubDate</div>
+      <div><i class="fas fa-tags"></i></div>
+      <div class="tags">
+        @foreach (var tag in Model.Categories.Split(','))
+        {
+          <span>
+            <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
+          </span>
+        }
+      </div>
+      <div><i class="fas fa-comments"></i></div>
+      <div><span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.</div>
+    </div>
+  </div>
+  @*Story*@
+  <div class="blog-story">
     @Html.Raw(Model.Body)
+
   </div>
-  <div class="card">
-    <div class="pull-left" style="padding-right: 5px;">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-        <img alt="Creative Commons License" class="img-fluid img-thumbnail" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
-      </a>
+  @*PostStory*@
+  <div>
+    <div class="card">
+      <div class="pull-left" style="padding-right: 5px;">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+          <img alt="Creative Commons License" class="img-fluid img-thumbnail" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
+        </a>
+      </div>
+      <div class="card-text">
+        <small>
+          This work by <a xmlns:cc="http://creativecommons.org/ns#" href="//wildermuth.com"
+                          property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
+          licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+            Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+          </a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="//wildermuth.com"
+                                      rel="dct:source">wildermuth.com</a>.
+        </small>
+      </div>
     </div>
-    <div class="card-text">
-      <small>
-        This work by <a xmlns:cc="http://creativecommons.org/ns#" href="//wildermuth.com"
-                        property="cc:attributionName" rel="cc:attributionURL">Shawn Wildermuth</a> is
-        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-          Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
-        </a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="//wildermuth.com"
-                                    rel="dct:source">wildermuth.com</a>.
-      </small>
-    </div>
+
   </div>
   <hr />
+  @*Ad*@
   <div class="ad-container">
     @ads.InlineAdd()
   </div>
   <hr />
+  @*Comments*@
   <div id="disqus_thread"></div>
 </div>
+
 @section Styles {
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-coy.min.css" />
-  @*<link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shCore.css" />
-    <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shThemeDefault.css" />*@
 }
 @section Scripts {
   <script>
@@ -76,7 +86,7 @@
     })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js"></script>
 }
