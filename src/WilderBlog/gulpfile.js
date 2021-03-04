@@ -69,7 +69,6 @@ function scripts() {
 
 }
 
-exports.minify = minify;
 exports.clean = clean;
 exports.scripts = scripts;
-exports.default = series(clean, minify, scripts);
+exports.default = series(clean, scripts);

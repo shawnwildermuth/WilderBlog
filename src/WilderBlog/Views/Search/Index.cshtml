@@ -21,7 +21,7 @@
 </form>
 @if (Model.Stories != null)
 {
-  <div class="grid grid-cols-3 gap-1">
+  <div class="grid xl:grid-cols-3 gap-1 grid-cols-1 sm:grid-cols-2">
     @foreach (var story in Model.Stories)
     {
       <partial name="_StoryBrief" model="story" />

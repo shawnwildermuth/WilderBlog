@@ -1,6 +1,15 @@
 ﻿@inject Microsoft.Extensions.Configuration.IConfiguration config
 @inject WilderBlog.Services.AdService ads
 @inject CoursesProvider courses
+@{
+  var ctrl = (string)ViewContext.RouteData.Values["controller"];
+  var action = (string)ViewContext.RouteData.Values["action"];
+  var isPage = new Func<string, string, bool>((c, a) =>
+  {
+    return ((string.IsNullOrWhiteSpace(a) && c == ctrl) || (c == ctrl && a == action));
+  });
+
+}
 <!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -30,7 +39,7 @@
   <meta name="twitter:title" @("content")="@ViewBag.Title" />
   <meta name="twitter:description" @("content")="@ViewBag.Title" />
   <meta name="twitter:image" @("content")="http://wildermuth.com/img/headshots/shawn-head-2016-square-200.jpg" />
-  <meta name="twitter:creator" @("content")="@("@shawnwildermuth")       />
+  <meta name="twitter:creator" @("content")="@("@shawnwildermuth")         />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico">
@@ -40,12 +49,12 @@
 
   <environment include="Development">
     <link href="~/css/fonts.css" rel="stylesheet" />
+    <link href="~/css/wilderblog.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fontawesome.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
     <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
-    <link href="~/css/wilderblog.css" rel="stylesheet" asp-append-version="true" />
     @RenderSection("Styles", required: false)
   </environment>
   <environment exclude="Development">
@@ -55,7 +64,6 @@
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet" />
     <link href="~/lib/@@fortawesome/fontawesome-free-webfonts/css/fa-brands.css" rel="stylesheet" />
-    <link href="~/css/clean-blog.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/lib/cookieconsent/cookieconsent.min.css" rel="stylesheet" />
     @RenderSection("Styles", required: false)
   </environment>
@@ -71,21 +79,25 @@
 <body class="bg-red-900">
 
   <div>
-    <div class="flex flex-row  bg-white">
+    <div class="flex flex-col lg:flex-row  bg-white">
 
-      <header class="bg-yellow-500 flex-none w-64 ">
-        <div class="fixed  h-screen w-64  overflow-y-auto thin-scroll">
-          <div class="my-6 w-40 mx-auto">
-            <a asp-controller="Root" asp-action="Index">
-              <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="w-100 lazy border border-gray-200 shadow rounded-full hover:shadow-lg hover:border-white" />
-            </a>
+      <header class="bg-yellow-500 lg:flex-none w-full lg:w-64 ">
+        <div class="lg:fixed  lg:h-screen lg:w-64  overflow-y-auto thin-scroll">
+          <div class="flex lg:flex-col">
+            <div class="m-1 lg:my-6 w-24 lg:w-40 lg:mx-auto">
+              <a asp-controller="Root" asp-action="Index">
+                <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="w-100 lazy border border-gray-200 shadow rounded-full hover:shadow-lg hover:border-white" />
+              </a>
+            </div>
+            <div class="">
+              <h1 class="lg:text-center"><a href="~/" class="hover:text-red-700">Shawn Wildermuth</a></h1>
+              <div class="lg:text-center">
+                Author, Teacher, and Filmmaker
+                <a href="https://dotnetfoundation.org/" target="_blank">.NET Foundation</a> Board Member
+              </div>
+            </div>
           </div>
-          <h1 class="text-center"><a href="~/" class="hover:text-red-700">Shawn Wildermuth</a></h1>
-          <div class="text-center">
-            Author, Teacher, and Filmmaker<br />
-            <a href="https://dotnetfoundation.org/" target="_blank">.NET Foundation</a> Board Member
-          </div>
-          <ul class="ml-10 text-lg mt-10">
+          <ul class="ml-10 text-lg mt-10 hidden lg:block">
             <li><a asp-controller="Root" asp-action="Index">Home</a></li>
             <li><a asp-controller="Root" asp-action="Calendar">Calendar</a></li>
             <li><a href="https://www.wilderminds.com/classroom" target="_blank">Training</a></li>
@@ -98,7 +110,7 @@
             <li><a asp-controller="Podcast" asp-action="Index">Hello World Podcast</a></li>
           </ul>
 
-          <div class="flex justify-around m-16">
+          <div class="hidden lg:justify-around lg:mx-16 lg:mt-4 lg:flex">
             <a href="http://feeds.feedburner.com/ShawnWildermuth" title="RSS Feed">
               <span class="fa-stack fa-hover-spin">
                 <i class="fas fa-rss fa-stack-2x fa-inverse"></i>
@@ -115,6 +127,16 @@
               </span>
             </a>
           </div>
+
+          @if (!isPage("Search", "Index"))
+          {
+            <form class="searchForm hidden lg:block lg:mt-4" novalidate>
+              <div class="flex justify-end lg:justify-start text-sm ">
+                <input type="text" id="searchInput" class="w-32" value="@ViewBag.Term" required placeholder="Search Stories..." />
+                <button type="submit" class="btn w-min"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          }
 
           @RenderSection("Sidebar", false)
         </div>
@@ -237,18 +259,11 @@
 
   <environment names="Development">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.2.0/dist/lazyload.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
   </environment>
-  <environment names="Production,Staging">
+  <environment exclude="Development">
+    <script src="~/js/site.es5.min.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.2.0/dist/lazyload.min.js"></script>
-  </environment>
-  <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
-  @RenderSection("Scripts", required: false)
-
-  <environment names="Development">
-    <script src="~/js/site.js"></script>
-  </environment>
-  <environment names="Production,Staging">
-    <script src="~/lib/site/wilderblog.min.js" asp-append-version="true"></script>
 
     <!-- Google -->
     <script type="text/javascript">
@@ -274,6 +289,9 @@
       })(window, document, "clarity", "script", "3wp8nx7dd9");
     </script>
   </environment>
+  <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
+  @RenderSection("Scripts", required: false)
+
   <script id="dsq-count-scr" src="//@(config["Disqus:BlogName"]).disqus.com/count.js" async></script>
   <!-- Mailchimp Signup -->
   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
