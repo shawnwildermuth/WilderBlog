@@ -80,7 +80,7 @@
     <Exec Command="npm ci" />
     <Exec Command="node node_modules/gulp/bin/gulp.js clean" />
     <Exec Command="node node_modules/gulp/bin/gulp.js minify" />
-    <Exec Command="node node_modules/gulp/bin/gulp.js scripts" />
+    <Exec Command="npm run build:css" />
     <Exec Command="echo Vue Client" />
     <Exec Command="npm ci" WorkingDirectory="client/" />
     <Exec Command="npm run build" WorkingDirectory="client/" />
