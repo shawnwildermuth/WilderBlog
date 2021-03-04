@@ -11,6 +11,7 @@ COPY . .
 WORKDIR "/src/WilderBlog"
 RUN npm ci
 RUN npm run purge
+
 RUN dotnet build "WilderBlog.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -1,8 +1,8 @@
 module.exports = {
   purge: {
     content: [
-      './views//**/*.cshtml',
-      './client/**/*.vue'
+      './Views/**/*.cshtml',
+      './client/src/**/*.vue'
     ]
   },
   darkMode: false, // or 'media' or 'class'
