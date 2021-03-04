@@ -3,7 +3,8 @@ module.exports = {
     content: [
       './Views/**/*.cshtml',
       './client/src/**/*.vue'
-    ]
+    ],
+    whitelistPatterns: [/^embed-/],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
