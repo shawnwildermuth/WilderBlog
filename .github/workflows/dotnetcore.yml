@@ -20,11 +20,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '15.x'
-    - name: NPM Tasks
-      working-directory: ./src/WilderBlog      
-      run: |
-        npm install
-        npm run purge
     - name: Vue Build
       working-directory: ./src/WilderBlog/client
       run: |
