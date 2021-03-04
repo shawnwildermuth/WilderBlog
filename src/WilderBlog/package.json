@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "copy": "copyfiles -u 1 ./node_modules/",
-    "purge": ".\\node_modules\\.bin\\cross-env.cmd NODE_ENV=production npm run build",
-    "build": ".\\node_modules\\.bin\\tailwind.cmd build ./wwwroot/css/wilderblog.src.css -o ./wwwroot/css/wilderblog.css",
-    "watch": ".\\node_modules\\.bin\\nodemon.cmd -e css,json -x npm run build -w ./wwwroot/css/wilderblog.src.css -w ./tailwind.config.js"
+    "purge": ".\\node_modules\\.bin\\cross-env NODE_ENV=production npm run build",
+    "build": ".\\node_modules\\.bin\\tailwind build ./wwwroot/css/wilderblog.src.css -o ./wwwroot/css/wilderblog.css",
+    "watch": ".\\node_modules\\.bin\\nodemon -e css,json -x npm run build -w ./wwwroot/css/wilderblog.src.css -w ./tailwind.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "1.0.9",
