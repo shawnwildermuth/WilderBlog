@@ -40,7 +40,6 @@
     <PackageReference Include="AspNetcore.HealthChecks.Publisher.ApplicationInsights" Version="5.0.1" />
     <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="5.0.2" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="5.0.1" />
-    <PackageReference Include="BuildWebCompiler" Version="1.12.394" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.30" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.3" />
