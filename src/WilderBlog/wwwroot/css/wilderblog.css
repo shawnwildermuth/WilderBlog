@@ -740,11 +740,26 @@ input[type=text], input[type=password], input[type=email], select, textarea {
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width: 24rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  input[type=text], input[type=password], input[type=email], select, textarea {
+    width: 24rem;
+  }
 }
 
 select {
-  width: 24rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  select {
+    width: 24rem;
+  }
+}
+
+select {
   line-height: 1.3;
   padding: .6em 1.4em .5em .8em;
   box-sizing: border-box;
