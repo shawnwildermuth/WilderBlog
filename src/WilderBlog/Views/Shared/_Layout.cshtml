@@ -81,6 +81,7 @@
 
       <header class="bg-yellow-500 lg:flex-none w-full lg:w-64 ">
         <div class="lg:fixed  lg:h-screen lg:w-64  overflow-y-auto thin-scroll">
+          <button id="menu-button" class="lg:hidden text-white float-right m-2 text-2xl"><i class="fas fa-bars"></i></button>
           <div class="flex lg:flex-col">
             <div class="m-1 lg:my-6 w-24 lg:w-40 lg:mx-auto">
               <a asp-controller="Root" asp-action="Index">
@@ -95,7 +96,7 @@
               </div>
             </div>
           </div>
-          <ul class="ml-10 text-lg mt-10 hidden lg:block">
+          <ul id="menu" class="ml-3 lg:ml-10 text-lg lg:mt-10 hidden lg:block text-lg lg:text-auto">
             <li><a asp-controller="Root" asp-action="Index">Home</a></li>
             <li><a asp-controller="Root" asp-action="Calendar">Calendar</a></li>
             <li><a href="https://www.wilderminds.com/classroom" target="_blank">Training</a></li>
