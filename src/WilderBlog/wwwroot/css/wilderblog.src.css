@@ -21,34 +21,42 @@
     @apply font-sans text-xl mb-1 text-red-900;
   }
 
-  a:link {
+  a {
     @apply text-red-900;
   }
 
-  a:visited {
-    @apply text-red-800;
-  }
+    a:hover {
+      @apply text-red-500;
+    }
 
-  a:hover {
-    @apply text-red-500;
-  }
-
-  a:active {
-    @apply text-gray-500;
-  }
+    a:active {
+      @apply text-gray-500;
+    }
 
   p {
     @apply leading-normal mb-2 text-xl mt-1;
   }
+
+  header {
+    @apply text-yellow-100;
+  }
+
+    header a {
+      @apply text-white;
+    }
+
+      header a:hover {
+        @apply text-yellow-300;
+      }
+
+      header a:active {
+        @apply text-gray-500;
+      }
 }
 
 @tailwind components;
 
 @layer components {
-
-  header a:hover {
-    @apply text-white;
-  }
 
   .fa-hover-spin:hover {
     -webkit-animation: fa-spin 2s infinite linear;

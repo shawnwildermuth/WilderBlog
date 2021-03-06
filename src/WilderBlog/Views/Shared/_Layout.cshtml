@@ -79,33 +79,39 @@
   <div>
     <div class="flex flex-col lg:flex-row  bg-white">
 
-      <header class="bg-yellow-500 lg:flex-none w-full lg:w-64 ">
+      <header class="bg-yellow-700 lg:flex-none w-full lg:w-64 ">
         <div class="lg:fixed  lg:h-screen lg:w-64  overflow-y-auto thin-scroll">
           <button id="menu-button" class="lg:hidden text-white float-right m-2 text-2xl"><i class="fas fa-bars"></i></button>
           <div class="flex lg:flex-col">
             <div class="m-1 lg:my-6 w-24 lg:w-40 lg:mx-auto">
               <a asp-controller="Root" asp-action="Index">
-                <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="w-100 lazy border border-gray-200 shadow rounded-full hover:shadow-lg hover:border-white" />
+                <img src="~/img/shawn-head-sm.jpg" data-src="/img/shawn-head.gif" alt="Shawn" class="w-96 lazy border border-gray-200 shadow rounded-full hover:shadow-lg hover:border-white" />
               </a>
             </div>
-            <div class="">
-              <h1 class="lg:text-center"><a href="~/" class="hover:text-red-700">Shawn Wildermuth</a></h1>
+
+            <div>
+              <h1 class="lg:text-center"><a href="~/">Shawn Wildermuth</a></h1>
               <div class="lg:text-center">
                 Author, Teacher, and Filmmaker
                 <a href="https://dotnetfoundation.org/" target="_blank">.NET Foundation</a> Board Member
               </div>
+              <div class="lg:absolute lg:bottom-0 lg:w-full ">
+                <a href="https://www.buymeacoffee.com/shawnwildermuth"><img class="p-1 my-2 border border-yellow-100 rounded hover:bg-yellow-900 lg:mx-auto" src="/img/buymeacoffee.png" alt="Buy me a coffee"></a>
+              </div>
             </div>
           </div>
-          <ul id="menu" class="ml-3 lg:ml-10 text-lg lg:mt-10 hidden lg:block text-lg lg:text-auto">
+
+
+          <ul id="menu" class="ml-3 lg:ml-10 text-lg lg:mt-10 hidden lg:block text-lg ">
             <li><a asp-controller="Root" asp-action="Index">Home</a></li>
             <li><a asp-controller="Root" asp-action="Calendar">Calendar</a></li>
             <li><a href="https://www.wilderminds.com/classroom" target="_blank">Training</a></li>
-            <li><a href="http://helloworldfilm.com" target="_blank">Hello World Film</a></li>
+            <li><a href="https://helloworldfilm.com" target="_blank">Hello World Film</a></li>
             <li><a asp-controller="Root" asp-action="About">About</a></li>
             <li><a asp-controller="Root" asp-action="Contact">Contact</a></li>
             <li><a asp-controller="Search" asp-action="Index">Search</a></li>
             <li><a asp-controller="Videos" asp-action="Index">Videos</a></li>
-            <li><a href="http://eepurl.com/dgM6fb" target="_blank">Weekly Dev Tips</a></li>
+            <li><a href="https://eepurl.com/dgM6fb" target="_blank">Weekly Dev Tips</a></li>
             <li><a asp-controller="Podcast" asp-action="Index">Hello World Podcast</a></li>
           </ul>
 

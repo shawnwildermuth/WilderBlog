@@ -594,14 +594,9 @@ h4 {
   color: rgba(127, 29, 29, var(--tw-text-opacity));
 }
 
-a:link {
+a {
   --tw-text-opacity: 1;
   color: rgba(127, 29, 29, var(--tw-text-opacity));
-}
-
-a:visited {
-  --tw-text-opacity: 1;
-  color: rgba(153, 27, 27, var(--tw-text-opacity));
 }
 
 a:hover {
@@ -620,6 +615,26 @@ p {
   line-height: 1.5;
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
+}
+
+header {
+  --tw-text-opacity: 1;
+  color: rgba(254, 243, 199, var(--tw-text-opacity));
+}
+
+header a {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+header a:hover {
+  --tw-text-opacity: 1;
+  color: rgba(252, 211, 77, var(--tw-text-opacity));
+}
+
+header a:active {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
 
 .container {
@@ -654,11 +669,6 @@ p {
   .container {
     max-width: 1536px;
   }
-}
-
-header a:hover {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .fa-hover-spin:hover {
