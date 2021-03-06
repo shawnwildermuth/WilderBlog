@@ -4,7 +4,9 @@ module.exports = {
       './Views/**/*.cshtml',
       './client/src/**/*.vue'
     ],
-    whitelistPatterns: [/^embed-/, /^grid-/, /^gap-/],
+    options: {
+      safelist: [/^embed-/, /^grid-/, /^gap-/],
+    }
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
