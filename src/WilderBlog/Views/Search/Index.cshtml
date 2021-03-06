@@ -1,32 +1,27 @@
 ﻿@model BlogResult
 @{
   ViewBag.Title = "Shawn Wildermuth's Rants and Raves";
-  ViewBag.PageName = "Search Results";
-  ViewBag.PageBlurb = $"#/Results: {Model.TotalResults}";
+  ViewBag.PageName = "Search";
+  if (!string.IsNullOrWhiteSpace(ViewBag.Term))
+  {
+    ViewBag.PageBlurb = $"Search Term: {ViewBag.Term} - #/Results: {Model.TotalResults}";
+  }
+  else
+  {
+    ViewBag.PageBlurb = "Please enter a search term to search for blog entries";
+  }
   ViewBag.PageImage = "/img/headers/search.jpg";
   ViewBag.ControllerName = "Search";
 }
-<div class="row">
-  <div class="col-lg-12">
-    <form id="searchForm" novalidate>
-      <div class="input-group">
-        <input type="text" class="form-control form-control-lg" id="search" value="@ViewBag.Term" required placeholder="Search Term..." />
-        <span class="input-group-btn">
-          <button class="btn btn-success btn-lg" type="submit"><i class="fas fa-search"></i></button>
-        </span>
-      </div>
-    </form>
+<form id="searchForm" novalidate>
+  <div class="flex justify-start">
+    <input type="text" id="searchInput" value="@ViewBag.Term" required placeholder="Search Term..." />
+    <button type="submit" class="btn btn-success w-min"><i class="fas fa-search"></i></button>
   </div>
-</div>
+</form>
 @if (Model.Stories != null)
 {
-  <div class="row">
-    <div class="col-lg-12">
-      <partial name="_Pager" />
-    </div>
-  </div>
-  
-  <div class="row">
+  <div class="grid xl:grid-cols-3 gap-1 grid-cols-1 sm:grid-cols-2">
     @foreach (var story in Model.Stories)
     {
       <partial name="_StoryBrief" model="story" />

@@ -33,7 +33,7 @@
   },
   "BlobStorage": {
     "Account": "FOO",
-    "Key": "BAR",
+    "Key": "6Lc9SOMZAAAAAGCIRKP6VUySH-p4gkNAtgw1Tn1v",
     "StorageUrl": "https://wilderminds.blob.core.windows.net/",
     "TestInDev": false
   },

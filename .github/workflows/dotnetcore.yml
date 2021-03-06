@@ -19,12 +19,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
-    - name: NPM Tasks
-      working-directory: ./src/WilderBlog      
-      run: |
-        npm install
-        node node_modules/gulp/bin/gulp.js
+        node-version: '15.x'
     - name: Vue Build
       working-directory: ./src/WilderBlog/client
       run: |

@@ -160,6 +160,9 @@ namespace WilderBlog.Data
 };
 </code></pre>
 <p>Then I just created a couple of scripts in my package.json so I could easily run the builds:</p>
+<div class=""embed-responsive embed-responsive-16by9"">
+  <iframe class=""embed-responsive-item"" src=""https://www.youtube.com/embed/smhqWP4bKnY"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"" allowfullscreen></iframe>
+</div>
 <pre><code>  &quot;scripts&quot;: {
     &quot;build&quot;: &quot;webpack --config webpack.prod.js&quot;,
     &quot;dev&quot;: &quot;webpack --watch --config webpack.dev.js&quot;

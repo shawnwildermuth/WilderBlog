@@ -6,15 +6,13 @@
   ViewBag.PageBlurb = "My Rants and Raves about technology, programming, everything else...";
   ViewBag.ControllerName = "Root";
 }
-<div class="row">
+<div class="grid xl:grid-cols-3 gap-1 grid-cols-1 sm:grid-cols-2">
   @foreach (var story in Model.Stories)
   {
     <partial name="_StoryBrief" model="story" />
   }
 </div>
 
-<div class="row">
-  <div class="col-lg-12">
-    <partial name="_Pager" />
-  </div>
+<div>
+  <partial name="_Pager" />
 </div>

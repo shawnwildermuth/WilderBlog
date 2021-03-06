@@ -17,7 +17,6 @@
 [Rr]eleases/
 x64/
 x86/
-build/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -222,7 +221,6 @@ nuget.exe
 
 bower_components/
 node_modules/
-**/wwwroot/lib/
 **/wwwroot/img/media/
 **/wwwroot/vendor/
 .settings
@@ -235,3 +233,4 @@ typings
 /src/.idea/.idea.WilderBlog
 /src/test.json
 *.booboo
+**/wwwroot/css/wilderblog.min.css

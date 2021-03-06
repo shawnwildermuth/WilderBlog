@@ -1,5 +1,59 @@
 {
   "version": "1.0",
   "defaultProvider": "cdnjs",
-  "libraries": []
+  "libraries": [
+    {
+      "provider": "unpkg",
+      "library": "lodash@4.17.21",
+      "destination": "wwwroot/lib/lodash/",
+      "files": [
+        "lodash.js",
+        "lodash.min.js"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "@fortawesome/fontawesome-free@5.15.2",
+      "destination": "wwwroot/lib/fortawesome/fontawesome-free/",
+      "files": [
+        "js/all.js",
+        "js/all.min.js",
+        "js/brands.js",
+        "js/brands.min.js",
+        "js/conflict-detection.js",
+        "js/conflict-detection.min.js",
+        "js/fontawesome.js",
+        "js/fontawesome.min.js",
+        "js/regular.js",
+        "js/regular.min.js",
+        "js/solid.js",
+        "js/solid.min.js",
+        "js/v4-shims.js",
+        "js/v4-shims.min.js",
+        "sprites/brands.svg",
+        "sprites/regular.svg",
+        "sprites/solid.svg"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "cookieconsent@3.1.1",
+      "destination": "wwwroot/lib/cookieconsent/",
+      "files": [
+        "build/cookieconsent.min.css",
+        "build/cookieconsent.min.js"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "respond.js@1.4.2",
+      "destination": "wwwroot/lib/respond.js/",
+      "files": [
+        "dest/respond.matchmedia.addListener.min.js",
+        "dest/respond.matchmedia.addListener.src.js",
+        "dest/respond.min.js",
+        "dest/respond.src.js"
+      ]
+    }
+  ]
 }
