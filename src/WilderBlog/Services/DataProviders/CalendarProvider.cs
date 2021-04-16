@@ -21,13 +21,13 @@ namespace WilderBlog.Services.DataProviders
 
   public class CalendarEntry
   {
-    public string EventName { get; set; }
+    public string EventName { get; set; } = "";
     public DateTime EventDate { get; set; }
     public int Length { get; set; }
-    public string Link { get; set; }
-    public string Location { get; set; }
-    public string Note { get; set; }
-    public string Logo { get; set; }
+    public string Link { get; set; } = "";
+    public string Location { get; set; } = "";
+    public string Note { get; set; } = "";
+    public string Logo { get; set; } = "";
     public bool ReverseLogo { get; set; } = false;
 
     public string FormattedDate

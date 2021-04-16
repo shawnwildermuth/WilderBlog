@@ -25,7 +25,7 @@ namespace WilderBlog.Logger
     public IDisposable BeginScope<TState>(TState state)
     {
       // Not necessary
-      return null;
+      return null!;
     }
 
     public bool IsEnabled(LogLevel logLevel)
@@ -62,7 +62,7 @@ namespace WilderBlog.Logger
         message += $"<p>{exception}</p>";
       }
 
-      var url = UriHelper.GetEncodedPathAndQuery(_contextAccessor.HttpContext.Request);
+      var url = UriHelper.GetEncodedPathAndQuery(_contextAccessor.HttpContext?.Request);
       message += $"<p>Request: {url}</p></div>";
       
 

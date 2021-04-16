@@ -95,7 +95,7 @@
 <hr />
 @* PS Ad *@
 @ads.SidebarAdd()
-@if (((string)ViewContext.RouteData.Values["controller"]) != "Search")
+@if (((string)ViewContext.RouteData.Values["controller"]!) != "Search")
 {
   <hr />
   <form id="searchForm" novalidate>

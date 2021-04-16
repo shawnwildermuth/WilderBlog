@@ -55,7 +55,7 @@ namespace WilderBlog.Controllers.Api
       try
       {
         var data = LiveEpisodes
-                  .FirstOrDefault(e => e.EpisodeNumber == number);
+                  .First(e => e.EpisodeNumber == number);
 
         return data;
       }

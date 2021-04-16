@@ -33,33 +33,37 @@ namespace WilderBlog.Services
     public async Task<bool> Verify(string recaptcha)
     {
       var uri = "https://www.google.com/recaptcha/api/siteverify";
-      var request = _ctxAccessor.HttpContext.Request;
+      var request = _ctxAccessor.HttpContext?.Request;
 
-      //make the api call and determine validity
-      using (var client = new HttpClient())
+      if (request is not null)
       {
-        var content = new FormUrlEncodedContent(new[]
+
+        //make the api call and determine validity
+        using (var client = new HttpClient())
         {
-            new KeyValuePair<string, string>("secret", _settings.Value.Google.CaptchaSecret),
-            new KeyValuePair<string, string>("response", recaptcha),
-            new KeyValuePair<string, string>("remoteip", request.Headers.ContainsKey("HTTP_X_FORWARDED_FOR") ?
+          var content = new FormUrlEncodedContent(new[]
+          {
+            new KeyValuePair<string?, string?>("secret", _settings.Value.Google.CaptchaSecret),
+            new KeyValuePair<string?, string?>("response", recaptcha),
+            new KeyValuePair<string?, string?>("remoteip", request.Headers.ContainsKey("HTTP_X_FORWARDED_FOR") ?
                                                           request.Headers["HTTP_X_FORWARDED_FOR"].FirstOrDefault() :
-                                                          _ctxAccessor.HttpContext.Connection.RemoteIpAddress.ToString())
+                                                          _ctxAccessor.HttpContext?.Connection.RemoteIpAddress?.ToString())
 
         });
 
-        var result = await client.PostAsync(uri, content);
+          var result = await client.PostAsync(uri, content);
 
-        if (result.IsSuccessStatusCode)
-        {
-          var json = await result.Content.ReadAsStringAsync();
-          var verifyResponse = JsonConvert.DeserializeObject<SiteVerifyResult>(json);
-          if (verifyResponse.Success)
+          if (result.IsSuccessStatusCode)
           {
-            return true;
+            var json = await result.Content.ReadAsStringAsync();
+            var verifyResponse = JsonConvert.DeserializeObject<SiteVerifyResult>(json);
+            if (verifyResponse.Success)
+            {
+              return true;
+            }
           }
-        }
 
+        }
       }
 
       return false;

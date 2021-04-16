@@ -183,7 +183,7 @@ namespace WilderBlog.Controllers
     {
       if (Response.StatusCode == (int)HttpStatusCode.NotFound ||
           errorCode == (int)HttpStatusCode.NotFound ||
-          Request.Path.Value.EndsWith("404"))
+          Request.Path.Value!.EndsWith("404"))
       {
         return View("NotFound");
       }
@@ -268,31 +268,6 @@ namespace WilderBlog.Controllers
     public IActionResult Calendar()
     {
       return View();
-    }
-
-    [HttpGet("psstats")]
-    public async Task<IActionResult> PsStats(bool c = false)
-    {
-      var CACHEKEY = "PSSTATS";
-      string cached;
-      
-      if (c)
-      {
-        _memoryCache.Remove(CACHEKEY);
-      }
-
-      if (!_memoryCache.TryGetValue(CACHEKEY, out cached))
-      { 
-        var client = new HttpClient();
-        cached = await client.GetStringAsync(new Uri("https://app.pluralsight.com/data/courses/popular"));
-        _memoryCache.Set(CACHEKEY, cached,new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(2) });
-      }
-
-      var converter = new ExpandoObjectConverter();
-      dynamic courses = JsonConvert.DeserializeObject<IEnumerable<ExpandoObject>>(cached, converter);
-
-      return View(courses);
-
     }
 
   }

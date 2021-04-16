@@ -26,7 +26,7 @@ namespace WilderBlog.Services
     {
       foreach (var rule in _rules)
       {
-        if (context.Request.Path.Value.Contains(rule.Search))
+        if (context.Request.Path.Value!.Contains(rule.Search))
         {
           context.Request.Path = context.Request.Path.Value.Replace(rule.Search, rule.Replace);
         }
@@ -49,8 +49,8 @@ namespace WilderBlog.Services
 
   public class UrlRule
   {
-    public string Replace { get; internal set; }
-    public string Search { get; internal set; }
+    public string Replace { get; internal set; } = "";
+    public string Search { get; internal set; } = "";
   }
 
   public static class UrlRewriterExtensions

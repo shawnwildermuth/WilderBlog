@@ -14,9 +14,11 @@ namespace WilderBlog.Logger
     public static ILoggerFactory AddEmail(this ILoggerFactory factory, 
                                           IMailService mailService, 
                                           IHttpContextAccessor contextAccessor,
-                                          Func<string, LogLevel, bool> filter = null)
+                                          Func<string, LogLevel, bool>? filter = null)
     {
+#pragma warning disable CS8604 // Possible null reference argument.
       factory.AddProvider(new EmailLoggerProvider(filter, mailService, contextAccessor));
+#pragma warning restore CS8604 // Possible null reference argument.
       return factory;
     }
 

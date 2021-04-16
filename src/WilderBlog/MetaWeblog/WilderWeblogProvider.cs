@@ -9,7 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using WilderBlog.Config;
 using WilderBlog.Data;
 using WilderBlog.Helpers;
 using WilderBlog.Services;
@@ -56,7 +55,7 @@ namespace WilderBlog.MetaWeblog
         newStory.IsPublished = publish;
         newStory.Slug = newStory.GetStoryUrl();
         newStory.UniqueId = newStory.Slug;
-        newStory.FeatureImageUrl = post?.wp_post_thumbnail;
+        newStory.FeatureImageUrl = post.wp_post_thumbnail;
         newStory.Abstract = newStory.GetSummary();
 
         _repo.AddStory(newStory);
@@ -90,7 +89,7 @@ namespace WilderBlog.MetaWeblog
         story.Categories = string.Join(",", post.categories);
         story.IsPublished = publish;
         if (string.IsNullOrWhiteSpace(story.Slug)) story.Slug = story.GetStoryUrl(); // Only recalcuate Slug if absolutely necessary
-        story.FeatureImageUrl = post?.wp_post_thumbnail;
+        story.FeatureImageUrl = post.wp_post_thumbnail;
         story.Abstract = story.GetSummary();
 
         if (await _repo.SaveAllAsync())

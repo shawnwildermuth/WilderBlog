@@ -15,7 +15,7 @@ namespace WilderBlog.Data
 
     private IConfiguration _config;
 
-    public DbSet<BlogStory> Stories { get; set; }
+    public DbSet<BlogStory> Stories => Set<BlogStory>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

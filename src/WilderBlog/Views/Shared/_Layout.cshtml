@@ -132,8 +132,7 @@
               </span>
             </a>
           </div>
-
-          @if (ViewContext.RouteData.Values["controller"].ToString().ToLower() != "search")
+          @if (ViewContext.RouteData.Values["controller"]?.ToString()?.ToLower() != "search")
           {
             <form id="searchForm" class="hidden lg:block lg:mt-4" novalidate>
               <div class="flex justify-end lg:justify-start text-sm ">

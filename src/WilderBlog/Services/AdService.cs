@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using WilderBlog.Config;
 using WilderBlog.Models;
 
 namespace WilderBlog.Services
@@ -42,7 +41,7 @@ namespace WilderBlog.Services
 
       };
       var now = DateTime.Now;
-      var ads = ranges.Where(r => r.Start <= now && r.End >= now).FirstOrDefault();
+      var ads = ranges.Where(r => r.Start <= now && r.End >= now).First();
 
       var item = new Random().Next(0, ads.Ads.Length);
 
@@ -71,7 +70,7 @@ namespace WilderBlog.Services
 
       };
       var now = DateTime.Now;
-      var ads = ranges.Where(r => r.Start <= now && r.End >= now).FirstOrDefault();
+      var ads = ranges.Where(r => r.Start <= now && r.End >= now).First();
 
       var item = new Random().Next(0, ads.Ads.Length);
 

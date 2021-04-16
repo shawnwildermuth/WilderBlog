@@ -15,7 +15,7 @@
         </tr>
         <tr>
           <td>Application Ver</td>
-          <td><strong>@Assembly.GetAssembly(typeof(WilderBlog.Startup)).GetName().Version</strong></td>
+          <td><strong>@Assembly.GetAssembly(typeof(WilderBlog.Startup))?.GetName().Version</strong></td>
           <td>Runtime Framework</td>
           <td><strong>@(Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.RuntimeArchitecture)</strong></td>
         </tr>
