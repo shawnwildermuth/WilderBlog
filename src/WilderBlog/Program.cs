@@ -9,7 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using WilderBlog.Config;
 using WilderBlog.Data;
 
 namespace WilderBlog
@@ -34,10 +33,10 @@ namespace WilderBlog
     private static async Task Seed(IWebHost host)
     {
       var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
-      using (var scope = scopeFactory.CreateScope())
+      using (var scope = scopeFactory?.CreateScope())
       {
-        var initializer = scope.ServiceProvider.GetService<WilderInitializer>();
-        await initializer.SeedAsync();
+        var initializer = scope?.ServiceProvider.GetService<WilderInitializer>();
+        await initializer!.SeedAsync();
       }
     }
 

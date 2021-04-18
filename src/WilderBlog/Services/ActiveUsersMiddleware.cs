@@ -35,7 +35,7 @@ namespace WilderBlog.Services
           string cookie;
           if (context.Request.Cookies.ContainsKey(COOKIENAME))
           {
-            cookie = context.Request.Cookies[COOKIENAME];
+            cookie = context.Request.Cookies[COOKIENAME]!;
           }
           else
           {
@@ -61,26 +61,37 @@ namespace WilderBlog.Services
     {
       var cacheType = cache.GetType();
       var fieldInfo = cacheType.GetField("_entries", BindingFlags.NonPublic | BindingFlags.Instance);
-      var dict = (IDictionary)fieldInfo.GetValue(cache);
-
-      var keys = dict.Keys
-        .Cast<object>()
-        .Where(k => k is string && ((string)k).StartsWith(PREFIX))
-        .Cast<string>()
-        .ToList();
-
-      return keys.Count(k =>
+      if (fieldInfo is not null)
       {
-        DateTime expiration;
-        if (cache.TryGetValue<DateTime>(k, out expiration))
+
+        var dict = fieldInfo.GetValue(cache);
+
+        if (dict is not null)
         {
-          if (expiration > DateTime.UtcNow)
+
+          var keys = ((IDictionary)dict).Keys
+            .Cast<object>()
+            .Where(k => k is string && ((string)k).StartsWith(PREFIX))
+            .Cast<string>()
+            .ToList();
+
+          return keys.Count(k =>
           {
-            return true;
-          }
+            DateTime expiration;
+            if (cache.TryGetValue<DateTime>(k, out expiration))
+            {
+              if (expiration > DateTime.UtcNow)
+              {
+                return true;
+              }
+            }
+            return false;
+          });
+
         }
-        return false;
-      });
+      }
+
+      return 0;
 
     }
 

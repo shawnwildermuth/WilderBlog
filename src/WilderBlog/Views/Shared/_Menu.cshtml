@@ -1,6 +1,6 @@
 ﻿@{
-  var ctrl = (string)ViewContext.RouteData.Values["controller"];
-  var action = (string)ViewContext.RouteData.Values["action"];
+  var ctrl = (string)ViewContext.RouteData.Values["controller"]!;
+  var action = (string)ViewContext.RouteData.Values["action"]!;
   var isCurrent = new Func<string, string, string>((c, a) =>
   {
     if ((string.IsNullOrWhiteSpace(a) && c == ctrl) || (c == ctrl && a == action)) return "active";

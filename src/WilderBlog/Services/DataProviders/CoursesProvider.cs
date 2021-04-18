@@ -21,9 +21,9 @@ namespace WilderBlog.Services.DataProviders
 
   public class Course
   {
-    public string Id { get; set; }
-    public string Name { get; set; }
-    public string Hint { get; set; }
+    public string Id { get; set; } = "";
+    public string Name { get; set; } = "";
+    public string Hint { get; set; } = "";
     public CourseType CourseType { get; set; } = CourseType.Pluralsight;
   }
 }

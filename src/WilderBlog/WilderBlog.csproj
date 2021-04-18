@@ -11,6 +11,7 @@
     <AssemblyVersion>5.0.4.0</AssemblyVersion>
     <FileVersion>5.0.4.0</FileVersion>
     <UserSecretsId>f0f97328-119d-4980-873f-f1a692135d6e</UserSecretsId>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -71,9 +72,6 @@
     <Content Remove="wwwroot\js\site.es5.js" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Styles\" />
-  </ItemGroup>
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     <Exec Command="echo Vue Client" />

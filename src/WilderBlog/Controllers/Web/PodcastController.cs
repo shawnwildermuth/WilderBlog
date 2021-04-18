@@ -25,7 +25,7 @@ namespace WilderBlog.Controllers
       var latest = _podcastProvider.Get().Where(e => e.Status == PodcastEpisodeStatus.Live &&
                                        e.PublishedDate.AddHours(14) <= DateTime.UtcNow)
                            .OrderByDescending(e => e.EpisodeNumber)
-                           .FirstOrDefault();
+                           .First();
 
       return View(Tuple.Create<PodcastEpisode, IEnumerable<PodcastEpisode>>(latest, episodes));
     }

@@ -22,12 +22,12 @@ namespace WilderBlog.Services.DataProviders
   public class Publication
   {
     public int Id { get; set; }
-    public string PublicationName { get; set; }
-    public string Publisher { get; set; }
+    public string PublicationName { get; set; } = "";
+    public string Publisher { get; set; } = "";
     public DateTime DatePublished { get; set; }
-    public string Comments { get; set; }
+    public string Comments { get; set; } = "";
     public bool IsBook { get; set; }
-    public string Title { get; set; }
-    public string Link { get; set; }
+    public string Title { get; set; } = "";
+    public string Link { get; set; } = "";
   }
 }
