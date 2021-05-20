@@ -1,5 +1,15 @@
 [
   {
+    "eventName": "WomenTech",
+    "eventDate": "06/07/2021",
+    "logo": "https://www.womentech.net/sites/default/files/2020-12/Women%20Tech%20Conference%20Logo.png",
+    "link": "https://www.womentech.net/speaker/Shawn/Wildermuth/54383",
+    "location": "Online",
+    "note": "Speaking on 'Diversity for Better Software: Pragmatic Reasons to Have Diverse Teams'",
+    "length": 5,
+    "reverseLogo": true
+  },
+  {
     "eventName": "AntarctiConf",
     "eventDate": "01/05/2020",
     "logo": "https://antarcticonf.com/wp-content/uploads/2018/07/icon-left-font-monochrome-white-cropped.png",
