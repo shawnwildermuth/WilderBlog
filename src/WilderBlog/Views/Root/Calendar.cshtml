@@ -5,14 +5,14 @@
   ViewBag.PageImage = "/img/headers/code.jpg";
 }
 
-<div class="row">
+<div class="flex flex-col">
   @foreach (var ap in appearances.Get().Where(e => e.EventDate.AddDays(e.Length - 1) >= DateTime.Today))
   {
-    <div class="col-8 offset-2">
-      <div style="min-height: 100px;">
+    <div class="border-2 p-1 my-2">
+      <div>
         @if (!string.IsNullOrWhiteSpace(ap.Logo))
         {
-          <a href="@ap.Link"><img src="@ap.Logo" alt="@ap.EventName" class="pull-right img-fluid calendar-logo @(ap.ReverseLogo ? "reverse" : "")" /></a>
+          <a href="@ap.Link"><img src="@ap.Logo" alt="@ap.EventName" class="float-right max-w-xs max-h-32 @(ap.ReverseLogo ? "reverse" : "")" /></a>
         }
         <h3><a href="@ap.Link" target="_blank">@ap.EventName</a></h3>
         <div>@ap.Location - @ap.FormattedDate</div>
@@ -21,7 +21,6 @@
           <div class="text-muted small">@ap.Note</div>
         }
       </div>
-      <hr class="hr" />
-    </div>
+   </div>
   }
 </div>
