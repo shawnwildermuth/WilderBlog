@@ -1,4 +1,27 @@
 [
+
+
+  {
+    "eventName": "Rockin' The Code World with dotNetDave",
+    "eventDate": "06/12/2021",
+    "logo": "https://pbs.twimg.com/media/EsgrDzpVkAMevxd.png",
+    "link": "",
+    "location": "Online",
+    "note": "Live Show!",
+    "length": 1,
+    "reverseLogo": true
+  },
+
+  {
+    "eventName": "Roanoke Valley .NET User Group",
+    "eventDate": "08/05/2021",
+    "logo": "https://rvnug.org/static/roanoke-star-128-d96f2491547061dec8ac24049296e492.png",
+    "link": "https://www.meetup.com/Roanoke-Valley-NET-User-Group/",
+    "location": "Online",
+    "note": "Vue's Composition API: Why it's Important",
+    "length": 1,
+    "reverseLogo": true
+  },
   {
     "eventName": "WomenTech",
     "eventDate": "06/07/2021",
