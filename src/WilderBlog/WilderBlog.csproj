@@ -72,6 +72,10 @@
     <Content Remove="wwwroot\js\site.es5.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="EmailTemplates\WilderMindsContact.txt" />
+  </ItemGroup>
+
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     <Exec Command="echo Vue Client" />

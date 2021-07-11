@@ -29,7 +29,7 @@ namespace WilderBlog.Services
       _logger = logger;
     }
 
-    public async Task<bool> SendMailAsync(string template, string name, string email, string subject, string msg)
+    public async Task<bool> SendMailAsync(string template, string name, string email, string subject, string msg, string phone = "")
     {
       try
       {
@@ -51,7 +51,7 @@ namespace WilderBlog.Services
         var key = _settings.Value.MailService.ApiKey;
 
         var client = new SendGridClient(key);
-        var formattedMessage = string.Format(body, email, name, subject, msg);
+        var formattedMessage = string.Format(body, email, name, subject, msg, phone);
 
         var mailMsg = MailHelper.CreateSingleEmail(
           new EmailAddress(_settings.Value.MailService.Receiver),
