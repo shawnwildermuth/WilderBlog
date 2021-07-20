@@ -1,0 +1,24 @@
+﻿<html>
+<head></head>
+<body>
+  <h3>From Wilder Minds Website!</h3>
+  <div>
+    <strong>Name</strong>: {1}
+  </div>
+  <div>
+    <strong>From</strong>: {0}
+  </div>
+  <div>
+    <strong>Phone</strong>: {4}
+  </div>
+  <div>
+    <strong>Subject</strong>: {2}
+  </div>
+  <div>
+    <strong>Message</strong>:
+  </div>
+  <div>
+    {3}
+  </div>
+</body>
+</html>

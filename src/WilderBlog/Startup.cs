@@ -26,6 +26,7 @@ namespace WilderBlog
   {
     private readonly IConfiguration _config;
     private readonly IHostEnvironment _env;
+    public const string CorsPolicyName = "_wilderminds_cors";
 
     public Startup(IConfiguration config, IHostEnvironment env)
     {
@@ -60,6 +61,27 @@ namespace WilderBlog
       {
         svcs.AddScoped<IWilderRepository, WilderRepository>();
       }
+
+      svcs.AddCors(setup =>
+      {
+        setup.AddPolicy(CorsPolicyName, cfg =>
+        {
+          if (_env.IsDevelopment())
+          {
+            cfg.AllowAnyMethod();
+            cfg.AllowAnyOrigin();
+            cfg.AllowAnyHeader();
+          }
+          else
+          {
+            cfg.WithMethods("POST");
+            cfg.WithOrigins("https://wilderminds.com",
+              "http://wilderminds.com",
+              "https://www.wilderminds.com",
+              "http://www.wilderminds.com");
+          }
+        });
+      });
 
       svcs.ConfigureHealthChecks(_config);
 
@@ -137,6 +159,7 @@ namespace WilderBlog
       }
 
       app.UseRouting();
+      app.UseCors();
       app.UseAuthentication();
       app.UseAuthorization();
 
