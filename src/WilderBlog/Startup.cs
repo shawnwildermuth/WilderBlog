@@ -79,6 +79,7 @@ namespace WilderBlog
               "http://wilderminds.com",
               "https://www.wilderminds.com",
               "http://www.wilderminds.com");
+            cfg.AllowAnyHeader();
           }
         });
       });
