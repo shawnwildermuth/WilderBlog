@@ -11,7 +11,7 @@
     "@types/grecaptcha": "^3.0.1",
     "@vuelidate/core": "2.0.0-alpha.7",
     "@vuelidate/validators": "2.0.0-alpha.5",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "core-js": "^3.6.5",
     "vue": "^3.0.2",
     "vuex": "^4.0.0-0"
