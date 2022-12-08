@@ -52,7 +52,7 @@
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Sendgrid" Version="9.22.0" />
     <PackageReference Include="WilderMinds.AzureImageStorageService" Version="0.4.1" />
     <PackageReference Include="WilderMinds.MetaWeblog" Version="5.0.0" />
