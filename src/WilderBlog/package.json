@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.20",
     "rimraf": "3.0.0",
     "tailwindcss": "2.0.3",
     "autoprefixer": "^10.2.4"
