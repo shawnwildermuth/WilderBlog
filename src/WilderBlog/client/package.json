@@ -10,7 +10,7 @@
   "dependencies": {
     "@types/grecaptcha": "^3.0.1",
     "@vuelidate/core": "2.0.0-alpha.7",
-    "@vuelidate/validators": "2.0.0-alpha.5",
+    "@vuelidate/validators": "2.0.0-alpha.22",
     "axios": "^0.21.2",
     "core-js": "^3.6.5",
     "vue": "^3.0.2",
