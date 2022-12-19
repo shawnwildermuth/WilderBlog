@@ -17,7 +17,7 @@
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
-    "@vue/cli": "4.5.8",
+    "@vue/cli": "5.0.8",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-typescript": "~5.0.8",
     "@vue/cli-plugin-vuex": "~5.0.8",
