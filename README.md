@@ -1,8 +1,12 @@
 # WilderBlog
 
-Project Status:
+### **Archived Project**
 
-![WilderBlog-Build](https://github.com/shawnwildermuth/WilderBlog/workflows/WilderBlog-Build/badge.svg)
+I am no longer using this for my blog, but feel free to use it as the basis of yours. I've moved to a static site generator (@11ty). You can see that repo here:
+
+> https://github.com/shawnwildermuth/WilderBlogGenerator
+
+Project Status: Archived
 
 I re-wrote my blog using a new stack of web technologies including:
 
@@ -21,4 +25,6 @@ The current project is built with many pre-release technologies so that the code
 See my blog entry (and the live site) for more information on how and why I built it:
 
 - http://wildermuth.com/2016/04/14/Welcome-to-the-New-Wildermuth-com
+
+
 
